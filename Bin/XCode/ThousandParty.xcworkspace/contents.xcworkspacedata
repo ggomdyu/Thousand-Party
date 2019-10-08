@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "TGON">
+      <FileRef
+         location = "group:../../../TGON/Bin/Xcode/TGON.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Contents">
+      <FileRef
+         location = "group:ThousandParty.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
