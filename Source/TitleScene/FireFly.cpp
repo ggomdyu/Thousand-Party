@@ -23,13 +23,17 @@ void FireFly::Initialize()
     transform->SetLocalScale(Vector3(scale, scale, 1.0f));
     transform->SetLocalPosition(Vector3(static_cast<float>(Random().NextDouble(-windowSize.width / 2, windowSize.width / 2)), static_cast<float>(Random().NextDouble(-windowSize.height / 2 - 80.0f, windowSize.height / 2)), 0.0f));
 
-    std::string resourceFolderPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#if TGON_PLATFORM_WINDOWS
+    std::string resourceFolderPath = u8"E:/Users/ggomdyu/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#else
+    std::string resourceFolderPath = u8"/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#endif
     auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
     auto texture = assetModule->LoadTexture(resourceFolderPath + u8"/Objects/TitleScene/Firefly.png");
     auto sprite = std::make_shared<UISprite>(texture);
     sprite->SetBlendColor(Color4f(1.0f, 1.0f, 1.0f, static_cast<float>(Random().NextDouble(0.4, 1.0))));
     m_spriteRendererComponent = this->AddComponent<SpriteRendererComponent>(sprite);
-    m_spriteRendererComponent->SetSortingLayer(Random().Next(0, 2) == 0 ? 1 : 2);
+    m_spriteRendererComponent->SetSortingLayer(Random().Next(1, 4));
     m_sprite = m_spriteRendererComponent->GetSprite();
 }
 
@@ -47,7 +51,7 @@ void FireFly::Reset()
     transform->SetLocalScale(Vector3(scale, scale, 1.0f));
     transform->SetLocalPosition(Vector3(static_cast<float>(Random().NextDouble(-windowSize.width / 2, windowSize.width / 2)), -windowSize.height / 2 - m_sprite->GetTexture()->GetSize().height / 2, 0.0f));
     
-    m_spriteRendererComponent->SetSortingLayer(Random().Next(0, 2) == 0 ? 1 : 2);
+    //m_spriteRendererComponent->SetSortingLayer(Random().Next(0, 2) == 0 ? 1 : 2);
 }
 
 void FireFly::Update()

@@ -2,6 +2,7 @@
 
 #include "TitleScene.h"
 #include "FireFly.h"
+#include "NightSky.h"
 
 using namespace tgon;
 
@@ -14,18 +15,6 @@ void TitleScene::Update()
     SuperType::Update();
 
     this->OnHandleInput();
-
-    auto windowSize = Application::GetRootWindow()->GetClientSize();
-    float halfWindowWidth = windowSize.width * 0.5f;
-    float halfWindowHeight = windowSize.height * 0.5f;
-    auto nightSkyNewPos = m_nightSky->GetTransform()->GetLocalPosition();
-    if (nightSkyNewPos.x <= -halfWindowWidth + -419.0f)
-    {
-        nightSkyNewPos = Vector3(-halfWindowWidth + 1257.0f, halfWindowHeight - 221.0f, 0.0f);
-    }
-
-    nightSkyNewPos.x -= 55.0f * m_timeModule->GetTickTime();
-    m_nightSky->GetTransform()->SetLocalPosition(nightSkyNewPos);
 
     auto blendColor = m_fadeInSprite->GetBlendColor();
     blendColor.a -= 1.0f * m_timeModule->GetTickTime();
@@ -110,14 +99,17 @@ void TitleScene::CreateFontObjects()
 
 void TitleScene::CreateUIObjects()
 {
-    std::string resourceFolderPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#if TGON_PLATFORM_WINDOWS
+    std::string resourceFolderPath = u8"E:/Users/ggomdyu/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#else
+    std::string resourceFolderPath = u8"/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#endif
     std::string texturePathList[] =
     {
-        resourceFolderPath + u8"/Backgrounds/TitleScene/nightSky.png",
-        resourceFolderPath + u8"/Backgrounds/TitleScene/star.png",
-        resourceFolderPath + u8"/Backgrounds/TitleScene/earth.png",
-        resourceFolderPath + u8"/Backgrounds/TitleScene/girl.png",
-        resourceFolderPath + u8"/UI/TitleScene/Logo.png",
+        //resourceFolderPath + u8"/Backgrounds/TitleScene/star.png",
+        //resourceFolderPath + u8"/Backgrounds/TitleScene/earth.png",
+        //resourceFolderPath + u8"/Backgrounds/TitleScene/girl.png",
+        //resourceFolderPath + u8"/UI/TitleScene/Logo.png",
         //resourceFolderPath + u8"../../Resource/UI/TitleScene/Press.png",
         resourceFolderPath + u8"/UI/Common/FadeInOut.png",
     };
@@ -127,15 +119,18 @@ void TitleScene::CreateUIObjects()
     float halfWindowHeight = windowSize.height * 0.5f;
     Vector3 texturePosList[] =
     {
-        Vector3(-halfWindowWidth + 1257.0f, halfWindowHeight - 221.0f, 0.0f),
-        Vector3(-halfWindowWidth + 640.0f, halfWindowHeight - 360.0f, 0.0f),
-        Vector3(-halfWindowWidth + 612.0f, halfWindowHeight - 388.0f, 0.0f),
-        Vector3(-halfWindowWidth + 640.0f, halfWindowHeight - 221.0f, 0.0f),
-        Vector3(-halfWindowWidth + 172.5f, halfWindowHeight - 92.5f, 0.0f),
+        //Vector3(-halfWindowWidth + 640.0f, halfWindowHeight - 360.0f, 0.0f),
+        //Vector3(-halfWindowWidth + 612.0f, halfWindowHeight - 388.0f, 0.0f),
+        //Vector3(-halfWindowWidth + 640.0f, halfWindowHeight - 221.0f, 0.0f),
+        //Vector3(-halfWindowWidth + 172.5f, halfWindowHeight - 92.5f, 0.0f),
         //Vector3(23.0f, 355.0f, 0.0f),
         Vector3(0.0f, 0.0f, 0.0f),
     };
-    int32_t sortingLayerList[] = {0, 0, 0, 2, 2, 3};
+    int32_t sortingLayerList[] = {/*0, 0, 2, 2, */3};
+
+    auto nightSky = std::make_shared<NightSky>();
+    nightSky->Initialize();
+    this->AddObject(nightSky);
 
     auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
@@ -150,14 +145,12 @@ void TitleScene::CreateUIObjects()
     }
 
     auto fadeInObject = this->FindObject("FadeInOut");
-    m_fadeInSprite = fadeInObject->GetComponent<SpriteRendererComponent>()->GetSprite();
-    
-    m_nightSky = this->FindObject("nightSky");
+    m_fadeInSprite = fadeInObject->GetComponent<SpriteRendererComponent>()->GetSprite();   
 }
 
 void TitleScene::CreateFireFlyObjects()
 {
-    for (int i = 0; i < 15; ++i)
+    for (int i = 0; i < 5; ++i)
     {
         auto fireFly = std::make_shared<FireFly>(StringHash(std::to_string(i)));
         fireFly->Initialize();

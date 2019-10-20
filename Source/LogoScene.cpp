@@ -106,7 +106,11 @@ void LogoScene::CreateUIObject()
     auto path = Environment::GetCurrentDirectory();
     auto windowSize = Application::GetRootWindow()->GetClientSize();
 
-    std::string resourceFolderPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#if TGON_PLATFORM_WINDOWS
+    std::string resourceFolderPath = u8"E:/Users/ggomdyu/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#else
+    std::string resourceFolderPath = u8"/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#endif
     std::string texturePathList[] =
     {
         resourceFolderPath + u8"/Backgrounds/IntroScene/Team_logo.png",

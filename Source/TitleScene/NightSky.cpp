@@ -22,11 +22,15 @@ void NightSky::Initialize()
 
 void NightSky::InitializeSpriteComponent()
 {
-    std::string resourceFolderPath = u8"/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource/";
+#if TGON_PLATFORM_WINDOWS
+    std::string resourceFolderPath = u8"E:/Users/ggomdyu/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#else
+    std::string resourceFolderPath = u8"/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
+#endif
     std::string texturePath = u8"/Backgrounds/TitleScene/nightSky.png";
     
     auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
-    auto texture = assetModule->LoadTexture(texturePath);
+    auto texture = assetModule->LoadTexture(resourceFolderPath + texturePath);
     auto sprite = std::make_shared<UISprite>(texture);
     this->AddComponent<SpriteRendererComponent>(sprite);
 }
@@ -42,6 +46,8 @@ void NightSky::InitializePosition()
 
 void NightSky::Update()
 {
+    SuperType::Update();
+
     auto transform = this->GetTransform();
     
     auto windowSize = Application::GetRootWindow()->GetClientSize();

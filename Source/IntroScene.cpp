@@ -86,7 +86,7 @@ IntroScene::IntroScene()
     decltype(auto) application = Application::GetInstance();
     decltype(auto) engine = application.GetEngine();
         
-    auto rootWindowSize = application.GetRootWindow()->GetExtent();
+    auto rootWindowSize = application.GetRootWindow()->GetClientSize();
         
     m_graphicsModule = engine->FindModule<GraphicsModule>();
     m_inputModule = engine->FindModule<InputModule>();

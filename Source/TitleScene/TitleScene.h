@@ -40,5 +40,4 @@ private:
     std::shared_ptr<tgon::InputModule> m_inputModule;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::UISprite> m_fadeInSprite;
-    std::shared_ptr<tgon::GameObject> m_nightSky;
 };
