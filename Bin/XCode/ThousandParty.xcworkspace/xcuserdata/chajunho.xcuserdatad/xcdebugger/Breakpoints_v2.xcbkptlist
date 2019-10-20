@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E2D4FA4E-F1E3-4CCF-9918-552D604BAC4F"
+            uuid = "219F22D5-B5C4-409C-A7BD-B22DC3CAD7E8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../Source/TitleScene.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "TitleScene::CreateUIObjects()"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "FireFly::Initialize()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

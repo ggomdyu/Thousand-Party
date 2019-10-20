@@ -32,8 +32,6 @@ void ThousandParty::Initialize()
 
 void ThousandParty::InitializeModule()
 {
-    using namespace tgon;
-
     // Input Module
     decltype(auto) rootWindow = Application::GetInstance().GetRootWindow();
     InputMode inputMode;
@@ -53,10 +51,12 @@ void ThousandParty::InitializeModule()
         videoMode.enableVerticalSync = false;
         videoMode.enableMultiSampling = false;
     };
-    this->RegisterModule<GraphicsModule>(*rootWindow, videoMode);
+    auto graphicsModule = this->RegisterModule<GraphicsModule>(*rootWindow, videoMode);
+    graphicsModule->GetUIRenderer().SetMaxSortingLayer(5);
     
     // Etc
+    this->RegisterModule<AssetModule>();
     this->RegisterModule<TimeModule>();
     this->RegisterModule<TaskModule>();
-    this->RegisterModule<SceneModule>()->ChangeScene(new LogoScene);
+    this->RegisterModule<SceneModule>()->ChangeScene<LogoScene>();
 }

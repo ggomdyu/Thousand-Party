@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8CF8A13F234A425600763883 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8A13A234A425600763883 /* TitleScene.cpp */; };
+		8C144A6E235C83810021BBAA /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C144A68235C83810021BBAA /* TitleScene.cpp */; };
+		8C144A6F235C83810021BBAA /* FireFly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C144A69235C83810021BBAA /* FireFly.cpp */; };
+		8C144A70235C83810021BBAA /* NightSky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C144A6A235C83810021BBAA /* NightSky.cpp */; };
 		8CF8A140234A425600763883 /* ThousandParty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8A13C234A425600763883 /* ThousandParty.cpp */; };
 		8CF8A141234A425600763883 /* LogoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8A13E234A425600763883 /* LogoScene.cpp */; };
 		FD515BDE20B46FAD0002F5C3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD06734B20B42CAA00BEA737 /* OpenAL.framework */; };
@@ -31,14 +33,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C144A68235C83810021BBAA /* TitleScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = TitleScene.cpp; path = ../../Source/TitleScene/TitleScene.cpp; sourceTree = "<group>"; };
+		8C144A69235C83810021BBAA /* FireFly.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = FireFly.cpp; path = ../../Source/TitleScene/FireFly.cpp; sourceTree = "<group>"; };
+		8C144A6A235C83810021BBAA /* NightSky.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = NightSky.cpp; path = ../../Source/TitleScene/NightSky.cpp; sourceTree = "<group>"; };
+		8C144A6B235C83810021BBAA /* FireFly.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = FireFly.h; path = ../../Source/TitleScene/FireFly.h; sourceTree = "<group>"; };
+		8C144A6C235C83810021BBAA /* NightSky.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = NightSky.h; path = ../../Source/TitleScene/NightSky.h; sourceTree = "<group>"; };
+		8C144A6D235C83810021BBAA /* TitleScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = TitleScene.h; path = ../../Source/TitleScene/TitleScene.h; sourceTree = "<group>"; };
+		8CD34BD2234CDAAD008338EC /* ThousandParty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ThousandParty; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF8A139234A425600763883 /* LogoScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = LogoScene.h; path = ../../Source/LogoScene.h; sourceTree = "<group>"; };
-		8CF8A13A234A425600763883 /* TitleScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = TitleScene.cpp; path = ../../Source/TitleScene.cpp; sourceTree = "<group>"; };
 		8CF8A13B234A425600763883 /* ThousandParty.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = ThousandParty.h; path = ../../Source/ThousandParty.h; sourceTree = "<group>"; };
 		8CF8A13C234A425600763883 /* ThousandParty.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ThousandParty.cpp; path = ../../Source/ThousandParty.cpp; sourceTree = "<group>"; };
-		8CF8A13D234A425600763883 /* TitleScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = TitleScene.h; path = ../../Source/TitleScene.h; sourceTree = "<group>"; };
 		8CF8A13E234A425600763883 /* LogoScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = LogoScene.cpp; path = ../../Source/LogoScene.cpp; sourceTree = "<group>"; };
 		FD06734B20B42CAA00BEA737 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
-		FD8D586D21966C0900983A4A /* ThousandParty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = ThousandParty; path = /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/ThousandParty/Bin/XCode/build/Debug/ThousandParty; sourceTree = "<absolute>"; };
 		FD8D58702196D24200983A4A /* libTGON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTGON.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBF76B020C1A40300A9207F /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		FDD7C9171F68458C000EB7C8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -64,15 +70,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C144A67235C83530021BBAA /* TitleScene */ = {
+			isa = PBXGroup;
+			children = (
+				8C144A69235C83810021BBAA /* FireFly.cpp */,
+				8C144A6B235C83810021BBAA /* FireFly.h */,
+				8C144A6A235C83810021BBAA /* NightSky.cpp */,
+				8C144A6C235C83810021BBAA /* NightSky.h */,
+				8C144A68235C83810021BBAA /* TitleScene.cpp */,
+				8C144A6D235C83810021BBAA /* TitleScene.h */,
+			);
+			name = TitleScene;
+			sourceTree = "<group>";
+		};
 		8CF8A138234A424700763883 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8C144A67235C83530021BBAA /* TitleScene */,
 				8CF8A13E234A425600763883 /* LogoScene.cpp */,
 				8CF8A139234A425600763883 /* LogoScene.h */,
 				8CF8A13C234A425600763883 /* ThousandParty.cpp */,
 				8CF8A13B234A425600763883 /* ThousandParty.h */,
-				8CF8A13A234A425600763883 /* TitleScene.cpp */,
-				8CF8A13D234A425600763883 /* TitleScene.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -82,6 +100,7 @@
 			children = (
 				8CF8A138234A424700763883 /* Source */,
 				FDD7C8EE1F6586D5000EB7C8 /* Frameworks */,
+				8CD34BD2234CDAAD008338EC /* ThousandParty */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,7 +135,7 @@
 			);
 			name = ThousandParty;
 			productName = ThousandParty;
-			productReference = FD8D586D21966C0900983A4A /* ThousandParty */;
+			productReference = 8CD34BD2234CDAAD008338EC /* ThousandParty */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +178,9 @@
 			files = (
 				8CF8A140234A425600763883 /* ThousandParty.cpp in Sources */,
 				8CF8A141234A425600763883 /* LogoScene.cpp in Sources */,
-				8CF8A13F234A425600763883 /* TitleScene.cpp in Sources */,
+				8C144A6E235C83810021BBAA /* TitleScene.cpp in Sources */,
+				8C144A70235C83810021BBAA /* NightSky.cpp in Sources */,
+				8C144A6F235C83810021BBAA /* FireFly.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,20 +305,20 @@
 					"$(inherited)",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../../Source/TGON",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/glew-2.1.0/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/libvorbis-1.3.6/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/libogg-1.3.3/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/zlib-1.2.11",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/gainput-1.0.0/lib/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/libpng16",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/boost_1_68_0",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/glm-0.9.9.0",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/freetype-2.10.0/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/stb",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/icu4c-64_2/icu/source/common",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/icu4c-64_2/icu/source/i18n",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/GSL-2.0.0/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/TGON",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/glew-2.1.0/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/libvorbis-1.3.6/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/libogg-1.3.3/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/zlib-1.2.11",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/gainput-1.0.0/lib/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/libpng16",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/boost_1_68_0",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/glm-0.9.9.0",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/freetype-2.10.0/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/stb",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/icu4c-64_2/icu/source/common",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/icu4c-64_2/icu/source/i18n",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/GSL-2.0.0/include",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
@@ -319,20 +340,20 @@
 				CODE_SIGN_IDENTITY = "-";
 				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../../Source/TGON",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/glew-2.1.0/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/libvorbis-1.3.6/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/libogg-1.3.3/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/zlib-1.2.11",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/gainput-1.0.0/lib/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/libpng16",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/boost_1_68_0",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/glm-0.9.9.0",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/freetype-2.10.0/include",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/stb",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/icu4c-64_2/icu/source/common",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/icu4c-64_2/icu/source/i18n",
-					"$(PROJECT_DIR)/../../../Source/ThirdParty/GSL-2.0.0/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/TGON",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/glew-2.1.0/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/libvorbis-1.3.6/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/libogg-1.3.3/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/zlib-1.2.11",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/gainput-1.0.0/lib/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/libpng16",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/boost_1_68_0",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/glm-0.9.9.0",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/freetype-2.10.0/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/stb",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/icu4c-64_2/icu/source/common",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/icu4c-64_2/icu/source/i18n",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/GSL-2.0.0/include",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;

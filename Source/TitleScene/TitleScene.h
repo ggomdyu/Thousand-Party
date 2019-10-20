@@ -24,7 +24,7 @@ public:
     
 /**@section Method */
 public:
-    void Initialize();
+    virtual void Initialize() override;
     virtual void Update() override;
     
 private:
@@ -33,7 +33,6 @@ private:
     void CreateFontObjects();
     void CreateUIObjects();
     void CreateFireFlyObjects();
-    
     void OnHandleInput();
 
 /**@section Variable */

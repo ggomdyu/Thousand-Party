@@ -1,114 +1,12 @@
-#include "PrecompiledHeader.h"
-
 #include "TGON.h"
+
 #include "TitleScene.h"
+#include "FireFly.h"
 
 using namespace tgon;
 
-class FireFly :
-    public GameObject
-{
-public:
-    TGON_DECLARE_RTTI(FireFly)
-
-/**@section Constructor */
-public:
-    explicit FireFly(const StringHash& name);
-
-/**@section Method */
-public:
-    void Initialize();
-    virtual void Update() override;
-    void Reset();
-
-/**@section Variable */
-private:
-    bool m_canAdjustOpacity;
-    bool m_needToIncreaseOpacity;
-    float m_opacityAdjustSpeed;
-    float m_moveSpeed;
-    std::shared_ptr<UISprite> m_sprite;
-};
-
-FireFly::FireFly(const StringHash& name) :
-    GameObject(name),
-    m_canAdjustOpacity((Random().Next(0, 2) == 0) ? true : false),
-    m_needToIncreaseOpacity(Random().Next(0, 1) == 0),
-    m_opacityAdjustSpeed(static_cast<float>(Random().NextDouble(0.1, 0.4))),
-    m_moveSpeed(static_cast<float>(Random().NextDouble(30, 60)))
-{
-}
-
-void FireFly::Initialize()
-{
-    auto windowSize = Application::GetRootWindow()->GetClientSize();
-    auto transform = this->GetComponent<Transform>();
-    auto scale = static_cast<float>(Random().NextDouble(0.3, 1.0));
-    transform->SetLocalScale(Vector3(scale, scale, 1.0f));
-    transform->SetLocalPosition(Vector3(static_cast<float>(Random().NextDouble(-windowSize.width / 2, windowSize.width / 2)), static_cast<float>(Random().NextDouble(-windowSize.height / 2 - 80.0f, windowSize.height / 2)), 0.0f));
-
-    std::string resourceFolderPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/ThousandParty/Resource";
-    auto texture = std::make_shared<Texture>(resourceFolderPath + u8"/Objects/TitleScene/Firefly.png", FilterMode::Bilinear, WrapMode::Repeat, true, false);
-    auto sprite = std::make_shared<UISprite>(texture);
-    sprite->SetBlendColor(Color4f(1.0f, 1.0f, 1.0f, static_cast<float>(Random().NextDouble(0.4, 1.0))));
-    auto spriteRendererComponent = this->AddComponent<SpriteRendererComponent>(sprite);
-    m_sprite = spriteRendererComponent->GetSprite();
-}
-
-void FireFly::Reset()
-{   
-    m_sprite->SetBlendColor(Color4f(1.0f, 1.0f, 1.0f, static_cast<float>(Random().NextDouble(0.4, 1.0))));
-
-    m_canAdjustOpacity = (Random().Next(0, 2) == 0) ? true : false;
-    m_opacityAdjustSpeed = static_cast<float>(Random().NextDouble(0.0625, 0.25));
-    m_moveSpeed = static_cast<float>(Random().NextDouble(30, 60));
-
-    auto windowSize = Application::GetRootWindow()->GetClientSize();
-    auto transform = this->GetComponent<Transform>();
-    auto scale = static_cast<float>(Random().NextDouble(0.3, 1.0));
-    transform->SetLocalScale(Vector3(scale, scale, 1.0f));
-    transform->SetLocalPosition(Vector3(static_cast<float>(Random().NextDouble(-windowSize.width / 2, windowSize.width / 2)), -windowSize.height / 2 - m_sprite->GetTexture()->GetSize().height / 2, 0.0f));
-}
-
-void FireFly::Update()
-{
-    SuperType::Update();
-
-    auto tickTime = Application::GetEngine()->FindModule<TimeModule>()->GetTickTime();
-
-    auto windowSize = Application::GetRootWindow()->GetClientSize();
-    auto transform = this->GetComponent<Transform>();
-    auto newPos = transform->GetLocalPosition();
-    if (newPos.y >= windowSize.height / 2 + 123.0F)
-    {
-        Reset();
-    }
-    else
-    {
-        newPos.y += m_moveSpeed * tickTime;
-        transform->SetLocalPosition(newPos);
-    }
-
-    if (m_canAdjustOpacity)
-    {
-        float alpha = m_sprite->GetBlendColor().a;
-        if (alpha >= 1.0f)
-        {
-            m_needToIncreaseOpacity = false;
-        }
-        else if (alpha <= 0.0f)
-        {
-            m_needToIncreaseOpacity = true;
-        }
-
-        alpha = (m_needToIncreaseOpacity) ? alpha + m_opacityAdjustSpeed * tickTime : alpha - m_opacityAdjustSpeed * tickTime;
-        m_sprite->SetBlendColor(Color4f(1.0f, 1.0f, 1.0f, alpha));
-    }
-}
-
 TitleScene::TitleScene()
 {
-    this->Initialize();
 }
 
 void TitleScene::Update()
@@ -212,11 +110,7 @@ void TitleScene::CreateFontObjects()
 
 void TitleScene::CreateUIObjects()
 {
-    auto windowSize = Application::GetRootWindow()->GetClientSize();
-    float halfWindowWidth = windowSize.width * 0.5f;
-    float halfWindowHeight = windowSize.height * 0.5f;
-
-    std::string resourceFolderPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/ThousandParty/Resource";
+    std::string resourceFolderPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
     std::string texturePathList[] =
     {
         resourceFolderPath + u8"/Backgrounds/TitleScene/nightSky.png",
@@ -227,6 +121,10 @@ void TitleScene::CreateUIObjects()
         //resourceFolderPath + u8"../../Resource/UI/TitleScene/Press.png",
         resourceFolderPath + u8"/UI/Common/FadeInOut.png",
     };
+    
+    auto windowSize = Application::GetRootWindow()->GetClientSize();
+    float halfWindowWidth = windowSize.width * 0.5f;
+    float halfWindowHeight = windowSize.height * 0.5f;
     Vector3 texturePosList[] =
     {
         Vector3(-halfWindowWidth + 1257.0f, halfWindowHeight - 221.0f, 0.0f),
@@ -237,26 +135,29 @@ void TitleScene::CreateUIObjects()
         //Vector3(23.0f, 355.0f, 0.0f),
         Vector3(0.0f, 0.0f, 0.0f),
     };
+    int32_t sortingLayerList[] = {0, 0, 0, 2, 2, 3};
 
+    auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
-        auto texture = std::make_shared<Texture>(texturePathList[i], FilterMode::Bilinear, WrapMode::Repeat, true, false);
+        auto texture = assetModule->LoadTexture(texturePathList[i]);
         auto objectName = StringHash(*Path::GetFileNameWithoutExtension(texturePathList[i]));
         auto object = std::make_shared<GameObject>(objectName);
         object->GetTransform()->SetLocalPosition(texturePosList[i]);
         auto spriteComponent = object->AddComponent<SpriteRendererComponent>(std::make_shared<UISprite>(texture));
+        spriteComponent->SetSortingLayer(sortingLayerList[i]);
         this->AddObject(object);
     }
 
     auto fadeInObject = this->FindObject("FadeInOut");
     m_fadeInSprite = fadeInObject->GetComponent<SpriteRendererComponent>()->GetSprite();
-
+    
     m_nightSky = this->FindObject("nightSky");
 }
 
 void TitleScene::CreateFireFlyObjects()
 {
-    for (int i = 0; i < 20; ++i)
+    for (int i = 0; i < 15; ++i)
     {
         auto fireFly = std::make_shared<FireFly>(StringHash(std::to_string(i)));
         fireFly->Initialize();
@@ -273,33 +174,4 @@ void TitleScene::CreateGameObjects()
 
 void TitleScene::OnHandleInput()
 {
-    /*auto moveableObject = this->FindObject("introSprite2");
-    if (moveableObject == nullptr)
-    {
-        return;
-    }
-
-    auto transform = moveableObject->GetTransform();
-    auto newPos = transform->GetLocalPosition();
-    float speed = 200.0f;
-
-    decltype(auto) keyboard = m_inputModule->GetKeyboard();
-    if (keyboard->IsKeyHold(KeyCode::LeftArrow))
-    {
-        newPos.x -= speed * m_timeModule->GetTickTime();
-    }
-    if (keyboard->IsKeyHold(KeyCode::RightArrow))
-    {
-        newPos.x += speed * m_timeModule->GetTickTime();
-    }
-    if (keyboard->IsKeyHold(KeyCode::UpArrow))
-    {
-        newPos.y += speed * m_timeModule->GetTickTime();
-    }
-    if (keyboard->IsKeyHold(KeyCode::DownArrow))
-    {
-        newPos.y -= speed * m_timeModule->GetTickTime();
-    }
-
-    transform->SetLocalPosition(newPos);*/
 }

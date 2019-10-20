@@ -1,14 +1,14 @@
-#include "PrecompiledHeader.h"
-
 #include "TGON.h"
 #include "LogoScene.h"
-#include "TitleScene.h"
+
+#include "TitleScene/TitleScene.h"
+
+#include <iostream>
 
 using namespace tgon;
 
 LogoScene::LogoScene()
 {
-    this->Initialize();
 }
 
 void LogoScene::Update()
@@ -21,7 +21,7 @@ void LogoScene::Update()
     if (elapsedTime >= 8500)
     {
         auto gameSceneModule = Application::GetEngine()->FindModule<SceneModule>();
-        gameSceneModule->ChangeScene(new TitleScene);
+        gameSceneModule->ChangeScene<TitleScene>();
     }
     else if (elapsedTime >= 7500)
     {
@@ -105,10 +105,8 @@ void LogoScene::CreateUIObject()
 {
     auto path = Environment::GetCurrentDirectory();
     auto windowSize = Application::GetRootWindow()->GetClientSize();
-    float halfWindowWidth = windowSize.width * 0.5f;
-    float halfWindowHeight = windowSize.height * 0.5f;
 
-    std::string resourceFolderPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/ThousandParty/Resource";
+    std::string resourceFolderPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
     std::string texturePathList[] =
     {
         resourceFolderPath + u8"/Backgrounds/IntroScene/Team_logo.png",
