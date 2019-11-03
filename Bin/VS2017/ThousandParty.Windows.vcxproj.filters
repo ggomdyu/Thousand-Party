@@ -4,6 +4,9 @@
     <Filter Include="Source">
       <UniqueIdentifier>{43a8c064-f06c-41eb-bd77-983bd842125e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\TitleScene">
+      <UniqueIdentifier>{0fe80c24-48ef-4f12-83b5-a921b9696ba8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\ThousandParty.h">
@@ -12,11 +15,17 @@
     <ClInclude Include="..\..\Source\IntroScene.h">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\TitleScene.h">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\LogoScene.h">
       <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TitleScene\NightSky.h">
+      <Filter>Source\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TitleScene\TitleScene.h">
+      <Filter>Source\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TitleScene\FireFly.h">
+      <Filter>Source\TitleScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -26,11 +35,17 @@
     <ClCompile Include="..\..\Source\IntroScene.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\TitleScene.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\LogoScene.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TitleScene\TitleScene.cpp">
+      <Filter>Source\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TitleScene\FireFly.cpp">
+      <Filter>Source\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TitleScene\NightSky.cpp">
+      <Filter>Source\TitleScene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

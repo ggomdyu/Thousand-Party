@@ -136,7 +136,7 @@ void TitleScene::CreateUIObjects()
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
         auto texture = assetModule->LoadTexture(texturePathList[i]);
-        auto objectName = StringHash(*Path::GetFileNameWithoutExtension(texturePathList[i]));
+        auto objectName = StringHash(Path::GetFileNameWithoutExtension(texturePathList[i]));
         auto object = std::make_shared<GameObject>(objectName);
         object->GetTransform()->SetLocalPosition(texturePosList[i]);
         auto spriteComponent = object->AddComponent<SpriteRendererComponent>(std::make_shared<UISprite>(texture));

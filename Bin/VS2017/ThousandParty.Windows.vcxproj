@@ -104,7 +104,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -156,14 +156,18 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\IntroScene.cpp" />
     <ClCompile Include="..\..\Source\LogoScene.cpp" />
-    <ClCompile Include="..\..\Source\TitleScene.cpp" />
     <ClCompile Include="..\..\Source\ThousandParty.cpp" />
+    <ClCompile Include="..\..\Source\TitleScene\FireFly.cpp" />
+    <ClCompile Include="..\..\Source\TitleScene\NightSky.cpp" />
+    <ClCompile Include="..\..\Source\TitleScene\TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\IntroScene.h" />
     <ClInclude Include="..\..\Source\LogoScene.h" />
-    <ClInclude Include="..\..\Source\TitleScene.h" />
     <ClInclude Include="..\..\Source\ThousandParty.h" />
+    <ClInclude Include="..\..\Source\TitleScene\FireFly.h" />
+    <ClInclude Include="..\..\Source\TitleScene\NightSky.h" />
+    <ClInclude Include="..\..\Source\TitleScene\TitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\TGON\Bin\VS2017\TGON.Windows.vcxproj">
