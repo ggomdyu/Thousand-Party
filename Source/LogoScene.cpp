@@ -2,6 +2,8 @@
 #include "LogoScene.h"
 
 #include "TitleScene/TitleScene.h"
+#include "../Test/IO/PathTest.h"
+#include "../Test/IO/DirectoryTest.h"
 
 #include <iostream>
 
@@ -103,19 +105,13 @@ void LogoScene::CreateCameraObject()
 
 void LogoScene::CreateUIObject()
 {
-    auto path = Environment::GetCurrentDirectory();
     auto windowSize = Application::GetRootWindow()->GetClientSize();
 
-#if TGON_PLATFORM_WINDOWS
-    std::string resourceFolderPath = u8"E:/Users/ggomdyu/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
-#else
-    std::string resourceFolderPath = u8"/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Resource";
-#endif
     std::string texturePathList[] =
     {
-        resourceFolderPath + u8"/Backgrounds/IntroScene/Team_logo.png",
-        resourceFolderPath + u8"/Backgrounds/IntroScene/ON_logo.png",
-        resourceFolderPath + u8"/UI/Common/FadeInOut.png",
+        u8"Resource/Backgrounds/IntroScene/Team_logo.png",
+        u8"Resource/Backgrounds/IntroScene/ON_logo.png",
+        u8"Resource/UI/Common/FadeInOut.png",
     };
 
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)

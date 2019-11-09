@@ -3,6 +3,7 @@
 #include "TGON.h"
 #include "ThousandParty.h"
 #include "LogoScene.h"
+#include "RenderTestScene.h"
 
 TGON_DECLARE_ENGINE(ThousandParty);
 
@@ -58,5 +59,6 @@ void ThousandParty::InitializeModule()
     this->RegisterModule<AssetModule>();
     this->RegisterModule<TimeModule>();
     this->RegisterModule<TaskModule>();
-    this->RegisterModule<SceneModule>()->ChangeScene<LogoScene>();
+    this->RegisterModule<SceneModule>()->ChangeScene<RenderTestScene>();
+//    this->RegisterModule<SceneModule>()->ChangeScene<LogoScene>();
 }

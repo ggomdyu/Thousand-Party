@@ -30,7 +30,6 @@ public:
 private:
     void InitializeGraphics();
     void CreateGameObjects();
-    void CreateFontObjects();
     void CreateUIObjects();
     void CreateFireFlyObjects();
     void OnHandleInput();
