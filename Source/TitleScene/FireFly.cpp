@@ -24,7 +24,7 @@ void FireFly::Initialize()
     transform->SetLocalPosition(Vector3(static_cast<float>(Random().NextDouble(-windowSize.width / 2, windowSize.width / 2)), static_cast<float>(Random().NextDouble(-windowSize.height / 2 - 80.0f, windowSize.height / 2)), 0.0f));
 
     auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
-    auto texture = assetModule->LoadTexture(u8"Resource/Objects/TitleScene/Firefly.png");
+    auto texture = assetModule->GetTexture(u8"Resource/Objects/TitleScene/Firefly.png");
     auto sprite = std::make_shared<UISprite>(texture);
     sprite->SetBlendColor(Color4f(1.0f, 1.0f, 1.0f, static_cast<float>(Random().NextDouble(0.4, 1.0))));
     m_spriteRendererComponent = this->AddComponent<SpriteRendererComponent>(sprite);

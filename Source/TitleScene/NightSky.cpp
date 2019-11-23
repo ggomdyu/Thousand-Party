@@ -23,7 +23,7 @@ void NightSky::Initialize()
 void NightSky::InitializeSpriteComponent()
 {
     auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
-    auto texture = assetModule->LoadTexture(u8"Resource/Backgrounds/TitleScene/nightSky.png");
+    auto texture = assetModule->GetTexture(u8"Resource/Backgrounds/TitleScene/nightSky.png");
     auto sprite = std::make_shared<UISprite>(texture);
     this->AddComponent<SpriteRendererComponent>(sprite);
 }

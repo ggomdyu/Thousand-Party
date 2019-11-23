@@ -12,7 +12,7 @@
 #include "Engine/InputModule.h"
 #include "Engine/TimeModule.h"
 
-class TGON_API TitleScene :
+class TitleScene :
     public tgon::Scene
 {
 public:

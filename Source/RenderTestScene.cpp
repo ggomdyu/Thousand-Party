@@ -1,6 +1,8 @@
 #include "TGON.h"
 #include "RenderTestScene.h"
 
+#include <climits>
+
 using namespace tgon;
 
 RenderTestScene::RenderTestScene()
@@ -14,6 +16,13 @@ void RenderTestScene::Initialize()
     
     this->CreateCameraObject();
     this->CreateFontObjects();
+
+    auto object = std::make_shared<GameObject>("test");
+    auto spriteComponent = object->AddComponent<SpriteRendererComponent>();
+    auto sprite = std::make_shared<UISprite>(std::make_shared<Texture>("/Users/chajunho/Desktop/1.png", FilterMode::Bilinear, WrapMode::Clamp, false, false));
+    sprite->SetPivot({0.5f, 0.5f});
+    spriteComponent->SetSprite(sprite);
+    this->AddObject(object);
 }
 
 void RenderTestScene::CreateCameraObject()
@@ -27,55 +36,58 @@ void RenderTestScene::CreateCameraObject()
     this->AddGlobalObject(camera);
 }
 
+static std::vector<std::tuple<std::shared_ptr<GameObject>, float, float, Vector3>> temp;
+
+void RenderTestScene::Update()
+{
+    SuperType::Update();
+    
+//    for (int i = 0; i < temp.size(); ++i)
+//    {
+//        auto obj = std::get<0>(temp[i]);
+//        std::get<1>(temp[i]) += 0.05f;
+//        std::get<2>(temp[i]) += 0.05f;
+//        Vector3 origin = std::get<3>(temp[i]);
+//        obj->GetTransform()->SetLocalPosition(Vector3(origin.x + std::cos(std::get<1>(temp[i])) * 10.0f, origin.y + std::sin(std::get<2>(temp[i])) * 10.0f));
+//    }
+}
+
 void RenderTestScene::CreateFontObjects()
 {
-    FontFactory ff;
-    std::shared_ptr<Font> font = ff.CreateFont(u8"Resource/Fonts/malgunbd.ttf");
-    auto object = std::make_shared<GameObject>("font");
-    object->GetTransform()->SetLocalScale( { 1.0f, 1.0f, 1.0f } );
-    object->GetTransform()->SetLocalPosition( Vector3( 0.0f, 0.0f, 0.0f ) );
-    auto spriteComponent = object->AddComponent<SpriteRendererComponent>();
+    auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
+    std::shared_ptr<Font> font = assetModule->GetFont(u8"Resource/Fonts/malgunbd.ttf");
 
-    const wchar_t chArray[] = L"A이것은 폰트에요.";
-    static auto textureAtlas = TextureAtlas::Create(I32Extent2D(512, 256), PixelFormat::RGBA8888, 20);
-    for (auto ch : chArray)
+    const char chArray[] = u8"static auto textureAtlas = TextureAtlas::Create(I32Extent2D(1024, 1024), PixelFormat::RGBA8888, 2); uiText.SetRect(I32Rect(-100, 100, 200, 200)) ";
+    static auto textureAtlas = TextureAtlas::Create(I32Extent2D(1024, 1024), PixelFormat::RGBA8888, 2);
+    for (auto ch : Encoding::UTF8().GetChars((const std::byte*)&chArray[0], strlen(chArray)))
     {
-        const auto& glyphData = font->GetGlyphData(ch, 70);
-        textureAtlas.Insert(glyphData.ch, ImageView(glyphData.bitmap.get(), glyphData.metrics.size, PixelFormat::RGBA8888));
+        const auto& glyphData = font->GetGlyphData(ch, 30);
+        textureAtlas.Insert(glyphData.ch, &glyphData.bitmap[0], glyphData.metrics.size);
     }
-
-    spriteComponent->SetSprite(std::make_shared<UISprite>(textureAtlas.GetAtlasTexture()));
-    this->AddObject(object);
-    return;
     
-    float accumulatedXPos = -100.0f;
-    float accumulatedYPos = 0.0f;
-    for (int i = 0; i < std::extent<decltype(chArray)>::value - 1; ++i)
+    UIText uiText;
+    uiText.SetText(chArray);
+    uiText.SetFont(u8"Resource/Fonts/malgunbd.ttf");
+    uiText.SetFontSize(30);
+    uiText.SetRect(I32Rect(-100, 100, 200, 200));
+    uiText.SetTextAlignment(TextAlignment::UpperLeft);
+    
+    auto fontTexture = textureAtlas.GetAtlasTexture();
+    for (auto& characterInfo : uiText.GetCharacterInfos())
     {
-       int32_t fontSize = 70;
-       auto& glyphData = font->GetGlyphData(chArray[i], fontSize);
+        auto object = std::make_shared<GameObject>("introSprite1");
+        object->GetTransform()->SetLocalScale({1.0f, 1.0f, 1.0f});
+        object->GetTransform()->SetLocalPosition(Vector3(characterInfo.rect.x, characterInfo.rect.y, 0.0f));
+        auto spriteComponent = object->AddComponent<SpriteRendererComponent>();
+        auto sprite = std::make_shared<UISprite>(fontTexture);
+        spriteComponent->SetSprite(sprite);
+        sprite->SetTextureRect(textureAtlas.GetTextureRect(characterInfo.character));
+        sprite->SetBlendColor(Color4f(0.0f, 1.0f, 1.0f, 1.0f));
+        sprite->SetPivot({0.0f, 0.0f});
 
-       if (i != 0)
-       {
-           auto& prevGlyphData = font->GetGlyphData( chArray[i - 1], fontSize );
-           accumulatedXPos -= (prevGlyphData.metrics.size.width - glyphData.metrics.size.width) / 2;
-
-           auto kerning = font->GetKerning( chArray[i - 1], chArray[i], fontSize );
-           accumulatedXPos += kerning.x;
-       }
-
-       float xPos = accumulatedXPos + glyphData.metrics.bearing.x;
-       float yPos = accumulatedYPos - glyphData.metrics.size.height / 2 + glyphData.metrics.bearing.y;
-
-       auto object = std::make_shared<GameObject>("introSprite1");
-       object->GetTransform()->SetLocalScale({ 1.0f, 1.0f, 1.0f });
-       object->GetTransform()->SetLocalPosition(Vector3( xPos, yPos, 0.0f ));
-       auto spriteComponent = object->AddComponent<SpriteRendererComponent>();
-       auto texture = std::make_shared<Texture>(&glyphData.bitmap[0], glyphData.metrics.size, PixelFormat::RGBA8888, FilterMode::Point, WrapMode::Clamp, false, false);
-       spriteComponent->SetSprite(std::make_shared<UISprite>(texture));
-
-       this->AddObject(object);
-
-       accumulatedXPos += glyphData.metrics.advance.x;
+        this->AddObject(object);
+        
+        float a = Random().NextDouble(0.0, 3.14159265358);
+        temp.push_back({object, a, a, object->GetTransform()->GetLocalPosition()});
     }
 }

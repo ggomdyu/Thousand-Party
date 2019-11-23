@@ -4,6 +4,7 @@
 #include "TitleScene/TitleScene.h"
 #include "../Test/IO/PathTest.h"
 #include "../Test/IO/DirectoryTest.h"
+#include "Core/Delegate.h"
 
 #include <iostream>
 
@@ -107,7 +108,7 @@ void LogoScene::CreateUIObject()
 {
     auto windowSize = Application::GetRootWindow()->GetClientSize();
 
-    std::string texturePathList[] =
+    const char* texturePathList[] =
     {
         u8"Resource/Backgrounds/IntroScene/Team_logo.png",
         u8"Resource/Backgrounds/IntroScene/ON_logo.png",

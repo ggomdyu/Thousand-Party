@@ -12,7 +12,7 @@
 #include "Engine/InputModule.h"
 #include "Engine/TimeModule.h"
 
-class TGON_API RenderTestScene :
+class RenderTestScene :
     public tgon::Scene
 {
 public:
@@ -24,6 +24,7 @@ public:
     
 /**@section Method */
 public:
+    virtual void Update() override;
     virtual void Initialize() override;
     
 private:

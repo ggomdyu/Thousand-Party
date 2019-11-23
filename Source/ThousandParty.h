@@ -9,7 +9,7 @@
 
 #include "Engine/Engine.h"
 
-class TGON_API ThousandParty final :
+class ThousandParty final :
     public tgon::Engine
 {
 public:
