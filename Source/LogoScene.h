@@ -24,8 +24,8 @@ public:
     
 /**@section Method */
 public:
-    virtual void Initialize() override;
-    virtual void Update() override;
+    void Initialize() override;
+    void Update() override;
     
 private:
     void InitializeGraphics();

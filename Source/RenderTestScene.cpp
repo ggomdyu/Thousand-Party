@@ -1,8 +1,6 @@
 #include "TGON.h"
 #include "RenderTestScene.h"
 
-#include <climits>
-
 using namespace tgon;
 
 RenderTestScene::RenderTestScene()
@@ -17,12 +15,12 @@ void RenderTestScene::Initialize()
     this->CreateCameraObject();
     this->CreateFontObjects();
 
-    auto object = std::make_shared<GameObject>("test");
-    auto spriteComponent = object->AddComponent<SpriteRendererComponent>();
-    auto sprite = std::make_shared<UISprite>(std::make_shared<Texture>("/Users/chajunho/Desktop/1.png", FilterMode::Bilinear, WrapMode::Clamp, false, false));
-    sprite->SetPivot({0.5f, 0.5f});
-    spriteComponent->SetSprite(sprite);
-    this->AddObject(object);
+//    auto object = std::make_shared<GameObject>("test");
+//    auto spriteComponent = object->AddComponent<SpriteRendererComponent>();
+//    auto sprite = std::make_shared<UISprite>(std::make_shared<Texture>("/Users/chajunho/Desktop/1.png", FilterMode::Bilinear, WrapMode::Clamp, false, false));
+//    sprite->SetPivot({0.5f, 0.5f});
+//    spriteComponent->SetSprite(sprite);
+//    this->AddObject(object);
 }
 
 void RenderTestScene::CreateCameraObject()
@@ -54,40 +52,17 @@ void RenderTestScene::Update()
 
 void RenderTestScene::CreateFontObjects()
 {
-    auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
-    std::shared_ptr<Font> font = assetModule->GetFont(u8"Resource/Fonts/malgunbd.ttf");
-
-    const char chArray[] = u8"static auto textureAtlas = TextureAtlas::Create(I32Extent2D(1024, 1024), PixelFormat::RGBA8888, 2); uiText.SetRect(I32Rect(-100, 100, 200, 200)) ";
-    static auto textureAtlas = TextureAtlas::Create(I32Extent2D(1024, 1024), PixelFormat::RGBA8888, 2);
-    for (auto ch : Encoding::UTF8().GetChars((const std::byte*)&chArray[0], strlen(chArray)))
-    {
-        const auto& glyphData = font->GetGlyphData(ch, 30);
-        textureAtlas.Insert(glyphData.ch, &glyphData.bitmap[0], glyphData.metrics.size);
-    }
+    const char chArray[] = u8"The problem is finding some way to pass the additional argument to operator new. You can't add a parenthesized argument list after the type name in the new-expression because the compiler will interpret that list as arguments to a constructor, not as arguments to an operator new. That is:";
     
-    UIText uiText;
-    uiText.SetText(chArray);
-    uiText.SetFont(u8"Resource/Fonts/malgunbd.ttf");
-    uiText.SetFontSize(30);
-    uiText.SetRect(I32Rect(-100, 100, 200, 200));
-    uiText.SetTextAlignment(TextAlignment::UpperLeft);
+    auto object = std::make_shared<GameObject>("introSprite1");
+    object->GetTransform()->SetLocalScale({1.0f, 1.0f, 1.0f});
+    object->GetTransform()->SetLocalPosition(Vector3(0.0f, 0.0f, 0.0f));
+    auto textComponent = object->AddComponent<TextRendererComponent>();
+    textComponent->SetFont(u8"Resource/Fonts/MaplestoryOTFBold.otf");
+    textComponent->SetFontSize(30);
+    textComponent->SetText(chArray);
+    textComponent->SetRect(I32Rect(-200, 100, 400, 200));
+    textComponent->SetTextAlignment(TextAlignment::MiddleCenter);
     
-    auto fontTexture = textureAtlas.GetAtlasTexture();
-    for (auto& characterInfo : uiText.GetCharacterInfos())
-    {
-        auto object = std::make_shared<GameObject>("introSprite1");
-        object->GetTransform()->SetLocalScale({1.0f, 1.0f, 1.0f});
-        object->GetTransform()->SetLocalPosition(Vector3(characterInfo.rect.x, characterInfo.rect.y, 0.0f));
-        auto spriteComponent = object->AddComponent<SpriteRendererComponent>();
-        auto sprite = std::make_shared<UISprite>(fontTexture);
-        spriteComponent->SetSprite(sprite);
-        sprite->SetTextureRect(textureAtlas.GetTextureRect(characterInfo.character));
-        sprite->SetBlendColor(Color4f(0.0f, 1.0f, 1.0f, 1.0f));
-        sprite->SetPivot({0.0f, 0.0f});
-
-        this->AddObject(object);
-        
-        float a = Random().NextDouble(0.0, 3.14159265358);
-        temp.push_back({object, a, a, object->GetTransform()->GetLocalPosition()});
-    }
+    this->AddObject(object);
 }

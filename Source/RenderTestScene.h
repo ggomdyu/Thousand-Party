@@ -24,8 +24,8 @@ public:
     
 /**@section Method */
 public:
-    virtual void Update() override;
-    virtual void Initialize() override;
+    void Update() override;
+    void Initialize() override;
     
 private:
     void CreateCameraObject();

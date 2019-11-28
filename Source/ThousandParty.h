@@ -21,16 +21,16 @@ public:
 
 /**@section Destructor */
 public:
-    virtual ~ThousandParty() override = default;
+    ~ThousandParty() override = default;
 
 /**@section Event Handler */
 public:
-    virtual void OnLaunch() override;
-    virtual void OnTerminate() override;
+    void OnLaunch() override;
+    void OnTerminate() override;
 
 /**@section Method */
 public:
-    virtual void Update() override;
+    void Update() override;
 
     void Initialize();
     void InitializeModule();

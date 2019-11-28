@@ -24,7 +24,7 @@ public:
 /**@section Method */
 public:
     void Initialize();
-    virtual void Update() override;
+    void Update() override;
     void Reset();
 
 /**@section Variable */

@@ -23,7 +23,7 @@ public:
 /**@section Method */
 public:
     void Initialize();
-    virtual void Update() override;
+    void Update() override;
     
 private:
     void InitializeSpriteComponent();
