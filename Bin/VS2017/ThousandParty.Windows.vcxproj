@@ -154,16 +154,18 @@
     <ClCompile Update="E:\Users\ggomdyu\Desktop\Programming\Git\GitHub\TGON\Bin\VS2017\TGON.Shared\..\..\..\Source\ThirdParty\freetype-2.10.0\src\base\ftftn.c">
       <FileType>CppCode</FileType>
     </ClCompile>
-    <ClCompile Include="..\..\Source\IntroScene.cpp" />
-    <ClCompile Include="..\..\Source\LogoScene.cpp" />
+    <ClCompile Include="..\..\Source\LogoScene\LogoScene.cpp" />
+    <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelectScene.cpp" />
+    <ClCompile Include="..\..\Source\MusicSelectScene\SquareBackground.cpp" />
     <ClCompile Include="..\..\Source\ThousandParty.cpp" />
     <ClCompile Include="..\..\Source\TitleScene\FireFly.cpp" />
     <ClCompile Include="..\..\Source\TitleScene\NightSky.cpp" />
     <ClCompile Include="..\..\Source\TitleScene\TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\IntroScene.h" />
-    <ClInclude Include="..\..\Source\LogoScene.h" />
+    <ClInclude Include="..\..\Source\LogoScene\LogoScene.h" />
+    <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelectScene.h" />
+    <ClInclude Include="..\..\Source\MusicSelectScene\SquareBackground.h" />
     <ClInclude Include="..\..\Source\ThousandParty.h" />
     <ClInclude Include="..\..\Source\TitleScene\FireFly.h" />
     <ClInclude Include="..\..\Source\TitleScene\NightSky.h" />

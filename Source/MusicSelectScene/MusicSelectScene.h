@@ -9,6 +9,13 @@
 
 #include "Game/Scene.h"
 
+namespace tgon
+{
+
+class GameObject;
+
+} /* namespace tgon */
+
 class MusicSelectScene :
     public tgon::Scene
 {
@@ -29,4 +36,6 @@ private:
     
 /**@section Variable */
 private:
+    std::shared_ptr<tgon::GameObject> m_musicText;
+    std::shared_ptr<tgon::GameObject> m_selectText;
 };

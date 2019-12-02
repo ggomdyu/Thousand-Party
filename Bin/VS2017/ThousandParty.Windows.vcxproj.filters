@@ -7,15 +7,15 @@
     <Filter Include="Source\TitleScene">
       <UniqueIdentifier>{0fe80c24-48ef-4f12-83b5-a921b9696ba8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\MusicSelectScene">
+      <UniqueIdentifier>{e987797e-ceba-42fe-9a58-b71bb359548b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\LogoScene">
+      <UniqueIdentifier>{0e5a739e-e3b2-4f3b-b850-95a4846ce495}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\ThousandParty.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\IntroScene.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\LogoScene.h">
       <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\TitleScene\NightSky.h">
@@ -27,15 +27,18 @@
     <ClInclude Include="..\..\Source\TitleScene\FireFly.h">
       <Filter>Source\TitleScene</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelectScene.h">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\MusicSelectScene\SquareBackground.h">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LogoScene\LogoScene.h">
+      <Filter>Source\LogoScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ThousandParty.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\IntroScene.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\LogoScene.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\TitleScene\TitleScene.cpp">
@@ -46,6 +49,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\TitleScene\NightSky.cpp">
       <Filter>Source\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MusicSelectScene\SquareBackground.cpp">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelectScene.cpp">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LogoScene\LogoScene.cpp">
+      <Filter>Source\LogoScene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -22,7 +22,7 @@ void SquareBackground::InitializeSpriteComponent()
 
 void SquareBackground::InitializePosition()
 {
-    auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     auto objectPos = tgon::Vector3(0.0f, 0.0f, 0.0f);
     this->GetTransform()->SetLocalPosition(objectPos);
 }
@@ -33,9 +33,9 @@ void SquareBackground::Update()
 
     auto transform = this->GetTransform();
     
-    auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
-    float halfWindowWidth = windowSize.width * 0.5f;
-    float halfWindowHeight = windowSize.height * 0.5f;
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
+    float halfWindowWidth = clientSize.width * 0.5f;
+    float halfWindowHeight = clientSize.height * 0.5f;
     auto newPos = transform->GetLocalPosition();
     if (newPos.x <= -halfWindowWidth + -419.0f)
     {

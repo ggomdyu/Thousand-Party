@@ -1,8 +1,9 @@
 #include "PrecompiledHeader.h"
 
+#include "../MusicSelectScene/MusicSelectScene.h"
+
 #include "TGON.h"
 #include "TitleScene.h"
-#include "MusicSelectScene.h"
 #include "FireFly.h"
 #include "NightSky.h"
 
@@ -57,9 +58,9 @@ void TitleScene::CreateSpriteObjects()
         u8"Resource/UI/Common/FadeInOut.png",
     };
     
-    auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
-    float halfWindowWidth = windowSize.width * 0.5f;
-    float halfWindowHeight = windowSize.height * 0.5f;
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
+    float halfWindowWidth = clientSize.width * 0.5f;
+    float halfWindowHeight = clientSize.height * 0.5f;
     tgon::Vector3 texturePosList[] =
     {
         tgon::Vector3(-halfWindowWidth + 640.0f, halfWindowHeight - 360.0f, 0.0f),

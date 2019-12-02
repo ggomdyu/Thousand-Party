@@ -24,7 +24,6 @@ void NightSky::InitializeSpriteComponent()
 
 void NightSky::InitializePosition()
 {
-    auto windowSize = Application::GetRootWindow()->GetClientSize();
     auto objectPos = Vector3(0.0f, 0.0f, 0.0f);
     this->GetTransform()->SetLocalPosition(objectPos);
 }
@@ -35,9 +34,9 @@ void NightSky::Update()
 
     auto transform = this->GetTransform();
     
-    auto windowSize = Application::GetRootWindow()->GetClientSize();
-    float halfWindowWidth = windowSize.width * 0.5f;
-    float halfWindowHeight = windowSize.height * 0.5f;
+    auto clientSize = Application::GetRootWindow()->GetClientSize();
+    float halfWindowWidth = clientSize.width * 0.5f;
+    float halfWindowHeight = clientSize.height * 0.5f;
     auto nightSkyNewPos = transform->GetLocalPosition();
     if (nightSkyNewPos.x <= -halfWindowWidth + -419.0f)
     {

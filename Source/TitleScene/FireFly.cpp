@@ -12,11 +12,11 @@ FireFly::FireFly(const tgon::StringHash& name) :
 
 void FireFly::Initialize()
 {
-    auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     auto transform = this->GetComponent<tgon::Transform>();
     auto scale = static_cast<float>(tgon::Random().NextDouble(0.3, 1.0));
     transform->SetLocalScale(tgon::Vector3(scale, scale, 1.0f));
-    transform->SetLocalPosition(tgon::Vector3(static_cast<float>(tgon::Random().NextDouble(-windowSize.width / 2, windowSize.width / 2)), static_cast<float>(tgon::Random().NextDouble(-windowSize.height / 2 - 80.0f, windowSize.height / 2)), 0.0f));
+    transform->SetLocalPosition(tgon::Vector3(static_cast<float>(tgon::Random().NextDouble(-clientSize.width / 2, clientSize.width / 2)), static_cast<float>(tgon::Random().NextDouble(-clientSize.height / 2 - 80.0f, clientSize.height / 2)), 0.0f));
     
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     m_spriteRendererComponent = this->AddComponent<tgon::SpriteRendererComponent>();
