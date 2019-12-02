@@ -1,9 +1,9 @@
 #include "PrecompiledHeader.h"
 
+#include "LogoScene/LogoScene.h"
+
 #include "TGON.h"
 #include "ThousandParty.h"
-#include "LogoScene.h"
-#include "RenderTestScene.h"
 
 TGON_DECLARE_ENGINE(ThousandParty);
 
@@ -12,7 +12,6 @@ using namespace tgon;
 void ThousandParty::OnLaunch()
 {
     SuperType::OnLaunch();
-
     this->Initialize();
 }
 
@@ -58,7 +57,8 @@ void ThousandParty::InitializeModule()
     // Etc
     this->RegisterModule<AssetModule>();
     this->RegisterModule<TimeModule>();
+    this->RegisterModule<TimerModule>();
     this->RegisterModule<TaskModule>();
-    this->RegisterModule<SceneModule>()->ChangeScene<RenderTestScene>();
-//    this->RegisterModule<SceneModule>()->ChangeScene<LogoScene>();
+//    this->RegisterModule<SceneModule>()->ChangeScene<RenderTestScene>();
+    this->RegisterModule<SceneModule>()->ChangeScene<LogoScene>();
 }

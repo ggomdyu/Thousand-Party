@@ -1,9 +1,4 @@
-#include "Platform/Application.h"
-#include "Graphics/Texture.h"
-#include "Engine/AssetModule.h"
-#include "IO/Path.h"
-#include "Component/SpriteRendererComponent.h"
-
+#include "TGON.h"
 #include "NightSky.h"
 
 using namespace tgon;
@@ -23,16 +18,13 @@ void NightSky::Initialize()
 void NightSky::InitializeSpriteComponent()
 {
     auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
-    auto texture = assetModule->GetTexture(u8"Resource/Backgrounds/TitleScene/nightSky.png");
-    auto sprite = std::make_shared<UISprite>(texture);
-    this->AddComponent<SpriteRendererComponent>(sprite);
+    auto spriteRendererComponent = this->AddComponent<SpriteRendererComponent>();
+    spriteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Backgrounds/TitleScene/nightSky.png"));
 }
 
 void NightSky::InitializePosition()
 {
     auto windowSize = Application::GetRootWindow()->GetClientSize();
-    float halfWindowWidth = windowSize.width * 0.5f;
-    float halfWindowHeight = windowSize.height * 0.5f;
     auto objectPos = Vector3(0.0f, 0.0f, 0.0f);
     this->GetTransform()->SetLocalPosition(objectPos);
 }

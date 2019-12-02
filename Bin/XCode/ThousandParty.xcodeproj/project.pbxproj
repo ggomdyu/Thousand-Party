@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C144A6E235C83810021BBAA /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C144A68235C83810021BBAA /* TitleScene.cpp */; };
-		8C144A6F235C83810021BBAA /* FireFly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C144A69235C83810021BBAA /* FireFly.cpp */; };
-		8C144A70235C83810021BBAA /* NightSky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C144A6A235C83810021BBAA /* NightSky.cpp */; };
-		8CF8A140234A425600763883 /* ThousandParty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8A13C234A425600763883 /* ThousandParty.cpp */; };
-		8CF8A141234A425600763883 /* LogoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8A13E234A425600763883 /* LogoScene.cpp */; };
-		8CFFD4342375B2A700B5651D /* RenderTestScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFD4322375B2A700B5651D /* RenderTestScene.cpp */; };
+		8C3DA39723929311004A24E4 /* MusicSelectScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA38823929310004A24E4 /* MusicSelectScene.cpp */; };
+		8C3DA39823929311004A24E4 /* NightSky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA38A23929310004A24E4 /* NightSky.cpp */; };
+		8C3DA39923929311004A24E4 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA38C23929310004A24E4 /* TitleScene.cpp */; };
+		8C3DA39A23929311004A24E4 /* FireFly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA38E23929310004A24E4 /* FireFly.cpp */; };
+		8C3DA39B23929311004A24E4 /* ThousandParty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA39023929311004A24E4 /* ThousandParty.cpp */; };
+		8C3DA39C23929311004A24E4 /* RenderTestScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA39323929311004A24E4 /* RenderTestScene.cpp */; };
+		8C3DA39D23929311004A24E4 /* LogoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA39623929311004A24E4 /* LogoScene.cpp */; };
+		8C3DA3A6239566B6004A24E4 /* SquareBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */; };
 		FD515BDE20B46FAD0002F5C3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD06734B20B42CAA00BEA737 /* OpenAL.framework */; };
 		FD8D58712196D24200983A4A /* libTGON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8D58702196D24200983A4A /* libTGON.a */; };
 		FDBF76B120C1A40400A9207F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF76B020C1A40300A9207F /* IOKit.framework */; };
@@ -34,19 +36,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8C144A68235C83810021BBAA /* TitleScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = TitleScene.cpp; path = ../../Source/TitleScene/TitleScene.cpp; sourceTree = "<group>"; };
-		8C144A69235C83810021BBAA /* FireFly.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = FireFly.cpp; path = ../../Source/TitleScene/FireFly.cpp; sourceTree = "<group>"; };
-		8C144A6A235C83810021BBAA /* NightSky.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = NightSky.cpp; path = ../../Source/TitleScene/NightSky.cpp; sourceTree = "<group>"; };
-		8C144A6B235C83810021BBAA /* FireFly.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = FireFly.h; path = ../../Source/TitleScene/FireFly.h; sourceTree = "<group>"; };
-		8C144A6C235C83810021BBAA /* NightSky.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = NightSky.h; path = ../../Source/TitleScene/NightSky.h; sourceTree = "<group>"; };
-		8C144A6D235C83810021BBAA /* TitleScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = TitleScene.h; path = ../../Source/TitleScene/TitleScene.h; sourceTree = "<group>"; };
+		8C3DA38523929310004A24E4 /* ThousandParty.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = ThousandParty.h; path = ../../Source/ThousandParty.h; sourceTree = "<group>"; };
+		8C3DA38723929310004A24E4 /* MusicSelectScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = MusicSelectScene.h; sourceTree = "<group>"; };
+		8C3DA38823929310004A24E4 /* MusicSelectScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MusicSelectScene.cpp; sourceTree = "<group>"; };
+		8C3DA38A23929310004A24E4 /* NightSky.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = NightSky.cpp; sourceTree = "<group>"; };
+		8C3DA38B23929310004A24E4 /* NightSky.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = NightSky.h; sourceTree = "<group>"; };
+		8C3DA38C23929310004A24E4 /* TitleScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = TitleScene.cpp; sourceTree = "<group>"; };
+		8C3DA38D23929310004A24E4 /* TitleScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = TitleScene.h; sourceTree = "<group>"; };
+		8C3DA38E23929310004A24E4 /* FireFly.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = FireFly.cpp; sourceTree = "<group>"; };
+		8C3DA38F23929310004A24E4 /* FireFly.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = FireFly.h; sourceTree = "<group>"; };
+		8C3DA39023929311004A24E4 /* ThousandParty.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ThousandParty.cpp; path = ../../Source/ThousandParty.cpp; sourceTree = "<group>"; };
+		8C3DA39223929311004A24E4 /* RenderTestScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = RenderTestScene.h; sourceTree = "<group>"; };
+		8C3DA39323929311004A24E4 /* RenderTestScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = RenderTestScene.cpp; sourceTree = "<group>"; };
+		8C3DA39523929311004A24E4 /* LogoScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = LogoScene.h; sourceTree = "<group>"; };
+		8C3DA39623929311004A24E4 /* LogoScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = LogoScene.cpp; sourceTree = "<group>"; };
+		8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = SquareBackground.cpp; sourceTree = "<group>"; };
+		8C3DA3A5239566B6004A24E4 /* SquareBackground.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = SquareBackground.h; sourceTree = "<group>"; };
 		8CD34BD2234CDAAD008338EC /* ThousandParty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ThousandParty; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CF8A139234A425600763883 /* LogoScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = LogoScene.h; path = ../../Source/LogoScene.h; sourceTree = "<group>"; };
-		8CF8A13B234A425600763883 /* ThousandParty.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = ThousandParty.h; path = ../../Source/ThousandParty.h; sourceTree = "<group>"; };
-		8CF8A13C234A425600763883 /* ThousandParty.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ThousandParty.cpp; path = ../../Source/ThousandParty.cpp; sourceTree = "<group>"; };
-		8CF8A13E234A425600763883 /* LogoScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = LogoScene.cpp; path = ../../Source/LogoScene.cpp; sourceTree = "<group>"; };
-		8CFFD4322375B2A700B5651D /* RenderTestScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = RenderTestScene.cpp; path = ../../Source/RenderTestScene.cpp; sourceTree = "<group>"; };
-		8CFFD4332375B2A700B5651D /* RenderTestScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = RenderTestScene.h; path = ../../Source/RenderTestScene.h; sourceTree = "<group>"; };
 		FD06734B20B42CAA00BEA737 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		FD8D58702196D24200983A4A /* libTGON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTGON.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBF76B020C1A40300A9207F /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -73,37 +79,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8C144A67235C83530021BBAA /* TitleScene */ = {
+		8C3DA38423929307004A24E4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8C144A69235C83810021BBAA /* FireFly.cpp */,
-				8C144A6B235C83810021BBAA /* FireFly.h */,
-				8C144A6A235C83810021BBAA /* NightSky.cpp */,
-				8C144A6C235C83810021BBAA /* NightSky.h */,
-				8C144A68235C83810021BBAA /* TitleScene.cpp */,
-				8C144A6D235C83810021BBAA /* TitleScene.h */,
+				8C3DA39423929311004A24E4 /* LogoScene */,
+				8C3DA38623929310004A24E4 /* MusicSelectScene */,
+				8C3DA39123929311004A24E4 /* TestScene */,
+				8C3DA39023929311004A24E4 /* ThousandParty.cpp */,
+				8C3DA38523929310004A24E4 /* ThousandParty.h */,
+				8C3DA38923929310004A24E4 /* TitleScene */,
 			);
-			name = TitleScene;
+			name = Sources;
 			sourceTree = "<group>";
 		};
-		8CF8A138234A424700763883 /* Source */ = {
+		8C3DA38623929310004A24E4 /* MusicSelectScene */ = {
 			isa = PBXGroup;
 			children = (
-				8C144A67235C83530021BBAA /* TitleScene */,
-				8CF8A13E234A425600763883 /* LogoScene.cpp */,
-				8CF8A139234A425600763883 /* LogoScene.h */,
-				8CFFD4322375B2A700B5651D /* RenderTestScene.cpp */,
-				8CFFD4332375B2A700B5651D /* RenderTestScene.h */,
-				8CF8A13C234A425600763883 /* ThousandParty.cpp */,
-				8CF8A13B234A425600763883 /* ThousandParty.h */,
+				8C3DA38823929310004A24E4 /* MusicSelectScene.cpp */,
+				8C3DA38723929310004A24E4 /* MusicSelectScene.h */,
+				8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */,
+				8C3DA3A5239566B6004A24E4 /* SquareBackground.h */,
 			);
-			name = Source;
+			name = MusicSelectScene;
+			path = ../../Source/MusicSelectScene;
+			sourceTree = "<group>";
+		};
+		8C3DA38923929310004A24E4 /* TitleScene */ = {
+			isa = PBXGroup;
+			children = (
+				8C3DA38A23929310004A24E4 /* NightSky.cpp */,
+				8C3DA38B23929310004A24E4 /* NightSky.h */,
+				8C3DA38C23929310004A24E4 /* TitleScene.cpp */,
+				8C3DA38D23929310004A24E4 /* TitleScene.h */,
+				8C3DA38E23929310004A24E4 /* FireFly.cpp */,
+				8C3DA38F23929310004A24E4 /* FireFly.h */,
+			);
+			name = TitleScene;
+			path = ../../Source/TitleScene;
+			sourceTree = "<group>";
+		};
+		8C3DA39123929311004A24E4 /* TestScene */ = {
+			isa = PBXGroup;
+			children = (
+				8C3DA39323929311004A24E4 /* RenderTestScene.cpp */,
+				8C3DA39223929311004A24E4 /* RenderTestScene.h */,
+			);
+			name = TestScene;
+			path = ../../Source/TestScene;
+			sourceTree = "<group>";
+		};
+		8C3DA39423929311004A24E4 /* LogoScene */ = {
+			isa = PBXGroup;
+			children = (
+				8C3DA39623929311004A24E4 /* LogoScene.cpp */,
+				8C3DA39523929311004A24E4 /* LogoScene.h */,
+			);
+			name = LogoScene;
+			path = ../../Source/LogoScene;
 			sourceTree = "<group>";
 		};
 		FDD7C8BE1F654342000EB7C8 = {
 			isa = PBXGroup;
 			children = (
-				8CF8A138234A424700763883 /* Source */,
 				FDD7C8EE1F6586D5000EB7C8 /* Frameworks */,
 				8CD34BD2234CDAAD008338EC /* ThousandParty */,
 			);
@@ -112,6 +149,7 @@
 		FDD7C8EE1F6586D5000EB7C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C3DA38423929307004A24E4 /* Sources */,
 				FD8D58702196D24200983A4A /* libTGON.a */,
 				FDBF76B020C1A40300A9207F /* IOKit.framework */,
 				FD06734B20B42CAA00BEA737 /* OpenAL.framework */,
@@ -181,12 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CFFD4342375B2A700B5651D /* RenderTestScene.cpp in Sources */,
-				8CF8A140234A425600763883 /* ThousandParty.cpp in Sources */,
-				8CF8A141234A425600763883 /* LogoScene.cpp in Sources */,
-				8C144A6E235C83810021BBAA /* TitleScene.cpp in Sources */,
-				8C144A70235C83810021BBAA /* NightSky.cpp in Sources */,
-				8C144A6F235C83810021BBAA /* FireFly.cpp in Sources */,
+				8C3DA39C23929311004A24E4 /* RenderTestScene.cpp in Sources */,
+				8C3DA39823929311004A24E4 /* NightSky.cpp in Sources */,
+				8C3DA39A23929311004A24E4 /* FireFly.cpp in Sources */,
+				8C3DA39D23929311004A24E4 /* LogoScene.cpp in Sources */,
+				8C3DA39723929311004A24E4 /* MusicSelectScene.cpp in Sources */,
+				8C3DA39923929311004A24E4 /* TitleScene.cpp in Sources */,
+				8C3DA3A6239566B6004A24E4 /* SquareBackground.cpp in Sources */,
+				8C3DA39B23929311004A24E4 /* ThousandParty.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

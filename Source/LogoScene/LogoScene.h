@@ -8,9 +8,15 @@
 #include <memory>
 
 #include "Game/Scene.h"
-#include "Component/SpriteRendererComponent.h"
-#include "Engine/InputModule.h"
-#include "Engine/TimeModule.h"
+
+namespace tgon
+{
+
+class InputModule;
+class TimeModule;
+class SpriteRendererComponent;
+
+} /* namespace tgon */
 
 class LogoScene :
     public tgon::Scene
@@ -31,8 +37,7 @@ private:
     void InitializeGraphics();
     void CreateGameObjects();
     void CreateCameraObject();
-    void CreateUIObject();
-    
+    void CreateSpriteObject();
     void OnHandleInput();
 
 /**@section Variable */
@@ -40,5 +45,5 @@ private:
     int64_t m_beginTime;
     std::shared_ptr<tgon::InputModule> m_inputModule;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
-    std::shared_ptr<tgon::UISprite> m_logoImages[4];
+    std::shared_ptr<tgon::SpriteRendererComponent> m_logoSpriteRendererComponents[4];
 };

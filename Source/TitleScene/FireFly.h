@@ -33,6 +33,5 @@ private:
     bool m_needToIncreaseOpacity;
     float m_opacityAdjustSpeed;
     float m_moveSpeed;
-    std::shared_ptr<tgon::UISprite> m_sprite;
     std::shared_ptr<tgon::SpriteRendererComponent> m_spriteRendererComponent;
 };

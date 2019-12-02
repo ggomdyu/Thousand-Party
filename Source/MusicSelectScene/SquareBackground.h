@@ -1,13 +1,14 @@
 /**
- * @file    NightSky.h
+ * @file    SquareBackground.h
  * @author  ggomdyu
- * @since   10/20/2019
+ * @since   12/03/2019
  */
 
 #pragma once
 #include <memory>
 
 #include "Game/GameObject.h"
+
 
 namespace tgon
 {
@@ -16,15 +17,15 @@ class TimeModule;
 
 } /* namespace tgon */
 
-class NightSky :
+class SquareBackground :
     public tgon::GameObject
 {
 public:
-    TGON_DECLARE_RTTI(NightSky)
+    TGON_DECLARE_RTTI(SquareBackground)
 
 /**@section Constructor */
 public:
-    NightSky();
+    SquareBackground();
     
 /**@section Method */
 public:
@@ -34,7 +35,7 @@ public:
 private:
     void InitializeSpriteComponent();
     void InitializePosition();
-    
+
 /**@section Variable */
 private:
     std::shared_ptr<tgon::TimeModule> m_timeModule;

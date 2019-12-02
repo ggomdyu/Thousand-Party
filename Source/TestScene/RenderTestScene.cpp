@@ -58,7 +58,7 @@ void RenderTestScene::CreateFontObjects()
     object->GetTransform()->SetLocalScale({1.0f, 1.0f, 1.0f});
     object->GetTransform()->SetLocalPosition(Vector3(0.0f, 0.0f, 0.0f));
     auto textComponent = object->AddComponent<TextRendererComponent>();
-    textComponent->SetFont(u8"Resource/Fonts/MaplestoryOTFBold.otf");
+    textComponent->SetFontAtlas(u8"Resource/Fonts/MaplestoryOTFBold.otf");
     textComponent->SetFontSize(30);
     textComponent->SetText(chArray);
     textComponent->SetRect(I32Rect(-200, 100, 400, 200));
