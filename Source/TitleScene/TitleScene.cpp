@@ -13,22 +13,34 @@ TitleScene::TitleScene()
 
 void TitleScene::Update()
 {
-    SuperType::Update();
+    Super::Update();
 
     this->OnHandleInput();
-
-    auto blendColor = m_fadeInSpriteRendererComponent->GetBlendColor();
-    blendColor.a -= 1.0f * m_timeModule->GetTickTime();
-    m_fadeInSpriteRendererComponent->SetBlendColor(blendColor);
 }
 
 void TitleScene::Initialize()
 {
-    m_inputModule = tgon::Application::GetEngine()->FindModule<tgon::InputModule>();
-    m_timeModule = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>();
+    auto engine = tgon::Application::GetEngine();
+    auto timerModule = engine->FindModule<tgon::TimerModule>();
+    auto timeModule = engine->FindModule<tgon::TimeModule>();
+    
+    m_inputModule = engine->FindModule<tgon::InputModule>();
+    m_fadeInImageTimerHandle = timerModule->SetTimer([&, timerModule = std::move(timerModule), timeModule = std::move(timeModule)]()
+    {
+        auto blendColor = m_fadeInSpriteRendererComponent->GetBlendColor();
+        if (blendColor.a <= 0.0f)
+        {
+            timerModule->ClearTimer(m_fadeInImageTimerHandle);
+            m_fadeInImageTimerHandle = {};
+            return;
+        }
+        
+        blendColor.a = std::max(0.0f, blendColor.a - 1.0f * timeModule->GetTickTime());
+        m_fadeInSpriteRendererComponent->SetBlendColor(blendColor);
+    }, 0.0f, true);
     
     this->InitializeGraphics();
-    
+    this->CreateNightSkyObject();
     this->CreateSpriteObjects();
     this->CreateTextObjects();
     this->CreateFireFlyObjects();
@@ -36,18 +48,19 @@ void TitleScene::Initialize()
 
 void TitleScene::InitializeGraphics()
 {
-    auto engine = tgon::Application::GetInstance().GetEngine();
-    
-    auto graphicsModule = engine->FindModule<tgon::GraphicsModule>();
+    auto graphicsModule = tgon::Application::GetEngine()->FindModule<tgon::GraphicsModule>();
     graphicsModule->GetGraphics().DisableDepthTest();
 }
 
-void TitleScene::CreateSpriteObjects()
+void TitleScene::CreateNightSkyObject()
 {
     auto nightSky = std::make_shared<NightSky>();
     nightSky->Initialize();
     this->AddObject(nightSky);
+}
 
+void TitleScene::CreateSpriteObjects()
+{
     std::string_view texturePathList[] =
     {
         u8"Resource/Backgrounds/TitleScene/star.png",
@@ -76,6 +89,7 @@ void TitleScene::CreateSpriteObjects()
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
         auto object = std::make_shared<tgon::GameObject>(tgon::Path::GetFileNameWithoutExtension(texturePathList[i]));
+        object->Initialize();
         object->GetTransform()->SetLocalPosition(texturePosList[i]);
         
         auto spriteRendererComponent = object->AddComponent<tgon::SpriteRendererComponent>();
@@ -95,6 +109,7 @@ void TitleScene::CreateTextObjects()
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
     
     auto object = std::make_shared<tgon::GameObject>("introSprite1");
+    object->Initialize();
     object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 30.0f, -windowSize.height / 2 + 140.0f, 0.0f));
     
     auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
@@ -121,7 +136,7 @@ void TitleScene::CreateFireFlyObjects()
 void TitleScene::OnHandleInput()
 {
     auto keyboard = m_inputModule->GetKeyboard();
-    if (keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return))
+    if (m_fadeInImageTimerHandle.IsValid() == false && keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return))
     {
         auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
         sceneModule->ChangeScene<MusicSelectScene>();

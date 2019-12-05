@@ -43,7 +43,7 @@ void FireFly::Reset()
 
 void FireFly::Update()
 {
-    SuperType::Update();
+    Super::Update();
 
     auto tickTime = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()->GetTickTime();
 

@@ -9,7 +9,6 @@
 
 #include "Game/GameObject.h"
 
-
 namespace tgon
 {
 

@@ -39,6 +39,7 @@ private:
     void CreateCameraObject();
     void CreateSpriteObject();
     void OnHandleInput();
+    void PreloadResources();
 
 /**@section Variable */
 private:

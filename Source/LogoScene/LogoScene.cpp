@@ -11,15 +11,15 @@ LogoScene::LogoScene()
 
 void LogoScene::Update()
 {
-    SuperType::Update();
+    Super::Update();
     
     this->OnHandleInput();
 
     auto elapsedTime = tgon::Environment::GetTickCount() - m_beginTime;
     if (elapsedTime >= 8500)
     {
-        auto gameSceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
-        gameSceneModule->ChangeScene<TitleScene>();
+        auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
+        sceneModule->ChangeScene<TitleScene>();
     }
     else if (elapsedTime >= 7500)
     {
@@ -72,12 +72,13 @@ void LogoScene::Update()
 
 void LogoScene::Initialize()
 {
-    this->InitializeGraphics();
-    this->CreateGameObjects();
-
     m_beginTime = tgon::Environment::GetTickCount();
     m_inputModule = tgon::Application::GetEngine()->FindModule<tgon::InputModule>();
     m_timeModule = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>();
+    
+    this->InitializeGraphics();
+    this->CreateGameObjects();
+    this->PreloadResources();
 }
 
 void LogoScene::InitializeGraphics()
@@ -111,6 +112,7 @@ void LogoScene::CreateSpriteObject()
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
         auto object = std::make_shared<tgon::GameObject>(tgon::StringHash(std::to_string(i)));
+        object->Initialize();
         m_logoSpriteRendererComponents[i] = object->AddComponent<tgon::SpriteRendererComponent>();
         m_logoSpriteRendererComponents[i]->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f));
         m_logoSpriteRendererComponents[i]->SetTexture(std::make_shared<tgon::Texture>(texturePathList[i], tgon::FilterMode::Bilinear, tgon::WrapMode::Repeat, true, false));
@@ -148,6 +150,29 @@ void LogoScene::OnHandleInput()
         else
         {
             m_beginTime -= 1000 - elapsedTime;
+        }
+    }
+}
+
+void LogoScene::PreloadResources()
+{
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    
+    auto noteDirectories = tgon::Directory::GetDirectories("Note");
+    for (const auto& directory : noteDirectories)
+    {
+        auto pngCoverPath = directory + "/cover.png";
+        if (tgon::File::Exists(pngCoverPath.c_str()))
+        {
+            assetModule->GetTexture(pngCoverPath);
+            continue;
+        }
+        
+        auto jpgCoverPath = directory + "/cover.jpg";
+        if (tgon::File::Exists(jpgCoverPath.c_str()))
+        {
+            assetModule->GetTexture(jpgCoverPath);
+            continue;
         }
     }
 }

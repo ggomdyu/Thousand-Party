@@ -28,7 +28,7 @@ public:
     
 /**@section Method */
 public:
-    void Initialize();
+    void Initialize() override;
     void Update() override;
     
 private:

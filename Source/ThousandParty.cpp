@@ -9,30 +9,25 @@ TGON_DECLARE_ENGINE(ThousandParty);
 
 using namespace tgon;
 
-void ThousandParty::OnLaunch()
+void ThousandParty::Initialize()
 {
-    SuperType::OnLaunch();
-    this->Initialize();
-}
-
-void ThousandParty::OnTerminate()
-{
-    SuperType::OnTerminate();
+    Super::Initialize();
+    
+    this->InitializeModule();
 }
 
 void ThousandParty::Update()
 {
-    SuperType::Update();
-}
-
-void ThousandParty::Initialize()
-{
-    this->InitializeModule();
+    Super::Update();
 }
 
 void ThousandParty::InitializeModule()
 {
-    // Input Module
+    this->AddModule<AssetModule>();
+    this->AddModule<TimeModule>();
+    this->AddModule<TimerModule>();
+    this->AddModule<TaskModule>();
+    
     decltype(auto) rootWindow = Application::GetInstance().GetRootWindow();
     InputMode inputMode;
     {
@@ -40,9 +35,8 @@ void ThousandParty::InitializeModule()
         inputMode.isUseKeyboard = true;
         inputMode.isUseGamepad = false;
     }
-    this->RegisterModule<InputModule>(*rootWindow, inputMode);
-
-    // Graphics Module
+    this->AddModule<InputModule>(*rootWindow, inputMode);
+    
     VideoMode videoMode;
     {
         videoMode.clearColor = Color4f(1.0f, 1.0f, 1.0f, 1.0f);
@@ -51,14 +45,7 @@ void ThousandParty::InitializeModule()
         videoMode.enableVerticalSync = false;
         videoMode.enableMultiSampling = false;
     };
-    auto graphicsModule = this->RegisterModule<GraphicsModule>(*rootWindow, videoMode);
-    graphicsModule->GetUIRenderer().SetMaxSortingLayer(5);
+    this->AddModule<GraphicsModule>(*rootWindow, videoMode)->GetUIRenderer().SetMaxSortingLayer(5);
     
-    // Etc
-    this->RegisterModule<AssetModule>();
-    this->RegisterModule<TimeModule>();
-    this->RegisterModule<TimerModule>();
-    this->RegisterModule<TaskModule>();
-//    this->RegisterModule<SceneModule>()->ChangeScene<RenderTestScene>();
-    this->RegisterModule<SceneModule>()->ChangeScene<LogoScene>();
+    this->AddModule<SceneModule>()->ChangeScene<LogoScene>();
 }

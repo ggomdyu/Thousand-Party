@@ -13,6 +13,7 @@ namespace tgon
 {
 
 class GameObject;
+class TimeModule;
 
 } /* namespace tgon */
 
@@ -33,9 +34,12 @@ public:
     
 private:
     void CreateSpriteObjects();
+    void CreateSquareBackgroundObject();
+    void CreateMusicSelectorObject();
     
 /**@section Variable */
 private:
     std::shared_ptr<tgon::GameObject> m_musicText;
     std::shared_ptr<tgon::GameObject> m_selectText;
+    std::shared_ptr<tgon::TimeModule> m_timeModule;
 };

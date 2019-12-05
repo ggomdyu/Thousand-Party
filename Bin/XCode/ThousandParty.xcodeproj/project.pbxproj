@@ -15,6 +15,7 @@
 		8C3DA39C23929311004A24E4 /* RenderTestScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA39323929311004A24E4 /* RenderTestScene.cpp */; };
 		8C3DA39D23929311004A24E4 /* LogoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA39623929311004A24E4 /* LogoScene.cpp */; };
 		8C3DA3A6239566B6004A24E4 /* SquareBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */; };
+		8C3DA3A923963425004A24E4 /* MusicSelector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA3A723963424004A24E4 /* MusicSelector.cpp */; };
 		FD515BDE20B46FAD0002F5C3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD06734B20B42CAA00BEA737 /* OpenAL.framework */; };
 		FD8D58712196D24200983A4A /* libTGON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8D58702196D24200983A4A /* libTGON.a */; };
 		FDBF76B120C1A40400A9207F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF76B020C1A40300A9207F /* IOKit.framework */; };
@@ -52,6 +53,8 @@
 		8C3DA39623929311004A24E4 /* LogoScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = LogoScene.cpp; sourceTree = "<group>"; };
 		8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = SquareBackground.cpp; sourceTree = "<group>"; };
 		8C3DA3A5239566B6004A24E4 /* SquareBackground.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = SquareBackground.h; sourceTree = "<group>"; };
+		8C3DA3A723963424004A24E4 /* MusicSelector.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MusicSelector.cpp; sourceTree = "<group>"; };
+		8C3DA3A823963425004A24E4 /* MusicSelector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = MusicSelector.h; sourceTree = "<group>"; };
 		8CD34BD2234CDAAD008338EC /* ThousandParty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ThousandParty; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD06734B20B42CAA00BEA737 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		FD8D58702196D24200983A4A /* libTGON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTGON.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +102,8 @@
 				8C3DA38723929310004A24E4 /* MusicSelectScene.h */,
 				8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */,
 				8C3DA3A5239566B6004A24E4 /* SquareBackground.h */,
+				8C3DA3A723963424004A24E4 /* MusicSelector.cpp */,
+				8C3DA3A823963425004A24E4 /* MusicSelector.h */,
 			);
 			name = MusicSelectScene;
 			path = ../../Source/MusicSelectScene;
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C3DA39C23929311004A24E4 /* RenderTestScene.cpp in Sources */,
+				8C3DA3A923963425004A24E4 /* MusicSelector.cpp in Sources */,
 				8C3DA39823929311004A24E4 /* NightSky.cpp in Sources */,
 				8C3DA39A23929311004A24E4 /* FireFly.cpp in Sources */,
 				8C3DA39D23929311004A24E4 /* LogoScene.cpp in Sources */,

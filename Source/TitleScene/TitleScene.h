@@ -8,6 +8,7 @@
 #include <memory>
 
 #include "Game/Scene.h"
+#include "Engine/TimerHandle.h"
 
 namespace tgon
 {
@@ -35,6 +36,7 @@ public:
     
 private:
     void InitializeGraphics();
+    void CreateNightSkyObject();
     void CreateSpriteObjects();
     void CreateTextObjects();
     void CreateFireFlyObjects();
@@ -43,6 +45,6 @@ private:
 /**@section Variable */
 private:
     std::shared_ptr<tgon::InputModule> m_inputModule;
-    std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::SpriteRendererComponent> m_fadeInSpriteRendererComponent;
+    tgon::TimerHandle m_fadeInImageTimerHandle;
 };

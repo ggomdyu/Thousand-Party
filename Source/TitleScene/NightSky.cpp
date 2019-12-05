@@ -30,7 +30,7 @@ void NightSky::InitializePosition()
 
 void NightSky::Update()
 {
-    SuperType::Update();
+    Super::Update();
 
     auto transform = this->GetTransform();
     

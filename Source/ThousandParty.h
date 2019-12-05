@@ -19,19 +19,9 @@ public:
 public:
     ThousandParty() {}
 
-/**@section Destructor */
-public:
-    ~ThousandParty() override = default;
-
-/**@section Event Handler */
-public:
-    void OnLaunch() override;
-    void OnTerminate() override;
-
 /**@section Method */
 public:
+    void Initialize() override;
     void Update() override;
-
-    void Initialize();
     void InitializeModule();
 };
