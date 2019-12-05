@@ -104,8 +104,8 @@ void LogoScene::CreateSpriteObject()
 {
     const char* texturePathList[] =
     {
-        u8"Resource/Backgrounds/IntroScene/Team_logo.png",
-        u8"Resource/Backgrounds/IntroScene/ON_logo.png",
+        u8"Resource/Background/IntroScene/Team_logo.png",
+        u8"Resource/Background/IntroScene/ON_logo.png",
         u8"Resource/UI/Common/FadeInOut.png",
     };
 

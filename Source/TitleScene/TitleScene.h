@@ -46,5 +46,7 @@ private:
 private:
     std::shared_ptr<tgon::InputModule> m_inputModule;
     std::shared_ptr<tgon::SpriteRendererComponent> m_fadeInSpriteRendererComponent;
-    tgon::TimerHandle m_fadeInImageTimerHandle;
+    std::shared_ptr<tgon::GameObject> m_girl;
+    tgon::TimerHandle m_girlMoveTimerHandle;
+    tgon::TimerHandle m_fadeInTimerHandle;
 };

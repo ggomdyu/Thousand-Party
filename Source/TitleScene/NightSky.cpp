@@ -19,7 +19,7 @@ void NightSky::InitializeSpriteComponent()
 {
     auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
     auto spriteRendererComponent = this->AddComponent<SpriteRendererComponent>();
-    spriteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Backgrounds/TitleScene/nightSky.png"));
+    spriteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Background/TitleScene/nightSky.png"));
 }
 
 void NightSky::InitializePosition()

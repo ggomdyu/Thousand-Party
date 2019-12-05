@@ -17,7 +17,7 @@ void SquareBackground::InitializeSpriteComponent()
 {
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     auto spriteRendererComponent = this->AddComponent<tgon::SpriteRendererComponent>();
-    spriteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Backgrounds/SelectScene/Layer.png"));
+    spriteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Background/MusicSelectScene/Layer.png"));
 }
 
 void SquareBackground::InitializePosition()

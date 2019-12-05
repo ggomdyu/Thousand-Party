@@ -36,6 +36,9 @@
     <ClInclude Include="..\..\Source\LogoScene\LogoScene.h">
       <Filter>Source\LogoScene</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelector.h">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ThousandParty.cpp">
@@ -58,6 +61,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\LogoScene\LogoScene.cpp">
       <Filter>Source\LogoScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelector.cpp">
+      <Filter>Source\MusicSelectScene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

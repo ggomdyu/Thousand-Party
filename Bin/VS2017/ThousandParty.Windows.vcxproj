@@ -155,6 +155,7 @@
       <FileType>CppCode</FileType>
     </ClCompile>
     <ClCompile Include="..\..\Source\LogoScene\LogoScene.cpp" />
+    <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelector.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelectScene.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\SquareBackground.cpp" />
     <ClCompile Include="..\..\Source\ThousandParty.cpp" />
@@ -164,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\LogoScene\LogoScene.h" />
+    <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelector.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelectScene.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\SquareBackground.h" />
     <ClInclude Include="..\..\Source\ThousandParty.h" />

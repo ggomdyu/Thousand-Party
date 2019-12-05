@@ -23,20 +23,37 @@ void TitleScene::Initialize()
     auto engine = tgon::Application::GetEngine();
     auto timerModule = engine->FindModule<tgon::TimerModule>();
     auto timeModule = engine->FindModule<tgon::TimeModule>();
-    
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
+
     m_inputModule = engine->FindModule<tgon::InputModule>();
-    m_fadeInImageTimerHandle = timerModule->SetTimer([&, timerModule = std::move(timerModule), timeModule = std::move(timeModule)]()
+    m_fadeInTimerHandle = timerModule->SetTimer([this, timerModule, timeModule]()
     {
         auto blendColor = m_fadeInSpriteRendererComponent->GetBlendColor();
         if (blendColor.a <= 0.0f)
         {
-            timerModule->ClearTimer(m_fadeInImageTimerHandle);
-            m_fadeInImageTimerHandle = {};
+            timerModule->ClearTimer(m_fadeInTimerHandle);
+            m_fadeInTimerHandle = {};
             return;
         }
         
         blendColor.a = std::max(0.0f, blendColor.a - 1.0f * timeModule->GetTickTime());
         m_fadeInSpriteRendererComponent->SetBlendColor(blendColor);
+    }, 0.0f, true);
+    m_girlMoveTimerHandle = timerModule->SetTimer([this, clientSize, timerModule, timeModule]()
+    {
+        auto destXPos = -clientSize.width / 2 + 640.0f;
+        auto position = m_girl->GetTransform()->GetLocalPosition();
+        if (std::abs(position.x - destXPos) <= 0.0001f)
+        {
+            position.x = destXPos;
+            m_girl->GetTransform()->SetLocalPosition(position);
+            timerModule->ClearTimer(m_girlMoveTimerHandle);
+            return;
+        }
+
+        auto newXPos = tgon::Lerp(position.x, destXPos, 0.1f);
+        position.x = newXPos;
+        m_girl->GetTransform()->SetLocalPosition(position);
     }, 0.0f, true);
     
     this->InitializeGraphics();
@@ -63,14 +80,14 @@ void TitleScene::CreateSpriteObjects()
 {
     std::string_view texturePathList[] =
     {
-        u8"Resource/Backgrounds/TitleScene/star.png",
-        u8"Resource/Backgrounds/TitleScene/earth.png",
-        u8"Resource/Backgrounds/TitleScene/girl.png",
+        u8"Resource/Background/TitleScene/star.png",
+        u8"Resource/Background/TitleScene/earth.png",
+        u8"Resource/Background/TitleScene/girl.png",
         u8"Resource/UI/TitleScene/Logo.png",
         u8"Resource/UI/TitleScene/Press.png",
         u8"Resource/UI/Common/FadeInOut.png",
     };
-    
+
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     float halfWindowWidth = clientSize.width * 0.5f;
     float halfWindowHeight = clientSize.height * 0.5f;
@@ -78,7 +95,7 @@ void TitleScene::CreateSpriteObjects()
     {
         tgon::Vector3(-halfWindowWidth + 640.0f, halfWindowHeight - 360.0f, 0.0f),
         tgon::Vector3(-halfWindowWidth + 612.0f, halfWindowHeight - 388.0f, 0.0f),
-        tgon::Vector3(-halfWindowWidth + 640.0f, halfWindowHeight - 221.0f, 0.0f),
+        tgon::Vector3(halfWindowWidth + 250.0f, halfWindowHeight - 221.0f, 0.0f),
         tgon::Vector3(-halfWindowWidth + 172.5f, halfWindowHeight - 92.5f, 0.0f),
         tgon::Vector3(23.0f, 355.0f, 0.0f),
         tgon::Vector3(0.0f, 0.0f, 0.0f),
@@ -96,24 +113,22 @@ void TitleScene::CreateSpriteObjects()
         spriteRendererComponent->SetTexture(assetModule->GetTexture(texturePathList[i]));
         spriteRendererComponent->SetSortingLayer(sortingLayerList[i]);
         this->AddObject(object);
-        
-        if (object->GetName() == "FadeInOut")
-        {
-            m_fadeInSpriteRendererComponent = object->GetComponent<tgon::SpriteRendererComponent>();
-        }
     }
+
+    m_girl = this->FindObject(u8"girl");
+    m_fadeInSpriteRendererComponent = this->FindObject(u8"FadeInOut")->GetComponent<tgon::SpriteRendererComponent>();
 }
 
 void TitleScene::CreateTextObjects()
 {
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
     
-    auto object = std::make_shared<tgon::GameObject>("introSprite1");
+    auto object = std::make_shared<tgon::GameObject>(u8"introSprite1");
     object->Initialize();
     object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 30.0f, -windowSize.height / 2 + 140.0f, 0.0f));
     
     auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
-    textComponent->SetFontAtlas(u8"Resource/Fonts/MaplestoryOTFBold.otf");
+    textComponent->SetFontAtlas(u8"Resource/Font/MaplestoryOTFBold.otf");
     textComponent->SetFontSize(20);
     textComponent->SetText(u8"Press Enter or Space...");
     textComponent->SetRect(tgon::I32Rect(0, 0, 400, 100));
@@ -136,7 +151,7 @@ void TitleScene::CreateFireFlyObjects()
 void TitleScene::OnHandleInput()
 {
     auto keyboard = m_inputModule->GetKeyboard();
-    if (m_fadeInImageTimerHandle.IsValid() == false && keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return))
+    if (m_fadeInTimerHandle.IsValid() == false && keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return))
     {
         auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
         sceneModule->ChangeScene<MusicSelectScene>();

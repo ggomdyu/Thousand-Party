@@ -38,11 +38,11 @@ void MusicSelectScene::CreateSpriteObjects()
 {
     std::string_view texturePathList[] =
     {
-        u8"Resource/Backgrounds/SelectScene/Background.png",
-        u8"Resource/Backgrounds/SelectScene/Shadow.png",
-        u8"Resource/UI/SelectScene/MUSIC.png",
-        u8"Resource/UI/SelectScene/SELECT.png",
-        u8"Resource/Backgrounds/SelectScene/HowToPlay.png"
+        u8"Resource/Background/MusicSelectScene/Background.png",
+        u8"Resource/Background/MusicSelectScene/Shadow.png",
+        u8"Resource/UI/MusicSelectScene/MUSIC.png",
+        u8"Resource/UI/MusicSelectScene/SELECT.png",
+        u8"Resource/Background/MusicSelectScene/HowToPlay.png"
     };
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     tgon::Vector3 texturePosList[] =
