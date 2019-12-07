@@ -97,7 +97,8 @@ void LogoScene::CreateCameraObject()
     float halfWidth = static_cast<float>(clientSize.width) * 0.5f;
     float halfHeight = static_cast<float>(clientSize.height) * 0.5f;
     camera->AddComponent<tgon::CameraComponent>(tgon::FRect(-halfWidth, -halfHeight, clientSize.width, clientSize.height), -1.0f, 1024.0f);
-    this->AddGlobalObject(camera);
+    
+    tgon::Application::GetEngine()->FindModule<tgon::SceneModule>()->AddGlobalObject(camera);
 }
 
 void LogoScene::CreateSpriteObject()

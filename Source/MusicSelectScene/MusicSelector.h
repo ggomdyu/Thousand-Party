@@ -9,6 +9,7 @@
 #include <array>
 
 #include "Game/GameObject.h"
+#include "Engine/TimerHandle.h"
 
 namespace tgon
 {
@@ -35,7 +36,11 @@ public:
     void Update() override;
     
 private:
+    void InitializeHighlightObject();
     void OnHandleInput();
+    void MoveToLeftMusic();
+    void MoveToRightMusic();
+    void SortMusicList();
     
 private:
 
@@ -43,5 +48,8 @@ private:
 private:
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::InputModule> m_inputModule;
-    std::array<std::shared_ptr<tgon::GameObject>, 5> m_musicCoverImages;
+    std::shared_ptr<tgon::GameObject> m_highlight;
+    std::array<std::shared_ptr<tgon::GameObject>, 5> m_coverImageObjectPool;
+    std::vector<std::shared_ptr<tgon::Texture>> m_coverImageTextures;
+    tgon::TimerHandle m_animationTimer;
 };

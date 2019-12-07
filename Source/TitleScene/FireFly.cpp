@@ -13,7 +13,7 @@ FireFly::FireFly(const tgon::StringHash& name) :
 void FireFly::Initialize()
 {
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-    auto transform = this->GetComponent<tgon::Transform>();
+    auto transform = this->FindComponent<tgon::Transform>();
     auto scale = static_cast<float>(tgon::Random().NextDouble(0.3, 1.0));
     transform->SetLocalScale(tgon::Vector3(scale, scale, 1.0f));
     transform->SetLocalPosition(tgon::Vector3(static_cast<float>(tgon::Random().NextDouble(-clientSize.width / 2, clientSize.width / 2)), static_cast<float>(tgon::Random().NextDouble(-clientSize.height / 2 - 80.0f, clientSize.height / 2)), 0.0f));
@@ -28,7 +28,7 @@ void FireFly::Initialize()
 void FireFly::Reset()
 {
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
-    auto transform = this->GetComponent<tgon::Transform>();
+    auto transform = this->FindComponent<tgon::Transform>();
     auto scale = static_cast<float>(tgon::Random().NextDouble(0.3, 1.0));
     transform->SetLocalScale(tgon::Vector3(scale, scale, 1.0f));
     transform->SetLocalPosition(tgon::Vector3(static_cast<float>(tgon::Random().NextDouble(-windowSize.width / 2, windowSize.width / 2)), -windowSize.height / 2 - m_spriteRendererComponent->GetTexture()->GetSize().height / 2, 0.0f));
@@ -48,7 +48,7 @@ void FireFly::Update()
     auto tickTime = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()->GetTickTime();
 
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
-    auto transform = this->GetComponent<tgon::Transform>();
+    auto transform = this->FindComponent<tgon::Transform>();
     auto newPos = transform->GetLocalPosition();
     if (newPos.y >= windowSize.height / 2 + 123.0F)
     {

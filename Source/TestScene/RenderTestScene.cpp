@@ -25,13 +25,13 @@ void RenderTestScene::Initialize()
 
 void RenderTestScene::CreateCameraObject()
 {
-    auto camera = std::make_shared<GameObject>("camera1");
-    
-    auto rootWindowSize = Application::GetInstance().GetRootWindow()->GetClientSize();
-    float halfWidth = static_cast<float>(rootWindowSize.width) * 0.5f;
-    float halfHeight = static_cast<float>(rootWindowSize.height) * 0.5f;
-    camera->AddComponent<CameraComponent>(FRect(-halfWidth, -halfHeight, rootWindowSize.width, rootWindowSize.height), -1.0f, 1024.0f);
-    this->AddGlobalObject(camera);
+//    auto camera = std::make_shared<GameObject>("camera1");
+//    
+//    auto rootWindowSize = Application::GetInstance().GetRootWindow()->GetClientSize();
+//    float halfWidth = static_cast<float>(rootWindowSize.width) * 0.5f;
+//    float halfHeight = static_cast<float>(rootWindowSize.height) * 0.5f;
+//    camera->AddComponent<CameraComponent>(FRect(-halfWidth, -halfHeight, rootWindowSize.width, rootWindowSize.height), -1.0f, 1024.0f);
+//    this->AddGlobalObject(camera);
 }
 
 static std::vector<std::tuple<std::shared_ptr<GameObject>, float, float, Vector3>> temp;

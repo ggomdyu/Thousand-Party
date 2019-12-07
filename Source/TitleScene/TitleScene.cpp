@@ -116,7 +116,7 @@ void TitleScene::CreateSpriteObjects()
     }
 
     m_girl = this->FindObject(u8"girl");
-    m_fadeInSpriteRendererComponent = this->FindObject(u8"FadeInOut")->GetComponent<tgon::SpriteRendererComponent>();
+    m_fadeInSpriteRendererComponent = this->FindObject(u8"FadeInOut")->FindComponent<tgon::SpriteRendererComponent>();
 }
 
 void TitleScene::CreateTextObjects()
@@ -151,7 +151,7 @@ void TitleScene::CreateFireFlyObjects()
 void TitleScene::OnHandleInput()
 {
     auto keyboard = m_inputModule->GetKeyboard();
-    if (m_fadeInTimerHandle.IsValid() == false && keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return))
+    if (m_fadeInTimerHandle.IsValid() == false && (keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return)))
     {
         auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
         sceneModule->ChangeScene<MusicSelectScene>();

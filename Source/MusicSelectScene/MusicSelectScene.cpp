@@ -23,7 +23,7 @@ void MusicSelectScene::CreateSquareBackgroundObject()
 {
     auto squareBackground = std::make_shared<SquareBackground>();
     squareBackground->Initialize();
-    squareBackground->GetComponent<tgon::SpriteRendererComponent>()->SetSortingLayer(1);
+    squareBackground->FindComponent<tgon::SpriteRendererComponent>()->SetSortingLayer(1);
     this->AddObject(squareBackground);
 }
 
