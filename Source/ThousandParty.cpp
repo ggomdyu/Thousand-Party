@@ -45,7 +45,7 @@ void ThousandParty::InitializeModule()
         videoMode.enableVerticalSync = false;
         videoMode.enableMultiSampling = false;
     };
-    this->AddModule<GraphicsModule>(*rootWindow, videoMode)->GetUIRenderer().SetMaxSortingLayer(5);
+    this->AddModule<GraphicsModule>(*rootWindow, videoMode)->GetUIRenderer().SetMaxSortingLayer(10);
     
     this->AddModule<SceneModule>()->ChangeScene<LogoScene>();
 }

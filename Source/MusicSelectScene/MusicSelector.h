@@ -36,20 +36,24 @@ public:
     void Update() override;
     
 private:
+    void InitializeMusicCoverObjects();
     void InitializeHighlightObject();
     void OnHandleInput();
-    void MoveToLeftMusic();
-    void MoveToRightMusic();
+    void AnimateMusicCoverObject();
+    void RefreshMusicCoverHighlight();
     void SortMusicList();
-    
-private:
+    void SortMusicLayer();
 
+/**@section Variable */
+public:
+    tgon::Delegate<void()> OnChangeSelectedMusic;
+    
 /**@section Variable */
 private:
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::InputModule> m_inputModule;
     std::shared_ptr<tgon::GameObject> m_highlight;
-    std::array<std::shared_ptr<tgon::GameObject>, 5> m_coverImageObjectPool;
-    std::vector<std::shared_ptr<tgon::Texture>> m_coverImageTextures;
+    std::vector<std::shared_ptr<tgon::GameObject>> m_coverImageObjects;
     tgon::TimerHandle m_animationTimer;
+    int32_t m_currSelectedCoverImageIndex = -3;
 };

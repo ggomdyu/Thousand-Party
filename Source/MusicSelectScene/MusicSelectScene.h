@@ -14,6 +14,7 @@ namespace tgon
 
 class GameObject;
 class TimeModule;
+class TextRendererComponent;
 
 } /* namespace tgon */
 
@@ -36,10 +37,15 @@ private:
     void CreateSpriteObjects();
     void CreateSquareBackgroundObject();
     void CreateMusicSelectorObject();
-    
+    void CreateMusicNameObject();
+    void CreateMusicComposerObject();
+    void OnChangeSelectedMusic();
+
 /**@section Variable */
 private:
     std::shared_ptr<tgon::GameObject> m_musicText;
     std::shared_ptr<tgon::GameObject> m_selectText;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
+    std::shared_ptr<tgon::TextRendererComponent> m_musicNameRendererComponent;
+    std::shared_ptr<tgon::TextRendererComponent> m_musicComposerRendererComponent;
 };

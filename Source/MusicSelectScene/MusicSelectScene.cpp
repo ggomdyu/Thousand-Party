@@ -14,6 +14,8 @@ void MusicSelectScene::Initialize()
 {
     m_timeModule = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>();
     
+    this->CreateMusicNameObject();
+    this->CreateMusicComposerObject();
     this->CreateSpriteObjects();
     this->CreateSquareBackgroundObject();
     this->CreateMusicSelectorObject();
@@ -30,8 +32,58 @@ void MusicSelectScene::CreateSquareBackgroundObject()
 void MusicSelectScene::CreateMusicSelectorObject()
 {
     auto musicSelector = std::make_shared<MusicSelector>();
+    musicSelector->OnChangeSelectedMusic = tgon::MakeDelegate<&MusicSelectScene::OnChangeSelectedMusic>(this);
     musicSelector->Initialize();
+    musicSelector->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 20.0f, 0.0f));
     this->AddObject(musicSelector);
+}
+
+void MusicSelectScene::CreateMusicNameObject()
+{
+    auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
+
+    auto object = std::make_shared<tgon::GameObject>(u8"musicName");
+    object->Initialize();
+    object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -windowSize.height / 2 + 90.0f, 0.0f));
+
+    auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
+    textComponent->SetFontAtlas(u8"Resource/Font/MaplestoryOTFBold.otf");
+    textComponent->SetFontSize(30);
+    textComponent->SetBlendColor(tgon::Color4f(0.0f, 0.0f, 0.0f, 1.0f));
+    textComponent->SetRect(tgon::I32Rect(-250, 0, 500, 50));
+    textComponent->SetTextAlignment(tgon::TextAlignment::MiddleCenter);
+    textComponent->SetSortingLayer(4);
+
+    m_musicNameRendererComponent = textComponent;
+
+    this->AddObject(object);
+}
+
+void MusicSelectScene::CreateMusicComposerObject()
+{
+    auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
+
+    auto object = std::make_shared<tgon::GameObject>(u8"musicComposer");
+    object->Initialize();
+    object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -windowSize.height / 2 + 70.0f, 0.0f));
+
+    auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
+    textComponent->SetFontAtlas(u8"Resource/Font/MaplestoryOTFBold.otf");
+    textComponent->SetFontSize(20);
+    textComponent->SetBlendColor(tgon::Color4f(0.0f, 0.0f, 0.0f, 1.0f));
+    textComponent->SetRect(tgon::I32Rect(-250, 0, 500, 50));
+    textComponent->SetTextAlignment(tgon::TextAlignment::MiddleCenter);
+    textComponent->SetSortingLayer(4);
+
+    m_musicComposerRendererComponent = textComponent;
+
+    this->AddObject(object);
+}
+
+void MusicSelectScene::OnChangeSelectedMusic()
+{
+    m_musicNameRendererComponent->SetText(std::to_string(tgon::Random().Next(1, 100)));
+    m_musicComposerRendererComponent->SetText(std::to_string(tgon::Random().Next(1, 100)));
 }
 
 void MusicSelectScene::CreateSpriteObjects()

@@ -22,24 +22,33 @@ void TitleScene::Initialize()
 {
     auto engine = tgon::Application::GetEngine();
     auto timerModule = engine->FindModule<tgon::TimerModule>();
-    auto timeModule = engine->FindModule<tgon::TimeModule>();
+    auto weakTimerModule = std::weak_ptr<tgon::TimerModule>(engine->FindModule<tgon::TimerModule>());
+    auto weakTimeModule = std::weak_ptr<tgon::TimeModule>(engine->FindModule<tgon::TimeModule>());
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
 
     m_inputModule = engine->FindModule<tgon::InputModule>();
-    m_fadeInTimerHandle = timerModule->SetTimer([this, timerModule, timeModule]()
+    m_fadeInTimerHandle = timerModule->SetTimer([this, weakTimeModule, weakTimerModule](tgon::TimerHandle timerHandle)
     {
         auto blendColor = m_fadeInSpriteRendererComponent->GetBlendColor();
         if (blendColor.a <= 0.0f)
         {
-            timerModule->ClearTimer(m_fadeInTimerHandle);
-            m_fadeInTimerHandle = {};
+            auto timerModule = weakTimerModule.lock();
+            if (timerModule != nullptr)
+            {
+                timerModule->ClearTimer(timerHandle);
+                m_fadeInTimerHandle = {};
+            }
             return;
         }
         
-        blendColor.a = std::max(0.0f, blendColor.a - 1.0f * timeModule->GetTickTime());
-        m_fadeInSpriteRendererComponent->SetBlendColor(blendColor);
+        auto timeModule = weakTimeModule.lock();
+        if (timeModule != nullptr)
+        {
+            blendColor.a = std::max(0.0f, blendColor.a - 1.0f * timeModule->GetTickTime());
+            m_fadeInSpriteRendererComponent->SetBlendColor(blendColor);
+        }
     }, 0.0f, true);
-    m_girlMoveTimerHandle = timerModule->SetTimer([this, clientSize, timerModule, timeModule]()
+    timerModule->SetTimer([this, clientSize, weakTimeModule, weakTimerModule](tgon::TimerHandle timerHandle)
     {
         auto destXPos = -clientSize.width / 2 + 640.0f;
         auto position = m_girl->GetTransform()->GetLocalPosition();
@@ -47,13 +56,22 @@ void TitleScene::Initialize()
         {
             position.x = destXPos;
             m_girl->GetTransform()->SetLocalPosition(position);
-            timerModule->ClearTimer(m_girlMoveTimerHandle);
+            
+            auto timerModule = weakTimerModule.lock();
+            if (timerModule != nullptr)
+            {
+                timerModule->ClearTimer(timerHandle);
+            }
             return;
         }
 
-        auto newXPos = tgon::Lerp(position.x, destXPos, 0.1f);
-        position.x = newXPos;
-        m_girl->GetTransform()->SetLocalPosition(position);
+        auto timeModule = weakTimeModule.lock();
+        if (timeModule != nullptr)
+        {
+            auto newXPos = tgon::Lerp(position.x, destXPos, 0.1f);
+            position.x = newXPos;
+            m_girl->GetTransform()->SetLocalPosition(position);
+        }
     }, 0.0f, true);
     
     this->InitializeGraphics();
@@ -151,7 +169,7 @@ void TitleScene::CreateFireFlyObjects()
 void TitleScene::OnHandleInput()
 {
     auto keyboard = m_inputModule->GetKeyboard();
-    if (m_fadeInTimerHandle.IsValid() == false && (keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return)))
+    if (m_fadeInTimerHandle == tgon::TimerHandle() && (keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return)))
     {
         auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
         sceneModule->ChangeScene<MusicSelectScene>();
