@@ -38,12 +38,14 @@ void MusicPlayScene::Update()
 {
     Super::Update();
     
-    m_elapsedTime += m_timeModule->GetTickTime();
+    this->UpdateBackgroundObjectPosition();
     
     if (m_isMusicWaiting)
     {
         return;
     }
+    
+    m_elapsedTime += m_timeModule->GetTickTime();
     
     for (size_t i = m_noteInfoIndex; i < m_musicInfo.noteInfos.size(); ++i)
     {
@@ -62,10 +64,29 @@ void MusicPlayScene::Update()
             break;
         }
     }
+    
+    this->UpdateNoteLine();
 }
 
 void MusicPlayScene::UpdateNoteLine()
 {
+    for (auto& noteObjects : m_noteLine)
+    {
+        if (noteObjects.size() == 0)
+        {
+            continue;
+        }
+        
+        auto note = noteObjects.front();
+        note->UpdateInput();
+        if (note->IsHitted())
+        {
+            m_noteObjectPool.push_back(note);
+            noteObjects.pop_front();
+            continue;
+        }
+    }
+
     for (auto& noteObjects : m_noteLine)
     {
         for (auto iter = noteObjects.begin(); iter != noteObjects.end();)
@@ -93,15 +114,28 @@ void MusicPlayScene::UpdateNoteLine()
     }
 }
 
+void MusicPlayScene::UpdateBackgroundObjectPosition()
+{
+    auto backgroundObjectTransform = m_backgroundObject->GetTransform();
+    auto backgroundObjectPos = backgroundObjectTransform->GetLocalPosition();
+    backgroundObjectPos.x -= 3.0f * m_timeModule->GetTickTime();
+    backgroundObjectTransform->SetLocalPosition(backgroundObjectPos);
+}
+
 void MusicPlayScene::InitializeBackgroundObject()
 {
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    
     auto backgroundObject = tgon::GameObject::Create();
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
+    backgroundObject->GetTransform()->SetLocalPosition({-static_cast<float>(clientSize.width) * 0.5f, 0.0f, 0.0f});
+    
     auto spriteRendererComponent = backgroundObject->AddComponent<tgon::SpriteRendererComponent>();
     spriteRendererComponent->SetTexture(assetModule->GetTexture("Resource/Background/MusicPlayScene/green.png"));
+    spriteRendererComponent->SetPivot({0.0f, 0.5f});
     
-    this->AddObject(std::move(backgroundObject));
+    this->AddObject(backgroundObject);
+    
+    m_backgroundObject = std::move(backgroundObject);
 }
 
 void MusicPlayScene::InitializeNoteObjectPool()
@@ -136,7 +170,14 @@ void MusicPlayScene::InitializeHitRingObject()
 
 std::shared_ptr<Note> MusicPlayScene::GetNoteObjectFromPool()
 {
+    if (m_noteObjectPool.size() == 0)
+    {
+        m_noteObjectPool.push_back(tgon::GameObject::Create<Note>());
+    }
+    
     auto ret = m_noteObjectPool.back();
+    ret->Reset();
+    
     m_noteObjectPool.pop_back();
     
     return ret;
@@ -144,7 +185,14 @@ std::shared_ptr<Note> MusicPlayScene::GetNoteObjectFromPool()
 
 std::shared_ptr<LongNote> MusicPlayScene::GetLongNoteObjectFromPool()
 {
+    if (m_longNoteObjectPool.size() == 0)
+    {
+        m_longNoteObjectPool.push_back(tgon::GameObject::Create<LongNote>());
+    }
+    
     auto ret = m_longNoteObjectPool.back();
+    ret->Reset();
+    
     m_longNoteObjectPool.pop_back();
     
     return ret;

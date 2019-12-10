@@ -40,8 +40,10 @@ public:
     
 /**@section Method */
 public:
+    void Reset();
     void Initialize() override;
     void Update() override;
+    void UpdateInput();
 //    virtual bool CheckHit() const;
     NoteTiming CheckNoteTiming() const noexcept;
     void SetNoteLineIndex(int32_t index) noexcept;
@@ -49,10 +51,9 @@ public:
     void SetHitTime(float hitTime) noexcept;
     float GetHitTime() const noexcept;
     bool IsHitted() const noexcept;
-    
+
 protected:
     virtual void InitializeSprite();
-    void OnHandleInput();
     
 /**@section Variable */
 protected:

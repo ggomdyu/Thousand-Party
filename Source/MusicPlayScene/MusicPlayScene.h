@@ -6,6 +6,7 @@
 
 #pragma once
 #include <memory>
+#include <deque>
 
 #include "Audio/AudioPlayer.h"
 #include "Game/Scene.h"
@@ -48,6 +49,7 @@ private:
     std::shared_ptr<Note> GetNoteObjectFromPool();
     std::shared_ptr<LongNote> GetLongNoteObjectFromPool();
     void UpdateNoteLine();
+    void UpdateBackgroundObjectPosition();
     
 /**@section Variable */
 private:
@@ -58,10 +60,11 @@ private:
     tgon::AudioPlayer m_audioPlayer;
     std::vector<std::shared_ptr<Note>> m_noteObjectPool;
     std::vector<std::shared_ptr<LongNote>> m_longNoteObjectPool;
-    std::array<std::vector<std::shared_ptr<Note>>, 4> m_noteLine;
+    std::array<std::deque<std::shared_ptr<Note>>, 4> m_noteLine;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::AudioModule> m_audioModule;
     std::shared_ptr<tgon::TextRendererComponent> m_comboRendererComponent;
     std::shared_ptr<tgon::TextRendererComponent> m_musicNameRendererComponent;
     std::shared_ptr<tgon::TextRendererComponent> m_musicArtistNameRendererComponent;
+    std::shared_ptr<tgon::GameObject> m_backgroundObject;
 };

@@ -28,6 +28,14 @@ Note::Note() :
 {
 }
 
+void Note::Reset()
+{
+    m_isHitted = false;
+    m_elapsedTime = 0.0f;
+    m_hitTime = 0.0f;
+    m_noteLineIndex = 0;
+}
+
 void Note::Initialize()
 {
     Super::Initialize();
@@ -70,11 +78,6 @@ void Note::InitializeSprite()
 
 void Note::Update()
 {
-    if (m_isHitted)
-    {
-        return;
-    }
-    
     Super::Update();
     
     m_transform->SetLocalPosition(tgon::Lerp(g_noteStartPosArray[m_noteLineIndex], g_noteEndPosArray[m_noteLineIndex], 1.0f + m_elapsedTime - m_hitTime));
@@ -106,27 +109,51 @@ NoteTiming Note::CheckNoteTiming() const noexcept
     return NoteTiming::Miss;
 }
 
-void Note::OnHandleInput()
+void Note::UpdateInput()
 {
+    auto distance = m_elapsedTime - m_hitTime;
+    if (-0.2f > distance || distance > 0.2f)
+    {
+        return;
+    }
+    
     auto onKeyDown = [&]()
     {
-        static auto hitSoundPlayer = []()
+        static auto hitSoundPlayer = [&]()
         {
             tgon::AudioPlayer hitSoundPlayer;
             
             auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
             hitSoundPlayer.Initialize(assetModule->GetAudioBuffer("Resource/Sound/HOCKEY.wav"));
             
+            auto noteTiming = this->CheckNoteTiming();
+            if (noteTiming == NoteTiming::Perfect)
+            {
+                tgon::Debug::WriteLine("Perfect");
+            }
+            else if (noteTiming == NoteTiming::Great)
+            {
+                tgon::Debug::WriteLine("Great");
+            }
+            else if (noteTiming == NoteTiming::Early)
+            {
+                tgon::Debug::WriteLine("Early");
+            }
+            else if (noteTiming == NoteTiming::Late)
+            {
+                tgon::Debug::WriteLine("Late");
+            }
+            
             return std::move(hitSoundPlayer);
         } ();
         hitSoundPlayer.Play();
-
+        
         m_isHitted = true;
     };
     
     switch (m_noteLineIndex)
     {
-    case 1:
+    case 0:
         if (m_keyboard->IsKeyDown(tgon::KeyCode::E) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::R) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::T) ||
@@ -137,7 +164,7 @@ void Note::OnHandleInput()
         }
         break;
 
-    case 2:
+    case 1:
         if (m_keyboard->IsKeyDown(tgon::KeyCode::D) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::F) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::G) ||
@@ -148,7 +175,7 @@ void Note::OnHandleInput()
         }
         break;
 
-    case 3:
+    case 2:
         if (m_keyboard->IsKeyDown(tgon::KeyCode::C) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::V) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::B) ||
@@ -159,7 +186,7 @@ void Note::OnHandleInput()
         }
         break;
 
-    case 4:
+    case 3:
         if (m_keyboard->IsKeyDown(tgon::KeyCode::Space))
         {
             onKeyDown();
