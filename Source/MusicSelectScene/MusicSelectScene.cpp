@@ -20,7 +20,7 @@ void MusicSelectScene::Initialize()
     this->CreateSquareBackgroundObject();
     this->CreateMusicSelectorObject();
     this->CreateMusicNameObject();
-    this->CreateMusicComposerObject();
+    this->CreateMusicArtistNameObject();
 }
 
 void MusicSelectScene::CreateSquareBackgroundObject()
@@ -66,11 +66,11 @@ void MusicSelectScene::CreateMusicNameObject()
     this->AddObject(object);
 }
 
-void MusicSelectScene::CreateMusicComposerObject()
+void MusicSelectScene::CreateMusicArtistNameObject()
 {
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
 
-    auto object = tgon::GameObject::Create(u8"musicComposer");
+    auto object = tgon::GameObject::Create(u8"musicArtistName");
     object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -windowSize.height / 2 + 72.0f, 0.0f));
 
     auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
@@ -87,7 +87,7 @@ void MusicSelectScene::CreateMusicComposerObject()
         textComponent->SetText(musicInfos[0].musicAuthorName);
     }
 
-    m_musicComposerRendererComponent = textComponent;
+    m_musicArtistNameRendererComponent = textComponent;
 
     this->AddObject(object);
 }
@@ -95,7 +95,7 @@ void MusicSelectScene::CreateMusicComposerObject()
 void MusicSelectScene::OnChangeSelectedMusic(const MusicInfo& musicInfo)
 {
     m_musicNameRendererComponent->SetText(musicInfo.musicName);
-    m_musicComposerRendererComponent->SetText(musicInfo.musicAuthorName);
+    m_musicArtistNameRendererComponent->SetText(musicInfo.musicAuthorName);
 }
 
 void MusicSelectScene::CreateSpriteObjects()

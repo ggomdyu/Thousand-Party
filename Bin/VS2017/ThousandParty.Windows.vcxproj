@@ -154,7 +154,10 @@
     <ClCompile Update="E:\Users\ggomdyu\Desktop\Programming\Git\GitHub\TGON\Bin\VS2017\TGON.Shared\..\..\..\Source\ThirdParty\freetype-2.10.0\src\base\ftftn.c">
       <FileType>CppCode</FileType>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GameDataModule.cpp" />
     <ClCompile Include="..\..\Source\LogoScene\LogoScene.cpp" />
+    <ClCompile Include="..\..\Source\MusicPlayScene\MusicPlayScene.cpp" />
+    <ClCompile Include="..\..\Source\MusicPlayScene\Note.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelector.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelectScene.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\SquareBackground.cpp" />
@@ -164,7 +167,10 @@
     <ClCompile Include="..\..\Source\TitleScene\TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\GameDataModule.h" />
     <ClInclude Include="..\..\Source\LogoScene\LogoScene.h" />
+    <ClInclude Include="..\..\Source\MusicPlayScene\MusicPlayScene.h" />
+    <ClInclude Include="..\..\Source\MusicPlayScene\Note.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelector.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelectScene.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\SquareBackground.h" />

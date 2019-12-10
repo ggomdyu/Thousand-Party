@@ -22,7 +22,6 @@ constexpr tgon::Vector3 g_noteEndPosArray[] = {
 
 Note::Note() :
     GameObject(),
-    m_isHitted(false),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
     m_keyboard(tgon::Application::GetEngine()->FindModule<tgon::InputModule>()->GetKeyboard())
 {
@@ -34,6 +33,7 @@ void Note::Reset()
     m_elapsedTime = 0.0f;
     m_hitTime = 0.0f;
     m_noteLineIndex = 0;
+    m_noteRendererComponent->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 1.0f));
 }
 
 void Note::Initialize()
@@ -79,6 +79,13 @@ void Note::InitializeSprite()
 void Note::Update()
 {
     Super::Update();
+
+    if (m_elapsedTime - m_hitTime > 0.0f)
+    {
+        auto blendColor = m_noteRendererComponent->GetBlendColor();
+        blendColor.a = std::max(0.0f, blendColor.a - 5.0f * m_timeModule->GetTickTime());
+        m_noteRendererComponent->SetBlendColor(blendColor);
+    }
     
     m_transform->SetLocalPosition(tgon::Lerp(g_noteStartPosArray[m_noteLineIndex], g_noteEndPosArray[m_noteLineIndex], 1.0f + m_elapsedTime - m_hitTime));
 }
@@ -111,76 +118,92 @@ NoteTiming Note::CheckNoteTiming() const noexcept
 
 void Note::UpdateInput()
 {
-    auto distance = m_elapsedTime - m_hitTime;
-    if (-0.2f > distance || distance > 0.2f)
+    if (this->CheckCanHit() == false)
     {
         return;
     }
-    
+
     auto onKeyDown = [&]()
     {
         static auto hitSoundPlayer = [&]()
         {
-            tgon::AudioPlayer hitSoundPlayer;
-            
             auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+            tgon::AudioPlayer hitSoundPlayer;
             hitSoundPlayer.Initialize(assetModule->GetAudioBuffer("Resource/Sound/HOCKEY.wav"));
-            
-            auto noteTiming = this->CheckNoteTiming();
-            if (noteTiming == NoteTiming::Perfect)
-            {
-                tgon::Debug::WriteLine("Perfect");
-            }
-            else if (noteTiming == NoteTiming::Great)
-            {
-                tgon::Debug::WriteLine("Great");
-            }
-            else if (noteTiming == NoteTiming::Early)
-            {
-                tgon::Debug::WriteLine("Early");
-            }
-            else if (noteTiming == NoteTiming::Late)
-            {
-                tgon::Debug::WriteLine("Late");
-            }
-            
             return std::move(hitSoundPlayer);
         } ();
         hitSoundPlayer.Play();
         
         m_isHitted = true;
+
+
+        auto noteTiming = this->CheckNoteTiming();
+        if (noteTiming == NoteTiming::Perfect)
+        {
+            tgon::Debug::WriteLine("Perfect");
+        }
+        else if (noteTiming == NoteTiming::Great)
+        {
+            tgon::Debug::WriteLine("Great");
+        }
+        else if (noteTiming == NoteTiming::Early)
+        {
+            tgon::Debug::WriteLine("Early");
+        }
+        else if (noteTiming == NoteTiming::Late)
+        {
+            tgon::Debug::WriteLine("Late");
+        }
     };
     
     switch (m_noteLineIndex)
     {
     case 0:
-        if (m_keyboard->IsKeyDown(tgon::KeyCode::E) ||
+        if (m_keyboard->IsKeyDown(tgon::KeyCode::Q) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::W) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::E) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::R) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::T) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::Y) ||
-            m_keyboard->IsKeyDown(tgon::KeyCode::U))
+            m_keyboard->IsKeyDown(tgon::KeyCode::U) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::I) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::O) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::P) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::LeftBracket) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::RightBracket))
         {
             onKeyDown();
         }
         break;
 
     case 1:
-        if (m_keyboard->IsKeyDown(tgon::KeyCode::D) ||
+        if (m_keyboard->IsKeyDown(tgon::KeyCode::A) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::S) || 
+            m_keyboard->IsKeyDown(tgon::KeyCode::D) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::F) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::G) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::H) ||
-            m_keyboard->IsKeyDown(tgon::KeyCode::J))
+            m_keyboard->IsKeyDown(tgon::KeyCode::J) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::K) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::L) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::Semicolon) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::Apostrophe))
         {
             onKeyDown();
         }
         break;
 
     case 2:
-        if (m_keyboard->IsKeyDown(tgon::KeyCode::C) ||
+        if (m_keyboard->IsKeyDown(tgon::KeyCode::Z) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::X) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::C) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::V) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::B) ||
             m_keyboard->IsKeyDown(tgon::KeyCode::N) ||
-            m_keyboard->IsKeyDown(tgon::KeyCode::M))
+            m_keyboard->IsKeyDown(tgon::KeyCode::M) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::Comma) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::Period) ||
+            m_keyboard->IsKeyDown(tgon::KeyCode::Slash))
         {
             onKeyDown();
         }
@@ -195,8 +218,17 @@ void Note::UpdateInput()
     }
 }
 
+bool Note::CheckCanHit() const
+{
+    auto distance = m_elapsedTime - m_hitTime;
+    return -0.2f < distance && distance < 0.2f;
+}
+
 void LongNote::Initialize()
 {
+    Super::Initialize();
+
+    this->InitializeSprite();
 }
 
 void LongNote::Update()
@@ -204,10 +236,23 @@ void LongNote::Update()
     Super::Update();
 }
 
+bool LongNote::CheckCanHit() const
+{
+    return Super::CheckCanHit();
+}
+
+void LongNote::SetHoldTime(float holdTime) noexcept
+{
+    m_holdTime = holdTime;
+}
+
+float LongNote::GetHoldTime() const noexcept
+{
+    return m_holdTime;
+}
+
 void LongNote::InitializeSprite()
 {
-    Super::InitializeSprite();
-    
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     m_longNoteRendererComponent = this->AddComponent<tgon::SpriteRendererComponent>();
     m_longNoteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/PlayScene/Note.png"));

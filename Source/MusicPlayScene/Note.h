@@ -43,8 +43,8 @@ public:
     void Reset();
     void Initialize() override;
     void Update() override;
-    void UpdateInput();
-//    virtual bool CheckHit() const;
+    virtual void UpdateInput();
+    virtual bool CheckCanHit() const;
     NoteTiming CheckNoteTiming() const noexcept;
     void SetNoteLineIndex(int32_t index) noexcept;
     void SetElapsedTime(float elapsedTime) noexcept;
@@ -52,18 +52,18 @@ public:
     float GetHitTime() const noexcept;
     bool IsHitted() const noexcept;
 
-protected:
-    virtual void InitializeSprite();
+private:
+    void InitializeSprite();
     
 /**@section Variable */
 protected:
-    bool m_isHitted;
     std::shared_ptr<tgon::SpriteRendererComponent> m_noteRendererComponent;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::Keyboard> m_keyboard;
+    bool m_isHitted = false;
     float m_elapsedTime = 0.0f;
     float m_hitTime = 0.0f;
-    int32_t m_noteLineIndex;
+    int32_t m_noteLineIndex = 0;
 };
 
 class LongNote :
@@ -80,11 +80,16 @@ public:
 public:
     void Initialize() override;
     void Update() override;
-    
-protected:
-    void InitializeSprite() override;
-    
+    bool CheckCanHit() const override;
+    void SetHoldTime(float holdTime) noexcept;
+    float GetHoldTime() const noexcept;
+
+private:
+    void InitializeSprite();
+
 /**@section Variable */
 protected:
+    char m_holdingKey = 0;
+    float m_holdTime = 0.0f;
     std::shared_ptr<tgon::SpriteRendererComponent> m_longNoteRendererComponent;
 };

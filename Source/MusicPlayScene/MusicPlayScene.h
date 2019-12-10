@@ -50,7 +50,9 @@ private:
     std::shared_ptr<LongNote> GetLongNoteObjectFromPool();
     void UpdateNoteLine();
     void UpdateBackgroundObjectPosition();
-    
+    void InitializeMusicNameObject();
+    void InitializeMusicArtistNameObject();
+
 /**@section Variable */
 private:
     bool m_isMusicWaiting;

@@ -13,6 +13,9 @@
     <Filter Include="Source\LogoScene">
       <UniqueIdentifier>{0e5a739e-e3b2-4f3b-b850-95a4846ce495}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\MusicPlayScene">
+      <UniqueIdentifier>{27f4a08b-8ab8-432a-b530-64368f54b001}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\ThousandParty.h">
@@ -39,6 +42,15 @@
     <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelector.h">
       <Filter>Source\MusicSelectScene</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\MusicPlayScene\MusicPlayScene.h">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\MusicPlayScene\Note.h">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameDataModule.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ThousandParty.cpp">
@@ -64,6 +76,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelector.cpp">
       <Filter>Source\MusicSelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MusicPlayScene\MusicPlayScene.cpp">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MusicPlayScene\Note.cpp">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameDataModule.cpp">
+      <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

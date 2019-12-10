@@ -22,6 +22,8 @@ void MusicPlayScene::Initialize()
     this->InitializeHitRingObject();
     this->InitializeNoteObjectPool();
     this->InitializeLongNoteObjectPool();
+    this->InitializeMusicNameObject();
+    this->InitializeMusicArtistNameObject();
     
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     m_audioPlayer.Initialize(assetModule->GetAudioBuffer(m_musicInfo.musicPath));
@@ -72,18 +74,19 @@ void MusicPlayScene::UpdateNoteLine()
 {
     for (auto& noteObjects : m_noteLine)
     {
-        if (noteObjects.size() == 0)
+        for (auto iter = noteObjects.begin(); iter != noteObjects.end(); ++iter)
         {
-            continue;
-        }
-        
-        auto note = noteObjects.front();
-        note->UpdateInput();
-        if (note->IsHitted())
-        {
-            m_noteObjectPool.push_back(note);
-            noteObjects.pop_front();
-            continue;
+            bool canHitNote = (*iter)->CheckCanHit();
+            if (canHitNote)
+            {
+                (*iter)->UpdateInput();
+                if ((*iter)->IsHitted())
+                {
+                    m_noteObjectPool.push_back((*iter));
+                    noteObjects.erase(iter);
+                }
+                break;
+            }
         }
     }
 
@@ -166,6 +169,46 @@ void MusicPlayScene::InitializeHitRingObject()
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     hitRingObject->GetTransform()->SetLocalPosition({-static_cast<float>(clientSize.width) * 0.5f + 120.0f, -85.0f, 0.0f});
     this->AddObject(std::move(hitRingObject));
+}
+
+void MusicPlayScene::InitializeMusicNameObject()
+{
+    auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
+
+    auto object = tgon::GameObject::Create(u8"musicName");
+    object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 33.0f, windowSize.height / 2 - 38.0f, 0.0f));
+
+    auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
+    textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
+    textComponent->SetFontSize(45);
+    textComponent->SetRect(tgon::I32Rect(0, 0, 500, 50));
+    textComponent->SetTextAlignment(tgon::TextAlignment::UpperLeft);
+    textComponent->SetSortingLayer(4);
+    textComponent->SetText(m_musicInfo.musicName);
+
+    m_musicNameRendererComponent = textComponent;
+
+    this->AddObject(object);
+}
+
+void MusicPlayScene::InitializeMusicArtistNameObject()
+{
+    auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
+
+    auto object = tgon::GameObject::Create(u8"musicArtistName");
+    object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 33.0f, windowSize.height / 2 - 82.0f, 0.0f));
+
+    auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
+    textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
+    textComponent->SetFontSize(18);
+    textComponent->SetRect(tgon::I32Rect(-0, 0, 500, 50));
+    textComponent->SetTextAlignment(tgon::TextAlignment::UpperLeft);
+    textComponent->SetSortingLayer(4);
+    textComponent->SetText(m_musicInfo.musicAuthorName);
+
+    m_musicArtistNameRendererComponent = textComponent;
+
+    this->AddObject(object);
 }
 
 std::shared_ptr<Note> MusicPlayScene::GetNoteObjectFromPool()

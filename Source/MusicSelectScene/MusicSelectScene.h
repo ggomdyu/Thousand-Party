@@ -42,7 +42,7 @@ private:
     void CreateSquareBackgroundObject();
     void CreateMusicSelectorObject();
     void CreateMusicNameObject();
-    void CreateMusicComposerObject();
+    void CreateMusicArtistNameObject();
     void OnChangeSelectedMusic(const MusicInfo& musicInfo);
 
 /**@section Variable */
@@ -53,5 +53,5 @@ private:
     std::shared_ptr<GameDataModule> m_gameDataModule;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::TextRendererComponent> m_musicNameRendererComponent;
-    std::shared_ptr<tgon::TextRendererComponent> m_musicComposerRendererComponent;
+    std::shared_ptr<tgon::TextRendererComponent> m_musicArtistNameRendererComponent;
 };
