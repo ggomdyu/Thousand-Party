@@ -54,16 +54,16 @@ void RenderTestScene::CreateFontObjects()
 {
     const char chArray[] = u8"The problem is finding some way to pass the additional argument to operator new. You can't add a parenthesized argument list after the type name in the new-expression because the compiler will interpret that list as arguments to a constructor, not as arguments to an operator new. That is:";
     
-    auto object = std::make_shared<GameObject>("introSprite1");
-    auto transform = object->GetTransform();
-    transform->SetLocalScale({1.0f, 1.0f, 1.0f});
-    object->GetTransform()->SetLocalPosition(Vector3(0.0f, 0.0f, 0.0f));
-    auto textComponent = object->AddComponent<TextRendererComponent>();
-    textComponent->SetFontAtlas(u8"Resource/Fonts/MaplestoryOTFBold.otf");
-    textComponent->SetFontSize(30);
-    textComponent->SetText(chArray);
-    textComponent->SetRect(I32Rect(-200, 100, 400, 200));
-    textComponent->SetTextAlignment(TextAlignment::MiddleCenter);
-    
-    this->AddObject(object);
+//    auto object = tgon::GameObject::Create("introSprite1");
+//    auto transform = object->GetTransform();
+//    transform->SetLocalScale({1.0f, 1.0f, 1.0f});
+//    object->GetTransform()->SetLocalPosition(Vector3(0.0f, 0.0f, 0.0f));
+//    auto textComponent = object->AddComponent<TextRendererComponent>();
+//    textComponent->SetFontAtlas(u8"Resource/Fonts/MaplestoryOTFBold.otf");
+//    textComponent->SetFontSize(30);
+//    textComponent->SetText(chArray);
+//    textComponent->SetRect(I32Rect(-200, 100, 400, 200));
+//    textComponent->SetTextAlignment(TextAlignment::MiddleCenter);
+//    
+//    this->AddObject(object);
 }

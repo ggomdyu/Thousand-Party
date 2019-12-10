@@ -1,2 +1,4 @@
 music=Click
 artist=Claris
+bpm=135
+sync=2.4

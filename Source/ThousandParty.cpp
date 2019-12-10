@@ -4,6 +4,7 @@
 
 #include "TGON.h"
 #include "ThousandParty.h"
+#include "GameDataModule.h"
 
 TGON_DECLARE_ENGINE(ThousandParty);
 
@@ -24,6 +25,7 @@ void ThousandParty::Update()
 void ThousandParty::InitializeModule()
 {
     this->AddModule<AssetModule>();
+    this->AddModule<AudioModule>();
     this->AddModule<TimeModule>();
     this->AddModule<TimerModule>();
     this->AddModule<TaskModule>();
@@ -46,6 +48,6 @@ void ThousandParty::InitializeModule()
         videoMode.enableMultiSampling = false;
     };
     this->AddModule<GraphicsModule>(*rootWindow, videoMode)->GetUIRenderer().SetMaxSortingLayer(10);
-    
+    this->AddModule<GameDataModule>();
     this->AddModule<SceneModule>()->ChangeScene<LogoScene>();
 }

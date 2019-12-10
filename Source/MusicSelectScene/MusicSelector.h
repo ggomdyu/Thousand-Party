@@ -20,6 +20,9 @@ class GameObject;
 
 } /* namespace tgon */
 
+class GameDataModule;
+struct MusicInfo;
+
 class MusicSelector :
     public tgon::GameObject
 {
@@ -46,12 +49,13 @@ private:
 
 /**@section Variable */
 public:
-    tgon::Delegate<void()> OnChangeSelectedMusic;
+    tgon::Delegate<void(const MusicInfo&)> OnChangeSelectedMusic;
     
 /**@section Variable */
 private:
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::InputModule> m_inputModule;
+    std::shared_ptr<GameDataModule> m_gameDataModule;
     std::shared_ptr<tgon::GameObject> m_highlight;
     std::vector<std::shared_ptr<tgon::GameObject>> m_coverImageObjects;
     tgon::TimerHandle m_animationTimer;

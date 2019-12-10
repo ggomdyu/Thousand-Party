@@ -1,6 +1,9 @@
 #include "TGON.h"
 #include "MusicSelector.h"
 
+#include "../MusicPlayScene/MusicPlayScene.h"
+#include "../GameDataModule.h"
+
 namespace
 {
     
@@ -28,7 +31,8 @@ constexpr tgon::Vector3 g_coverImageScales[] = {
 MusicSelector::MusicSelector() :
     GameObject(u8"MusicSelector"),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
-    m_inputModule(tgon::Application::GetEngine()->FindModule<tgon::InputModule>())
+    m_inputModule(tgon::Application::GetEngine()->FindModule<tgon::InputModule>()),
+    m_gameDataModule(tgon::Application::GetEngine()->FindModule<GameDataModule>())
 {
 }
 
@@ -40,11 +44,6 @@ void MusicSelector::Initialize()
     this->SortMusicList();
     this->SortMusicLayer();
     this->RefreshMusicCoverHighlight();
-
-    if (OnChangeSelectedMusic != nullptr)
-    {
-        OnChangeSelectedMusic();
-    }
 }
 
 void MusicSelector::Update()
@@ -70,13 +69,12 @@ void MusicSelector::InitializeMusicCoverObjects()
             texture = assetModule->GetTexture(jpgCoverPath);
         }
 
-        auto coverImageObject = std::make_shared<tgon::GameObject>();
-        coverImageObject->Initialize();
+        auto coverImageObject = tgon::GameObject::Create();
         coverImageObject->GetTransform()->SetParent(this->GetTransform());
         auto spriteRendererComponent = coverImageObject->AddComponent<tgon::SpriteRendererComponent>();
         spriteRendererComponent->SetTexture(std::move(texture));
-        spriteRendererComponent->SetTextureSize({ 222.0f, 222.0f });
-        spriteRendererComponent->SetTextureRect({ 0.0f, 0.0f, 222.0f, 222.0f });
+        spriteRendererComponent->SetTextureSize({222.0f, 222.0f});
+        spriteRendererComponent->SetTextureRect({0.0f, 0.0f, 222.0f, 222.0f});
         spriteRendererComponent->SetSortingLayer(4);
 
         m_coverImageObjects.push_back(std::move(coverImageObject));
@@ -85,8 +83,7 @@ void MusicSelector::InitializeMusicCoverObjects()
 
 void MusicSelector::InitializeHighlightObject()
 {
-    m_highlight = std::make_shared<tgon::GameObject>();
-    m_highlight->Initialize();
+    m_highlight = tgon::GameObject::Create();
     
     auto spriteRendererComponent = m_highlight->AddComponent<tgon::SpriteRendererComponent>();
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
@@ -106,7 +103,7 @@ void MusicSelector::OnHandleInput()
 
             if (OnChangeSelectedMusic != nullptr)
             {
-                OnChangeSelectedMusic();
+                OnChangeSelectedMusic(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
             }
         }
     }
@@ -119,9 +116,14 @@ void MusicSelector::OnHandleInput()
 
             if (OnChangeSelectedMusic != nullptr)
             {
-                OnChangeSelectedMusic();
+                OnChangeSelectedMusic(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
             }
         }    
+    }
+    else if (keyboard->IsKeyDown(tgon::KeyCode::Space))
+    {
+        auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
+        sceneModule->ChangeScene<MusicPlayScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
     }
 }
 

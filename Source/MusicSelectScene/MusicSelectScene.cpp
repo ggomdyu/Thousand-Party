@@ -5,54 +5,61 @@
 #include "MusicSelector.h"
 #include "SquareBackground.h"
 
-MusicSelectScene::MusicSelectScene()
+#include "../GameDataModule.h"
+
+MusicSelectScene::MusicSelectScene() :
+    m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
+    m_gameDataModule(tgon::Application::GetEngine()->FindModule<GameDataModule>())
 {
     Super::Update();
 }
 
 void MusicSelectScene::Initialize()
 {
-    m_timeModule = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>();
-    
-    this->CreateMusicNameObject();
-    this->CreateMusicComposerObject();
     this->CreateSpriteObjects();
     this->CreateSquareBackgroundObject();
     this->CreateMusicSelectorObject();
+    this->CreateMusicNameObject();
+    this->CreateMusicComposerObject();
 }
 
 void MusicSelectScene::CreateSquareBackgroundObject()
 {
-    auto squareBackground = std::make_shared<SquareBackground>();
-    squareBackground->Initialize();
+    auto squareBackground = tgon::GameObject::Create<SquareBackground>();
     squareBackground->FindComponent<tgon::SpriteRendererComponent>()->SetSortingLayer(1);
     this->AddObject(squareBackground);
 }
 
 void MusicSelectScene::CreateMusicSelectorObject()
 {
-    auto musicSelector = std::make_shared<MusicSelector>();
-    musicSelector->OnChangeSelectedMusic = tgon::MakeDelegate<&MusicSelectScene::OnChangeSelectedMusic>(this);
-    musicSelector->Initialize();
+    auto musicSelector = tgon::GameObject::Create<MusicSelector>();
     musicSelector->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 20.0f, 0.0f));
+    musicSelector->OnChangeSelectedMusic = tgon::MakeDelegate<&MusicSelectScene::OnChangeSelectedMusic>(this);
     this->AddObject(musicSelector);
+    
+    m_musicSelector = musicSelector;
 }
 
 void MusicSelectScene::CreateMusicNameObject()
 {
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
 
-    auto object = std::make_shared<tgon::GameObject>(u8"musicName");
-    object->Initialize();
-    object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -windowSize.height / 2 + 90.0f, 0.0f));
+    auto object = tgon::GameObject::Create(u8"musicName");
+    object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -windowSize.height / 2 + 100.0f, 0.0f));
 
     auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
-    textComponent->SetFontAtlas(u8"Resource/Font/MaplestoryOTFBold.otf");
-    textComponent->SetFontSize(30);
+    textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
+    textComponent->SetFontSize(27);
     textComponent->SetBlendColor(tgon::Color4f(0.0f, 0.0f, 0.0f, 1.0f));
     textComponent->SetRect(tgon::I32Rect(-250, 0, 500, 50));
     textComponent->SetTextAlignment(tgon::TextAlignment::MiddleCenter);
     textComponent->SetSortingLayer(4);
+    
+    auto musicInfos = m_gameDataModule->GetMusicInfos();
+    if (musicInfos.size() > 0)
+    {
+        textComponent->SetText(musicInfos[0].musicName);
+    }
 
     m_musicNameRendererComponent = textComponent;
 
@@ -63,27 +70,32 @@ void MusicSelectScene::CreateMusicComposerObject()
 {
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
 
-    auto object = std::make_shared<tgon::GameObject>(u8"musicComposer");
-    object->Initialize();
-    object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -windowSize.height / 2 + 70.0f, 0.0f));
+    auto object = tgon::GameObject::Create(u8"musicComposer");
+    object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -windowSize.height / 2 + 72.0f, 0.0f));
 
     auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
-    textComponent->SetFontAtlas(u8"Resource/Font/MaplestoryOTFBold.otf");
-    textComponent->SetFontSize(20);
+    textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
+    textComponent->SetFontSize(16);
     textComponent->SetBlendColor(tgon::Color4f(0.0f, 0.0f, 0.0f, 1.0f));
     textComponent->SetRect(tgon::I32Rect(-250, 0, 500, 50));
     textComponent->SetTextAlignment(tgon::TextAlignment::MiddleCenter);
     textComponent->SetSortingLayer(4);
+    
+    auto musicInfos = m_gameDataModule->GetMusicInfos();
+    if (musicInfos.size() > 0)
+    {
+        textComponent->SetText(musicInfos[0].musicAuthorName);
+    }
 
     m_musicComposerRendererComponent = textComponent;
 
     this->AddObject(object);
 }
 
-void MusicSelectScene::OnChangeSelectedMusic()
+void MusicSelectScene::OnChangeSelectedMusic(const MusicInfo& musicInfo)
 {
-    m_musicNameRendererComponent->SetText(std::to_string(tgon::Random().Next(1, 100)));
-    m_musicComposerRendererComponent->SetText(std::to_string(tgon::Random().Next(1, 100)));
+    m_musicNameRendererComponent->SetText(musicInfo.musicName);
+    m_musicComposerRendererComponent->SetText(musicInfo.musicAuthorName);
 }
 
 void MusicSelectScene::CreateSpriteObjects()
@@ -118,8 +130,7 @@ void MusicSelectScene::CreateSpriteObjects()
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
-        auto object = std::make_shared<tgon::GameObject>(tgon::Path::GetFileNameWithoutExtension(texturePathList[i]));
-        object->Initialize();
+        auto object = tgon::GameObject::Create(tgon::Path::GetFileNameWithoutExtension(texturePathList[i]));
         object->GetTransform()->SetLocalPosition(texturePosList[i]);
         
         auto spriteRendererComponent = object->AddComponent<tgon::SpriteRendererComponent>();

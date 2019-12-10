@@ -19,8 +19,8 @@ public:
 
 /**@section Constructor */
 public:
-    explicit FireFly(const tgon::StringHash& name);
-
+    FireFly();
+    
 /**@section Method */
 public:
     void Initialize() override;

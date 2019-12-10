@@ -12,10 +12,12 @@
 		8C3DA39923929311004A24E4 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA38C23929310004A24E4 /* TitleScene.cpp */; };
 		8C3DA39A23929311004A24E4 /* FireFly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA38E23929310004A24E4 /* FireFly.cpp */; };
 		8C3DA39B23929311004A24E4 /* ThousandParty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA39023929311004A24E4 /* ThousandParty.cpp */; };
-		8C3DA39C23929311004A24E4 /* RenderTestScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA39323929311004A24E4 /* RenderTestScene.cpp */; };
 		8C3DA39D23929311004A24E4 /* LogoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA39623929311004A24E4 /* LogoScene.cpp */; };
 		8C3DA3A6239566B6004A24E4 /* SquareBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */; };
 		8C3DA3A923963425004A24E4 /* MusicSelector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA3A723963424004A24E4 /* MusicSelector.cpp */; };
+		8CD02C4F239DFE7F006EFA79 /* Note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CD02C4D239DFE7F006EFA79 /* Note.cpp */; };
+		8CD02C52239E004E006EFA79 /* GameDataModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CD02C51239E004E006EFA79 /* GameDataModule.cpp */; };
+		8CD02C55239E2FB7006EFA79 /* MusicPlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CD02C54239E2FB7006EFA79 /* MusicPlayScene.cpp */; };
 		FD515BDE20B46FAD0002F5C3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD06734B20B42CAA00BEA737 /* OpenAL.framework */; };
 		FD8D58712196D24200983A4A /* libTGON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8D58702196D24200983A4A /* libTGON.a */; };
 		FDBF76B120C1A40400A9207F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF76B020C1A40300A9207F /* IOKit.framework */; };
@@ -47,14 +49,18 @@
 		8C3DA38E23929310004A24E4 /* FireFly.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = FireFly.cpp; sourceTree = "<group>"; };
 		8C3DA38F23929310004A24E4 /* FireFly.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = FireFly.h; sourceTree = "<group>"; };
 		8C3DA39023929311004A24E4 /* ThousandParty.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ThousandParty.cpp; path = ../../Source/ThousandParty.cpp; sourceTree = "<group>"; };
-		8C3DA39223929311004A24E4 /* RenderTestScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = RenderTestScene.h; sourceTree = "<group>"; };
-		8C3DA39323929311004A24E4 /* RenderTestScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = RenderTestScene.cpp; sourceTree = "<group>"; };
 		8C3DA39523929311004A24E4 /* LogoScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = LogoScene.h; sourceTree = "<group>"; };
 		8C3DA39623929311004A24E4 /* LogoScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = LogoScene.cpp; sourceTree = "<group>"; };
 		8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = SquareBackground.cpp; sourceTree = "<group>"; };
 		8C3DA3A5239566B6004A24E4 /* SquareBackground.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = SquareBackground.h; sourceTree = "<group>"; };
 		8C3DA3A723963424004A24E4 /* MusicSelector.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MusicSelector.cpp; sourceTree = "<group>"; };
 		8C3DA3A823963425004A24E4 /* MusicSelector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = MusicSelector.h; sourceTree = "<group>"; };
+		8CD02C4D239DFE7F006EFA79 /* Note.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Note.cpp; sourceTree = "<group>"; };
+		8CD02C4E239DFE7F006EFA79 /* Note.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = Note.h; sourceTree = "<group>"; };
+		8CD02C50239E004E006EFA79 /* GameDataModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = GameDataModule.h; path = ../../Source/GameDataModule.h; sourceTree = "<group>"; };
+		8CD02C51239E004E006EFA79 /* GameDataModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = GameDataModule.cpp; path = ../../Source/GameDataModule.cpp; sourceTree = "<group>"; };
+		8CD02C53239E2FB7006EFA79 /* MusicPlayScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = MusicPlayScene.h; sourceTree = "<group>"; };
+		8CD02C54239E2FB7006EFA79 /* MusicPlayScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MusicPlayScene.cpp; sourceTree = "<group>"; };
 		8CD34BD2234CDAAD008338EC /* ThousandParty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ThousandParty; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD06734B20B42CAA00BEA737 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		FD8D58702196D24200983A4A /* libTGON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTGON.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,11 +92,13 @@
 			isa = PBXGroup;
 			children = (
 				8C3DA39423929311004A24E4 /* LogoScene */,
+				8CD02C4A239DFDAF006EFA79 /* MusicPlayScene */,
 				8C3DA38623929310004A24E4 /* MusicSelectScene */,
-				8C3DA39123929311004A24E4 /* TestScene */,
+				8C3DA38923929310004A24E4 /* TitleScene */,
 				8C3DA39023929311004A24E4 /* ThousandParty.cpp */,
 				8C3DA38523929310004A24E4 /* ThousandParty.h */,
-				8C3DA38923929310004A24E4 /* TitleScene */,
+				8CD02C51239E004E006EFA79 /* GameDataModule.cpp */,
+				8CD02C50239E004E006EFA79 /* GameDataModule.h */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -123,16 +131,6 @@
 			path = ../../Source/TitleScene;
 			sourceTree = "<group>";
 		};
-		8C3DA39123929311004A24E4 /* TestScene */ = {
-			isa = PBXGroup;
-			children = (
-				8C3DA39323929311004A24E4 /* RenderTestScene.cpp */,
-				8C3DA39223929311004A24E4 /* RenderTestScene.h */,
-			);
-			name = TestScene;
-			path = ../../Source/TestScene;
-			sourceTree = "<group>";
-		};
 		8C3DA39423929311004A24E4 /* LogoScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +139,18 @@
 			);
 			name = LogoScene;
 			path = ../../Source/LogoScene;
+			sourceTree = "<group>";
+		};
+		8CD02C4A239DFDAF006EFA79 /* MusicPlayScene */ = {
+			isa = PBXGroup;
+			children = (
+				8CD02C54239E2FB7006EFA79 /* MusicPlayScene.cpp */,
+				8CD02C53239E2FB7006EFA79 /* MusicPlayScene.h */,
+				8CD02C4D239DFE7F006EFA79 /* Note.cpp */,
+				8CD02C4E239DFE7F006EFA79 /* Note.h */,
+			);
+			name = MusicPlayScene;
+			path = ../../Source/MusicPlayScene;
 			sourceTree = "<group>";
 		};
 		FDD7C8BE1F654342000EB7C8 = {
@@ -224,15 +234,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C3DA39C23929311004A24E4 /* RenderTestScene.cpp in Sources */,
 				8C3DA3A923963425004A24E4 /* MusicSelector.cpp in Sources */,
 				8C3DA39823929311004A24E4 /* NightSky.cpp in Sources */,
 				8C3DA39A23929311004A24E4 /* FireFly.cpp in Sources */,
 				8C3DA39D23929311004A24E4 /* LogoScene.cpp in Sources */,
+				8CD02C55239E2FB7006EFA79 /* MusicPlayScene.cpp in Sources */,
 				8C3DA39723929311004A24E4 /* MusicSelectScene.cpp in Sources */,
 				8C3DA39923929311004A24E4 /* TitleScene.cpp in Sources */,
 				8C3DA3A6239566B6004A24E4 /* SquareBackground.cpp in Sources */,
 				8C3DA39B23929311004A24E4 /* ThousandParty.cpp in Sources */,
+				8CD02C52239E004E006EFA79 /* GameDataModule.cpp in Sources */,
+				8CD02C4F239DFE7F006EFA79 /* Note.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -89,9 +89,7 @@ void TitleScene::InitializeGraphics()
 
 void TitleScene::CreateNightSkyObject()
 {
-    auto nightSky = std::make_shared<NightSky>();
-    nightSky->Initialize();
-    this->AddObject(nightSky);
+    this->AddObject(tgon::GameObject::Create<NightSky>());
 }
 
 void TitleScene::CreateSpriteObjects()
@@ -123,8 +121,7 @@ void TitleScene::CreateSpriteObjects()
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
-        auto object = std::make_shared<tgon::GameObject>(tgon::Path::GetFileNameWithoutExtension(texturePathList[i]));
-        object->Initialize();
+        auto object = tgon::GameObject::Create(tgon::Path::GetFileNameWithoutExtension(texturePathList[i]));
         object->GetTransform()->SetLocalPosition(texturePosList[i]);
         
         auto spriteRendererComponent = object->AddComponent<tgon::SpriteRendererComponent>();
@@ -141,8 +138,7 @@ void TitleScene::CreateTextObjects()
 {
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
     
-    auto object = std::make_shared<tgon::GameObject>(u8"introSprite1");
-    object->Initialize();
+    auto object = tgon::GameObject::Create(u8"introSprite1");
     object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 30.0f, -windowSize.height / 2 + 140.0f, 0.0f));
     
     auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
@@ -160,9 +156,7 @@ void TitleScene::CreateFireFlyObjects()
 {
     for (int i = 0; i < 15; ++i)
     {
-        auto fireFly = std::make_shared<FireFly>(tgon::StringHash(std::to_string(i)));
-        fireFly->Initialize();
-        this->AddObject(std::move(fireFly));
+        this->AddObject(tgon::GameObject::Create<FireFly>(tgon::StringHash(std::to_string(i))));
     }
 }
 

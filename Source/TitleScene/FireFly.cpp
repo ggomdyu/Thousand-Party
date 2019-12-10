@@ -1,8 +1,8 @@
 #include "TGON.h"
 #include "FireFly.h"
 
-FireFly::FireFly(const tgon::StringHash& name) :
-    GameObject(name),
+FireFly::FireFly() :
+    GameObject(),
     m_canAdjustOpacity((tgon::Random().Next(0, 2) == 0) ? true : false),
     m_needToIncreaseOpacity(tgon::Random().Next(0, 1) == 0),
     m_opacityAdjustSpeed(static_cast<float>(tgon::Random().NextDouble(0.1, 0.4))),

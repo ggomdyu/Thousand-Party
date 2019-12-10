@@ -1,11 +1,9 @@
 #include "TGON.h"
 #include "NightSky.h"
 
-using namespace tgon;
-
 NightSky::NightSky() :
     GameObject(u8"NightSky"),
-    m_timeModule(Application::GetEngine()->FindModule<TimeModule>())
+    m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>())
 {
 }
 
@@ -17,14 +15,14 @@ void NightSky::Initialize()
 
 void NightSky::InitializeSpriteComponent()
 {
-    auto assetModule = Application::GetEngine()->FindModule<AssetModule>();
-    auto spriteRendererComponent = this->AddComponent<SpriteRendererComponent>();
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    auto spriteRendererComponent = this->AddComponent<tgon::SpriteRendererComponent>();
     spriteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Background/TitleScene/nightSky.png"));
 }
 
 void NightSky::InitializePosition()
 {
-    auto objectPos = Vector3(0.0f, 0.0f, 0.0f);
+    auto objectPos = tgon::Vector3(0.0f, 0.0f, 0.0f);
     this->GetTransform()->SetLocalPosition(objectPos);
 }
 
@@ -34,13 +32,13 @@ void NightSky::Update()
 
     auto transform = this->GetTransform();
     
-    auto clientSize = Application::GetRootWindow()->GetClientSize();
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     float halfWindowWidth = clientSize.width * 0.5f;
     float halfWindowHeight = clientSize.height * 0.5f;
     auto nightSkyNewPos = transform->GetLocalPosition();
     if (nightSkyNewPos.x <= -halfWindowWidth + -419.0f)
     {
-        nightSkyNewPos = Vector3(-halfWindowWidth + 1257.0f, halfWindowHeight - 221.0f, 0.0f);
+        nightSkyNewPos = tgon::Vector3(-halfWindowWidth + 1257.0f, halfWindowHeight - 221.0f, 0.0f);
     }
 
     nightSkyNewPos.x -= 55.0f * m_timeModule->GetTickTime();

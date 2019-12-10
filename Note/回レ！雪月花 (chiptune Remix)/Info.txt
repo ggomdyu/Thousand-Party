@@ -1,2 +1,4 @@
-music=Maware! setsugets...
-artist=Ê°ğÚàäêÅü£
+music=å›ãƒ¬ï¼é›ªæœˆèŠ±
+artist=æ­Œçµ„é›ªæœˆèŠ±
+bpm=145
+sync=2.4

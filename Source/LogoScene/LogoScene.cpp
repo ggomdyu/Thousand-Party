@@ -78,7 +78,6 @@ void LogoScene::Initialize()
     
     this->InitializeGraphics();
     this->CreateGameObjects();
-    this->PreloadResources();
 }
 
 void LogoScene::InitializeGraphics()
@@ -91,7 +90,7 @@ void LogoScene::InitializeGraphics()
 
 void LogoScene::CreateCameraObject()
 {
-    auto camera = std::make_shared<tgon::GameObject>("camera1");
+    auto camera = tgon::GameObject::Create("camera1");
     
     auto clientSize = tgon::Application::GetInstance().GetRootWindow()->GetClientSize();
     float halfWidth = static_cast<float>(clientSize.width) * 0.5f;
@@ -112,8 +111,7 @@ void LogoScene::CreateSpriteObject()
 
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
-        auto object = std::make_shared<tgon::GameObject>(tgon::StringHash(std::to_string(i)));
-        object->Initialize();
+        auto object = tgon::GameObject::Create(tgon::StringHash(std::to_string(i)));
         m_logoSpriteRendererComponents[i] = object->AddComponent<tgon::SpriteRendererComponent>();
         m_logoSpriteRendererComponents[i]->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f));
         m_logoSpriteRendererComponents[i]->SetTexture(std::make_shared<tgon::Texture>(texturePathList[i], tgon::FilterMode::Bilinear, tgon::WrapMode::Repeat, true, false));
@@ -151,29 +149,6 @@ void LogoScene::OnHandleInput()
         else
         {
             m_beginTime -= 1000 - elapsedTime;
-        }
-    }
-}
-
-void LogoScene::PreloadResources()
-{
-    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    
-    auto noteDirectories = tgon::Directory::GetDirectories("Note");
-    for (const auto& directory : noteDirectories)
-    {
-        auto pngCoverPath = directory + "/cover.png";
-        if (tgon::File::Exists(pngCoverPath.c_str()))
-        {
-            assetModule->GetTexture(pngCoverPath);
-            continue;
-        }
-        
-        auto jpgCoverPath = directory + "/cover.jpg";
-        if (tgon::File::Exists(jpgCoverPath.c_str()))
-        {
-            assetModule->GetTexture(jpgCoverPath);
-            continue;
         }
     }
 }
