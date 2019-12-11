@@ -10,12 +10,18 @@
 
 #include "Engine/Module.h"
 
+namespace tgon
+{
+
+class AudioPlayer;
+
+} /* namespace tgon */
+
 struct NoteInfo
 {
     int32_t noteIndex = 0;
     float hitTime = 0.0f;
     float holdTime = 0.0f;
-    bool isLongNote = false;
 };
 
 struct MusicInfo

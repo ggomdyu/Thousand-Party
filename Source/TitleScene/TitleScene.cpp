@@ -7,6 +7,8 @@
 #include "FireFly.h"
 #include "NightSky.h"
 
+#include "../MusicPlayScene/Note.h"
+
 TitleScene::TitleScene()
 {
 }
@@ -20,12 +22,17 @@ void TitleScene::Update()
 
 void TitleScene::Initialize()
 {
+    this->InitializeGraphics();
+    this->CreateNightSkyObject();
+    this->CreateSpriteObjects();
+    this->CreateTextObjects();
+    this->CreateFireFlyObjects();
+    
     auto engine = tgon::Application::GetEngine();
     auto timerModule = engine->FindModule<tgon::TimerModule>();
     auto weakTimerModule = std::weak_ptr<tgon::TimerModule>(engine->FindModule<tgon::TimerModule>());
     auto weakTimeModule = std::weak_ptr<tgon::TimeModule>(engine->FindModule<tgon::TimeModule>());
-    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-
+    
     m_inputModule = engine->FindModule<tgon::InputModule>();
     m_fadeInTimerHandle = timerModule->SetTimer([this, weakTimeModule, weakTimerModule](tgon::TimerHandle timerHandle)
     {
@@ -48,37 +55,43 @@ void TitleScene::Initialize()
             m_fadeInSpriteRendererComponent->SetBlendColor(blendColor);
         }
     }, 0.0f, true);
-    timerModule->SetTimer([this, clientSize, weakTimeModule, weakTimerModule](tgon::TimerHandle timerHandle)
+    
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
+    std::weak_ptr<tgon::GameObject> weakGirl(m_girl);
+    timerModule->SetTimer([clientSize, weakTimeModule, weakTimerModule, weakGirl](tgon::TimerHandle timerHandle)
     {
+        auto girl = weakGirl.lock();
+        if (girl == nullptr)
+        {
+            if (auto timerModule = weakTimerModule.lock(); timerModule != nullptr)
+            {
+                timerModule->ClearTimer(timerHandle);
+            }
+            return;
+        }
+        
         auto destXPos = -clientSize.width / 2 + 640.0f;
-        auto position = m_girl->GetTransform()->GetLocalPosition();
+        auto position = girl->GetTransform()->GetLocalPosition();
         if (std::abs(position.x - destXPos) <= 0.0001f)
         {
             position.x = destXPos;
-            m_girl->GetTransform()->SetLocalPosition(position);
+            girl->GetTransform()->SetLocalPosition(position);
             
-            auto timerModule = weakTimerModule.lock();
-            if (timerModule != nullptr)
+            if (auto timerModule = weakTimerModule.lock(); timerModule != nullptr)
             {
                 timerModule->ClearTimer(timerHandle);
             }
             return;
         }
 
-        auto timeModule = weakTimeModule.lock();
-        if (timeModule != nullptr)
+        if (auto timeModule = weakTimeModule.lock(); timeModule != nullptr)
         {
             auto newXPos = tgon::Lerp(position.x, destXPos, 0.1f);
             position.x = newXPos;
-            m_girl->GetTransform()->SetLocalPosition(position);
+            girl->GetTransform()->SetLocalPosition(position);
         }
     }, 0.0f, true);
     
-    this->InitializeGraphics();
-    this->CreateNightSkyObject();
-    this->CreateSpriteObjects();
-    this->CreateTextObjects();
-    this->CreateFireFlyObjects();
 }
 
 void TitleScene::InitializeGraphics()

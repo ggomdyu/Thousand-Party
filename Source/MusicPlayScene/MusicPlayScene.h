@@ -24,7 +24,7 @@ class TextRendererComponent;
 } /* namespace tgon */
 
 class Note;
-class LongNote;
+class HoldNote;
 
 class MusicPlayScene :
     public tgon::Scene
@@ -44,10 +44,10 @@ public:
 private:
     void InitializeBackgroundObject();
     void InitializeNoteObjectPool();
-    void InitializeLongNoteObjectPool();
+    void InitializeHoldNoteObjectPool();
     void InitializeHitRingObject();
     std::shared_ptr<Note> GetNoteObjectFromPool();
-    std::shared_ptr<LongNote> GetLongNoteObjectFromPool();
+    std::shared_ptr<HoldNote> GetHoldNoteObjectFromPool();
     void UpdateNoteLine();
     void UpdateBackgroundObjectPosition();
     void InitializeMusicNameObject();
@@ -61,7 +61,7 @@ private:
     MusicInfo m_musicInfo;
     tgon::AudioPlayer m_audioPlayer;
     std::vector<std::shared_ptr<Note>> m_noteObjectPool;
-    std::vector<std::shared_ptr<LongNote>> m_longNoteObjectPool;
+    std::vector<std::shared_ptr<HoldNote>> m_holdNoteObjectPool;
     std::array<std::deque<std::shared_ptr<Note>>, 4> m_noteLine;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::AudioModule> m_audioModule;

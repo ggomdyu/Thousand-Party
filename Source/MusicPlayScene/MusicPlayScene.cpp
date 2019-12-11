@@ -21,7 +21,7 @@ void MusicPlayScene::Initialize()
     this->InitializeBackgroundObject();
     this->InitializeHitRingObject();
     this->InitializeNoteObjectPool();
-    this->InitializeLongNoteObjectPool();
+    this->InitializeHoldNoteObjectPool();
     this->InitializeMusicNameObject();
     this->InitializeMusicArtistNameObject();
     
@@ -47,14 +47,24 @@ void MusicPlayScene::Update()
         return;
     }
     
-    m_elapsedTime += m_timeModule->GetTickTime();
+    m_elapsedTime = m_audioPlayer.GetProgressInSeconds();
     
     for (size_t i = m_noteInfoIndex; i < m_musicInfo.noteInfos.size(); ++i)
     {
         auto& noteInfo = m_musicInfo.noteInfos[i];
         if (noteInfo.hitTime - m_elapsedTime < 1.0f)
         {
-            auto noteObject = (noteInfo.isLongNote) ? this->GetLongNoteObjectFromPool() : this->GetNoteObjectFromPool();
+            std::shared_ptr<Note> noteObject;
+            if (noteInfo.holdTime == 0.0f)
+            {
+                noteObject = this->GetNoteObjectFromPool();
+            }
+            else
+            {
+                auto holdNoteObject = this->GetHoldNoteObjectFromPool();
+                holdNoteObject->SetHoldTime(noteInfo.holdTime);
+                noteObject = holdNoteObject;
+            }
             noteObject->SetHitTime(noteInfo.hitTime);
             noteObject->SetNoteLineIndex(noteInfo.noteIndex);
             
@@ -82,8 +92,16 @@ void MusicPlayScene::UpdateNoteLine()
                 (*iter)->UpdateInput();
                 if ((*iter)->IsHitted())
                 {
-                    m_noteObjectPool.push_back((*iter));
-                    noteObjects.erase(iter);
+                    if (tgon::DynamicCast<HoldNote*>(iter->get()) == nullptr)
+                    {
+                        m_noteObjectPool.push_back(*iter);
+                        noteObjects.erase(iter);
+                    }
+                    else if ((*iter)->IsHolding() == false)
+                    {
+                        m_holdNoteObjectPool.push_back(std::static_pointer_cast<HoldNote>(*iter));
+                        noteObjects.erase(iter);
+                    }
                 }
                 break;
             }
@@ -94,20 +112,26 @@ void MusicPlayScene::UpdateNoteLine()
     {
         for (auto iter = noteObjects.begin(); iter != noteObjects.end();)
         {
-            if ((*iter)->GetHitTime() - m_elapsedTime < -0.5f)
-            {
-                if (tgon::DynamicCast<LongNote*>(iter->get()) == nullptr)
-                {
-                    m_noteObjectPool.push_back(*iter);
-                }
-                else
-                {
-                    m_longNoteObjectPool.push_back(std::static_pointer_cast<LongNote>(*iter));
-                }
-                
-                iter = noteObjects.erase(iter);
-            }
-            else
+//            if ((*iter)->GetHitTime() - m_elapsedTime < -0.5f)
+//            {
+//                if (tgon::DynamicCast<HoldNote*>(iter->get()) == nullptr)
+//                {
+//                    m_noteObjectPool.push_back(*iter);
+//                    iter = noteObjects.erase(iter);
+//                }
+//                else if ((*iter)->IsHolding() == false)
+//                {
+//                    m_holdNoteObjectPool.push_back(std::static_pointer_cast<HoldNote>(*iter));
+//                    iter = noteObjects.erase(iter);
+//                }
+//                else
+//                {
+//                    (*iter)->SetElapsedTime(m_elapsedTime);
+//                    (*iter)->Update();
+//                    ++iter;
+//                }
+//            }
+//            else
             {
                 (*iter)->SetElapsedTime(m_elapsedTime);
                 (*iter)->Update();
@@ -143,17 +167,17 @@ void MusicPlayScene::InitializeBackgroundObject()
 
 void MusicPlayScene::InitializeNoteObjectPool()
 {
-    for (size_t i = 0; i < 50; ++i)
+    for (size_t i = 0; i < 40; ++i)
     {
         m_noteObjectPool.push_back(tgon::GameObject::Create<Note>());
     }
 }
 
-void MusicPlayScene::InitializeLongNoteObjectPool()
+void MusicPlayScene::InitializeHoldNoteObjectPool()
 {
-    for (size_t i = 0; i < 30; ++i)
+    for (size_t i = 0; i < 20; ++i)
     {
-//        m_longNoteObjectPool.push_back(tgon::GameObject::Create<LongNote>());
+        m_holdNoteObjectPool.push_back(tgon::GameObject::Create<HoldNote>());
     }
 }
 
@@ -226,17 +250,17 @@ std::shared_ptr<Note> MusicPlayScene::GetNoteObjectFromPool()
     return ret;
 }
 
-std::shared_ptr<LongNote> MusicPlayScene::GetLongNoteObjectFromPool()
+std::shared_ptr<HoldNote> MusicPlayScene::GetHoldNoteObjectFromPool()
 {
-    if (m_longNoteObjectPool.size() == 0)
+    if (m_holdNoteObjectPool.size() == 0)
     {
-        m_longNoteObjectPool.push_back(tgon::GameObject::Create<LongNote>());
+        m_holdNoteObjectPool.push_back(tgon::GameObject::Create<HoldNote>());
     }
     
-    auto ret = m_longNoteObjectPool.back();
+    auto ret = m_holdNoteObjectPool.back();
     ret->Reset();
     
-    m_longNoteObjectPool.pop_back();
+    m_holdNoteObjectPool.pop_back();
     
     return ret;
 }

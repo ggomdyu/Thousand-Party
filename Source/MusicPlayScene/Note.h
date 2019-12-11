@@ -40,7 +40,7 @@ public:
     
 /**@section Method */
 public:
-    void Reset();
+    virtual void Reset();
     void Initialize() override;
     void Update() override;
     virtual void UpdateInput();
@@ -51,7 +51,12 @@ public:
     void SetHitTime(float hitTime) noexcept;
     float GetHitTime() const noexcept;
     bool IsHitted() const noexcept;
-
+    bool IsHolding() const noexcept;
+    
+protected:
+    virtual void OnHitNote(tgon::KeyCode keyCode);
+    void PlayHitSound();
+    
 private:
     void InitializeSprite();
     
@@ -61,16 +66,18 @@ protected:
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::Keyboard> m_keyboard;
     bool m_isHitted = false;
+    bool m_isHolding = false;
+    tgon::KeyCode m_hittedKeyCode;
     float m_elapsedTime = 0.0f;
     float m_hitTime = 0.0f;
     int32_t m_noteLineIndex = 0;
 };
 
-class LongNote :
+class HoldNote :
     public Note
 {
 public:
-    TGON_DECLARE_RTTI(LongNote)
+    TGON_DECLARE_RTTI(HoldNote)
 
 /**@section Constructor */
 public:
@@ -78,18 +85,23 @@ public:
     
 /**@section Method */
 public:
+    void Reset() override;
     void Initialize() override;
     void Update() override;
+    void UpdateInput() override;
     bool CheckCanHit() const override;
     void SetHoldTime(float holdTime) noexcept;
     float GetHoldTime() const noexcept;
 
+protected:
+    void OnHitNote(tgon::KeyCode keyCode) override;
+        
 private:
     void InitializeSprite();
 
 /**@section Variable */
 protected:
-    char m_holdingKey = 0;
     float m_holdTime = 0.0f;
+    std::shared_ptr<tgon::GameObject> m_ringObject;
     std::shared_ptr<tgon::SpriteRendererComponent> m_longNoteRendererComponent;
 };

@@ -50,32 +50,58 @@ std::vector<NoteInfo> GameDataModule::ParseNoteInfo(const std::string& noteDirec
     std::vector<NoteInfo> ret;
     double bitPerSeconds = bpm / 60.0f;
     
-    for (auto& fileLineData : fileLineDatas.value())
+    for (size_t i = 0; i < fileLineDatas.value().size(); ++i)
     {
-        auto divisor = fileLineData.find(':');
-        if (divisor == std::string::npos)
+        auto& fileLineData = fileLineDatas.value()[i];
+        
+        auto divisorIndex = fileLineData.find(':');
+        if (divisorIndex == std::string::npos)
         {
             continue;
         }
         
-        fileLineData[divisor] = '\0';
+        fileLineData[divisorIndex] = '\0';
         float hitTime = (1.0f / bitPerSeconds / 8.0f) * atof(&fileLineData[0]) + sync;
-        
-        for (int32_t i = 0; i < 4; ++i)
+
+        for (size_t j = 0; j < 4; ++j)
         {
-            auto ch = fileLineData[divisor + 1 + i];
+            auto ch = fileLineData[divisorIndex + 1 + j];
             if (ch == '0')
             {
                 continue;
             }
             else if (ch == '1')
             {
-                ret.push_back(NoteInfo{i, hitTime, 0.0f, false});
+                ret.push_back(NoteInfo{static_cast<int32_t>(j), hitTime, 0.0f});
             }
             else if (ch == '2')
             {
-                // TODO...
-                ret.push_back(NoteInfo{i, hitTime, 0.0f, false});
+                size_t holdEndLineDataIndex = i;
+                size_t holdEndLineDataDivisorIndex = 0;
+                for (size_t k = i + 1; k < fileLineDatas.value().size(); ++k)
+                {
+                    auto& holdLineData = fileLineDatas.value()[k];
+                    size_t divisorIndex2 = holdLineData.find(':');
+                    if (holdLineData[divisorIndex2 + 1 + j] != '2')
+                    {
+                        break;
+                    }
+
+                    holdEndLineDataDivisorIndex = divisorIndex2;
+                    holdEndLineDataIndex = k;
+                }
+
+                if (holdEndLineDataIndex == i)
+                {
+                    continue;
+                }
+
+                auto& holdEndLineData = fileLineDatas.value()[holdEndLineDataIndex];
+                holdEndLineData[holdEndLineDataDivisorIndex] = '\0';
+                float holdEndTime = (1.0f / bitPerSeconds / 8.0f) * atof(&holdEndLineData[0]) + sync;
+                holdEndLineData[holdEndLineDataDivisorIndex] = ':';
+
+                ret.push_back(NoteInfo{static_cast<int32_t>(j), hitTime, holdEndTime - hitTime});
             }
         }
     }
