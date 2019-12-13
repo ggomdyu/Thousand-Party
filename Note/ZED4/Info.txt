@@ -1,4 +1,0 @@
-music=ZED
-artist=USAO
-bpm=190
-sync=3.7

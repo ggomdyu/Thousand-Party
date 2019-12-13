@@ -77,7 +77,7 @@ void Note::InitializeSprite()
 {
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     m_noteRendererComponent = this->AddComponent<tgon::SpriteRendererComponent>();
-    m_noteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/PlayScene/Note.png"));
+    m_noteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/MusicPlayScene/note.png"));
 }
 
 void Note::Update()
@@ -89,7 +89,7 @@ void Note::Update()
         if (m_elapsedTime - m_hitTime > 0.0f)
         {
             auto blendColor = m_noteRendererComponent->GetBlendColor();
-            blendColor.a = std::max(0.0f, blendColor.a - 5.0f * m_timeModule->GetTickTime());
+            blendColor.a = std::clamp(tgon::Lerp(1.0f, 0.0f, (m_hitTime - m_elapsedTime) * 3.0f), 0.0f, 1.0f);
             m_noteRendererComponent->SetBlendColor(blendColor);
         }
         
@@ -97,9 +97,9 @@ void Note::Update()
     }
 }
 
-NoteTiming Note::CheckNoteTiming() const noexcept
+NoteTiming Note::CheckNoteTiming(float timingOffset) const noexcept
 {
-    auto distance = m_elapsedTime - m_hitTime;
+    auto distance = m_elapsedTime - (m_hitTime + timingOffset);
     if (-0.05f < distance && distance < 0.05f)
     {
         return NoteTiming::Perfect;
@@ -130,22 +130,26 @@ void Note::UpdateInput()
         return;
     }
 
-    tgon::KeyCode keyCodeTable[] = {
+    constexpr tgon::KeyCode keyCodeTable[] = {
+        tgon::KeyCode::Alpha1, tgon::KeyCode::Alpha2, tgon::KeyCode::Alpha3, tgon::KeyCode::Alpha4, tgon::KeyCode::Alpha5, tgon::KeyCode::Alpha6, tgon::KeyCode::Alpha7, tgon::KeyCode::Alpha8, tgon::KeyCode::Alpha9, tgon::KeyCode::Alpha0, tgon::KeyCode::Minus, tgon::KeyCode::Plus,
         tgon::KeyCode::Q, tgon::KeyCode::W, tgon::KeyCode::E, tgon::KeyCode::R, tgon::KeyCode::T, tgon::KeyCode::Y, tgon::KeyCode::U, tgon::KeyCode::I, tgon::KeyCode::O, tgon::KeyCode::P, tgon::KeyCode::LeftBracket, tgon::KeyCode::RightBracket,
         tgon::KeyCode::A, tgon::KeyCode::S, tgon::KeyCode::D, tgon::KeyCode::F, tgon::KeyCode::G, tgon::KeyCode::H, tgon::KeyCode::J, tgon::KeyCode::K, tgon::KeyCode::L, tgon::KeyCode::Semicolon, tgon::KeyCode::Apostrophe,
         tgon::KeyCode::Z, tgon::KeyCode::X, tgon::KeyCode::C, tgon::KeyCode::V, tgon::KeyCode::B, tgon::KeyCode::N, tgon::KeyCode::M, tgon::KeyCode::Comma, tgon::KeyCode::Period, tgon::KeyCode::Slash,
         tgon::KeyCode::Space
     };
-    std::array<std::pair<size_t, size_t>, 4> keyCodeIndexTable = {std::pair<size_t, size_t>
-        {0, 11}, {12, 22}, {23, 32}, {33,33}
+    constexpr std::array<std::pair<size_t, size_t>, 5> keyCodeIndexTable = {std::pair<size_t, size_t>
+        {0, 11}, {12, 23}, {24, 34}, {35, 44}, {45,45}
     };
     
-    for (size_t i = keyCodeIndexTable[m_noteLineIndex].first; i <= keyCodeIndexTable[m_noteLineIndex].second; ++i)
+    if (m_isHolding == false)
     {
-        if (m_keyboard->IsKeyDown(keyCodeTable[i]))
+        for (size_t i = keyCodeIndexTable[m_noteLineIndex].first; i <= keyCodeIndexTable[m_noteLineIndex].second; ++i)
         {
-            this->OnHitNote(keyCodeTable[i]);
-            break;
+            if (m_keyboard->IsKeyDown(keyCodeTable[i]))
+            {
+                this->OnHitNote(keyCodeTable[i], this->CheckNoteTiming());
+                break;
+            }
         }
     }
 }
@@ -165,7 +169,8 @@ void Note::PlayHitSound()
         hitSoundPlayer.Initialize(assetModule->GetAudioBuffer("Resource/Sound/HOCKEY.wav"));
         return hitSoundPlayer;
     };
-    static tgon::AudioPlayer hitSoundPlayer[4] = {
+    static tgon::AudioPlayer hitSoundPlayer[5] = {
+        audioPlayerGenerator(),
         audioPlayerGenerator(),
         audioPlayerGenerator(),
         audioPlayerGenerator(),
@@ -175,14 +180,13 @@ void Note::PlayHitSound()
     hitSoundPlayer[m_noteLineIndex].Play();
 }
 
-void Note::OnHitNote(tgon::KeyCode keyCode)
+void Note::OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming)
 {
     this->PlayHitSound();
     
     m_isHitted = true;
     m_hittedKeyCode = keyCode;
     
-    auto noteTiming = this->CheckNoteTiming();
     if (noteTiming == NoteTiming::Perfect)
     {
         tgon::Debug::Write("Perfect:");
@@ -199,6 +203,10 @@ void Note::OnHitNote(tgon::KeyCode keyCode)
     {
         tgon::Debug::Write("Late:   ");
     }
+    else if (noteTiming == NoteTiming::Miss)
+    {
+        tgon::Debug::Write("Miss:   ");
+    }
     
     tgon::Debug::WriteLine(std::to_string(m_elapsedTime));
 }
@@ -208,7 +216,8 @@ void HoldNote::Reset()
     Super::Reset();
     
     m_holdTime = 0.0f;
-    m_longNoteRendererComponent->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 1.0f));
+    m_holdNoteRendererComponent->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 1.0f));
+    m_ringObject->GetTransform()->SetLocalScale(tgon::Vector3(1.0f, 1.0f, 1.0f));
 }
 
 void HoldNote::Initialize()
@@ -226,15 +235,12 @@ void HoldNote::Update()
     {
         if (m_elapsedTime - m_hitTime > 0.0f)
         {
-            auto blendColor = m_longNoteRendererComponent->GetBlendColor();
-            blendColor.a = std::max(0.0f, blendColor.a - 5.0f * m_timeModule->GetTickTime());
-            m_longNoteRendererComponent->SetBlendColor(blendColor);
+            m_holdNoteRendererComponent->SetBlendColor(m_noteRendererComponent->GetBlendColor());
         }
     }
     else
     {
-        float holdEndTime = m_hitTime + m_holdTime;
-        float interpolated = tgon::Lerp(1.0f, 0.5f, m_elapsedTime / holdEndTime);
+        float interpolated = std::min(1.0f, 1.0f - (0.5f * ((m_elapsedTime - m_hitTime) / m_holdTime)));
         m_ringObject->GetTransform()->SetLocalScale(tgon::Vector3(interpolated, interpolated, 1.0f));
     }
 }
@@ -248,15 +254,20 @@ void HoldNote::UpdateInput()
     
     Super::UpdateInput();
     
-    if (m_isHitted == false)
+    if (m_isHitted)
     {
-        return;
-    }
-    
-    if (m_keyboard->IsKeyUp(m_hittedKeyCode))
-    {
-        this->PlayHitSound();
-        m_isHolding = false;
+        if (m_keyboard->IsKeyUp(m_hittedKeyCode))
+        {
+            this->OnHitNote(m_hittedKeyCode, this->CheckNoteTiming(m_holdTime));
+        }
+        else if (m_keyboard->IsKeyHold(m_hittedKeyCode))
+        {
+            float holdEndTime = m_hitTime + m_holdTime;
+            if (m_elapsedTime - holdEndTime >= 0.0f)
+            {
+                this->OnHitNote(m_hittedKeyCode, this->CheckNoteTiming(m_holdTime));
+            }
+        }
     }
 }
 
@@ -275,11 +286,20 @@ float HoldNote::GetHoldTime() const noexcept
     return m_holdTime;
 }
 
-void HoldNote::OnHitNote(tgon::KeyCode keyCode)
+void HoldNote::OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming)
 {
-    Super::OnHitNote(keyCode);
+    Super::OnHitNote(keyCode, noteTiming);
     
-    m_isHolding = true;
+    // Hold note key up occured
+    if (m_isHolding)
+    {
+        m_isHolding = false;
+    }
+    // Hold note key down occured
+    else
+    {
+        m_isHolding = true;
+    }
 }
 
 void HoldNote::InitializeSprite()
@@ -288,8 +308,8 @@ void HoldNote::InitializeSprite()
 
     auto ringObject = tgon::GameObject::Create();
     ringObject->GetTransform()->SetParent(this->GetTransform());
-    m_longNoteRendererComponent = ringObject->AddComponent<tgon::SpriteRendererComponent>();
-    m_longNoteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/PlayScene/LongNote.png"));
+    m_holdNoteRendererComponent = ringObject->AddComponent<tgon::SpriteRendererComponent>();
+    m_holdNoteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/MusicPlayScene/holdNote.png"));
     
     m_ringObject = ringObject;
 }

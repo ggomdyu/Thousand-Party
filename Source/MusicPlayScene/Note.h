@@ -45,7 +45,7 @@ public:
     void Update() override;
     virtual void UpdateInput();
     virtual bool CheckCanHit() const;
-    NoteTiming CheckNoteTiming() const noexcept;
+    NoteTiming CheckNoteTiming(float timingOffset = 0.0f) const noexcept;
     void SetNoteLineIndex(int32_t index) noexcept;
     void SetElapsedTime(float elapsedTime) noexcept;
     void SetHitTime(float hitTime) noexcept;
@@ -54,7 +54,7 @@ public:
     bool IsHolding() const noexcept;
     
 protected:
-    virtual void OnHitNote(tgon::KeyCode keyCode);
+    virtual void OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming);
     void PlayHitSound();
     
 private:
@@ -94,7 +94,7 @@ public:
     float GetHoldTime() const noexcept;
 
 protected:
-    void OnHitNote(tgon::KeyCode keyCode) override;
+    void OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming) override;
         
 private:
     void InitializeSprite();
@@ -103,5 +103,5 @@ private:
 protected:
     float m_holdTime = 0.0f;
     std::shared_ptr<tgon::GameObject> m_ringObject;
-    std::shared_ptr<tgon::SpriteRendererComponent> m_longNoteRendererComponent;
+    std::shared_ptr<tgon::SpriteRendererComponent> m_holdNoteRendererComponent;
 };

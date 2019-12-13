@@ -54,18 +54,11 @@ std::vector<NoteInfo> GameDataModule::ParseNoteInfo(const std::string& noteDirec
     {
         auto& fileLineData = fileLineDatas.value()[i];
         
-        auto divisorIndex = fileLineData.find(':');
-        if (divisorIndex == std::string::npos)
-        {
-            continue;
-        }
-        
-        fileLineData[divisorIndex] = '\0';
-        float hitTime = (1.0f / bitPerSeconds / 8.0f) * atof(&fileLineData[0]) + sync;
+        float hitTime = (1.0f / bitPerSeconds / 8.0f) * atof(&fileLineData[6]) + sync;
 
-        for (size_t j = 0; j < 4; ++j)
+        for (size_t j = 0; j < 5; ++j)
         {
-            auto ch = fileLineData[divisorIndex + 1 + j];
+            auto ch = fileLineData[j];
             if (ch == '0')
             {
                 continue;
@@ -76,18 +69,20 @@ std::vector<NoteInfo> GameDataModule::ParseNoteInfo(const std::string& noteDirec
             }
             else if (ch == '2')
             {
+                if (i > 0 && fileLineDatas.value()[i - 1][j] == '2')
+                {
+                    continue;
+                }
+                
                 size_t holdEndLineDataIndex = i;
-                size_t holdEndLineDataDivisorIndex = 0;
                 for (size_t k = i + 1; k < fileLineDatas.value().size(); ++k)
                 {
                     auto& holdLineData = fileLineDatas.value()[k];
-                    size_t divisorIndex2 = holdLineData.find(':');
-                    if (holdLineData[divisorIndex2 + 1 + j] != '2')
+                    if (holdLineData[j] != '2')
                     {
                         break;
                     }
 
-                    holdEndLineDataDivisorIndex = divisorIndex2;
                     holdEndLineDataIndex = k;
                 }
 
@@ -97,14 +92,17 @@ std::vector<NoteInfo> GameDataModule::ParseNoteInfo(const std::string& noteDirec
                 }
 
                 auto& holdEndLineData = fileLineDatas.value()[holdEndLineDataIndex];
-                holdEndLineData[holdEndLineDataDivisorIndex] = '\0';
-                float holdEndTime = (1.0f / bitPerSeconds / 8.0f) * atof(&holdEndLineData[0]) + sync;
-                holdEndLineData[holdEndLineDataDivisorIndex] = ':';
+                float holdEndTime = (1.0f / bitPerSeconds / 8.0f) * atof(&holdEndLineData[6]) + sync;
 
                 ret.push_back(NoteInfo{static_cast<int32_t>(j), hitTime, holdEndTime - hitTime});
             }
         }
     }
+    
+    std::sort(ret.begin(), ret.end(), [](const NoteInfo& lhs, const NoteInfo& rhs)
+    {
+        return lhs.hitTime < rhs.hitTime;
+    });
     
     return ret;
 }

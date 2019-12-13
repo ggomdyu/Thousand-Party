@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0C8B4623A3759C00AA01F3 /* NoteLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C8B4523A3759C00AA01F3 /* NoteLine.cpp */; };
 		8C3DA39723929311004A24E4 /* MusicSelectScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA38823929310004A24E4 /* MusicSelectScene.cpp */; };
 		8C3DA39823929311004A24E4 /* NightSky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA38A23929310004A24E4 /* NightSky.cpp */; };
 		8C3DA39923929311004A24E4 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA38C23929310004A24E4 /* TitleScene.cpp */; };
@@ -39,6 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C0C8B4423A3759C00AA01F3 /* NoteLine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = NoteLine.h; sourceTree = "<group>"; };
+		8C0C8B4523A3759C00AA01F3 /* NoteLine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = NoteLine.cpp; sourceTree = "<group>"; };
 		8C3DA38523929310004A24E4 /* ThousandParty.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = ThousandParty.h; path = ../../Source/ThousandParty.h; sourceTree = "<group>"; };
 		8C3DA38723929310004A24E4 /* MusicSelectScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = MusicSelectScene.h; sourceTree = "<group>"; };
 		8C3DA38823929310004A24E4 /* MusicSelectScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MusicSelectScene.cpp; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				8CD02C53239E2FB7006EFA79 /* MusicPlayScene.h */,
 				8CD02C4D239DFE7F006EFA79 /* Note.cpp */,
 				8CD02C4E239DFE7F006EFA79 /* Note.h */,
+				8C0C8B4523A3759C00AA01F3 /* NoteLine.cpp */,
+				8C0C8B4423A3759C00AA01F3 /* NoteLine.h */,
 			);
 			name = MusicPlayScene;
 			path = ../../Source/MusicPlayScene;
@@ -241,6 +246,7 @@
 				8CD02C55239E2FB7006EFA79 /* MusicPlayScene.cpp in Sources */,
 				8C3DA39723929311004A24E4 /* MusicSelectScene.cpp in Sources */,
 				8C3DA39923929311004A24E4 /* TitleScene.cpp in Sources */,
+				8C0C8B4623A3759C00AA01F3 /* NoteLine.cpp in Sources */,
 				8C3DA3A6239566B6004A24E4 /* SquareBackground.cpp in Sources */,
 				8C3DA39B23929311004A24E4 /* ThousandParty.cpp in Sources */,
 				8CD02C52239E004E006EFA79 /* GameDataModule.cpp in Sources */,
