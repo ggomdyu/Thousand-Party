@@ -21,7 +21,6 @@ void MusicPlayScene::Initialize()
     
     this->InitializeBackgroundObject();
     this->InitializeNoteLine();
-    this->InitializeHitRingObject();
     this->InitializeNoteObjectPool();
     this->InitializeHoldNoteObjectPool();
     this->InitializeMusicNameObject();
@@ -180,7 +179,7 @@ void MusicPlayScene::InitializeNoteObjectPool()
 {
     for (size_t i = 0; i < 40; ++i)
     {
-        m_noteObjectPool.push_back(tgon::GameObject::Create<Note>());
+        m_noteObjectPool.push_back(tgon::GameObject::Create<Note>({}, std::make_shared<tgon::Transform>(), m_noteLine));
     }
 }
 
@@ -188,22 +187,8 @@ void MusicPlayScene::InitializeHoldNoteObjectPool()
 {
     for (size_t i = 0; i < 20; ++i)
     {
-        m_holdNoteObjectPool.push_back(tgon::GameObject::Create<HoldNote>());
+        m_holdNoteObjectPool.push_back(tgon::GameObject::Create<HoldNote>({}, std::make_shared<tgon::Transform>(), m_noteLine));
     }
-}
-
-void MusicPlayScene::InitializeHitRingObject()
-{
-    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    
-    auto hitRingObject = tgon::GameObject::Create();
-    auto spriteRendererComponent = hitRingObject->AddComponent<tgon::SpriteRendererComponent>();
-    spriteRendererComponent->SetTexture(assetModule->GetTexture("Resource/Object/MusicPlayScene/ring.png"));
-    spriteRendererComponent->SetPivot({0.0f, 0.5f});
-    
-    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-    hitRingObject->GetTransform()->SetLocalPosition({-static_cast<float>(clientSize.width) * 0.5f + 120.0f, -85.0f, 0.0f});
-    this->AddObject(std::move(hitRingObject));
 }
 
 void MusicPlayScene::InitializeMusicNameObject()
@@ -250,7 +235,7 @@ std::shared_ptr<Note> MusicPlayScene::GetNoteObjectFromPool()
 {
     if (m_noteObjectPool.size() == 0)
     {
-        m_noteObjectPool.push_back(tgon::GameObject::Create<Note>());
+        m_noteObjectPool.push_back(tgon::GameObject::Create<Note>({}, std::make_shared<tgon::Transform>(), m_noteLine));
     }
     
     auto ret = m_noteObjectPool.back();
@@ -265,7 +250,7 @@ std::shared_ptr<HoldNote> MusicPlayScene::GetHoldNoteObjectFromPool()
 {
     if (m_holdNoteObjectPool.size() == 0)
     {
-        m_holdNoteObjectPool.push_back(tgon::GameObject::Create<HoldNote>());
+        m_holdNoteObjectPool.push_back(tgon::GameObject::Create<HoldNote>({}, std::make_shared<tgon::Transform>(), m_noteLine));
     }
     
     auto ret = m_holdNoteObjectPool.back();

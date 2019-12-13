@@ -28,6 +28,8 @@ enum NoteTiming
     Miss
 };
 
+class NoteLine;
+
 class Note :
     public tgon::GameObject
 {
@@ -36,7 +38,7 @@ public:
 
 /**@section Constructor */
 public:
-    Note();
+    explicit Note(const std::shared_ptr<NoteLine>& noteLine);
     
 /**@section Method */
 public:
@@ -62,6 +64,7 @@ private:
     
 /**@section Variable */
 protected:
+    std::shared_ptr<NoteLine> m_noteLine;
     std::shared_ptr<tgon::SpriteRendererComponent> m_noteRendererComponent;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::Keyboard> m_keyboard;

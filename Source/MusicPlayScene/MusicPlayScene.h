@@ -47,7 +47,6 @@ private:
     void InitializeNoteLine();
     void InitializeNoteObjectPool();
     void InitializeHoldNoteObjectPool();
-    void InitializeHitRingObject();
     std::shared_ptr<Note> GetNoteObjectFromPool();
     std::shared_ptr<HoldNote> GetHoldNoteObjectFromPool();
     void UpdateNotes();

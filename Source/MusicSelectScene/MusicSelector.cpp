@@ -118,10 +118,17 @@ void MusicSelector::OnHandleInput()
             {
                 OnChangeSelectedMusic(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
             }
-        }    
+        }
     }
+
     else if (keyboard->IsKeyDown(tgon::KeyCode::Space))
     {
+        auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
+        if (m_animationTimer != tgon::TimerHandle{})
+        {
+            timerModule->ClearTimer(m_animationTimer);
+        }
+        
         auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
         sceneModule->ChangeScene<MusicPlayScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
     }

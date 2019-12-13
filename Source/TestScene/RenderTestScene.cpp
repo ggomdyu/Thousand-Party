@@ -3,6 +3,46 @@
 
 using namespace tgon;
 
+std::shared_ptr<GameObject> g_note; 
+std::shared_ptr<GameObject> g_ring;
+std::shared_ptr<GameObject> g_background;
+std::shared_ptr<SpriteRendererComponent> g_noteRendererComponent;
+std::shared_ptr<SpriteRendererComponent> g_longNoteRendererComponent;
+
+void InitializeBackground()
+{
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    auto backgroundObject = tgon::GameObject::Create();
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
+    backgroundObject->GetTransform()->SetLocalPosition({ -static_cast<float>(clientSize.width) * 0.5f, 0.0f, 0.0f });
+
+    auto spriteRendererComponent = backgroundObject->AddComponent<tgon::SpriteRendererComponent>();
+    spriteRendererComponent->SetTexture(assetModule->GetTexture("Resource/Background/MusicPlayScene/green.png"));
+    spriteRendererComponent->SetPivot({ 0.0f, 0.5f });
+    spriteRendererComponent->SetSortingLayer(0);
+
+    g_background = backgroundObject;
+}
+
+void InitializeNote()
+{
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    auto obj = GameObject::Create();
+    g_noteRendererComponent = obj->AddComponent<tgon::SpriteRendererComponent>();
+    g_noteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/PlayScene/Note.png"));
+    g_noteRendererComponent->SetSortingLayer(1);
+
+    auto ringObject = tgon::GameObject::Create();
+    ringObject->GetTransform()->SetParent(obj->GetTransform());
+    g_longNoteRendererComponent = ringObject->AddComponent<tgon::SpriteRendererComponent>();
+    g_longNoteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/PlayScene/LongNote.png"));
+    g_noteRendererComponent->SetSortingLayer(0);
+
+    g_note = obj;
+    g_ring = ringObject;
+}
+
+
 RenderTestScene::RenderTestScene()
 {
 }
@@ -13,57 +53,61 @@ void RenderTestScene::Initialize()
     graphicsModule->GetGraphics().SetClearColor(Color4f(1.0f, 0.5f, 0.5f, 1.0f));
     
     this->CreateCameraObject();
-    this->CreateFontObjects();
 
-//    auto object = std::make_shared<GameObject>("test");
-//    auto spriteComponent = object->AddComponent<SpriteRendererComponent>();
-//    auto sprite = std::make_shared<UISprite>(std::make_shared<Texture>("/Users/chajunho/Desktop/1.png", FilterMode::Bilinear, WrapMode::Clamp, false, false));
-//    sprite->SetPivot({0.5f, 0.5f});
-//    spriteComponent->SetSprite(sprite);
-//    this->AddObject(object);
+    InitializeBackground();
+    InitializeNote();
+    this->AddObject(g_note);
 }
 
 void RenderTestScene::CreateCameraObject()
 {
-//    auto camera = std::make_shared<GameObject>("camera1");
-//    
-//    auto rootWindowSize = Application::GetInstance().GetRootWindow()->GetClientSize();
-//    float halfWidth = static_cast<float>(rootWindowSize.width) * 0.5f;
-//    float halfHeight = static_cast<float>(rootWindowSize.height) * 0.5f;
-//    camera->AddComponent<CameraComponent>(FRect(-halfWidth, -halfHeight, rootWindowSize.width, rootWindowSize.height), -1.0f, 1024.0f);
-//    this->AddGlobalObject(camera);
-}
+    auto camera = tgon::GameObject::Create("camera1");
 
-static std::vector<std::tuple<std::shared_ptr<GameObject>, float, float, Vector3>> temp;
+    auto clientSize = tgon::Application::GetInstance().GetRootWindow()->GetClientSize();
+    float halfWidth = static_cast<float>(clientSize.width) * 0.5f;
+    float halfHeight = static_cast<float>(clientSize.height) * 0.5f;
+    camera->AddComponent<tgon::CameraComponent>(tgon::FRect(-halfWidth, -halfHeight, clientSize.width, clientSize.height), -1.0f, 1024.0f);
+
+    this->AddObject(camera);
+}
 
 void RenderTestScene::Update()
 {
     Super::Update();
-    
-//    for (int i = 0; i < temp.size(); ++i)
-//    {
-//        auto obj = std::get<0>(temp[i]);
-//        std::get<1>(temp[i]) += 0.05f;
-//        std::get<2>(temp[i]) += 0.05f;
-//        Vector3 origin = std::get<3>(temp[i]);
-//        obj->GetTransform()->SetLocalPosition(Vector3(origin.x + std::cos(std::get<1>(temp[i])) * 10.0f, origin.y + std::sin(std::get<2>(temp[i])) * 10.0f));
-//    }
-}
 
-void RenderTestScene::CreateFontObjects()
-{
-    const char chArray[] = u8"The problem is finding some way to pass the additional argument to operator new. You can't add a parenthesized argument list after the type name in the new-expression because the compiler will interpret that list as arguments to a constructor, not as arguments to an operator new. That is:";
-    
-//    auto object = tgon::GameObject::Create("introSprite1");
-//    auto transform = object->GetTransform();
-//    transform->SetLocalScale({1.0f, 1.0f, 1.0f});
-//    object->GetTransform()->SetLocalPosition(Vector3(0.0f, 0.0f, 0.0f));
-//    auto textComponent = object->AddComponent<TextRendererComponent>();
-//    textComponent->SetFontAtlas(u8"Resource/Fonts/MaplestoryOTFBold.otf");
-//    textComponent->SetFontSize(30);
-//    textComponent->SetText(chArray);
-//    textComponent->SetRect(I32Rect(-200, 100, 400, 200));
-//    textComponent->SetTextAlignment(TextAlignment::MiddleCenter);
-//    
-//    this->AddObject(object);
+    auto keyboard = Application::GetEngine()->FindModule<InputModule>()->GetKeyboard();
+    if (keyboard->IsKeyHold(KeyCode::Space))
+    {
+        auto transform = g_ring->GetTransform();
+        auto scale = transform->GetLocalScale();
+        scale.x -= 0.01f;
+        scale.y -= 0.01f;
+        transform->SetLocalScale(scale);
+    }
+
+    auto transform = g_note->GetTransform();
+    if (keyboard->IsKeyHold(KeyCode::LeftArrow))
+    {
+        auto pos = transform->GetLocalPosition();
+        pos.x -= 3.0f;
+        transform->SetLocalPosition(pos);
+    }
+    if (keyboard->IsKeyHold(KeyCode::RightArrow))
+    {
+        auto pos = transform->GetLocalPosition();
+        pos.x += 3.0f;
+        transform->SetLocalPosition(pos);
+    }
+    if (keyboard->IsKeyHold(KeyCode::UpArrow))
+    {
+        auto pos = transform->GetLocalPosition();
+        pos.y += 3.0f;
+        transform->SetLocalPosition(pos);
+    }
+    if (keyboard->IsKeyHold(KeyCode::DownArrow))
+    {
+        auto pos = transform->GetLocalPosition();
+        pos.y -= 3.0f;
+        transform->SetLocalPosition(pos);
+    }
 }

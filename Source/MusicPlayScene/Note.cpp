@@ -20,8 +20,10 @@ constexpr tgon::Vector3 g_noteEndPosArray[] = {
 
 } /* namespace */
 
-Note::Note() :
+Note::Note(const std::shared_ptr<NoteLine>& noteLine) :
     GameObject(),
+    m_hittedKeyCode(tgon::KeyCode(0)),
+    m_noteLine(noteLine),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
     m_keyboard(tgon::Application::GetEngine()->FindModule<tgon::InputModule>()->GetKeyboard())
 {

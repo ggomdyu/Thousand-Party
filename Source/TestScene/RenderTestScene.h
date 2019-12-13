@@ -29,5 +29,4 @@ public:
     
 private:
     void CreateCameraObject();
-    void CreateFontObjects();
 };

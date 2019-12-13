@@ -55,10 +55,9 @@ private:
     void InitializeMusicInfos();
     MusicInfo ParseMusicInfo(const std::string& noteDirectory);
     std::vector<NoteInfo> ParseNoteInfo(const std::string& noteDirectory, float bpm, float sync);
-    void PreloadMusicCoverTexture(const std::string& noteDirectory);
+    void PreloadMusicCoverTexture(const std::shared_ptr<tgon::AssetModule>& assetModule, const std::string& noteDirectory);
     
 /**@section Variable */
 private:
-    std::shared_ptr<tgon::AssetModule> m_assetModule;
     std::vector<MusicInfo> m_musicInfos;
 };

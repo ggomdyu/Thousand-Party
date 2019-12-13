@@ -3,10 +3,7 @@
 #include "TGON.h"
 #include "GameDataModule.h"
 
-GameDataModule::GameDataModule() :
-    m_assetModule(tgon::Application::GetEngine()->FindModule<tgon::AssetModule>())
-{
-}
+GameDataModule::GameDataModule() = default;
 
 void GameDataModule::Initialize()
 {
@@ -29,7 +26,7 @@ void GameDataModule::InitializeMusicInfos()
         musicInfo.noteInfos = this->ParseNoteInfo(noteDirectory, musicInfo.bpm, musicInfo.sync);
         m_musicInfos.push_back(std::move(musicInfo));
         
-        this->PreloadMusicCoverTexture(noteDirectory);
+        this->PreloadMusicCoverTexture(assetModule, noteDirectory);
     }
 }
 
@@ -169,19 +166,19 @@ MusicInfo GameDataModule::ParseMusicInfo(const std::string& noteDirectory)
     return MusicInfo{std::move(musicPath), std::move(musicName), std::move(musicAuthorName), bpm, sync, {}};
 }
 
-void GameDataModule::PreloadMusicCoverTexture(const std::string& noteDirectory)
+void GameDataModule::PreloadMusicCoverTexture(const std::shared_ptr<tgon::AssetModule>& assetModule, const std::string& noteDirectory)
 {
     auto pngCoverPath = noteDirectory + "/cover.png";
     if (tgon::File::Exists(pngCoverPath.c_str()))
     {
-        m_assetModule->GetTexture(pngCoverPath);
+        assetModule->GetTexture(pngCoverPath);
         return;
     }
     
     auto jpgCoverPath = noteDirectory + "/cover.jpg";
     if (tgon::File::Exists(jpgCoverPath.c_str()))
     {
-        m_assetModule->GetTexture(jpgCoverPath);
+        assetModule->GetTexture(jpgCoverPath);
         return;
     }
 }
