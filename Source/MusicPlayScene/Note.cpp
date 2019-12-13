@@ -1,24 +1,6 @@
 #include "TGON.h"
 #include "Note.h"
-
-namespace
-{
-
-constexpr tgon::Vector3 g_noteStartPosArray[] = {
-    tgon::Vector3(465.301727f, -24.2000046f, 0.0f),
-    tgon::Vector3(487.301849f, -64.8999634f, 0.0f),
-    tgon::Vector3(508.201965f, -104.499908f, 0.0f),
-    tgon::Vector3(529.102081f, -145.199966f, 0.0f),
-};
-
-constexpr tgon::Vector3 g_noteEndPosArray[] = {
-    tgon::Vector3(-269.500641f, -24.2000046f, 0.0f),
-    tgon::Vector3(-247.500519f, -64.8999634f, 0.0f),
-    tgon::Vector3(-226.600403f, -104.499908f, 0.0f),
-    tgon::Vector3(-205.700287f, -145.199966f, 0.0f),
-};
-
-} /* namespace */
+#include "NoteLine.h"
 
 Note::Note(const std::shared_ptr<NoteLine>& noteLine) :
     GameObject(),
@@ -47,7 +29,7 @@ void Note::Initialize()
 void Note::SetNoteLineIndex(int32_t index) noexcept
 {
     m_noteLineIndex = index;
-    m_transform->SetLocalPosition(g_noteStartPosArray[index]);
+    m_transform->SetLocalPosition(m_noteLine->GetNoteStartPosition(index));
 }
 
 void Note::SetElapsedTime(float elapsedTime) noexcept
@@ -95,7 +77,7 @@ void Note::Update()
             m_noteRendererComponent->SetBlendColor(blendColor);
         }
         
-        m_transform->SetLocalPosition(tgon::Lerp(g_noteStartPosArray[m_noteLineIndex], g_noteEndPosArray[m_noteLineIndex], 1.0f + m_elapsedTime - m_hitTime));
+        m_transform->SetLocalPosition(tgon::Lerp(m_noteLine->GetNoteStartPosition(m_noteLineIndex), m_noteLine->GetNoteHitPosition(m_noteLineIndex), 1.0f + m_elapsedTime - m_hitTime));
     }
 }
 
@@ -131,7 +113,9 @@ void Note::UpdateInput()
     {
         return;
     }
-
+    constexpr tgon::KeyCode keyCodeTable2[] = {
+        tgon::KeyCode::Q, tgon::KeyCode::W, tgon::KeyCode::E, tgon::KeyCode::R, tgon::KeyCode::T, tgon::KeyCode::Y, tgon::KeyCode::U, tgon::KeyCode::I, tgon::KeyCode::O, tgon::KeyCode::P, tgon::KeyCode::LeftBracket, tgon::KeyCode::RightBracket,
+    };
     constexpr tgon::KeyCode keyCodeTable[] = {
         tgon::KeyCode::Alpha1, tgon::KeyCode::Alpha2, tgon::KeyCode::Alpha3, tgon::KeyCode::Alpha4, tgon::KeyCode::Alpha5, tgon::KeyCode::Alpha6, tgon::KeyCode::Alpha7, tgon::KeyCode::Alpha8, tgon::KeyCode::Alpha9, tgon::KeyCode::Alpha0, tgon::KeyCode::Minus, tgon::KeyCode::Plus,
         tgon::KeyCode::Q, tgon::KeyCode::W, tgon::KeyCode::E, tgon::KeyCode::R, tgon::KeyCode::T, tgon::KeyCode::Y, tgon::KeyCode::U, tgon::KeyCode::I, tgon::KeyCode::O, tgon::KeyCode::P, tgon::KeyCode::LeftBracket, tgon::KeyCode::RightBracket,

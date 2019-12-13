@@ -23,6 +23,8 @@ public:
 public:
     void Initialize() override;
     void Update() override;
+    tgon::Vector3 GetNoteStartPosition(int32_t index) const;
+    tgon::Vector3 GetNoteHitPosition(int32_t index) const;
     
 private:
     void InitializeLines();
