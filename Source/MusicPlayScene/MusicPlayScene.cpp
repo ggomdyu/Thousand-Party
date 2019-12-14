@@ -8,10 +8,7 @@
 MusicPlayScene::MusicPlayScene(const MusicInfo& musicInfo) :
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
     m_audioModule(tgon::Application::GetEngine()->FindModule<tgon::AudioModule>()),
-    m_musicInfo(musicInfo),
-    m_isMusicWaiting(true),
-    m_elapsedTime(0.0f),
-    m_noteInfoIndex(0)
+    m_musicInfo(musicInfo)
 {
 }
 
@@ -54,6 +51,12 @@ void MusicPlayScene::Update()
         return;
     }
     
+    this->UpdateNotes();
+}
+
+void MusicPlayScene::UpdateNotes()
+{
+    // Update for note creation
     for (size_t i = m_noteInfoIndex; i < m_musicInfo.noteInfos.size(); ++i)
     {
         auto& noteInfo = m_musicInfo.noteInfos[i];
@@ -72,7 +75,7 @@ void MusicPlayScene::Update()
             }
             noteObject->SetHitTime(noteInfo.hitTime);
             noteObject->SetNoteLineIndex(noteInfo.noteIndex);
-            
+
             m_notes[noteInfo.noteIndex].push_back(std::move(noteObject));
             ++m_noteInfoIndex;
         }
@@ -81,12 +84,35 @@ void MusicPlayScene::Update()
             break;
         }
     }
-    
-    this->UpdateNotes();
-}
 
-void MusicPlayScene::UpdateNotes()
-{
+    for (auto& noteObjects : m_notes)
+    {
+        for (auto iter = noteObjects.begin(); iter != noteObjects.end();)
+        {
+            if ((*iter)->GetHitTime() - m_elapsedTime < -0.5f)
+            {
+                bool isNormalNote = (*iter)->GetRTTI() != tgon::GetRTTI<HoldNote*>();
+                if (isNormalNote)
+                {
+                    m_noteObjectPool.push_back(*iter);
+                    iter = noteObjects.erase(iter);
+                    continue;
+                }
+                else if ((*iter)->IsHolding() == false)
+                {
+                    m_holdNoteObjectPool.push_back(std::static_pointer_cast<HoldNote>(*iter));
+                    iter = noteObjects.erase(iter);
+                    continue;
+                }
+            }
+
+            (*iter)->SetElapsedTime(m_elapsedTime);
+            (*iter)->Update();
+            ++iter;
+        }
+    }
+
+    // Update for note input update
     for (auto& noteObjects : m_notes)
     {
         for (auto iter = noteObjects.begin(); iter != noteObjects.end();)
@@ -97,7 +123,7 @@ void MusicPlayScene::UpdateNotes()
                 (*iter)->UpdateInput();
                 if ((*iter)->IsHitted())
                 {
-                    if (tgon::DynamicCast<HoldNote*>(iter->get()) == nullptr)
+                    if ((*iter)->GetRTTI() != tgon::GetRTTI<HoldNote*>())
                     {
                         m_noteObjectPool.push_back(*iter);
                         iter = noteObjects.erase(iter);
@@ -112,32 +138,6 @@ void MusicPlayScene::UpdateNotes()
                 }
             }
             
-            ++iter;
-        }
-    }
-
-    for (auto& noteObjects : m_notes)
-    {
-        for (auto iter = noteObjects.begin(); iter != noteObjects.end();)
-        {
-            if ((*iter)->GetHitTime() - m_elapsedTime < -0.5f)
-            {
-                if (tgon::DynamicCast<HoldNote*>(iter->get()) == nullptr)
-                {
-                    m_noteObjectPool.push_back(*iter);
-                    iter = noteObjects.erase(iter);
-                    continue;
-                }
-                else if ((*iter)->IsHolding() == false)
-                {
-                    m_holdNoteObjectPool.push_back(std::static_pointer_cast<HoldNote>(*iter));
-                    iter = noteObjects.erase(iter);
-                    continue;
-                }
-            }
-        
-            (*iter)->SetElapsedTime(m_elapsedTime);
-            (*iter)->Update();
             ++iter;
         }
     }

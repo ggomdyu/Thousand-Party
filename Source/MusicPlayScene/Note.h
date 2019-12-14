@@ -64,6 +64,7 @@ private:
     
 /**@section Variable */
 protected:
+    bool m_autoHitted = false;
     std::shared_ptr<NoteLine> m_noteLine;
     std::shared_ptr<tgon::SpriteRendererComponent> m_noteRendererComponent;
     std::shared_ptr<tgon::TimeModule> m_timeModule;

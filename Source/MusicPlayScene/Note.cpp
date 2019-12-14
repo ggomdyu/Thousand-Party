@@ -2,6 +2,12 @@
 #include "Note.h"
 #include "NoteLine.h"
 
+#if _DEBUG
+constexpr bool g_needToHitAutomatically = true;
+#else
+constexpr bool g_needToHitAutomatically = false;
+#endif
+
 Note::Note(const std::shared_ptr<NoteLine>& noteLine) :
     GameObject(),
     m_hittedKeyCode(tgon::KeyCode(0)),
@@ -13,6 +19,7 @@ Note::Note(const std::shared_ptr<NoteLine>& noteLine) :
 
 void Note::Reset()
 {
+    m_autoHitted = false;
     m_isHitted = false;
     m_elapsedTime = 0.0f;
     m_hitTime = 0.0f;
@@ -79,6 +86,18 @@ void Note::Update()
         
         m_transform->SetLocalPosition(tgon::Lerp(m_noteLine->GetNoteStartPosition(m_noteLineIndex), m_noteLine->GetNoteHitPosition(m_noteLineIndex), 1.0f + m_elapsedTime - m_hitTime));
     }
+
+    if constexpr (g_needToHitAutomatically)
+    {
+        if (m_elapsedTime - m_hitTime > 0.0f)
+        {
+            if (m_autoHitted == false)
+            {
+                this->PlayHitSound();
+                m_autoHitted = true;
+            }
+        }
+    }
 }
 
 NoteTiming Note::CheckNoteTiming(float timingOffset) const noexcept
@@ -113,9 +132,7 @@ void Note::UpdateInput()
     {
         return;
     }
-    constexpr tgon::KeyCode keyCodeTable2[] = {
-        tgon::KeyCode::Q, tgon::KeyCode::W, tgon::KeyCode::E, tgon::KeyCode::R, tgon::KeyCode::T, tgon::KeyCode::Y, tgon::KeyCode::U, tgon::KeyCode::I, tgon::KeyCode::O, tgon::KeyCode::P, tgon::KeyCode::LeftBracket, tgon::KeyCode::RightBracket,
-    };
+
     constexpr tgon::KeyCode keyCodeTable[] = {
         tgon::KeyCode::Alpha1, tgon::KeyCode::Alpha2, tgon::KeyCode::Alpha3, tgon::KeyCode::Alpha4, tgon::KeyCode::Alpha5, tgon::KeyCode::Alpha6, tgon::KeyCode::Alpha7, tgon::KeyCode::Alpha8, tgon::KeyCode::Alpha9, tgon::KeyCode::Alpha0, tgon::KeyCode::Minus, tgon::KeyCode::Plus,
         tgon::KeyCode::Q, tgon::KeyCode::W, tgon::KeyCode::E, tgon::KeyCode::R, tgon::KeyCode::T, tgon::KeyCode::Y, tgon::KeyCode::U, tgon::KeyCode::I, tgon::KeyCode::O, tgon::KeyCode::P, tgon::KeyCode::LeftBracket, tgon::KeyCode::RightBracket,
@@ -204,6 +221,7 @@ void HoldNote::Reset()
     m_holdTime = 0.0f;
     m_holdNoteRendererComponent->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 1.0f));
     m_ringObject->GetTransform()->SetLocalScale(tgon::Vector3(1.0f, 1.0f, 1.0f));
+    m_autoHitted = false;
 }
 
 void HoldNote::Initialize()

@@ -50,6 +50,10 @@ std::vector<NoteInfo> GameDataModule::ParseNoteInfo(const std::string& noteDirec
     for (size_t i = 0; i < fileLineDatas.value().size(); ++i)
     {
         auto& fileLineData = fileLineDatas.value()[i];
+        if (fileLineData[0] == '#')
+        {
+            continue;
+        }
         
         float hitTime = (1.0f / bitPerSeconds / 8.0f) * atof(&fileLineData[6]) + sync;
 
@@ -75,6 +79,11 @@ std::vector<NoteInfo> GameDataModule::ParseNoteInfo(const std::string& noteDirec
                 for (size_t k = i + 1; k < fileLineDatas.value().size(); ++k)
                 {
                     auto& holdLineData = fileLineDatas.value()[k];
+                    if (holdLineData[0] == '#')
+                    {
+                        continue;
+                    }
+
                     if (holdLineData[j] != '2')
                     {
                         break;

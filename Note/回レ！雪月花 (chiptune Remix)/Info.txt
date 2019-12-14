@@ -1,4 +1,0 @@
-music=回レ！雪月花
-artist=歌組雪月花
-bpm=145
-sync=2.4

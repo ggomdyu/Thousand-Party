@@ -56,9 +56,9 @@ private:
 
 /**@section Variable */
 private:
-    bool m_isMusicWaiting;
-    float m_elapsedTime;
-    size_t m_noteInfoIndex;
+    bool m_isMusicWaiting = true;
+    float m_elapsedTime = 0.0f;
+    size_t m_noteInfoIndex = 0;
     MusicInfo m_musicInfo;
     tgon::AudioPlayer m_audioPlayer;
     std::shared_ptr<tgon::GameObject> m_backgroundObject;

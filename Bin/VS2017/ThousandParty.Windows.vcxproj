@@ -156,11 +156,14 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\GameDataModule.cpp" />
     <ClCompile Include="..\..\Source\LogoScene\LogoScene.cpp" />
+    <ClCompile Include="..\..\Source\MusicPlayScene\MusicEditScene.cpp" />
     <ClCompile Include="..\..\Source\MusicPlayScene\MusicPlayScene.cpp" />
     <ClCompile Include="..\..\Source\MusicPlayScene\Note.cpp" />
+    <ClCompile Include="..\..\Source\MusicPlayScene\NoteLine.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelector.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelectScene.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\SquareBackground.cpp" />
+    <ClCompile Include="..\..\Source\TestScene\RenderTestScene.cpp" />
     <ClCompile Include="..\..\Source\ThousandParty.cpp" />
     <ClCompile Include="..\..\Source\TitleScene\FireFly.cpp" />
     <ClCompile Include="..\..\Source\TitleScene\NightSky.cpp" />
@@ -169,11 +172,14 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\GameDataModule.h" />
     <ClInclude Include="..\..\Source\LogoScene\LogoScene.h" />
+    <ClInclude Include="..\..\Source\MusicPlayScene\MusicEditScene.h" />
     <ClInclude Include="..\..\Source\MusicPlayScene\MusicPlayScene.h" />
     <ClInclude Include="..\..\Source\MusicPlayScene\Note.h" />
+    <ClInclude Include="..\..\Source\MusicPlayScene\NoteLine.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelector.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelectScene.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\SquareBackground.h" />
+    <ClInclude Include="..\..\Source\TestScene\RenderTestScene.h" />
     <ClInclude Include="..\..\Source\ThousandParty.h" />
     <ClInclude Include="..\..\Source\TitleScene\FireFly.h" />
     <ClInclude Include="..\..\Source\TitleScene\NightSky.h" />
