@@ -59,6 +59,7 @@ private:
 
 /**@section Variable */
 private:
+    bool m_isMusicStopped = false;
     bool m_isMusicWaiting = true;
     float m_elapsedTime = 0.0f;
     size_t m_noteInfoIndex = 0;

@@ -45,7 +45,10 @@ void MusicEditScene::Update()
     
     this->UpdateBackgroundObjectPosition();
     
-    m_elapsedTime += m_timeModule->GetTickTime();
+    if (m_isMusicStopped == false)
+    {
+        m_elapsedTime += m_timeModule->GetTickTime();
+    }
     
     if (m_isMusicWaiting)
     {
@@ -78,11 +81,24 @@ void MusicEditScene::OnHandleInput()
     {
         for (auto& noteInfo : m_musicInfo.noteInfos)
         {
-            const char* noteIndexStr[5] = {":10000", ":01000", ":00100", ":00010", ":00001"};
+            const char* noteIndexStr[5] = {"10000:", "01000:", "00100:", "00010:", "00001:"};
 
             double bitPerSeconds = m_musicInfo.bpm / 60.0f;
             auto clap = 8.0f * bitPerSeconds * (noteInfo.hitTime - m_musicInfo.sync);
-            tgon::Debug::WriteLine(std::to_string(int(clap)) + noteIndexStr[noteInfo.noteIndex]);
+            tgon::Debug::WriteLine(std::string(noteIndexStr[noteInfo.noteIndex]) + std::to_string(int(clap)));
+        }
+    }
+    else if (m_keyboard->IsKeyDown(tgon::KeyCode::F2))
+    {
+        if (m_isMusicStopped)
+        {
+            m_isMusicStopped = false;
+            m_audioPlayer.Resume();
+        }
+        else
+        {
+            m_isMusicStopped = true;
+            m_audioPlayer.Pause();
         }
     }
     else
