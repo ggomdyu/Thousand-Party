@@ -135,7 +135,7 @@ void MusicEditScene::UpdateNotes()
         auto& noteInfo = m_musicInfo.noteInfos[i];
         if (noteInfo.hitTime - m_elapsedTime < 1.0f)
         {
-            std::shared_ptr<Note> noteObject;
+            std::pair<std::shared_ptr<tgon::GameObject>, std::shared_ptr<Note>> noteObject;
             if (noteInfo.holdTime == 0.0f)
             {
                 noteObject = this->GetNoteObjectFromPool();
@@ -143,11 +143,11 @@ void MusicEditScene::UpdateNotes()
             else
             {
                 auto holdNoteObject = this->GetHoldNoteObjectFromPool();
-                holdNoteObject->SetHoldTime(noteInfo.holdTime);
+                holdNoteObject.second->SetHoldTime(noteInfo.holdTime);
                 noteObject = holdNoteObject;
             }
-            noteObject->SetHitTime(noteInfo.hitTime);
-            noteObject->SetNoteLineIndex(noteInfo.noteIndex);
+            noteObject.second->SetHitTime(noteInfo.hitTime);
+            noteObject.second->SetNoteLineIndex(noteInfo.noteIndex);
 
             m_notes[noteInfo.noteIndex].push_back(std::move(noteObject));
             ++m_noteInfoIndex;
@@ -162,25 +162,25 @@ void MusicEditScene::UpdateNotes()
     {
         for (auto iter = noteObjects.begin(); iter != noteObjects.end();)
         {
-            if ((*iter)->GetHitTime() - m_elapsedTime < -0.5f)
+            if (iter->second->GetHitTime() - m_elapsedTime < -0.5f)
             {
-                bool isNormalNote = (*iter)->GetRTTI() != tgon::GetRTTI<HoldNote*>();
+                bool isNormalNote = iter->second->GetRTTI() != tgon::GetRTTI<HoldNote*>();
                 if (isNormalNote)
                 {
                     m_noteObjectPool.push_back(*iter);
                     iter = noteObjects.erase(iter);
                     continue;
                 }
-                else if ((*iter)->IsHolding() == false)
+                else if (iter->second->IsHolding() == false)
                 {
-                    m_holdNoteObjectPool.push_back(std::static_pointer_cast<HoldNote>(*iter));
+                    m_holdNoteObjectPool.emplace_back(iter->first, std::static_pointer_cast<HoldNote>(iter->second));
                     iter = noteObjects.erase(iter);
                     continue;
                 }
             }
         
-            (*iter)->SetElapsedTime(m_elapsedTime);
-            (*iter)->Update();
+            iter->second->SetElapsedTime(m_elapsedTime);
+            iter->second->Update();
             ++iter;
         }
     }
@@ -211,18 +211,22 @@ void MusicEditScene::InitializeBackgroundObject()
 
 void MusicEditScene::InitializeNoteLine()
 {
-    auto noteLine = tgon::GameObject::Create<NoteLine>();
-    noteLine->GetTransform()->SetLocalPosition(tgon::Vector3(-10.0f, -40.0f, 0.0f));
-    this->AddObject(noteLine);
-    
-    m_noteLine = std::move(noteLine);
+    auto noteLineObject = tgon::GameObject::Create();
+    noteLineObject->GetTransform()->SetLocalPosition(tgon::Vector3(-10.0f, -40.0f, 0.0f));
+    auto noteLineComponent = noteLineObject->AddComponent<NoteLine>();
+    this->AddObject(noteLineObject);
+
+    m_noteLine = std::move(noteLineComponent);
 }
 
 void MusicEditScene::InitializeNoteObjectPool()
 {
     for (size_t i = 0; i < 40; ++i)
     {
-        m_noteObjectPool.push_back(tgon::GameObject::Create<Note>({}, std::make_shared<tgon::Transform>(), m_noteLine));
+        auto noteObject = tgon::GameObject::Create();
+        auto noteComponent = noteObject->AddComponent<Note>(m_noteLine);
+
+        m_noteObjectPool.emplace_back(std::move(noteObject), std::move(noteComponent));
     }
 }
 
@@ -230,7 +234,10 @@ void MusicEditScene::InitializeHoldNoteObjectPool()
 {
     for (size_t i = 0; i < 20; ++i)
     {
-        m_holdNoteObjectPool.push_back(tgon::GameObject::Create<HoldNote>({}, std::make_shared<tgon::Transform>(), m_noteLine));
+        auto holdNoteObject = tgon::GameObject::Create();
+        auto holdNoteComponent = holdNoteObject->AddComponent<HoldNote>(m_noteLine);
+
+        m_holdNoteObjectPool.emplace_back(std::move(holdNoteObject), std::move(holdNoteComponent));
     }
 }
 
@@ -297,13 +304,13 @@ void MusicEditScene::RefreshNotes()
         while (noteObjects.empty() == false)
         {
             auto noteObject = noteObjects.back();
-            if (noteObject->GetRTTI() != tgon::GetRTTI<HoldNote*>())
+            if (noteObject.second->GetRTTI() != tgon::GetRTTI<HoldNote*>())
             {
                 m_noteObjectPool.push_back(noteObject);
             }
             else
             {
-                m_holdNoteObjectPool.push_back(std::static_pointer_cast<HoldNote>(noteObject));
+                m_holdNoteObjectPool.emplace_back(noteObject.first, std::static_pointer_cast<HoldNote>(noteObject.second));
             }
 
             noteObjects.pop_back();
@@ -313,30 +320,36 @@ void MusicEditScene::RefreshNotes()
     this->UpdateNotes();
 }
 
-std::shared_ptr<Note> MusicEditScene::GetNoteObjectFromPool()
+std::pair<std::shared_ptr<tgon::GameObject>, std::shared_ptr<Note>> MusicEditScene::GetNoteObjectFromPool()
 {
     if (m_noteObjectPool.size() == 0)
     {
-        m_noteObjectPool.push_back(tgon::GameObject::Create<Note>({}, std::make_shared<tgon::Transform>(), m_noteLine));
+        auto noteObject = tgon::GameObject::Create();
+        auto noteComponent = noteObject->AddComponent<Note>(m_noteLine);
+
+        m_noteObjectPool.emplace_back(std::move(noteObject), std::move(noteComponent));
     }
     
     auto ret = m_noteObjectPool.back();
-    ret->Reset();
+    ret.second->Reset();
     
     m_noteObjectPool.pop_back();
     
     return ret;
 }
 
-std::shared_ptr<HoldNote> MusicEditScene::GetHoldNoteObjectFromPool()
+std::pair<std::shared_ptr<tgon::GameObject>, std::shared_ptr<HoldNote>> MusicEditScene::GetHoldNoteObjectFromPool()
 {
     if (m_holdNoteObjectPool.size() == 0)
     {
-        m_holdNoteObjectPool.push_back(tgon::GameObject::Create<HoldNote>({}, std::make_shared<tgon::Transform>(), m_noteLine));
+        auto holdNoteObject = tgon::GameObject::Create();
+        auto holdNoteComponent = holdNoteObject->AddComponent<HoldNote>(m_noteLine);
+
+        m_holdNoteObjectPool.emplace_back(std::move(holdNoteObject), std::move(holdNoteComponent));
     }
     
     auto ret = m_holdNoteObjectPool.back();
-    ret->Reset();
+    ret.second->Reset();
     
     m_holdNoteObjectPool.pop_back();
     

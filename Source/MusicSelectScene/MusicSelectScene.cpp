@@ -25,19 +25,21 @@ void MusicSelectScene::Initialize()
 
 void MusicSelectScene::CreateSquareBackgroundObject()
 {
-    auto squareBackground = tgon::GameObject::Create<SquareBackground>();
+    auto squareBackground = tgon::GameObject::Create();
+    squareBackground->AddComponent<SquareBackground>();
     squareBackground->FindComponent<tgon::SpriteRendererComponent>()->SetSortingLayer(1);
     this->AddObject(squareBackground);
 }
 
 void MusicSelectScene::CreateMusicSelectorObject()
 {
-    auto musicSelector = tgon::GameObject::Create<MusicSelector>();
-    musicSelector->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 20.0f, 0.0f));
-    musicSelector->OnChangeSelectedMusic = tgon::MakeDelegate<&MusicSelectScene::OnChangeSelectedMusic>(this);
-    this->AddObject(musicSelector);
+    auto musicSelectorObject = tgon::GameObject::Create();
+    musicSelectorObject->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 20.0f, 0.0f));
+
+    auto musicSelectorComponent = musicSelectorObject->AddComponent<MusicSelector>();
+    musicSelectorComponent->OnChangeSelectedMusic = tgon::MakeDelegate<&MusicSelectScene::OnChangeSelectedMusic>(this);
     
-    m_musicSelector = musicSelector;
+    this->AddObject(musicSelectorObject);
 }
 
 void MusicSelectScene::CreateMusicNameObject()

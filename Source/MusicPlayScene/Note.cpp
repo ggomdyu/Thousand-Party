@@ -9,7 +9,7 @@ constexpr bool g_needToHitAutomatically = false;
 #endif
 
 Note::Note(const std::shared_ptr<NoteLine>& noteLine) :
-    GameObject(),
+    Component(),
     m_hittedKeyCode(tgon::KeyCode(0)),
     m_noteLine(noteLine),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
@@ -36,7 +36,12 @@ void Note::Initialize()
 void Note::SetNoteLineIndex(int32_t index) noexcept
 {
     m_noteLineIndex = index;
-    m_transform->SetLocalPosition(m_noteLine->GetNoteStartPosition(index));
+
+    auto gameObject = this->GetGameObject();
+    if (gameObject != nullptr)
+    {
+        gameObject->GetTransform()->SetLocalPosition(m_noteLine->GetNoteStartPosition(index));
+    }
 }
 
 void Note::SetElapsedTime(float elapsedTime) noexcept
@@ -66,8 +71,14 @@ bool Note::IsHolding() const noexcept
 
 void Note::InitializeSprite()
 {
+    auto gameObject = this->GetGameObject();
+    if (gameObject == nullptr)
+    {
+        return;
+    }
+
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_noteRendererComponent = this->AddComponent<tgon::SpriteRendererComponent>();
+    m_noteRendererComponent = gameObject->AddComponent<tgon::SpriteRendererComponent>();
     m_noteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/MusicPlayScene/note.png"));
 }
 
@@ -308,10 +319,16 @@ void HoldNote::OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming)
 
 void HoldNote::InitializeSprite()
 {
+    auto gameObject = this->GetGameObject();
+    if (gameObject == nullptr)
+    {
+        return;
+    }
+
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
 
     auto ringObject = tgon::GameObject::Create();
-    ringObject->GetTransform()->SetParent(this->GetTransform());
+    ringObject->GetTransform()->SetParent(gameObject->GetTransform());
     m_holdNoteRendererComponent = ringObject->AddComponent<tgon::SpriteRendererComponent>();
     m_holdNoteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/MusicPlayScene/holdNote.png"));
     

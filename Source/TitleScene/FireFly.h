@@ -8,11 +8,16 @@
 #include <memory>
 
 #include "Game/GameObject.h"
-#include "UI/UISprite.h"
-#include "Component/SpriteRendererComponent.h"
+
+namespace tgon
+{
+
+class SpriteRendererComponent;
+
+} /* namespace tgon */
 
 class FireFly :
-    public tgon::GameObject
+    public tgon::Component
 {
 public:
     TGON_DECLARE_RTTI(FireFly)

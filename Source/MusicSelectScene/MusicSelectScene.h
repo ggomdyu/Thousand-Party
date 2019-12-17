@@ -49,7 +49,6 @@ private:
 private:
     std::shared_ptr<tgon::GameObject> m_musicText;
     std::shared_ptr<tgon::GameObject> m_selectText;
-    std::shared_ptr<MusicSelector> m_musicSelector;
     std::shared_ptr<GameDataModule> m_gameDataModule;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::TextRendererComponent> m_musicNameRendererComponent;

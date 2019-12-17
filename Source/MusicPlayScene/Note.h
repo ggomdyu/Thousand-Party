@@ -31,7 +31,7 @@ enum NoteTiming
 class NoteLine;
 
 class Note :
-    public tgon::GameObject
+    public tgon::Component
 {
 public:
     TGON_DECLARE_RTTI(Note)
@@ -69,6 +69,7 @@ protected:
     std::shared_ptr<tgon::SpriteRendererComponent> m_noteRendererComponent;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::Keyboard> m_keyboard;
+    std::shared_ptr<tgon::Transform> m_transform;
     bool m_isHitted = false;
     bool m_isHolding = false;
     tgon::KeyCode m_hittedKeyCode;

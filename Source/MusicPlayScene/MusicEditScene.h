@@ -34,6 +34,11 @@ class MusicEditScene :
 public:
     TGON_DECLARE_RTTI(MusicEditScene)
     
+/**@section Type */
+private:
+    using NoteObjectPair = std::pair<std::shared_ptr<tgon::GameObject>, std::shared_ptr<Note>>;
+    using HoldNoteObjectPair = std::pair<std::shared_ptr<tgon::GameObject>, std::shared_ptr<HoldNote>>;
+
 /**@section Constructor */
 public:
     explicit MusicEditScene(const MusicInfo& musicInfo);
@@ -49,8 +54,8 @@ private:
     void InitializeNoteLine();
     void InitializeNoteObjectPool();
     void InitializeHoldNoteObjectPool();
-    std::shared_ptr<Note> GetNoteObjectFromPool();
-    std::shared_ptr<HoldNote> GetHoldNoteObjectFromPool();
+    NoteObjectPair GetNoteObjectFromPool();
+    HoldNoteObjectPair GetHoldNoteObjectFromPool();
     void UpdateNotes();
     void UpdateBackgroundObjectPosition();
     void InitializeMusicNameObject();
@@ -67,9 +72,9 @@ private:
     tgon::AudioPlayer m_audioPlayer;
     std::shared_ptr<tgon::GameObject> m_backgroundObject;
     std::shared_ptr<NoteLine> m_noteLine;
-    std::vector<std::shared_ptr<Note>> m_noteObjectPool;
-    std::vector<std::shared_ptr<HoldNote>> m_holdNoteObjectPool;
-    std::array<std::deque<std::shared_ptr<Note>>, 5> m_notes;
+    std::vector<NoteObjectPair> m_noteObjectPool;
+    std::vector<HoldNoteObjectPair> m_holdNoteObjectPool;
+    std::array<std::deque<NoteObjectPair>, 5> m_notes;
     std::shared_ptr<tgon::Keyboard> m_keyboard;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::AudioModule> m_audioModule;

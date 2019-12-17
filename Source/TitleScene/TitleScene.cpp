@@ -172,7 +172,10 @@ void TitleScene::CreateFireFlyObjects()
 {
     for (int i = 0; i < 15; ++i)
     {
-        this->AddObject(tgon::GameObject::Create<FireFly>(tgon::StringHash(std::to_string(i))));
+        auto fireflyObject = tgon::GameObject::Create();
+        fireflyObject->AddComponent<FireFly>();
+
+        this->AddObject(std::move(fireflyObject));
     }
 }
 

@@ -2,7 +2,7 @@
 #include "SquareBackground.h"
 
 SquareBackground::SquareBackground() :
-    GameObject(u8"SquareBackground"),
+    Component(),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>())
 {
 }
@@ -15,21 +15,39 @@ void SquareBackground::Initialize()
 
 void SquareBackground::InitializeSpriteComponent()
 {
+    auto gameObject = this->GetGameObject();
+    if (gameObject == nullptr)
+    {
+        return;
+    }
+
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    auto spriteRendererComponent = this->AddComponent<tgon::SpriteRendererComponent>();
+    auto spriteRendererComponent = gameObject->AddComponent<tgon::SpriteRendererComponent>();
     spriteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Background/MusicSelectScene/Layer.png"));
 }
 
 void SquareBackground::InitializePosition()
 {
-    this->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 0.0f, 0.0f));
+    auto gameObject = this->GetGameObject();
+    if (gameObject == nullptr)
+    {
+        return;
+    }
+
+    gameObject->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 0.0f, 0.0f));
 }
 
 void SquareBackground::Update()
 {
     Super::Update();
 
-    auto transform = this->GetTransform();
+    auto gameObject = this->GetGameObject();
+    if (gameObject == nullptr)
+    {
+        return;
+    }
+
+    auto transform = gameObject->GetTransform();
     auto newPos = transform->GetLocalPosition();
     if (newPos.x <= -35.0f)
     {

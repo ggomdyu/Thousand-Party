@@ -4,6 +4,12 @@
 NightSky::NightSky() :
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>())
 {
+}
+
+void NightSky::Initialize()
+{
+    Super::Initialize();
+
     this->InitializeSpriteComponent();
     this->InitializePosition();
 }

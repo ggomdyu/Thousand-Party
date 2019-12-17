@@ -30,7 +30,7 @@ constexpr tgon::Vector3 g_coverImageScales[] = {
 } /* namespace */
 
 MusicSelector::MusicSelector() :
-    GameObject(u8"MusicSelector"),
+    Component(),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
     m_inputModule(tgon::Application::GetEngine()->FindModule<tgon::InputModule>()),
     m_gameDataModule(tgon::Application::GetEngine()->FindModule<GameDataModule>())
@@ -56,6 +56,12 @@ void MusicSelector::Update()
 
 void MusicSelector::InitializeMusicCoverObjects()
 {
+    auto gameObject = this->GetGameObject();
+    if (gameObject == nullptr)
+    {
+        return;
+    }
+
     auto noteDirectories = tgon::Directory::GetDirectories("Note");
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     for (size_t i = 0; i < noteDirectories.size(); ++i)
@@ -71,7 +77,7 @@ void MusicSelector::InitializeMusicCoverObjects()
         }
 
         auto coverImageObject = tgon::GameObject::Create();
-        coverImageObject->GetTransform()->SetParent(this->GetTransform());
+        coverImageObject->GetTransform()->SetParent(gameObject->GetTransform());
         auto spriteRendererComponent = coverImageObject->AddComponent<tgon::SpriteRendererComponent>();
         spriteRendererComponent->SetTexture(std::move(texture));
         spriteRendererComponent->SetTextureSize({222.0f, 222.0f});

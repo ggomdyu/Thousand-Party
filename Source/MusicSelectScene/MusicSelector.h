@@ -16,7 +16,6 @@ namespace tgon
 
 class TimeModule;
 class InputModule;
-class GameObject;
 
 } /* namespace tgon */
 
@@ -24,7 +23,7 @@ class GameDataModule;
 struct MusicInfo;
 
 class MusicSelector :
-    public tgon::GameObject
+    public tgon::Component
 {
 public:
     TGON_DECLARE_RTTI(MusicSelector)

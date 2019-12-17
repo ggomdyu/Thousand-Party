@@ -17,7 +17,7 @@ class TimeModule;
 } /* namespace tgon */
 
 class SquareBackground :
-    public tgon::GameObject
+    public tgon::Component
 {
 public:
     TGON_DECLARE_RTTI(SquareBackground)
