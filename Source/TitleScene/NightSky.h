@@ -17,7 +17,7 @@ class TimeModule;
 } /* namespace tgon */
 
 class NightSky :
-    public tgon::GameObject
+    public tgon::Component
 {
 public:
     TGON_DECLARE_RTTI(NightSky)
@@ -28,7 +28,6 @@ public:
     
 /**@section Method */
 public:
-    void Initialize() override;
     void Update() override;
     
 private:

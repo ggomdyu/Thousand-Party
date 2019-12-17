@@ -99,10 +99,13 @@ void TitleScene::InitializeGraphics()
     auto graphicsModule = tgon::Application::GetEngine()->FindModule<tgon::GraphicsModule>();
     graphicsModule->GetGraphics().DisableDepthTest();
 }
-
+ 
 void TitleScene::CreateNightSkyObject()
 {
-    this->AddObject(tgon::GameObject::Create<NightSky>());
+    auto nightSky = tgon::GameObject::Create();
+    nightSky->AddComponent<NightSky>();
+    
+    this->AddObject(std::move(nightSky));
 }
 
 void TitleScene::CreateSpriteObjects()
