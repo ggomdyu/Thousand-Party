@@ -180,7 +180,7 @@ void MusicEditScene::UpdateNotes()
             }
         
             iter->second->SetElapsedTime(m_elapsedTime);
-            iter->second->Update();
+            iter->first->Update();
             ++iter;
         }
     }
