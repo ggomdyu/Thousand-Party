@@ -3,7 +3,7 @@
 #include "NoteLine.h"
 
 #if _DEBUG
-constexpr bool g_needToHitAutomatically = true;
+constexpr bool g_needToHitAutomatically = false;
 #else
 constexpr bool g_needToHitAutomatically = false;
 #endif
@@ -30,6 +30,15 @@ void Note::Reset()
 void Note::Initialize()
 {
     Super::Initialize();
+    
+    auto gameObject = this->GetGameObject();
+    if (gameObject == nullptr)
+    {
+        return;
+    }
+
+    m_transform = gameObject->GetTransform();
+    
     this->InitializeSprite();
 }
 

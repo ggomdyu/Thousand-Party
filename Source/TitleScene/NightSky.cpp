@@ -9,6 +9,14 @@ NightSky::NightSky() :
 void NightSky::Initialize()
 {
     Super::Initialize();
+    
+    auto gameObject = this->GetGameObject();
+    if (gameObject == nullptr)
+    {
+        return;
+    }
+    
+    m_transform = gameObject->GetTransform();
 
     this->InitializeSpriteComponent();
     this->InitializePosition();
@@ -31,12 +39,10 @@ void NightSky::Update()
 {
     Super::Update();
 
-    auto transform = m_gameObject.lock()->GetTransform();
-    
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     float halfWindowWidth = clientSize.width * 0.5f;
     float halfWindowHeight = clientSize.height * 0.5f;
-    auto nightSkyNewPos = transform->GetLocalPosition();
+    auto nightSkyNewPos = m_transform->GetLocalPosition();
     if (nightSkyNewPos.x <= -halfWindowWidth + -419.0f)
     {
         nightSkyNewPos = tgon::Vector3(-halfWindowWidth + 1257.0f, halfWindowHeight - 221.0f, 0.0f);
@@ -44,5 +50,5 @@ void NightSky::Update()
 
     nightSkyNewPos.x -= 55.0f * m_timeModule->GetTickTime();
     
-    transform->SetLocalPosition(nightSkyNewPos);
+    m_transform->SetLocalPosition(nightSkyNewPos);
 }

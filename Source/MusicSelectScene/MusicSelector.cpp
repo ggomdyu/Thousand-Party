@@ -75,6 +75,10 @@ void MusicSelector::InitializeMusicCoverObjects()
         {
             texture = assetModule->GetTexture(jpgCoverPath);
         }
+        else
+        {
+            continue;
+        }
 
         auto coverImageObject = tgon::GameObject::Create();
         coverImageObject->GetTransform()->SetParent(gameObject->GetTransform());

@@ -37,5 +37,6 @@ private:
     
 /**@section Variable */
 private:
+    std::shared_ptr<tgon::Transform> m_transform;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
 };

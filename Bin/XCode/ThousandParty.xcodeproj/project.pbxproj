@@ -16,6 +16,7 @@
 		8C3DA39D23929311004A24E4 /* LogoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA39623929311004A24E4 /* LogoScene.cpp */; };
 		8C3DA3A6239566B6004A24E4 /* SquareBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */; };
 		8C3DA3A923963425004A24E4 /* MusicSelector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA3A723963424004A24E4 /* MusicSelector.cpp */; };
+		8C9FB44123A8CDE800C0E12D /* MusicEditScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C9FB44023A8CDE800C0E12D /* MusicEditScene.cpp */; };
 		8CD02C4F239DFE7F006EFA79 /* Note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CD02C4D239DFE7F006EFA79 /* Note.cpp */; };
 		8CD02C52239E004E006EFA79 /* GameDataModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CD02C51239E004E006EFA79 /* GameDataModule.cpp */; };
 		8CD02C55239E2FB7006EFA79 /* MusicPlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CD02C54239E2FB7006EFA79 /* MusicPlayScene.cpp */; };
@@ -58,6 +59,8 @@
 		8C3DA3A5239566B6004A24E4 /* SquareBackground.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = SquareBackground.h; sourceTree = "<group>"; };
 		8C3DA3A723963424004A24E4 /* MusicSelector.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MusicSelector.cpp; sourceTree = "<group>"; };
 		8C3DA3A823963425004A24E4 /* MusicSelector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = MusicSelector.h; sourceTree = "<group>"; };
+		8C9FB43F23A8CDE800C0E12D /* MusicEditScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = MusicEditScene.h; sourceTree = "<group>"; };
+		8C9FB44023A8CDE800C0E12D /* MusicEditScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MusicEditScene.cpp; sourceTree = "<group>"; };
 		8CD02C4D239DFE7F006EFA79 /* Note.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Note.cpp; sourceTree = "<group>"; };
 		8CD02C4E239DFE7F006EFA79 /* Note.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = Note.h; sourceTree = "<group>"; };
 		8CD02C50239E004E006EFA79 /* GameDataModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = GameDataModule.h; path = ../../Source/GameDataModule.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 		8CD02C4A239DFDAF006EFA79 /* MusicPlayScene */ = {
 			isa = PBXGroup;
 			children = (
+				8C9FB44023A8CDE800C0E12D /* MusicEditScene.cpp */,
+				8C9FB43F23A8CDE800C0E12D /* MusicEditScene.h */,
 				8CD02C54239E2FB7006EFA79 /* MusicPlayScene.cpp */,
 				8CD02C53239E2FB7006EFA79 /* MusicPlayScene.h */,
 				8CD02C4D239DFE7F006EFA79 /* Note.cpp */,
@@ -251,6 +256,7 @@
 				8C3DA39B23929311004A24E4 /* ThousandParty.cpp in Sources */,
 				8CD02C52239E004E006EFA79 /* GameDataModule.cpp in Sources */,
 				8CD02C4F239DFE7F006EFA79 /* Note.cpp in Sources */,
+				8C9FB44123A8CDE800C0E12D /* MusicEditScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
