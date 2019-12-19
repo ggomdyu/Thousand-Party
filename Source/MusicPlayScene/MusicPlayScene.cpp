@@ -3,6 +3,7 @@
 #include "TGON.h"
 #include "MusicPlayScene.h"
 #include "Note.h"
+#include "NoteHitInfo.h"
 #include "NoteLine.h"
 
 MusicPlayScene::MusicPlayScene(const MusicInfo& musicInfo) :
@@ -16,26 +17,17 @@ void MusicPlayScene::Initialize()
 {
     Super::Initialize();
     
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    m_audioPlayer.Initialize(assetModule->GetAudioBuffer(m_musicInfo.musicPath));
+    
     this->InitializeBackgroundObject();
+    this->InitializeNoteHitInfo();
     this->InitializeNoteLine();
     this->InitializeNoteObjectPool();
     this->InitializeHoldNoteObjectPool();
     this->InitializeMusicNameObject();
     this->InitializeMusicArtistNameObject();
-    
-    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_audioPlayer.Initialize(assetModule->GetAudioBuffer(m_musicInfo.musicPath));
-    
-    auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
-    timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
-    {
-        m_audioPlayer.Play(1.0f, false);
-        m_isMusicWaiting = false;
-    }, 3.0f, false);
-    timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
-    {
-        m_elapsedTime = m_audioPlayer.GetProgressInSeconds();
-    }, 0.5f, true);
+    this->InitializeTimer();
 }
 
 void MusicPlayScene::Update()
@@ -94,12 +86,14 @@ void MusicPlayScene::UpdateNotes()
                 bool isNormalNote = iter->second->GetRTTI() != tgon::GetRTTI<HoldNote*>();
                 if (isNormalNote)
                 {
+                    m_noteHitInfo->OnMissNote();
                     m_noteObjectPool.push_back(*iter);
                     iter = noteObjects.erase(iter);
                     continue;
                 }
                 else if (iter->second->IsHolding() == false)
                 {
+                    m_noteHitInfo->OnMissNote();
                     m_holdNoteObjectPool.emplace_back(iter->first, std::static_pointer_cast<HoldNote>(iter->second));
                     iter = noteObjects.erase(iter);
                     continue;
@@ -125,12 +119,14 @@ void MusicPlayScene::UpdateNotes()
                 {
                     if (iter->second->GetRTTI() != tgon::GetRTTI<HoldNote*>())
                     {
+                        m_noteHitInfo->OnHitNote();
                         m_noteObjectPool.push_back(*iter);
                         iter = noteObjects.erase(iter);
                         break;
                     }
                     else if (iter->second->IsHolding() == false)
                     {
+                        m_noteHitInfo->OnMissNote();
                         m_holdNoteObjectPool.emplace_back(iter->first, std::static_pointer_cast<HoldNote>(iter->second));
                         iter = noteObjects.erase(iter);
                         continue;
@@ -148,6 +144,13 @@ void MusicPlayScene::UpdateBackgroundObjectPosition()
     auto backgroundObjectPos = m_backgroundObject->GetTransform()->GetLocalPosition();
     backgroundObjectPos.x -= 3.0f * m_timeModule->GetTickTime();
     m_backgroundObject->GetTransform()->SetLocalPosition(backgroundObjectPos);
+}
+
+void MusicPlayScene::InitializeNoteHitInfo()
+{
+    auto noteHitInfoObject = tgon::GameObject::Create();
+    m_noteHitInfo = noteHitInfoObject->AddComponent<NoteHitInfo>();
+    this->AddObject(std::move(noteHitInfoObject));
 }
 
 void MusicPlayScene::InitializeBackgroundObject()
@@ -236,6 +239,20 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
     m_musicArtistNameRendererComponent = textComponent;
 
     this->AddObject(object);
+}
+
+void MusicPlayScene::InitializeTimer()
+{
+    auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
+    timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
+    {
+        m_audioPlayer.Play(1.0f, false);
+        m_isMusicWaiting = false;
+    }, 3.0f, false);
+    timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
+    {
+        m_elapsedTime = m_audioPlayer.GetProgressInSeconds();
+    }, 0.5f, true);
 }
 
 MusicPlayScene::NoteObjectPair MusicPlayScene::GetNoteObjectFromPool()

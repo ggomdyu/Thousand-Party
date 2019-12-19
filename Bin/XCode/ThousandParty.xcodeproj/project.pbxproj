@@ -17,6 +17,7 @@
 		8C3DA3A6239566B6004A24E4 /* SquareBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA3A4239566B5004A24E4 /* SquareBackground.cpp */; };
 		8C3DA3A923963425004A24E4 /* MusicSelector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DA3A723963424004A24E4 /* MusicSelector.cpp */; };
 		8C9FB44123A8CDE800C0E12D /* MusicEditScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C9FB44023A8CDE800C0E12D /* MusicEditScene.cpp */; };
+		8C9FB45723AB2F6C00C0E12D /* NoteHitInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C9FB45523AB2F6C00C0E12D /* NoteHitInfo.cpp */; };
 		8CD02C4F239DFE7F006EFA79 /* Note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CD02C4D239DFE7F006EFA79 /* Note.cpp */; };
 		8CD02C52239E004E006EFA79 /* GameDataModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CD02C51239E004E006EFA79 /* GameDataModule.cpp */; };
 		8CD02C55239E2FB7006EFA79 /* MusicPlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CD02C54239E2FB7006EFA79 /* MusicPlayScene.cpp */; };
@@ -61,6 +62,8 @@
 		8C3DA3A823963425004A24E4 /* MusicSelector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = MusicSelector.h; sourceTree = "<group>"; };
 		8C9FB43F23A8CDE800C0E12D /* MusicEditScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = MusicEditScene.h; sourceTree = "<group>"; };
 		8C9FB44023A8CDE800C0E12D /* MusicEditScene.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MusicEditScene.cpp; sourceTree = "<group>"; };
+		8C9FB45523AB2F6C00C0E12D /* NoteHitInfo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = NoteHitInfo.cpp; sourceTree = "<group>"; };
+		8C9FB45623AB2F6C00C0E12D /* NoteHitInfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = NoteHitInfo.h; sourceTree = "<group>"; };
 		8CD02C4D239DFE7F006EFA79 /* Note.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Note.cpp; sourceTree = "<group>"; };
 		8CD02C4E239DFE7F006EFA79 /* Note.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; path = Note.h; sourceTree = "<group>"; };
 		8CD02C50239E004E006EFA79 /* GameDataModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = GameDataModule.h; path = ../../Source/GameDataModule.h; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				8CD02C4E239DFE7F006EFA79 /* Note.h */,
 				8C0C8B4523A3759C00AA01F3 /* NoteLine.cpp */,
 				8C0C8B4423A3759C00AA01F3 /* NoteLine.h */,
+				8C9FB45523AB2F6C00C0E12D /* NoteHitInfo.cpp */,
+				8C9FB45623AB2F6C00C0E12D /* NoteHitInfo.h */,
 			);
 			name = MusicPlayScene;
 			path = ../../Source/MusicPlayScene;
@@ -257,6 +262,7 @@
 				8CD02C52239E004E006EFA79 /* GameDataModule.cpp in Sources */,
 				8CD02C4F239DFE7F006EFA79 /* Note.cpp in Sources */,
 				8C9FB44123A8CDE800C0E12D /* MusicEditScene.cpp in Sources */,
+				8C9FB45723AB2F6C00C0E12D /* NoteHitInfo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +401,7 @@
 					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/icu4c-64_2/icu/source/common",
 					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/icu4c-64_2/icu/source/i18n",
 					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/GSL-2.0.0/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/fmt-6.1.2/include",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
@@ -430,6 +437,7 @@
 					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/icu4c-64_2/icu/source/common",
 					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/icu4c-64_2/icu/source/i18n",
 					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/GSL-2.0.0/include",
+					"$(PROJECT_DIR)/../../../TGON/Source/ThirdParty/fmt-6.1.2/include",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;

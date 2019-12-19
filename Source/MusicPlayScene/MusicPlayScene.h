@@ -25,6 +25,7 @@ class TextRendererComponent;
 
 class Note;
 class HoldNote;
+class NoteHitInfo;
 class NoteLine;
 
 class MusicPlayScene :
@@ -49,6 +50,7 @@ public:
     
 private:
     void InitializeBackgroundObject();
+    void InitializeNoteHitInfo();
     void InitializeNoteLine();
     void InitializeNoteObjectPool();
     void InitializeHoldNoteObjectPool();
@@ -58,6 +60,7 @@ private:
     void UpdateBackgroundObjectPosition();
     void InitializeMusicNameObject();
     void InitializeMusicArtistNameObject();
+    void InitializeTimer();
 
 /**@section Variable */
 private:
@@ -67,6 +70,7 @@ private:
     MusicInfo m_musicInfo;
     tgon::AudioPlayer m_audioPlayer;
     std::shared_ptr<tgon::GameObject> m_backgroundObject;
+    std::shared_ptr<NoteHitInfo> m_noteHitInfo;
     std::shared_ptr<NoteLine> m_noteLine;
     std::vector<NoteObjectPair> m_noteObjectPool;
     std::vector<HoldNoteObjectPair> m_holdNoteObjectPool;

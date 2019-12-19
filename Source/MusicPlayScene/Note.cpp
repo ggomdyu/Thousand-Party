@@ -3,7 +3,7 @@
 #include "NoteLine.h"
 
 #if _DEBUG
-constexpr bool g_needToHitAutomatically = false;
+constexpr bool g_needToHitAutomatically = true;
 #else
 constexpr bool g_needToHitAutomatically = false;
 #endif
@@ -100,7 +100,7 @@ void Note::Update()
         if (m_elapsedTime - m_hitTime > 0.0f)
         {
             auto blendColor = m_noteRendererComponent->GetBlendColor();
-            blendColor.a = std::clamp(tgon::Lerp(1.0f, 0.0f, (m_hitTime - m_elapsedTime) * 3.0f), 0.0f, 1.0f);
+            blendColor.a = tgon::Lerp(1.0f, 0.0f, (m_elapsedTime - m_hitTime) * 5.0f);
             m_noteRendererComponent->SetBlendColor(blendColor);
         }
         
@@ -264,7 +264,7 @@ void HoldNote::Update()
     }
     else
     {
-        float interpolated = std::min(1.0f, 1.0f - (0.5f * ((m_elapsedTime - m_hitTime) / m_holdTime)));
+        float interpolated = std::clamp(std::min(1.0f, 1.0f - (0.5f * ((m_elapsedTime - m_hitTime) / m_holdTime))), 0.0f, 1.0f);
         m_ringObject->GetTransform()->SetLocalScale(tgon::Vector3(interpolated, interpolated, 1.0f));
     }
 }

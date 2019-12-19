@@ -38,7 +38,6 @@ private:
     void InitializeGraphics();
     void CreateNightSkyObject();
     void CreateSpriteObjects();
-    void CreateTextObjects();
     void CreateFireFlyObjects();
     void OnHandleInput();
 
