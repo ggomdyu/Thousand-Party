@@ -1,6 +1,7 @@
 #include "PrecompiledHeader.h"
 
 #include "LogoScene/LogoScene.h"
+#include "TestScene/RenderTestScene.h"
 
 #include "TGON.h"
 #include "ThousandParty.h"
@@ -49,5 +50,5 @@ void ThousandParty::InitializeModule()
     };
     this->AddModule<GraphicsModule>(*rootWindow, videoMode)->GetUIRenderer().SetMaxSortingLayer(10);
     this->AddModule<GameDataModule>();
-    this->AddModule<SceneModule>()->ChangeScene<LogoScene>();
+    this->AddModule<SceneModule>()->ChangeScene<RenderTestScene>();
 }
