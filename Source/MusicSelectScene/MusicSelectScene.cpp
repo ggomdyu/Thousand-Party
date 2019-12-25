@@ -37,7 +37,7 @@ void MusicSelectScene::CreateMusicSelectorObject()
     musicSelectorObject->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 20.0f, 0.0f));
 
     auto musicSelectorComponent = musicSelectorObject->AddComponent<MusicSelector>();
-    musicSelectorComponent->OnChangeSelectedMusic = tgon::MakeDelegate<&MusicSelectScene::OnChangeSelectedMusic>(this);
+    musicSelectorComponent->OnChangeSelectedMusic = tgon::Delegate(&MusicSelectScene::OnChangeSelectedMusic, this);
     
     this->AddObject(musicSelectorObject);
 }

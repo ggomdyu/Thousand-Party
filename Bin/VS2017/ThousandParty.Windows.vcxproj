@@ -108,6 +108,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -140,6 +141,7 @@
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>PrecompiledHeader.pch</PrecompiledHeaderFile>
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -160,6 +162,7 @@
     <ClCompile Include="..\..\Source\MusicPlayScene\MusicEditScene.cpp" />
     <ClCompile Include="..\..\Source\MusicPlayScene\MusicPlayScene.cpp" />
     <ClCompile Include="..\..\Source\MusicPlayScene\Note.cpp" />
+    <ClCompile Include="..\..\Source\MusicPlayScene\NoteHitInfo.cpp" />
     <ClCompile Include="..\..\Source\MusicPlayScene\NoteLine.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelector.cpp" />
     <ClCompile Include="..\..\Source\MusicSelectScene\MusicSelectScene.cpp" />
@@ -176,6 +179,7 @@
     <ClInclude Include="..\..\Source\MusicPlayScene\MusicEditScene.h" />
     <ClInclude Include="..\..\Source\MusicPlayScene\MusicPlayScene.h" />
     <ClInclude Include="..\..\Source\MusicPlayScene\Note.h" />
+    <ClInclude Include="..\..\Source\MusicPlayScene\NoteHitInfo.h" />
     <ClInclude Include="..\..\Source\MusicPlayScene\NoteLine.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelector.h" />
     <ClInclude Include="..\..\Source\MusicSelectScene\MusicSelectScene.h" />
