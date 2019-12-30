@@ -180,14 +180,14 @@ void GameDataModule::PreloadMusicCoverTexture(const std::shared_ptr<tgon::AssetM
     auto pngCoverPath = noteDirectory + "/cover.png";
     if (tgon::File::Exists(pngCoverPath.c_str()))
     {
-        assetModule->GetTexture(pngCoverPath);
+        assetModule->GetResource<tgon::Texture>(pngCoverPath);
         return;
     }
     
     auto jpgCoverPath = noteDirectory + "/cover.jpg";
     if (tgon::File::Exists(jpgCoverPath.c_str()))
     {
-        assetModule->GetTexture(jpgCoverPath);
+        assetModule->GetResource<tgon::Texture>(jpgCoverPath);
         return;
     }
 }

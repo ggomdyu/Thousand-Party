@@ -127,7 +127,7 @@ void TitleScene::CreateSpriteObjects()
         object->GetTransform()->SetLocalPosition(texturePosList[i]);
         
         auto spriteRendererComponent = object->AddComponent<tgon::SpriteRendererComponent>();
-        spriteRendererComponent->SetTexture(assetModule->GetTexture(texturePathList[i]));
+        spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(texturePathList[i]));
         spriteRendererComponent->SetSortingLayer(sortingLayerList[i]);
         spriteRendererComponent->SetPivot(pivotList[i]);
         this->AddObject(object);

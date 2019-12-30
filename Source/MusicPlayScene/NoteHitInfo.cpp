@@ -40,7 +40,7 @@ void NoteHitInfo::InitializeSprite()
 
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     auto spriteComponent = gameObject->AddComponent<tgon::SpriteRendererComponent>();
-    spriteComponent->SetTexture(assetModule->GetTexture("Resource/UI/MusicPlayScene/noteHitInfo.png"));
+    spriteComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/UI/MusicPlayScene/noteHitInfo.png"));
     spriteComponent->SetSortingLayer(3);
     spriteComponent->SetPivot({1.0f, 0.0f});
 }
