@@ -29,66 +29,40 @@ void TitleScene::Initialize()
     
     auto engine = tgon::Application::GetEngine();
     auto timerModule = engine->FindModule<tgon::TimerModule>();
-    auto weakTimerModule = std::weak_ptr<tgon::TimerModule>(engine->FindModule<tgon::TimerModule>());
-    auto weakTimeModule = std::weak_ptr<tgon::TimeModule>(engine->FindModule<tgon::TimeModule>());
+    auto timeModule = engine->FindModule<tgon::TimeModule>();
     
     m_inputModule = engine->FindModule<tgon::InputModule>();
-    m_fadeInTimerHandle = timerModule->SetTimer([this, weakTimeModule, weakTimerModule](tgon::TimerHandle timerHandle)
+    m_fadeInTimerHandle = timerModule->SetTimer([this, timeModule, timerModule](tgon::TimerHandle timerHandle)
     {
         auto blendColor = m_fadeInSpriteRendererComponent->GetBlendColor();
         if (blendColor.a <= 0.0f)
         {
-            auto timerModule = weakTimerModule.lock();
-            if (timerModule != nullptr)
-            {
-                timerModule->ClearTimer(timerHandle);
-                m_fadeInTimerHandle = {};
-            }
+            timerModule->ClearTimer(timerHandle);
+            m_fadeInTimerHandle = {};
             return;
         }
         
-        auto timeModule = weakTimeModule.lock();
-        if (timeModule != nullptr)
-        {
-            blendColor.a = std::max(0.0f, blendColor.a - 1.0f * timeModule->GetTickTime());
-            m_fadeInSpriteRendererComponent->SetBlendColor(blendColor);
-        }
+        blendColor.a = std::max(0.0f, blendColor.a - 1.0f * timeModule->GetTickTime());
+        m_fadeInSpriteRendererComponent->SetBlendColor(blendColor);
     }, 0.0f, true);
     
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-    std::weak_ptr<tgon::GameObject> weakGirl(m_girl);
-    timerModule->SetTimer([clientSize, weakTimeModule, weakTimerModule, weakGirl](tgon::TimerHandle timerHandle)
+    timerModule->SetTimer([this, clientSize, timeModule, timerModule](tgon::TimerHandle timerHandle)
     {
-        auto girl = weakGirl.lock();
-        if (girl == nullptr)
-        {
-            if (auto timerModule = weakTimerModule.lock(); timerModule != nullptr)
-            {
-                timerModule->ClearTimer(timerHandle);
-            }
-            return;
-        }
-        
         auto destXPos = -clientSize.width / 2 + 640.0f;
-        auto position = girl->GetTransform()->GetLocalPosition();
+        auto position = m_girl->GetTransform()->GetLocalPosition();
         if (std::abs(position.x - destXPos) <= 0.0001f)
         {
             position.x = destXPos;
-            girl->GetTransform()->SetLocalPosition(position);
+            m_girl->GetTransform()->SetLocalPosition(position);
             
-            if (auto timerModule = weakTimerModule.lock(); timerModule != nullptr)
-            {
-                timerModule->ClearTimer(timerHandle);
-            }
+            timerModule->ClearTimer(timerHandle);
             return;
         }
 
-        if (auto timeModule = weakTimeModule.lock(); timeModule != nullptr)
-        {
-            auto newXPos = tgon::Lerp(position.x, destXPos, 0.1f);
-            position.x = newXPos;
-            girl->GetTransform()->SetLocalPosition(position);
-        }
+        auto newXPos = tgon::Lerp(position.x, destXPos, 0.1f);
+        position.x = newXPos;
+        m_girl->GetTransform()->SetLocalPosition(position);
     }, 0.0f, true);
     
 }
@@ -96,7 +70,7 @@ void TitleScene::Initialize()
 void TitleScene::InitializeGraphics()
 {
     auto graphicsModule = tgon::Application::GetEngine()->FindModule<tgon::GraphicsModule>();
-    graphicsModule->GetGraphics().DisableDepthTest();
+//    graphicsModule->GetGraphics().DisableDepthTest();
 }
  
 void TitleScene::CreateNightSkyObject()

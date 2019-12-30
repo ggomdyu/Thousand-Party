@@ -164,13 +164,10 @@ void MusicSelector::AnimateMusicCoverObject()
     {
         auto engine = tgon::Application::GetEngine();
         auto timerModule = engine->FindModule<tgon::TimerModule>();
-        std::weak_ptr<tgon::TimerModule> weakTimerModule = timerModule;
-        std::weak_ptr<tgon::TimeModule> weakTimeModule = engine->FindModule<tgon::TimeModule>();
+        auto timeModule = engine->FindModule<tgon::TimeModule>();
         
-        m_animationTimer = timerModule->SetTimer([this, weakTimerModule, weakTimeModule](tgon::TimerHandle timerHandle)
+        m_animationTimer = timerModule->SetTimer([this, timerModule, timeModule](tgon::TimerHandle timerHandle)
         {
-            auto timeModule = weakTimeModule.lock();
-
             int j = 0;
             for (int32_t i = m_currSelectedCoverImageIndex; i < m_currSelectedCoverImageIndex + 7; ++i, ++j)
             {
@@ -193,12 +190,8 @@ void MusicSelector::AnimateMusicCoverObject()
             auto currPos = transform->GetLocalPosition();
             if (std::abs(g_coverImagePositions[3].x - currPos.x) < 0.0001f)
             {
-                auto timerModule = weakTimerModule.lock();
-                if (timerModule != nullptr)
-                {
-                    timerModule->ClearTimer(timerHandle);
-                    m_animationTimer = {};
-                }
+                timerModule->ClearTimer(timerHandle);
+                m_animationTimer = {};
             }
         }, 0.0f, true);
     }
