@@ -25,7 +25,7 @@ void MusicEditScene::Initialize()
     this->InitializeMusicArtistNameObject();
     
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_audioPlayer.Initialize(assetModule->GetAudioBuffer(m_musicInfo.musicPath));
+    m_audioPlayer.Initialize(assetModule->GetResource<tgon::AudioBuffer>(m_musicInfo.musicPath));
     
     auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
     timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
@@ -201,7 +201,7 @@ void MusicEditScene::InitializeBackgroundObject()
     backgroundObject->GetTransform()->SetLocalPosition({-static_cast<float>(clientSize.width) * 0.5f, 0.0f, 0.0f});
     
     auto spriteRendererComponent = backgroundObject->AddComponent<tgon::SpriteRendererComponent>();
-    spriteRendererComponent->SetTexture(assetModule->GetTexture("Resource/Background/MusicPlayScene/green.png"));
+    spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/Background/MusicPlayScene/green.png"));
     spriteRendererComponent->SetPivot({0.0f, 0.5f});
     
     this->AddObject(backgroundObject);

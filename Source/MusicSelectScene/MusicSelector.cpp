@@ -69,11 +69,11 @@ void MusicSelector::InitializeMusicCoverObjects()
         std::shared_ptr<tgon::Texture> texture;
         if (auto pngCoverPath = noteDirectories[i] + "/cover.png"; tgon::File::Exists(pngCoverPath.c_str()))
         {
-            texture = assetModule->GetTexture(pngCoverPath);
+            texture = assetModule->GetResource<tgon::Texture>(pngCoverPath);
         }
         else if (auto jpgCoverPath = noteDirectories[i] + "/cover.jpg"; tgon::File::Exists(jpgCoverPath.c_str()))
         {
-            texture = assetModule->GetTexture(jpgCoverPath);
+            texture = assetModule->GetResource<tgon::Texture>(jpgCoverPath);
         }
         else
         {
@@ -98,7 +98,7 @@ void MusicSelector::InitializeHighlightObject()
     
     auto spriteRendererComponent = m_highlight->AddComponent<tgon::SpriteRendererComponent>();
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    spriteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/UI/MusicSelectScene/highlight.png"));
+    spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/UI/MusicSelectScene/highlight.png"));
     spriteRendererComponent->SetSortingLayer(7);
 }
 

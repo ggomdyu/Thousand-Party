@@ -3,7 +3,7 @@
 #include "NoteLine.h"
 
 #if _DEBUG
-constexpr bool g_needToHitAutomatically = true;
+constexpr bool g_needToHitAutomatically = false;
 #else
 constexpr bool g_needToHitAutomatically = false;
 #endif
@@ -88,7 +88,7 @@ void Note::InitializeSprite()
 
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     m_noteRendererComponent = gameObject->AddComponent<tgon::SpriteRendererComponent>();
-    m_noteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/MusicPlayScene/note.png"));
+    m_noteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/MusicPlayScene/note.png"));
 }
 
 void Note::Update()
@@ -189,7 +189,7 @@ void Note::PlayHitSound()
     {
         auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
         tgon::AudioPlayer hitSoundPlayer;
-        hitSoundPlayer.Initialize(assetModule->GetAudioBuffer("Resource/Sound/HOCKEY.wav"));
+        hitSoundPlayer.Initialize(assetModule->GetResource<tgon::AudioBuffer>("Resource/Sound/HOCKEY.wav"));
         return hitSoundPlayer;
     };
     static tgon::AudioPlayer hitSoundPlayer[5] = {
@@ -339,7 +339,7 @@ void HoldNote::InitializeSprite()
     auto ringObject = tgon::GameObject::Create();
     ringObject->GetTransform()->SetParent(gameObject->GetTransform());
     m_holdNoteRendererComponent = ringObject->AddComponent<tgon::SpriteRendererComponent>();
-    m_holdNoteRendererComponent->SetTexture(assetModule->GetTexture(u8"Resource/Object/MusicPlayScene/holdNote.png"));
+    m_holdNoteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/MusicPlayScene/holdNote.png"));
     
     m_ringObject = ringObject;
 }

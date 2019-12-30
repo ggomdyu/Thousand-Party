@@ -15,22 +15,6 @@ void foo() { Debug::WriteLine("¹Ý°©"); }
 
 LogoScene::LogoScene()
 {
-    auto sss = std::make_shared<int>(4);
-    auto sss1 = std::make_shared<int>(4);
-    auto sss2 = std::make_shared<int>(4);
-    auto sss3 = std::make_shared<int>(4);
-    auto d1 = Delegate([sss, sss1, sss2, sss3]()
-    {
-        int d = *sss;
-        int d2 = *sss1;
-        int d3 = *sss2;
-        int d4 = *sss3;
-        Debug::WriteLine(fmt::to_string(d));
-       /* Debug::WriteLine(fmt::to_string(d2));
-        Debug::WriteLine(fmt::to_string(d3));
-        Debug::WriteLine(fmt::to_string(d4));*/
-    });
-    d1();
 }
 
 void LogoScene::Foo(int32_t)
