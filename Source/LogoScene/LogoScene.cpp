@@ -11,15 +11,8 @@
 
 using namespace tgon;
 
-void foo() { Debug::WriteLine("¹Ý°©"); }
-
 LogoScene::LogoScene()
 {
-}
-
-void LogoScene::Foo(int32_t)
-{
-    Debug::WriteLine("½À´Ï´Ù");
 }
 
 void LogoScene::Update()
@@ -110,7 +103,8 @@ void LogoScene::CreateCameraObject()
     float halfHeight = static_cast<float>(clientSize.height) * 0.5f;
     camera->AddComponent<tgon::CameraComponent>(tgon::FRect(-halfWidth, -halfHeight, clientSize.width, clientSize.height), -1.0f, 1024.0f);
     
-    tgon::Application::GetEngine()->FindModule<tgon::SceneModule>()->AddGlobalObject(camera);
+    auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
+    sceneModule->AddGlobalObject(camera);
 }
 
 void LogoScene::CreateSpriteObject()

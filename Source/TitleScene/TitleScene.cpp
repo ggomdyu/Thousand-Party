@@ -166,9 +166,6 @@ void TitleScene::OnHandleInput()
 void TitleScene::DestroyTimer()
 {
     auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
-    if (timerModule != nullptr)
-    {
-        timerModule->ClearTimer(m_fadeInTimerHandle);
-        timerModule->ClearTimer(m_girlMoveTimerHandler);
-    }
+    timerModule->ClearTimer(m_fadeInTimerHandle);
+    timerModule->ClearTimer(m_girlMoveTimerHandler);
 }
