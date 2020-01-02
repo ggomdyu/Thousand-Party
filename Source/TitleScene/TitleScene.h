@@ -28,7 +28,11 @@ public:
 /**@section Constructor */
 public:
     TitleScene();
-    
+
+/**@section Destructor */
+public:
+    ~TitleScene() override;
+
 /**@section Method */
 public:
     void Initialize() override;
@@ -40,6 +44,7 @@ private:
     void CreateSpriteObjects();
     void CreateFireFlyObjects();
     void OnHandleInput();
+    void DestroyTimer();
 
 /**@section Variable */
 private:
@@ -47,4 +52,5 @@ private:
     std::shared_ptr<tgon::SpriteRendererComponent> m_fadeInSpriteRendererComponent;
     std::shared_ptr<tgon::GameObject> m_girl;
     tgon::TimerHandle m_fadeInTimerHandle;
+    tgon::TimerHandle m_girlMoveTimerHandler;
 };

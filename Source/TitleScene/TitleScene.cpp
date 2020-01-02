@@ -20,6 +20,11 @@ void TitleScene::Update()
     this->OnHandleInput();
 }
 
+TitleScene::~TitleScene()
+{
+    this->DestroyTimer();
+}
+
 void TitleScene::Initialize()
 {
     this->InitializeGraphics();
@@ -47,7 +52,7 @@ void TitleScene::Initialize()
     }, 0.0f, true);
     
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-    timerModule->SetTimer([this, clientSize, timeModule, timerModule](tgon::TimerHandle timerHandle)
+    m_girlMoveTimerHandler = timerModule->SetTimer([this, clientSize, timeModule, timerModule](tgon::TimerHandle timerHandle)
     {
         auto destXPos = -clientSize.width / 2 + 640.0f;
         auto position = m_girl->GetTransform()->GetLocalPosition();
@@ -70,7 +75,7 @@ void TitleScene::Initialize()
 void TitleScene::InitializeGraphics()
 {
     auto graphicsModule = tgon::Application::GetEngine()->FindModule<tgon::GraphicsModule>();
-//    graphicsModule->GetGraphics().DisableDepthTest();
+    graphicsModule->GetGraphics().DisableDepthTest();
 }
  
 void TitleScene::CreateNightSkyObject()
@@ -155,5 +160,15 @@ void TitleScene::OnHandleInput()
     {
         auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
         sceneModule->ChangeScene<MusicSelectScene>();
+    }
+}
+
+void TitleScene::DestroyTimer()
+{
+    auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
+    if (timerModule != nullptr)
+    {
+        timerModule->ClearTimer(m_fadeInTimerHandle);
+        timerModule->ClearTimer(m_girlMoveTimerHandler);
     }
 }
