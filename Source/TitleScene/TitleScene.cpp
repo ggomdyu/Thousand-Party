@@ -1,12 +1,11 @@
 #include "PrecompiledHeader.h"
 
-#include "../MusicSelectScene/MusicSelectScene.h"
-
 #include "TGON.h"
 #include "TitleScene.h"
 #include "FireFly.h"
 #include "NightSky.h"
 
+#include "../MusicSelectScene/MusicSelectScene.h"
 #include "../MusicPlayScene/Note.h"
 
 TitleScene::TitleScene()
@@ -37,12 +36,16 @@ void TitleScene::Initialize()
     auto timeModule = engine->FindModule<tgon::TimeModule>();
     
     m_inputModule = engine->FindModule<tgon::InputModule>();
-    m_fadeInTimerHandle = timerModule->SetTimer([this, timeModule, timerModule](tgon::TimerHandle timerHandle)
+    m_fadeInTimerHandle = timerModule->SetTimer([this, timeModule, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule)](tgon::TimerHandle timerHandle)
     {
         auto blendColor = m_fadeInSpriteRendererComponent->GetBlendColor();
         if (blendColor.a <= 0.0f)
         {
-            timerModule->ClearTimer(timerHandle);
+            if (auto timerModule = weakTimerModule.lock(); timerModule != nullptr)
+            {
+                timerModule->ClearTimer(timerHandle);
+            }
+
             m_fadeInTimerHandle = {};
             return;
         }
@@ -52,7 +55,7 @@ void TitleScene::Initialize()
     }, 0.0f, true);
     
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-    m_girlMoveTimerHandler = timerModule->SetTimer([this, clientSize, timeModule, timerModule](tgon::TimerHandle timerHandle)
+    m_girlMoveTimerHandler = timerModule->SetTimer([this, clientSize, timeModule, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule)](tgon::TimerHandle timerHandle)
     {
         auto destXPos = -clientSize.width / 2 + 640.0f;
         auto position = m_girl->GetTransform()->GetLocalPosition();
@@ -61,7 +64,10 @@ void TitleScene::Initialize()
             position.x = destXPos;
             m_girl->GetTransform()->SetLocalPosition(position);
             
-            timerModule->ClearTimer(timerHandle);
+            if (auto timerModule = weakTimerModule.lock(); timerModule != nullptr)
+            {
+                timerModule->ClearTimer(timerHandle);
+            }
             return;
         }
 
@@ -69,7 +75,6 @@ void TitleScene::Initialize()
         position.x = newXPos;
         m_girl->GetTransform()->SetLocalPosition(position);
     }, 0.0f, true);
-    
 }
 
 void TitleScene::InitializeGraphics()
