@@ -19,7 +19,7 @@ class SpriteRendererComponent;
 
 } /* namespace tgon */
 
-enum NoteTiming
+enum class NoteTiming
 {
     Perfect,
     Great,

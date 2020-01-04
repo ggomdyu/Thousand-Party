@@ -1,9 +1,12 @@
 #include "PrecompiledHeader.h"
 
-#include "TGON.h"
-#include "GameDataModule.h"
+#include "Engine/AssetModule.h"
+#include "Platform/Application.h"
+#include "IO/Path.h"
+#include "IO/Path.h"
+#include "IO/Directory.h"
 
-GameDataModule::GameDataModule() = default;
+#include "GameDataModule.h"
 
 void GameDataModule::Initialize()
 {

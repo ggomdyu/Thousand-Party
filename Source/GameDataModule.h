@@ -14,6 +14,7 @@ namespace tgon
 {
 
 class AudioPlayer;
+class AssetModule;
 
 } /* namespace tgon */
 
@@ -40,10 +41,6 @@ class GameDataModule :
 {
 public:
     TGON_DECLARE_RTTI(GameDataModule)
-
-/**@section Constructor */
-public:
-    GameDataModule();
 
 /**@section Method */
 public:

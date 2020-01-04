@@ -115,8 +115,8 @@ void MusicSelectScene::CreateSpriteObjects()
     {
         tgon::Vector3(0.0f, 0.0f, 0.0f),
         tgon::Vector3(0.0f, 0.0f, 0.0f),
-        tgon::Vector3(-clientSize.width / 2 - 50, clientSize.height / 2 + 250, 0.0f),
-        tgon::Vector3(-clientSize.width / 2 + 640.0f, clientSize.height / 2 + 10.0f, 0.0f),
+        tgon::Vector3(static_cast<float>(-clientSize.width) * 0.5f - 50.0f, static_cast<float>(clientSize.height) * 0.5f + 250.0f, 0.0f),
+        tgon::Vector3(static_cast<float>(-clientSize.width) * 0.5f + 640.0f, static_cast<float>(clientSize.height) * 0.5f + 10.0f, 0.0f),
         tgon::Vector3(10000.0f, 0.0f, 0.0f),
     };
     tgon::Vector2 pivotList[] =

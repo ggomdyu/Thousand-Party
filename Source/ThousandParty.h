@@ -17,11 +17,10 @@ public:
 
 /**@section Constructor */
 public:
-    ThousandParty() {}
+    ThousandParty();
 
 /**@section Method */
 public:
     void Initialize() override;
-    void Update() override;
-    void InitializeModule();
+    void InitializeModule() override;
 };

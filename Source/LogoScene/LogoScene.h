@@ -24,10 +24,6 @@ class LogoScene :
 public:
     TGON_DECLARE_RTTI(LogoScene)
 
-/**@section Constructor */
-public:
-    LogoScene();
-    
 /**@section Method */
 public:
     void Initialize() override;

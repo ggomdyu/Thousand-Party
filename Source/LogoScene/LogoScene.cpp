@@ -1,19 +1,11 @@
 #include "PrecompiledHeader.h"
 
-#include "../TitleScene/TitleScene.h"
-
 #include "TGON.h"
 #include "LogoScene.h"
 
-#include <functional>
-#include <fmt/format.h>
-
+#include "../TitleScene/TitleScene.h"
 
 using namespace tgon;
-
-LogoScene::LogoScene()
-{
-}
 
 void LogoScene::Update()
 {
@@ -101,7 +93,7 @@ void LogoScene::CreateCameraObject()
     auto clientSize = tgon::Application::GetInstance().GetRootWindow()->GetClientSize();
     float halfWidth = static_cast<float>(clientSize.width) * 0.5f;
     float halfHeight = static_cast<float>(clientSize.height) * 0.5f;
-    camera->AddComponent<tgon::CameraComponent>(tgon::FRect(-halfWidth, -halfHeight, clientSize.width, clientSize.height), -1.0f, 1024.0f);
+    camera->AddComponent<tgon::CameraComponent>(tgon::FRect(-halfWidth, -halfHeight, static_cast<float>(clientSize.width), static_cast<float>(clientSize.height)), -1.0f, 1024.0f);
     
     auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
     sceneModule->AddGlobalObject(camera);
