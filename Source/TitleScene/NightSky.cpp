@@ -25,7 +25,7 @@ void NightSky::Initialize()
 void NightSky::InitializeSpriteComponent()
 {
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    auto spriteRendererComponent = m_gameObject.lock()->AddComponent<tgon::SpriteRendererComponent>();
+    auto spriteRendererComponent = m_gameObject.lock()->AddComponent<tgon::UISpriteRendererComponent>();
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Background/TitleScene/nightSky.png"));
 }
 

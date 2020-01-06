@@ -22,7 +22,7 @@ void SquareBackground::InitializeSpriteComponent()
     }
 
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    auto spriteRendererComponent = gameObject->AddComponent<tgon::SpriteRendererComponent>();
+    auto spriteRendererComponent = gameObject->AddComponent<tgon::UISpriteRendererComponent>();
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Background/MusicSelectScene/Layer.png"));
 }
 

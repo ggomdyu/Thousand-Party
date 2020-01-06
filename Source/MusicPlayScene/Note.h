@@ -15,7 +15,7 @@ namespace tgon
 
 class TimeModule;
 class InputModule;
-class SpriteRendererComponent;
+class UISpriteRendererComponent;
 
 } /* namespace tgon */
 
@@ -29,7 +29,6 @@ enum class NoteTiming
 };
 
 class NoteLine;
-
 class Note :
     public tgon::Component
 {
@@ -66,7 +65,7 @@ private:
 protected:
     bool m_autoHitted = false;
     std::shared_ptr<NoteLine> m_noteLine;
-    std::shared_ptr<tgon::SpriteRendererComponent> m_noteRendererComponent;
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_noteRendererComponent;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::Keyboard> m_keyboard;
     std::shared_ptr<tgon::Transform> m_transform;
@@ -108,5 +107,5 @@ private:
 protected:
     float m_holdTime = 0.0f;
     std::shared_ptr<tgon::GameObject> m_ringObject;
-    std::shared_ptr<tgon::SpriteRendererComponent> m_holdNoteRendererComponent;
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_holdNoteRendererComponent;
 };

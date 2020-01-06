@@ -12,7 +12,7 @@
 namespace tgon
 {
 
-class SpriteRendererComponent;
+class UISpriteRendererComponent;
 
 } /* namespace tgon */
 
@@ -38,5 +38,5 @@ private:
     bool m_needToIncreaseOpacity;
     float m_opacityAdjustSpeed;
     float m_moveSpeed;
-    std::shared_ptr<tgon::SpriteRendererComponent> m_spriteRendererComponent;
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_spriteRendererComponent;
 };

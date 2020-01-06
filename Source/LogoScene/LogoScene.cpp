@@ -74,16 +74,7 @@ void LogoScene::Initialize()
     m_inputModule = tgon::Application::GetEngine()->FindModule<tgon::InputModule>();
     m_timeModule = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>();
     
-    this->InitializeGraphics();
     this->CreateGameObjects();
-}
-
-void LogoScene::InitializeGraphics()
-{
-    auto engine = tgon::Application::GetInstance().GetEngine();
-    
-    auto graphicsModule = engine->FindModule<tgon::GraphicsModule>();
-    graphicsModule->GetGraphics().DisableDepthTest();
 }
 
 void LogoScene::CreateCameraObject()
@@ -111,7 +102,7 @@ void LogoScene::CreateSpriteObject()
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
         auto object = tgon::GameObject::Create(tgon::StringHash(std::to_string(i)));
-        m_logoSpriteRendererComponents[i] = object->AddComponent<tgon::SpriteRendererComponent>();
+        m_logoSpriteRendererComponents[i] = object->AddComponent<tgon::UISpriteRendererComponent>();
         m_logoSpriteRendererComponents[i]->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f));
         m_logoSpriteRendererComponents[i]->SetTexture(std::make_shared<tgon::Texture>(texturePathList[i], tgon::FilterMode::Bilinear, tgon::WrapMode::Repeat, true, false));
         

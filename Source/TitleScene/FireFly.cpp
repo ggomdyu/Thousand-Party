@@ -25,7 +25,7 @@ void FireFly::Initialize()
     transform->SetLocalPosition(tgon::Vector3(static_cast<float>(tgon::Random().NextDouble(-clientSize.width / 2, clientSize.width / 2)), static_cast<float>(tgon::Random().NextDouble(-clientSize.height / 2 - 80.0f, clientSize.height / 2)), 0.0f));
     
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_spriteRendererComponent = gameObject->AddComponent<tgon::SpriteRendererComponent>();
+    m_spriteRendererComponent = gameObject->AddComponent<tgon::UISpriteRendererComponent>();
     m_spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/TitleScene/Firefly.png"));
     m_spriteRendererComponent->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, static_cast<float>(tgon::Random().NextDouble(0.4, 1.0))));
     m_spriteRendererComponent->SetSortingLayer(tgon::Random().Next(0, 2) == 0 ? 1 : 2);

@@ -26,7 +26,6 @@ TitleScene::~TitleScene()
 
 void TitleScene::Initialize()
 {
-    this->InitializeGraphics();
     this->CreateNightSkyObject();
     this->CreateSpriteObjects();
     this->CreateFireFlyObjects();
@@ -77,12 +76,6 @@ void TitleScene::Initialize()
     }, 0.0f, true);
 }
 
-void TitleScene::InitializeGraphics()
-{
-    auto graphicsModule = tgon::Application::GetEngine()->FindModule<tgon::GraphicsModule>();
-    graphicsModule->GetGraphics().DisableDepthTest();
-}
- 
 void TitleScene::CreateNightSkyObject()
 {
     auto nightSky = tgon::GameObject::Create();
@@ -136,7 +129,7 @@ void TitleScene::CreateSpriteObjects()
         auto object = tgon::GameObject::Create(tgon::Path::GetFileNameWithoutExtension(texturePathList[i]));
         object->GetTransform()->SetLocalPosition(texturePosList[i]);
         
-        auto spriteRendererComponent = object->AddComponent<tgon::SpriteRendererComponent>();
+        auto spriteRendererComponent = object->AddComponent<tgon::UISpriteRendererComponent>();
         spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(texturePathList[i]));
         spriteRendererComponent->SetSortingLayer(sortingLayerList[i]);
         spriteRendererComponent->SetPivot(pivotList[i]);
@@ -144,7 +137,7 @@ void TitleScene::CreateSpriteObjects()
     }
 
     m_girl = this->FindObject(u8"girl");
-    m_fadeInSpriteRendererComponent = this->FindObject(u8"FadeInOut")->FindComponent<tgon::SpriteRendererComponent>();
+    m_fadeInSpriteRendererComponent = this->FindObject(u8"FadeInOut")->FindComponent<tgon::UISpriteRendererComponent>();
 }
 
 void TitleScene::CreateFireFlyObjects()

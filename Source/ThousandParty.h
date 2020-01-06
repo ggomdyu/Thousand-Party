@@ -20,7 +20,6 @@ public:
     ThousandParty();
 
 /**@section Method */
-public:
+private:
     void Initialize() override;
-    void InitializeModule() override;
 };

@@ -160,7 +160,7 @@ void MusicPlayScene::InitializeBackgroundObject()
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     backgroundObject->GetTransform()->SetLocalPosition({-static_cast<float>(clientSize.width) * 0.5f, 0.0f, 0.0f});
     
-    auto spriteRendererComponent = backgroundObject->AddComponent<tgon::SpriteRendererComponent>();
+    auto spriteRendererComponent = backgroundObject->AddComponent<tgon::UISpriteRendererComponent>();
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/Background/MusicPlayScene/green.png"));
     spriteRendererComponent->SetPivot({0.0f, 0.5f});
     
@@ -208,7 +208,7 @@ void MusicPlayScene::InitializeMusicNameObject()
     auto object = tgon::GameObject::Create(u8"musicName");
     object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 33.0f, windowSize.height / 2 - 24.0f, 0.0f));
 
-    auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
+    auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
     textComponent->SetFontSize(45);
     textComponent->SetRect(tgon::I32Rect(0, 0, 500, 50));
@@ -228,7 +228,7 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
     auto object = tgon::GameObject::Create(u8"musicArtistName");
     object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 33.0f, windowSize.height / 2 - 82.0f, 0.0f));
 
-    auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
+    auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
     textComponent->SetFontSize(18);
     textComponent->SetRect(tgon::I32Rect(-0, 0, 500, 50));

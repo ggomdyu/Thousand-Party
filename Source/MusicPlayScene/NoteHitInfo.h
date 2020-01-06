@@ -12,7 +12,7 @@
 namespace tgon
 {
 
-class TextRendererComponent;
+class UITextRendererComponent;
 
 } /* namespace tgon */
 
@@ -38,6 +38,6 @@ private:
 protected:
     int32_t m_currCombo = 0;
     int32_t m_maxCombo = 0;
-    std::shared_ptr<tgon::TextRendererComponent> m_currComboTextRendererComponent;
-    std::shared_ptr<tgon::TextRendererComponent> m_maxComboTextRendererComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_currComboTextRendererComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_maxComboTextRendererComponent;
 };

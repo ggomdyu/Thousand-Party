@@ -19,7 +19,7 @@ namespace tgon
 class GameObject;
 class AudioModule;
 class TimeModule;
-class TextRendererComponent;
+class UITextRendererComponent;
 class Keyboard;
 
 } /* namespace tgon */
@@ -78,7 +78,7 @@ private:
     std::shared_ptr<tgon::Keyboard> m_keyboard;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::AudioModule> m_audioModule;
-    std::shared_ptr<tgon::TextRendererComponent> m_comboRendererComponent;
-    std::shared_ptr<tgon::TextRendererComponent> m_musicNameRendererComponent;
-    std::shared_ptr<tgon::TextRendererComponent> m_musicArtistNameRendererComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_comboRendererComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_musicNameRendererComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_musicArtistNameRendererComponent;
 };

@@ -82,11 +82,13 @@ void MusicSelector::InitializeMusicCoverObjects()
 
         auto coverImageObject = tgon::GameObject::Create();
         coverImageObject->GetTransform()->SetParent(gameObject->GetTransform());
-        auto spriteRendererComponent = coverImageObject->AddComponent<tgon::SpriteRendererComponent>();
+        auto spriteRendererComponent = coverImageObject->AddComponent<tgon::UISpriteRendererComponent>();
         spriteRendererComponent->SetTexture(std::move(texture));
         spriteRendererComponent->SetTextureSize({222.0f, 222.0f});
         spriteRendererComponent->SetTextureRect({0.0f, 0.0f, 222.0f, 222.0f});
         spriteRendererComponent->SetSortingLayer(4);
+        spriteRendererComponent->EnableScissorRect();
+        spriteRendererComponent->SetScissorRect({838/2-200, 0.0f, 400, 1000.5f});
 
         m_coverImageObjects.push_back(std::move(coverImageObject));
     }
@@ -96,7 +98,7 @@ void MusicSelector::InitializeHighlightObject()
 {
     m_highlight = tgon::GameObject::Create();
     
-    auto spriteRendererComponent = m_highlight->AddComponent<tgon::SpriteRendererComponent>();
+    auto spriteRendererComponent = m_highlight->AddComponent<tgon::UISpriteRendererComponent>();
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/UI/MusicSelectScene/highlight.png"));
     spriteRendererComponent->SetSortingLayer(7);
@@ -213,7 +215,7 @@ void MusicSelector::SortMusicLayer()
             continue;
         }
 
-        m_coverImageObjects[m_currSelectedCoverImageIndex + i]->FindComponent<tgon::SpriteRendererComponent>()->SetSortingLayer(7 - std::abs(j));
+        m_coverImageObjects[m_currSelectedCoverImageIndex + i]->FindComponent<tgon::UISpriteRendererComponent>()->SetSortingLayer(7 - std::abs(j));
     }
 }
 

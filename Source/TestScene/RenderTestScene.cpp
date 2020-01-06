@@ -5,9 +5,6 @@ using namespace tgon;
 
 void RenderTestScene::Initialize()
 {
-    auto graphicsModule = Application::GetEngine()->FindModule<GraphicsModule>();
-    graphicsModule->GetGraphics().SetClearColor(Color4f(1.0f, 0.5f, 0.5f, 1.0f));
-    
     this->CreateCameraObject();
     this->CreateFontObjects();
 }
@@ -31,7 +28,7 @@ void RenderTestScene::CreateFontObjects()
     auto transform = object->GetTransform();
     transform->SetLocalScale({1.0f, 1.0f, 1.0f});
     object->GetTransform()->SetLocalPosition(Vector3(0.0f, 0.0f, 0.0f));
-    auto textComponent = object->AddComponent<TextRendererComponent>();
+    auto textComponent = object->AddComponent<UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Fonts/MaplestoryOTFBold.otf");
     textComponent->SetFontSize(30);
     textComponent->SetText(chArray);

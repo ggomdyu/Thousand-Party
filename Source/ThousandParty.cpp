@@ -1,6 +1,6 @@
 #include "PrecompiledHeader.h"
 
-#include "Engine/GraphicsModule.h"
+#include "Engine/UIRendererModule.h"
 #include "Engine/SceneModule.h"
 #include "LogoScene/LogoScene.h"
 
@@ -21,14 +21,12 @@ ThousandParty::ThousandParty() :
 void ThousandParty::Initialize()
 {
     Super::Initialize();
-
-    this->FindModule<tgon::GraphicsModule>()->GetUIRenderer().SetMaxSortingLayer(10);
-    this->FindModule<tgon::SceneModule>()->ChangeScene<LogoScene>();
-}
-
-void ThousandParty::InitializeModule()
-{
-    Super::Initialize();
-
+    
     this->AddModule<GameDataModule>();
+
+    auto uiRendererModule = this->FindModule<tgon::UIRendererModule>();
+    uiRendererModule->SetMaxSortingLayer(10);
+    uiRendererModule->GetGraphics()->DisableDepthTest();
+
+    this->FindModule<tgon::SceneModule>()->ChangeScene<LogoScene>();
 }

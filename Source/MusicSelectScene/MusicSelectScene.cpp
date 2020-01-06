@@ -27,7 +27,7 @@ void MusicSelectScene::CreateSquareBackgroundObject()
 {
     auto squareBackground = tgon::GameObject::Create();
     squareBackground->AddComponent<SquareBackground>();
-    squareBackground->FindComponent<tgon::SpriteRendererComponent>()->SetSortingLayer(1);
+    squareBackground->FindComponent<tgon::UISpriteRendererComponent>()->SetSortingLayer(1);
     this->AddObject(squareBackground);
 }
 
@@ -49,7 +49,7 @@ void MusicSelectScene::CreateMusicNameObject()
     auto object = tgon::GameObject::Create(u8"musicName");
     object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -windowSize.height / 2 + 100.0f, 0.0f));
 
-    auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
+    auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
     textComponent->SetFontSize(27);
     textComponent->SetBlendColor(tgon::Color4f(0.0f, 0.0f, 0.0f, 1.0f));
@@ -75,7 +75,7 @@ void MusicSelectScene::CreateMusicArtistNameObject()
     auto object = tgon::GameObject::Create(u8"musicArtistName");
     object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -windowSize.height / 2 + 72.0f, 0.0f));
 
-    auto textComponent = object->AddComponent<tgon::TextRendererComponent>();
+    auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
     textComponent->SetFontSize(16);
     textComponent->SetBlendColor(tgon::Color4f(0.0f, 0.0f, 0.0f, 1.0f));
@@ -135,7 +135,7 @@ void MusicSelectScene::CreateSpriteObjects()
         auto object = tgon::GameObject::Create(tgon::Path::GetFileNameWithoutExtension(texturePathList[i]));
         object->GetTransform()->SetLocalPosition(texturePosList[i]);
         
-        auto spriteRendererComponent = object->AddComponent<tgon::SpriteRendererComponent>();
+        auto spriteRendererComponent = object->AddComponent<tgon::UISpriteRendererComponent>();
         spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(texturePathList[i]));
         spriteRendererComponent->SetSortingLayer(sortingLayerList[i]);
         spriteRendererComponent->SetPivot(pivotList[i]);

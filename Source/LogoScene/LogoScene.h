@@ -14,7 +14,7 @@ namespace tgon
 
 class InputModule;
 class TimeModule;
-class SpriteRendererComponent;
+class UISpriteRendererComponent;
 
 } /* namespace tgon */
 
@@ -30,7 +30,6 @@ public:
     void Update() override;
     
 private:
-    void InitializeGraphics();
     void CreateGameObjects();
     void CreateCameraObject();
     void CreateSpriteObject();
@@ -41,5 +40,5 @@ private:
     int64_t m_beginTime = 0;
     std::shared_ptr<tgon::InputModule> m_inputModule;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
-    std::shared_ptr<tgon::SpriteRendererComponent> m_logoSpriteRendererComponents[4];
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_logoSpriteRendererComponents[4];
 };

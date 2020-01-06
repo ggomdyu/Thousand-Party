@@ -87,7 +87,7 @@ void Note::InitializeSprite()
     }
 
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_noteRendererComponent = gameObject->AddComponent<tgon::SpriteRendererComponent>();
+    m_noteRendererComponent = gameObject->AddComponent<tgon::UISpriteRendererComponent>();
     m_noteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/MusicPlayScene/note.png"));
 }
 
@@ -338,7 +338,7 @@ void HoldNote::InitializeSprite()
 
     auto ringObject = tgon::GameObject::Create();
     ringObject->GetTransform()->SetParent(gameObject->GetTransform());
-    m_holdNoteRendererComponent = ringObject->AddComponent<tgon::SpriteRendererComponent>();
+    m_holdNoteRendererComponent = ringObject->AddComponent<tgon::UISpriteRendererComponent>();
     m_holdNoteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/MusicPlayScene/holdNote.png"));
     
     m_ringObject = ringObject;

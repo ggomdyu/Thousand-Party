@@ -15,7 +15,7 @@ namespace tgon
 
 class InputModule;
 class TimeModule;
-class SpriteRendererComponent;
+class UISpriteRendererComponent;
 
 } /* namespace tgon */
 
@@ -39,7 +39,6 @@ public:
     void Update() override;
     
 private:
-    void InitializeGraphics();
     void CreateNightSkyObject();
     void CreateSpriteObjects();
     void CreateFireFlyObjects();
@@ -49,7 +48,7 @@ private:
 /**@section Variable */
 private:
     std::shared_ptr<tgon::InputModule> m_inputModule;
-    std::shared_ptr<tgon::SpriteRendererComponent> m_fadeInSpriteRendererComponent;
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_fadeInSpriteRendererComponent;
     std::shared_ptr<tgon::GameObject> m_girl;
     tgon::TimerHandle m_fadeInTimerHandle;
     tgon::TimerHandle m_girlMoveTimerHandler;
