@@ -1,7 +1,12 @@
-#include "TGON.h"
-#include "RenderTestScene.h"
+#include "Platform/Application.h"
+#include "Component/CameraComponent.h"
+#include "Component/UITextRendererComponent.h"
+#include "Math/Rect.h"
+#include "Math/Vector3.h"
+#include "Math/Rect.h"
+#include "UI/UIText.h"
 
-using namespace tgon;
+#include "RenderTestScene.h"
 
 void RenderTestScene::Initialize()
 {
@@ -13,10 +18,10 @@ void RenderTestScene::CreateCameraObject()
 {
     auto camera = tgon::GameObject::Create("camera1");
 
-    auto rootWindowSize = Application::GetInstance().GetRootWindow()->GetClientSize();
+    auto rootWindowSize = tgon::Application::GetInstance().GetRootWindow()->GetClientSize();
     float halfWidth = static_cast<float>(rootWindowSize.width) * 0.5f;
     float halfHeight = static_cast<float>(rootWindowSize.height) * 0.5f;
-    camera->AddComponent<CameraComponent>(FRect(-halfWidth, -halfHeight, rootWindowSize.width, rootWindowSize.height), -1.0f, 1024.0f);
+    camera->AddComponent<tgon::CameraComponent>(tgon::FRect(-halfWidth, -halfHeight, rootWindowSize.width, rootWindowSize.height), -1.0f, 1024.0f);
     this->AddObject(camera);
 }
 
@@ -27,13 +32,13 @@ void RenderTestScene::CreateFontObjects()
     auto object = tgon::GameObject::Create("introSprite1");
     auto transform = object->GetTransform();
     transform->SetLocalScale({1.0f, 1.0f, 1.0f});
-    object->GetTransform()->SetLocalPosition(Vector3(0.0f, 0.0f, 0.0f));
-    auto textComponent = object->AddComponent<UITextRendererComponent>();
+    object->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 0.0f, 0.0f));
+    auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Fonts/MaplestoryOTFBold.otf");
     textComponent->SetFontSize(30);
     textComponent->SetText(chArray);
-    textComponent->SetRect(I32Rect(-200, 100, 400, 200));
-    textComponent->SetTextAlignment(TextAlignment::MiddleCenter);
+    textComponent->SetRect(tgon::I32Rect(-200, 100, 400, 200));
+    textComponent->SetTextAlignment(tgon::TextAlignment::MiddleCenter);
 
     this->AddObject(object);
 }
