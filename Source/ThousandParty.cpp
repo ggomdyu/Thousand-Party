@@ -1,5 +1,3 @@
-#include "PrecompiledHeader.h"
-
 #include "Engine/UIRendererModule.h"
 #include "Engine/SceneModule.h"
 #include "LogoScene/LogoScene.h"

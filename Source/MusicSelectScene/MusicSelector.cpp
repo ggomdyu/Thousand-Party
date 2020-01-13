@@ -1,5 +1,14 @@
-#include "TGON.h"
 #include "MusicSelector.h"
+
+#include "Platform/Application.h"
+#include "Engine/AssetModule.h"
+#include "Engine/TimeModule.h"
+#include "Engine/SceneModule.h"
+#include "Engine/InputModule.h"
+#include "Engine/TimerModule.h"
+#include "IO/Directory.h"
+#include "Component/UISpriteRendererComponent.h"
+#include "Math/Mathematics.h"
 
 #include "../MusicPlayScene/MusicPlayScene.h"
 #include "../MusicPlayScene/MusicEditScene.h"
@@ -87,8 +96,6 @@ void MusicSelector::InitializeMusicCoverObjects()
         spriteRendererComponent->SetTextureSize({222.0f, 222.0f});
         spriteRendererComponent->SetTextureRect({0.0f, 0.0f, 222.0f, 222.0f});
         spriteRendererComponent->SetSortingLayer(4);
-        spriteRendererComponent->EnableScissorRect();
-        spriteRendererComponent->SetScissorRect({838/2-200, 0.0f, 400, 1000.5f});
 
         m_coverImageObjects.push_back(std::move(coverImageObject));
     }

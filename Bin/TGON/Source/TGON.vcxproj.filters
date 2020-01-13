@@ -1,0 +1,802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\AudioBuffer.cpp">
+      <Filter>Source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\AudioDevice.cpp">
+      <Filter>Source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\AudioPlayer.cpp">
+      <Filter>Source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\Importer\VorbisAudioImporter.cpp">
+      <Filter>Source\Audio\Importer</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\CameraComponent.cpp">
+      <Filter>Source\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\Component.cpp">
+      <Filter>Source\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\RendererComponent.cpp">
+      <Filter>Source\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\Transform.cpp">
+      <Filter>Source\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\UIRendererComponent.cpp">
+      <Filter>Source\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\UISpriteRendererComponent.cpp">
+      <Filter>Source\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\UiTextRendererComponent.cpp">
+      <Filter>Source\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Diagnostics\Debug.cpp">
+      <Filter>Source\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Diagnostics\Windows\WindowsDebug.cpp">
+      <Filter>Source\Diagnostics\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\Font.cpp">
+      <Filter>Source\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\FontFace.cpp">
+      <Filter>Source\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\FontFactory.cpp">
+      <Filter>Source\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\Image.cpp">
+      <Filter>Source\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\AudioModule.cpp">
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\Engine.cpp">
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\InputModule.cpp">
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\SceneModule.cpp">
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\TaskModule.cpp">
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\TimeModule.cpp">
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\TimerModule.cpp">
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\UIRendererModule.cpp">
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Game\GameObject.cpp">
+      <Filter>Source\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Game\Scene.cpp">
+      <Filter>Source\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Camera.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Graphics.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\IndexBuffer.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Material.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Mesh.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLGraphics.cpp">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLIndexBuffer.cpp">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLRenderTarget.cpp">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLShaderProgram.cpp">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLTexture.cpp">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLVertexBuffer.cpp">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\Windows\WindowsOpenGLContext.cpp">
+      <Filter>Source\Graphics\OpenGL\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Pass.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\RenderTarget.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\ShaderProgram.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Texture.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\TextureAtlas.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\VertexBuffer.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Hardware\InputManager.cpp">
+      <Filter>Source\Hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Hardware\Keyboard.cpp">
+      <Filter>Source\Hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Hardware\Mouse.cpp">
+      <Filter>Source\Hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Directory.cpp">
+      <Filter>Source\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\DirectoryInfo.cpp">
+      <Filter>Source\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\File.cpp">
+      <Filter>Source\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\FileStream.cpp">
+      <Filter>Source\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Path.cpp">
+      <Filter>Source\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Windows\WindowsDirectory.cpp">
+      <Filter>Source\IO\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Windows\WindowsFile.cpp">
+      <Filter>Source\IO\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Windows\WindowsFileStream.cpp">
+      <Filter>Source\IO\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Windows\WindowsPath.cpp">
+      <Filter>Source\IO\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Misc\EventDispatcher.cpp">
+      <Filter>Source\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Application.cpp">
+      <Filter>Source\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Environment.cpp">
+      <Filter>Source\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Window.cpp">
+      <Filter>Source\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Windows\WindowsApplication.cpp">
+      <Filter>Source\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Windows\WindowsEnvironment.cpp">
+      <Filter>Source\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Windows\WindowsLocale.cpp">
+      <Filter>Source\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Windows\WindowsMain.cpp">
+      <Filter>Source\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Source\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Random\Random.cpp">
+      <Filter>Source\Random</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Random\WELL1024a.cpp">
+      <Filter>Source\Random</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Text\Encoding.cpp">
+      <Filter>Source\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Text\Hash.cpp">
+      <Filter>Source\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Threading\DispatchQueue.cpp">
+      <Filter>Source\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Threading\Thread.cpp">
+      <Filter>Source\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Threading\Windows\WindowsThread.cpp">
+      <Filter>Source\Threading\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Time\DateTime.cpp">
+      <Filter>Source\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Time\Timer.cpp">
+      <Filter>Source\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Time\Windows\WindowsTimeZoneInfo.cpp">
+      <Filter>Source\Time\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\UI\RectTransform.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\UI\UIBatch.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\UI\UISprite.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\UI\UIText.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\TGON\Source\Hardware\Gamepad.cpp">
+      <Filter>Source\Hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\TGON\Source\Graphics\FontAtlas.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\TGON\Source\UI\UIElement.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\AudioBuffer.h">
+      <Filter>Source\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\AudioDevice.h">
+      <Filter>Source\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\AudioPlayer.h">
+      <Filter>Source\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\Importer\AudioImporter.h">
+      <Filter>Source\Audio\Importer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\Importer\RiffReader.h">
+      <Filter>Source\Audio\Importer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\Importer\VorbisAudioImporter.h">
+      <Filter>Source\Audio\Importer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\Importer\WavAudioImporter.h">
+      <Filter>Source\Audio\Importer</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Audio\OpenALDebug.h">
+      <Filter>Source\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\CameraComponent.h">
+      <Filter>Source\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\Component.h">
+      <Filter>Source\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\RendererComponent.h">
+      <Filter>Source\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\Transform.h">
+      <Filter>Source\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\UIRendererComponent.h">
+      <Filter>Source\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\UISpriteRendererComponent.h">
+      <Filter>Source\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Component\UITextRendererComponent.h">
+      <Filter>Source\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\Delegate.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\DelegateChain.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\DynamicCast.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\ICloneable.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\IComparable.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\ISerializable.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\NonAddressable.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\NonCopyable.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\Object.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\RTTI.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\Range.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\RuntimeObject.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Core\TypeTraits.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Diagnostics\Debug.h">
+      <Filter>Source\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\Font.h">
+      <Filter>Source\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\FontFace.h">
+      <Filter>Source\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\FontFactory.h">
+      <Filter>Source\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\Image.h">
+      <Filter>Source\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\ImageProcessor\BmpImageProcessor.h">
+      <Filter>Source\Drawing\ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\ImageProcessor\ImageProcessor.h">
+      <Filter>Source\Drawing\ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Drawing\ImageProcessor\WebPImageProcessor.h">
+      <Filter>Source\Drawing\ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\AssetModule.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\AudioModule.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\Engine.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\EngineConfig.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\InputMode.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\InputModule.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\Module.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\SceneModule.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\TaskModule.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\TimeModule.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\TimerHandle.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\TimerModule.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Engine\UIRendererModule.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Game\GameObject.h">
+      <Filter>Source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Game\Scene.h">
+      <Filter>Source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Camera.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Graphics.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\IndexBuffer.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Material.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Mesh.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLContext.h">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLDebug.h">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLGraphics.h">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLIndexBuffer.h">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLRenderTarget.h">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLShaderCode.h">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLShaderProgram.h">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLTexture.h">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\OpenGL\OpenGLVertexBuffer.h">
+      <Filter>Source\Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Pass.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\RenderTarget.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\ShaderProgram.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\Texture.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\TextureAtlas.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\VertexBuffer.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\VertexFormat.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Graphics\VideoMode.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Hardware\Gamepad.h">
+      <Filter>Source\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Hardware\InputManager.h">
+      <Filter>Source\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Hardware\Keyboard.h">
+      <Filter>Source\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Hardware\Mouse.h">
+      <Filter>Source\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Directory.h">
+      <Filter>Source\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\DirectoryInfo.h">
+      <Filter>Source\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\File.h">
+      <Filter>Source\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\FileStream.h">
+      <Filter>Source\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\FileSystemEnumerable.h">
+      <Filter>Source\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Path.h">
+      <Filter>Source\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Stream.h">
+      <Filter>Source\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\IO\Windows\WindowsPath.h">
+      <Filter>Source\IO\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Circle.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Color.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Extent.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Mathematics.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Matrix3x4.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Matrix4x4.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Rect.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Vector2.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Vector3.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Math\Vector4.h">
+      <Filter>Source\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Misc\Algorithm.h">
+      <Filter>Source\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Misc\AutoCast.h">
+      <Filter>Source\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Misc\EventDispatcher.h">
+      <Filter>Source\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Misc\ExpressionTemplate.h">
+      <Filter>Source\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Misc\InstanceCounter.h">
+      <Filter>Source\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Misc\InstantiateCounter.h">
+      <Filter>Source\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Misc\Windows\SafeFileHandle.h">
+      <Filter>Source\Misc\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Application.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Config.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Environment.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Locale.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Prefix.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Version.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Window.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\WindowStyle.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Windows\Windows.h">
+      <Filter>Source\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Windows\WindowsApplication.h">
+      <Filter>Source\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Windows\WindowsConfig.h">
+      <Filter>Source\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Platform\Windows\WindowsWindow.h">
+      <Filter>Source\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\PrecompiledHeader.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Random\Random.h">
+      <Filter>Source\Random</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Random\WELL1024a.h">
+      <Filter>Source\Random</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Random\WeightSelector.h">
+      <Filter>Source\Random</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\TGON.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Test\IO\DirectoryTest.h">
+      <Filter>Source\Test\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Test\IO\FileStreamTest.h">
+      <Filter>Source\Test\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Test\IO\FileTest.h">
+      <Filter>Source\Test\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Test\IO\PathTest.h">
+      <Filter>Source\Test\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Test\Platform\EnvironmentTest.h">
+      <Filter>Source\Test\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Test\String\FixedStringTest.h">
+      <Filter>Source\Test\String</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Test\Test.h">
+      <Filter>Source\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Test\Time\DateTimeTest.h">
+      <Filter>Source\Test\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Text\Encoding.h">
+      <Filter>Source\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Text\FixedString.h">
+      <Filter>Source\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Text\Hash.h">
+      <Filter>Source\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Text\StringHash.h">
+      <Filter>Source\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Text\StringTraits.h">
+      <Filter>Source\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Text\UUID.h">
+      <Filter>Source\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Text\UnicodeScalar.h">
+      <Filter>Source\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Threading\DispatchQueue.h">
+      <Filter>Source\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Threading\Thread.h">
+      <Filter>Source\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Time\DateTime.h">
+      <Filter>Source\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Time\Stopwatch.h">
+      <Filter>Source\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Time\TimeSpan.h">
+      <Filter>Source\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Time\TimeZoneInfo.h">
+      <Filter>Source\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\Time\Timer.h">
+      <Filter>Source\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\UI\RectTransform.h">
+      <Filter>Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\UI\UIBatch.h">
+      <Filter>Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\UI\UIElement.h">
+      <Filter>Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\UI\UISprite.h">
+      <Filter>Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\UI\UIText.h">
+      <Filter>Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\TGON\Source\Graphics\FontAtlas.h">
+      <Filter>Source\Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{B978DB12-25D1-3D8F-BFC6-E35723120C5D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Audio">
+      <UniqueIdentifier>{5E18A7C3-4685-3AEF-BF86-D71B474FF24F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Audio\Importer">
+      <UniqueIdentifier>{A9A3EE5A-4A8E-3150-9D5C-F7D691E54379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Component">
+      <UniqueIdentifier>{C2DA05F9-D429-3D90-A9E2-220F0BAAB03F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Core">
+      <UniqueIdentifier>{30DE3B1C-1D21-38F4-9DDC-85F22702F4AB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Diagnostics">
+      <UniqueIdentifier>{5E969C1C-BBF0-310B-8BEE-0FB10CD071B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Diagnostics\Windows">
+      <UniqueIdentifier>{524CD61F-A11F-3B7F-A1B2-F2A1C3317B15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Drawing">
+      <UniqueIdentifier>{0D6B31DD-24CC-3CEC-862E-783F56D2C5AB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Drawing\ImageProcessor">
+      <UniqueIdentifier>{DDBDC02B-91A8-3385-89CC-67E982D1193A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Engine">
+      <UniqueIdentifier>{06513EB6-0D6B-334E-9C43-3407E6726798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game">
+      <UniqueIdentifier>{30A24A85-67C4-3EA6-904B-C363F9AAF7BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Graphics">
+      <UniqueIdentifier>{3571BB0D-F0EE-3635-AE9D-4B709DA89F6D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Graphics\OpenGL">
+      <UniqueIdentifier>{DAE2D8BF-ECF5-3899-8735-AB2FBA972EED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Graphics\OpenGL\Windows">
+      <UniqueIdentifier>{94784A92-9E7B-3C0E-B838-BADB5938DA6F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Hardware">
+      <UniqueIdentifier>{9A1AE878-C532-3DE0-BC11-048D7C53C8AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\IO">
+      <UniqueIdentifier>{7A90D853-6D5B-39A5-90CA-EEF6391133EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\IO\Windows">
+      <UniqueIdentifier>{6974BC66-BCFB-318D-A9FA-257C83FC94AD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Math">
+      <UniqueIdentifier>{C973BB3A-37BE-31C1-98C3-A946ECC492F9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Misc">
+      <UniqueIdentifier>{43DB48DD-E1DD-384A-B474-253F5A2D126A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Misc\Windows">
+      <UniqueIdentifier>{EFA17D58-46D1-37C2-B778-A61BFCEBECB3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Platform">
+      <UniqueIdentifier>{D41EBD4B-C5C0-335A-8D66-6FCE6AAEC27C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Platform\Windows">
+      <UniqueIdentifier>{D328806E-BD56-3295-B723-E270EE568A42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Random">
+      <UniqueIdentifier>{EA17D461-3D59-32F8-B9B2-A8CDA9C59060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Test">
+      <UniqueIdentifier>{F5E0E153-370A-3CBE-9B0D-1C10666A3668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Test\IO">
+      <UniqueIdentifier>{A9FB52CB-5AB8-3569-812E-337904B8FF1B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Test\Platform">
+      <UniqueIdentifier>{88374EE1-0D53-310B-A4D4-3F487AB56987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Test\String">
+      <UniqueIdentifier>{A2312D5B-F90A-35D4-8EDE-ACA72A45D9A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Test\Time">
+      <UniqueIdentifier>{7506B76B-90CB-358E-80E0-9CBDF4FF2158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Text">
+      <UniqueIdentifier>{116FCC44-CA02-3BBD-9E6D-B376F48AD617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Threading">
+      <UniqueIdentifier>{2053B014-1A0F-318C-AC5E-300E926496FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Threading\Windows">
+      <UniqueIdentifier>{71347301-47D0-34C2-8332-1048B7899DB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Time">
+      <UniqueIdentifier>{4431B7C3-E2E3-3F55-8E83-56FFFD686BB8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Time\Windows">
+      <UniqueIdentifier>{091179DA-9D54-3855-81C9-1FEC3354B313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UI">
+      <UniqueIdentifier>{0B04FC3D-8D56-3361-B339-FB3ADBF2BF5F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

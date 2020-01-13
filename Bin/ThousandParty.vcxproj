@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BBD1A7C1-36F3-3A4B-BEF0-6DCE5176F3AB}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ThousandParty</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ThousandParty.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ThousandParty</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ThousandParty.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ThousandParty</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ThousandParty.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ThousandParty</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ThousandParty.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ThousandParty</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;TGON_PLATFORM_WINDOWS=1;TGON_GRAPHICS_OPENGL=1;AL_LIBTYPE_STATIC;FMT_LOCALE;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;GLEW_STATIC;U_STATIC_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TGON_PLATFORM_WINDOWS=1;TGON_GRAPHICS_OPENGL=1;AL_LIBTYPE_STATIC;FMT_LOCALE;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;GLEW_STATIC;U_STATIC_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>TGON\Debug\TGON.lib;TGON\Debug\common.lib;TGON\Debug\fmtd.lib;TGON\Debug\freetyped.lib;TGON\Debug\gainputstatic-d.lib;Xinput9_1_0.lib;ws2_32.lib;TGON\Debug\glew.lib;TGON\Debug\icu.lib;TGON\Debug\OpenAL32.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.17763.0\um\x86\WinMM.Lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/Debug/ThousandParty.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/Debug/ThousandParty.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TGON_PLATFORM_WINDOWS=1;TGON_GRAPHICS_OPENGL=1;AL_LIBTYPE_STATIC;FMT_LOCALE;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;GLEW_STATIC;U_STATIC_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TGON_PLATFORM_WINDOWS=1;TGON_GRAPHICS_OPENGL=1;AL_LIBTYPE_STATIC;FMT_LOCALE;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;GLEW_STATIC;U_STATIC_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>TGON\Release\TGON.lib;TGON\Release\common.lib;TGON\Release\fmt.lib;TGON\Release\freetype.lib;TGON\Release\gainputstatic.lib;Xinput9_1_0.lib;ws2_32.lib;TGON\Release\glew.lib;TGON\Release\icu.lib;TGON\Release\OpenAL32.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.17763.0\um\x86\WinMM.Lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/Release/ThousandParty.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/Release/ThousandParty.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TGON_PLATFORM_WINDOWS=1;TGON_GRAPHICS_OPENGL=1;AL_LIBTYPE_STATIC;FMT_LOCALE;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;GLEW_STATIC;U_STATIC_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TGON_PLATFORM_WINDOWS=1;TGON_GRAPHICS_OPENGL=1;AL_LIBTYPE_STATIC;FMT_LOCALE;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;GLEW_STATIC;U_STATIC_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>TGON\MinSizeRel\TGON.lib;TGON\MinSizeRel\common.lib;TGON\MinSizeRel\fmt.lib;TGON\MinSizeRel\freetype.lib;TGON\MinSizeRel\gainputstatic.lib;Xinput9_1_0.lib;ws2_32.lib;TGON\MinSizeRel\glew.lib;TGON\MinSizeRel\icu.lib;TGON\MinSizeRel\OpenAL32.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.17763.0\um\x86\WinMM.Lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/MinSizeRel/ThousandParty.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/MinSizeRel/ThousandParty.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TGON_PLATFORM_WINDOWS=1;TGON_GRAPHICS_OPENGL=1;AL_LIBTYPE_STATIC;FMT_LOCALE;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;GLEW_STATIC;U_STATIC_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TGON_PLATFORM_WINDOWS=1;TGON_GRAPHICS_OPENGL=1;AL_LIBTYPE_STATIC;FMT_LOCALE;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;GLEW_STATIC;U_STATIC_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\jhcha\Desktop\Programming\Git\TGON\Source;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\assimp-4.1.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\fmt-6.1.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\gainput-1.0.0\lib\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\GSL-2.0.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\icu4c-64_2\icu\source\i18n;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\libiconv-1.9.2\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\alc;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\common;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\openal-soft-1.20.0\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\stb;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\zlib-1.2.11;\Include;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\freetype-2.10.1\include;C:\Users\jhcha\Desktop\Programming\Git\TGON\Source\ThirdParty\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>TGON\RelWithDebInfo\TGON.lib;TGON\RelWithDebInfo\common.lib;TGON\RelWithDebInfo\fmt.lib;TGON\RelWithDebInfo\freetype.lib;TGON\RelWithDebInfo\gainputstatic.lib;Xinput9_1_0.lib;ws2_32.lib;TGON\RelWithDebInfo\glew.lib;TGON\RelWithDebInfo\icu.lib;TGON\RelWithDebInfo\OpenAL32.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.17763.0\um\x86\WinMM.Lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/RelWithDebInfo/ThousandParty.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/RelWithDebInfo/ThousandParty.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jhcha/Desktop/Programming/Git/Thousand-Party -BC:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin --check-stamp-file C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeCCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeCXXCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeRCCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeSystem.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\feature_tests.c;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\feature_tests.cxx;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\CMakeLists.txt;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jhcha/Desktop/Programming/Git/Thousand-Party -BC:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin --check-stamp-file C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeCCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeCXXCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeRCCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeSystem.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\feature_tests.c;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\feature_tests.cxx;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\CMakeLists.txt;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jhcha/Desktop/Programming/Git/Thousand-Party -BC:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin --check-stamp-file C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeCCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeCXXCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeRCCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeSystem.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\feature_tests.c;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\feature_tests.cxx;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\CMakeLists.txt;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jhcha/Desktop/Programming/Git/Thousand-Party -BC:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin --check-stamp-file C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeCCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeCXXCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeRCCompiler.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\3.14.4\CMakeSystem.cmake;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\feature_tests.c;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\feature_tests.cxx;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\CMakeLists.txt;C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\GameDataModule.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\GameDataModule.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\LogoScene\LogoScene.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\LogoScene\LogoScene.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\MusicEditScene.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\MusicEditScene.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\MusicPlayScene.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\MusicPlayScene.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\Note.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\Note.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\NoteHitInfo.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\NoteHitInfo.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\NoteLine.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicPlayScene\NoteLine.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicSelectScene\MusicSelectScene.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicSelectScene\MusicSelectScene.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicSelectScene\MusicSelector.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicSelectScene\MusicSelector.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicSelectScene\SquareBackground.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\MusicSelectScene\SquareBackground.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\TestScene\RenderTestScene.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\TestScene\RenderTestScene.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\ThousandParty.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\ThousandParty.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\TitleScene\FireFly.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\TitleScene\FireFly.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\TitleScene\NightSky.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\TitleScene\NightSky.h" />
+    <ClCompile Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\TitleScene\TitleScene.cpp" />
+    <ClInclude Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Source\TitleScene\TitleScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\ZERO_CHECK.vcxproj">
+      <Project>{491C92AC-B0D8-347B-8071-D00D50B717B6}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\openal-soft-1.20.0\OpenAL.vcxproj">
+      <Project>{A00D24CE-72CC-398E-8E9E-DB6806644697}</Project>
+      <Name>OpenAL</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\TGON.vcxproj">
+      <Project>{6FC42868-D893-3A4F-9F72-A34B3135BBC6}</Project>
+      <Name>TGON</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\openal-soft-1.20.0\common.vcxproj">
+      <Project>{7F0895F4-5CC3-3635-B385-099D543FC1EC}</Project>
+      <Name>common</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\fmt-6.1.2\fmt.vcxproj">
+      <Project>{91249A65-AA78-39FE-9708-44AE23EF5726}</Project>
+      <Name>fmt</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\freetype-2.10.1\freetype.vcxproj">
+      <Project>{E0971E19-8B6E-3390-9247-3331CEF249BF}</Project>
+      <Name>freetype</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\gainput-1.0.0\lib\gainputstatic.vcxproj">
+      <Project>{51994ABC-E621-33EB-A360-D9880EA02133}</Project>
+      <Name>gainputstatic</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\glew-2.1.0\glew.vcxproj">
+      <Project>{F02235A5-ADD4-3CC9-841D-8639726CC4B5}</Project>
+      <Name>glew</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\jhcha\Desktop\Programming\Git\Thousand-Party\Bin\TGON\Source\ThirdParty\icu4c-64_2\icu\icu.vcxproj">
+      <Project>{84480A10-041A-358D-AE3C-BBD81228B765}</Project>
+      <Name>icu</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

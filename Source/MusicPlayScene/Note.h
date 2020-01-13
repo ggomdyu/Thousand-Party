@@ -16,6 +16,8 @@ namespace tgon
 class TimeModule;
 class InputModule;
 class UISpriteRendererComponent;
+enum class KeyCode;
+class Keyboard;
 
 } /* namespace tgon */
 

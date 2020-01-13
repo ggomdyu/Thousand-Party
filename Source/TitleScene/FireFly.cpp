@@ -1,4 +1,9 @@
-#include "TGON.h"
+#include "Platform/Application.h"
+#include "Random/Random.h"
+#include "Engine/AssetModule.h"
+#include "Engine/TimeModule.h"
+#include "Component/UISpriteRendererComponent.h"
+
 #include "FireFly.h"
 
 FireFly::FireFly() :

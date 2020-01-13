@@ -1,6 +1,10 @@
 #include <fmt/format.h>
 
-#include "TGON.h"
+#include "Platform/Application.h"
+#include "Engine/AssetModule.h"
+#include "Component/UISpriteRendererComponent.h"
+#include "Component/UITextRendererComponent.h"
+
 #include "NoteHitInfo.h"
 
 void NoteHitInfo::Initialize()

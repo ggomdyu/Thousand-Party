@@ -1,6 +1,10 @@
-#include "PrecompiledHeader.h"
+#include "Platform/Application.h"
+#include "Component/UISpriteRendererComponent.h"
+#include "Component/UITextRendererComponent.h"
+#include "Engine/AssetModule.h"
+#include "Engine/TimeModule.h"
+#include "IO/Path.h"
 
-#include "TGON.h"
 #include "MusicSelectScene.h"
 #include "MusicSelector.h"
 #include "SquareBackground.h"

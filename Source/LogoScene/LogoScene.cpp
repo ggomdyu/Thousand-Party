@@ -1,16 +1,28 @@
-#include "PrecompiledHeader.h"
+#include <fmt/format.h>
 
-#include "TGON.h"
-#include "LogoScene.h"
+#include "Diagnostics/Debug.h"
+#include "Platform/Environment.h"
+#include "Platform/Application.h"
+#include "Component/UISpriteRendererComponent.h"
+#include "Component/CameraComponent.h"
+#include "Engine/TimeModule.h"
+#include "Engine/SceneModule.h"
+#include "Engine/InputModule.h"
 
 #include "../TitleScene/TitleScene.h"
+
+#include "LogoScene.h"
 
 using namespace tgon;
 
 void LogoScene::Update()
 {
     Super::Update();
-    
+
+    auto cd = tgon::Environment::GetCurrentDirectory();
+    tgon::Debug::Write("HAHHA:");
+    tgon::Debug::WriteLine(cd);
+
     this->OnHandleInput();
 
     auto elapsedTime = tgon::Environment::GetTickCount() - m_beginTime;

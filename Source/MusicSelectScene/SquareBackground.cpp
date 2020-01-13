@@ -1,4 +1,8 @@
-#include "TGON.h"
+#include "Platform/Application.h"
+#include "Engine/TimeModule.h"
+#include "Engine/AssetModule.h"
+#include "Component/UISpriteRendererComponent.h"
+
 #include "SquareBackground.h"
 
 SquareBackground::SquareBackground() :

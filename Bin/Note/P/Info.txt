@@ -1,0 +1,4 @@
+music=MusicForTest
+artist=GGOMDYU
+bpm=190
+sync=1.3

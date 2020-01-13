@@ -3,7 +3,6 @@
 #include "Engine/AssetModule.h"
 #include "Platform/Application.h"
 #include "IO/Path.h"
-#include "IO/Path.h"
 #include "IO/Directory.h"
 
 #include "GameDataModule.h"

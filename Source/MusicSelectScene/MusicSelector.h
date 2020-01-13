@@ -10,6 +10,7 @@
 
 #include "Game/GameObject.h"
 #include "Engine/TimerHandle.h"
+#include "Core/Delegate.h"
 
 namespace tgon
 {

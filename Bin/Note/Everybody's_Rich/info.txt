@@ -1,0 +1,4 @@
+music=Everybody's Rich
+artist=REMO-CON
+bpm=160
+sync=2.12

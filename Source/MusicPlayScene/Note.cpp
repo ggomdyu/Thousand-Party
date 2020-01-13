@@ -1,4 +1,12 @@
-#include "TGON.h"
+#include "Math/Mathematics.h"
+#include "Platform/Application.h"
+#include "Component/UISpriteRendererComponent.h"
+#include "Engine/InputModule.h"
+#include "Engine/AssetModule.h"
+#include "Engine/TimeModule.h"
+#include "Audio/AudioPlayer.h"
+#include "Diagnostics/Debug.h"
+
 #include "Note.h"
 #include "NoteLine.h"
 

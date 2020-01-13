@@ -1,4 +1,8 @@
-#include "TGON.h"
+#include "Platform/Application.h"
+#include "Component/UISpriteRendererComponent.h"
+#include "Engine/TimeModule.h"
+#include "Engine/AssetModule.h"
+
 #include "NightSky.h"
 
 NightSky::NightSky() :

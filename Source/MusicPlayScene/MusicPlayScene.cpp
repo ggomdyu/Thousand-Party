@@ -1,6 +1,11 @@
-#include "PrecompiledHeader.h"
+#include "Platform/Application.h"
+#include "Engine/AssetModule.h"
+#include "Engine/AudioModule.h"
+#include "Engine/TimeModule.h"
+#include "Engine/TimerModule.h"
+#include "Component/UISpriteRendererComponent.h"
+#include "Component/UITextRendererComponent.h"
 
-#include "TGON.h"
 #include "MusicPlayScene.h"
 #include "Note.h"
 #include "NoteHitInfo.h"

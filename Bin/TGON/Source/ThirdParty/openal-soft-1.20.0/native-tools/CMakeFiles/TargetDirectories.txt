@@ -1,0 +1,4 @@
+C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/TGON/Source/ThirdParty/openal-soft-1.20.0/native-tools/CMakeFiles/bin2h.dir
+C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/TGON/Source/ThirdParty/openal-soft-1.20.0/native-tools/CMakeFiles/bsincgen.dir
+C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/TGON/Source/ThirdParty/openal-soft-1.20.0/native-tools/CMakeFiles/ALL_BUILD.dir
+C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/TGON/Source/ThirdParty/openal-soft-1.20.0/native-tools/CMakeFiles/ZERO_CHECK.dir

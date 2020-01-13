@@ -1,0 +1,41 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeConfigurableFile.in
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckCXXCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckFunctionExists.c
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFile.c.in
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFiles.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckStructHasMember.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckTypeSize.c.in
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/FindGit.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/GNUInstallDirs.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/CMakeLists.txt
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindALSA.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindAudioIO.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindDSound.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindJACK.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindOSS.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindOpenSL.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindPortAudio.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindPulseAudio.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindQSA.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindSDL2.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindSoundIO.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/cmake/FindWindowsSDK.cmake
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/config.h.in
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/openal.pc.in
+C:/Users/jhcha/Desktop/Programming/Git/TGON/Source/ThirdParty/openal-soft-1.20.0/version.h.in
+C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/CMakeFiles/CheckIncludeFiles/HAVE_MMSYSTEM_H.c
+C:/Users/jhcha/Desktop/Programming/Git/Thousand-Party/Bin/CMakeFiles/CheckTypeSize/SIZEOF_LONG.c
