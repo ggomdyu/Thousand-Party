@@ -19,10 +19,6 @@ void LogoScene::Update()
 {
     Super::Update();
 
-    auto cd = tgon::Environment::GetCurrentDirectory();
-    tgon::Debug::Write("HAHHA:");
-    tgon::Debug::WriteLine(cd);
-
     this->OnHandleInput();
 
     auto elapsedTime = tgon::Environment::GetTickCount() - m_beginTime;

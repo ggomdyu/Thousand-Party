@@ -1,4 +1,7 @@
-#include "TGON.h"
+#include "Platform/Application.h"
+#include "Component/UISpriteRendererComponent.h"
+#include "Engine/AssetModule.h"
+
 #include "NoteLine.h"
 
 void NoteLine::Initialize()

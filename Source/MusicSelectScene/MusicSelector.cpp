@@ -9,6 +9,7 @@
 #include "IO/Directory.h"
 #include "Component/UISpriteRendererComponent.h"
 #include "Math/Mathematics.h"
+#include "Graphics/OpenGL/OpenGLShaderCode.h"
 
 #include "../MusicPlayScene/MusicPlayScene.h"
 #include "../MusicPlayScene/MusicEditScene.h"
@@ -96,6 +97,10 @@ void MusicSelector::InitializeMusicCoverObjects()
         spriteRendererComponent->SetTextureSize({222.0f, 222.0f});
         spriteRendererComponent->SetTextureRect({0.0f, 0.0f, 222.0f, 222.0f});
         spriteRendererComponent->SetSortingLayer(4);
+
+        auto material = std::make_shared<tgon::Material>(g_positionColorUVVert, g_scissorFrag);
+        material->GetShaderProgram().SetParameter4f("clipUV", 0.5f, 0.5f, 0.5f, 0.5f);
+        spriteRendererComponent->SetMaterial(material);
 
         m_coverImageObjects.push_back(std::move(coverImageObject));
     }
