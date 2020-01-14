@@ -98,10 +98,6 @@ void MusicSelector::InitializeMusicCoverObjects()
         spriteRendererComponent->SetTextureRect({0.0f, 0.0f, 222.0f, 222.0f});
         spriteRendererComponent->SetSortingLayer(4);
 
-        auto material = std::make_shared<tgon::Material>(g_positionColorUVVert, g_scissorFrag);
-        material->GetShaderProgram().SetParameter4f("clipUV", 0.5f, 0.5f, 0.5f, 0.5f);
-        spriteRendererComponent->SetMaterial(material);
-
         m_coverImageObjects.push_back(std::move(coverImageObject));
     }
 }
