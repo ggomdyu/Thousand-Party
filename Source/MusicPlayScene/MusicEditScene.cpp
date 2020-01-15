@@ -10,7 +10,7 @@
 
 #include "MusicEditScene.h"
 #include "Note.h"
-#include "NoteLine.h"
+#include "NoteLineUI.h"
 
 MusicEditScene::MusicEditScene(const MusicInfo& musicInfo) :
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
@@ -25,7 +25,7 @@ void MusicEditScene::Initialize()
     Super::Initialize();
     
     this->InitializeBackgroundObject();
-    this->InitializeNoteLine();
+    this->InitializeNoteLineUI();
     this->InitializeNoteObjectPool();
     this->InitializeHoldNoteObjectPool();
     this->InitializeMusicNameObject();
@@ -216,11 +216,11 @@ void MusicEditScene::InitializeBackgroundObject()
     m_backgroundObject = std::move(backgroundObject);
 }
 
-void MusicEditScene::InitializeNoteLine()
+void MusicEditScene::InitializeNoteLineUI()
 {
     auto noteLineObject = tgon::GameObject::Create();
     noteLineObject->GetTransform()->SetLocalPosition(tgon::Vector3(-10.0f, -40.0f, 0.0f));
-    auto noteLineComponent = noteLineObject->AddComponent<NoteLine>();
+    auto noteLineComponent = noteLineObject->AddComponent<NoteLineUI>();
     this->AddObject(noteLineObject);
 
     m_noteLine = std::move(noteLineComponent);

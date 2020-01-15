@@ -26,7 +26,7 @@ class UITextRendererComponent;
 class Note;
 class HoldNote;
 class NoteHitInfo;
-class NoteLine;
+class NoteLineUI;
 
 class MusicPlayScene :
     public tgon::Scene
@@ -51,7 +51,8 @@ public:
 private:
     void InitializeBackgroundObject();
     void InitializeNoteHitInfo();
-    void InitializeNoteLine();
+    void InitializeNoteLineUI();
+    void InitializeMusicLeftTimeUI();
     void InitializeNoteObjectPool();
     void InitializeHoldNoteObjectPool();
     NoteObjectPair GetNoteObjectFromPool();
@@ -71,7 +72,7 @@ private:
     tgon::AudioPlayer m_audioPlayer;
     std::shared_ptr<tgon::GameObject> m_backgroundObject;
     std::shared_ptr<NoteHitInfo> m_noteHitInfo;
-    std::shared_ptr<NoteLine> m_noteLine;
+    std::shared_ptr<NoteLineUI> m_noteLine;
     std::vector<NoteObjectPair> m_noteObjectPool;
     std::vector<HoldNoteObjectPair> m_holdNoteObjectPool;
     std::array<std::deque<NoteObjectPair>, 5> m_notes;

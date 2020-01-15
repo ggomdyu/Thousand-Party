@@ -8,7 +8,7 @@
 #include "Diagnostics/Debug.h"
 
 #include "Note.h"
-#include "NoteLine.h"
+#include "NoteLineUI.h"
 
 #if _DEBUG
 constexpr bool g_needToHitAutomatically = false;
@@ -16,7 +16,7 @@ constexpr bool g_needToHitAutomatically = false;
 constexpr bool g_needToHitAutomatically = false;
 #endif
 
-Note::Note(const std::shared_ptr<NoteLine>& noteLine) :
+Note::Note(const std::shared_ptr<NoteLineUI>& noteLine) :
     Component(),
     m_hittedKeyCode(tgon::KeyCode(0)),
     m_noteLine(noteLine),

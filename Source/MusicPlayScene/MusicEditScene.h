@@ -26,7 +26,7 @@ class Keyboard;
 
 class Note;
 class HoldNote;
-class NoteLine;
+class NoteLineUI;
 
 class MusicEditScene :
     public tgon::Scene
@@ -51,7 +51,7 @@ public:
 private:
     void OnHandleInput();
     void InitializeBackgroundObject();
-    void InitializeNoteLine();
+    void InitializeNoteLineUI();
     void InitializeNoteObjectPool();
     void InitializeHoldNoteObjectPool();
     NoteObjectPair GetNoteObjectFromPool();
@@ -71,7 +71,7 @@ private:
     MusicInfo m_musicInfo;
     tgon::AudioPlayer m_audioPlayer;
     std::shared_ptr<tgon::GameObject> m_backgroundObject;
-    std::shared_ptr<NoteLine> m_noteLine;
+    std::shared_ptr<NoteLineUI> m_noteLine;
     std::vector<NoteObjectPair> m_noteObjectPool;
     std::vector<HoldNoteObjectPair> m_holdNoteObjectPool;
     std::array<std::deque<NoteObjectPair>, 5> m_notes;

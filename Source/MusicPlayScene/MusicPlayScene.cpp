@@ -9,7 +9,8 @@
 #include "MusicPlayScene.h"
 #include "Note.h"
 #include "NoteHitInfo.h"
-#include "NoteLine.h"
+#include "NoteLineUI.h"
+#include "MusicLeftTimeUI.h"
 
 MusicPlayScene::MusicPlayScene(const MusicInfo& musicInfo) :
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
@@ -27,7 +28,8 @@ void MusicPlayScene::Initialize()
     
     this->InitializeBackgroundObject();
     this->InitializeNoteHitInfo();
-    this->InitializeNoteLine();
+    this->InitializeNoteLineUI();
+    this->InitializeMusicLeftTimeUI();
     this->InitializeNoteObjectPool();
     this->InitializeHoldNoteObjectPool();
     this->InitializeMusicNameObject();
@@ -174,14 +176,22 @@ void MusicPlayScene::InitializeBackgroundObject()
     m_backgroundObject = std::move(backgroundObject);
 }
 
-void MusicPlayScene::InitializeNoteLine()
+void MusicPlayScene::InitializeNoteLineUI()
 {
     auto noteLineObject = tgon::GameObject::Create();
     noteLineObject->GetTransform()->SetLocalPosition(tgon::Vector3(-10.0f, -40.0f, 0.0f));
-    auto noteLineComponent = noteLineObject->AddComponent<NoteLine>();
+    auto noteLineComponent = noteLineObject->AddComponent<NoteLineUI>();
     this->AddObject(noteLineObject);
 
     m_noteLine = std::move(noteLineComponent);
+}
+
+void MusicPlayScene::InitializeMusicLeftTimeUI()
+{
+    auto musicLeftTimeObject = tgon::GameObject::Create();
+    musicLeftTimeObject->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 0.0f, 0.0f));
+    musicLeftTimeObject->AddComponent<MusicLeftTimeUI>();
+    this->AddObject(musicLeftTimeObject);
 }
 
 void MusicPlayScene::InitializeNoteObjectPool()
