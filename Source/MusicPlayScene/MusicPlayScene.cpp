@@ -50,6 +50,8 @@ void MusicPlayScene::Update()
         return;
     }
     
+    m_musicLeftTime->SetProgress(m_elapsedTime / m_audioPlayer.GetTotalProgressInSeconds());
+    
     this->UpdateNotes();
 }
 
@@ -180,17 +182,15 @@ void MusicPlayScene::InitializeNoteLineUI()
 {
     auto noteLineObject = tgon::GameObject::Create();
     noteLineObject->GetTransform()->SetLocalPosition(tgon::Vector3(-10.0f, -40.0f, 0.0f));
-    auto noteLineComponent = noteLineObject->AddComponent<NoteLineUI>();
+    m_noteLine = noteLineObject->AddComponent<NoteLineUI>();
     this->AddObject(noteLineObject);
-
-    m_noteLine = std::move(noteLineComponent);
 }
 
 void MusicPlayScene::InitializeMusicLeftTimeUI()
 {
     auto musicLeftTimeObject = tgon::GameObject::Create();
-    musicLeftTimeObject->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 0.0f, 0.0f));
-    musicLeftTimeObject->AddComponent<MusicLeftTimeUI>();
+    musicLeftTimeObject->GetTransform()->SetLocalPosition(tgon::Vector3(161.0f, 96.0f, 0.0f));
+    m_musicLeftTime = musicLeftTimeObject->AddComponent<MusicLeftTimeUI>();
     this->AddObject(musicLeftTimeObject);
 }
 

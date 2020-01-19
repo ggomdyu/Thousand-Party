@@ -6,6 +6,8 @@
 #include "Engine/TimeModule.h"
 #include "Audio/AudioPlayer.h"
 #include "Diagnostics/Debug.h"
+#include "Graphics/Material.h"
+#include "Graphics/OpenGL/OpenGLShaderCode.h"
 
 #include "MusicLeftTimeUI.h"
 
@@ -15,8 +17,19 @@ void MusicLeftTimeUI::Initialize()
     this->InitializeLeftTimeCircle();
 }
 
-void MusicLeftTimeUI::Update()
+void MusicLeftTimeUI::SetProgress(float progress) noexcept
 {
+    m_progress = std::clamp(progress, 0.0f, 1.0f);
+    
+    m_leftTimeBGMaterial->SetParameter4f("clipUV", m_progress, 0.0f, 1.0f, 1.0f);
+    
+    float xPos = tgon::Lerp(m_leftTimeCircleStartXPos, m_leftTimeCircleEndXPos, m_progress);
+    m_leftTimeCircle->GetTransform()->SetLocalPosition(tgon::Vector3(xPos, 0.0f, 0.0f));
+}
+
+float MusicLeftTimeUI::GetProgress() const noexcept
+{
+    return m_progress;
 }
 
 void MusicLeftTimeUI::InitializeLeftTimeBGImage()
@@ -28,14 +41,18 @@ void MusicLeftTimeUI::InitializeLeftTimeBGImage()
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/UI/MusicPlayScene/leftTimeBar.png"));
     spriteRendererComponent->SetSortingLayer(4);
+    
+    auto leftTimeBGMaterial = std::make_shared<tgon::Material>(g_positionColorUVVert, g_scissorFrag);
+    spriteRendererComponent->SetMaterial(leftTimeBGMaterial);
 
+    m_leftTimeBGMaterial = leftTimeBGMaterial;
     m_leftTimeBGRendererComponent = spriteRendererComponent;
 }
 
 void MusicLeftTimeUI::InitializeLeftTimeCircle()
 {
     m_leftTimeCircleStartXPos = -m_leftTimeBGRendererComponent->GetTexture()->GetSize().width / 2;
-    m_leftTimeCircleEndXPos = m_leftTimeBGRendererComponent->GetTexture()->GetSize().width;
+    m_leftTimeCircleEndXPos = m_leftTimeCircleStartXPos + m_leftTimeBGRendererComponent->GetTexture()->GetSize().width;
 
     m_leftTimeCircle = tgon::GameObject::Create();
 

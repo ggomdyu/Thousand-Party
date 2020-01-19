@@ -27,6 +27,7 @@ class Note;
 class HoldNote;
 class NoteHitInfo;
 class NoteLineUI;
+class MusicLeftTimeUI;
 
 class MusicPlayScene :
     public tgon::Scene
@@ -73,6 +74,7 @@ private:
     std::shared_ptr<tgon::GameObject> m_backgroundObject;
     std::shared_ptr<NoteHitInfo> m_noteHitInfo;
     std::shared_ptr<NoteLineUI> m_noteLine;
+    std::shared_ptr<MusicLeftTimeUI> m_musicLeftTime;
     std::vector<NoteObjectPair> m_noteObjectPool;
     std::vector<HoldNoteObjectPair> m_holdNoteObjectPool;
     std::array<std::deque<NoteObjectPair>, 5> m_notes;
