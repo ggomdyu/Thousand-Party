@@ -31,7 +31,6 @@ public:
     
 private:
     void CreateGameObjects();
-    void CreateCameraObject();
     void CreateSpriteObject();
     void OnHandleInput();
 

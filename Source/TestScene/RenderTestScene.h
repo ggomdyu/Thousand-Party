@@ -18,6 +18,5 @@ public:
     void Initialize() override;
     
 private:
-    void CreateCameraObject();
     void CreateFontObjects();
 };

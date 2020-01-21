@@ -4,7 +4,6 @@
 #include "Platform/Environment.h"
 #include "Platform/Application.h"
 #include "Component/UISpriteRendererComponent.h"
-#include "Component/CameraComponent.h"
 #include "Engine/TimeModule.h"
 #include "Engine/SceneModule.h"
 #include "Engine/InputModule.h"
@@ -85,19 +84,6 @@ void LogoScene::Initialize()
     this->CreateGameObjects();
 }
 
-void LogoScene::CreateCameraObject()
-{
-    auto camera = tgon::GameObject::Create("camera1");
-    
-    auto clientSize = tgon::Application::GetInstance().GetRootWindow()->GetClientSize();
-    float halfWidth = static_cast<float>(clientSize.width) * 0.5f;
-    float halfHeight = static_cast<float>(clientSize.height) * 0.5f;
-    camera->AddComponent<tgon::CameraComponent>(tgon::FRect(-halfWidth, -halfHeight, static_cast<float>(clientSize.width), static_cast<float>(clientSize.height)), -1.0f, 1024.0f);
-    
-    auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
-    sceneModule->AddGlobalObject(camera);
-}
-
 void LogoScene::CreateSpriteObject()
 {
     const char* texturePathList[] =
@@ -112,7 +98,7 @@ void LogoScene::CreateSpriteObject()
         auto object = tgon::GameObject::Create(tgon::StringHash(std::to_string(i)));
         m_logoSpriteRendererComponents[i] = object->AddComponent<tgon::UISpriteRendererComponent>();
         m_logoSpriteRendererComponents[i]->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f));
-        m_logoSpriteRendererComponents[i]->SetTexture(std::make_shared<tgon::Texture>(texturePathList[i], tgon::FilterMode::Bilinear, tgon::WrapMode::Repeat, true, false));
+        m_logoSpriteRendererComponents[i]->SetTexture(std::make_shared<tgon::Texture>(*Image::Create(texturePathList[i]), tgon::FilterMode::Linear, tgon::WrapMode::Repeat, true, false));
         
         this->AddObject(object);
     }
@@ -120,7 +106,6 @@ void LogoScene::CreateSpriteObject()
 
 void LogoScene::CreateGameObjects()
 {
-    this->CreateCameraObject();
     this->CreateSpriteObject();
 }
 

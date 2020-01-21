@@ -1,5 +1,4 @@
 #include "Platform/Application.h"
-#include "Component/CameraComponent.h"
 #include "Component/UITextRendererComponent.h"
 #include "Math/Rect.h"
 #include "Math/Vector3.h"
@@ -10,19 +9,7 @@
 
 void RenderTestScene::Initialize()
 {
-    this->CreateCameraObject();
     this->CreateFontObjects();
-}
-
-void RenderTestScene::CreateCameraObject()
-{
-    auto camera = tgon::GameObject::Create("camera1");
-
-    auto rootWindowSize = tgon::Application::GetInstance().GetRootWindow()->GetClientSize();
-    float halfWidth = static_cast<float>(rootWindowSize.width) * 0.5f;
-    float halfHeight = static_cast<float>(rootWindowSize.height) * 0.5f;
-    camera->AddComponent<tgon::CameraComponent>(tgon::FRect(-halfWidth, -halfHeight, rootWindowSize.width, rootWindowSize.height), -1.0f, 1024.0f);
-    this->AddObject(camera);
 }
 
 void RenderTestScene::CreateFontObjects()

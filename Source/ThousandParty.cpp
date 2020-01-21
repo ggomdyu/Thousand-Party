@@ -24,7 +24,6 @@ void ThousandParty::Initialize()
 
     auto uiRendererModule = this->FindModule<tgon::UIRendererModule>();
     uiRendererModule->SetMaxSortingLayer(10);
-    uiRendererModule->GetGraphics()->DisableDepthTest();
 
     this->FindModule<tgon::SceneModule>()->ChangeScene<LogoScene>();
 }
