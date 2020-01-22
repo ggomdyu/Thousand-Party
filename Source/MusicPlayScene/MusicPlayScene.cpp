@@ -13,18 +13,20 @@
 #include "MusicLeftTimeUI.h"
 
 MusicPlayScene::MusicPlayScene(const MusicInfo& musicInfo) :
+    m_musicInfo(musicInfo),
+    m_audioPlayer([&]()
+    {
+        auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+        return *tgon::AudioPlayer::Create(assetModule->GetResource<tgon::AudioBuffer>(musicInfo.musicPath));
+    } ()),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
-    m_audioModule(tgon::Application::GetEngine()->FindModule<tgon::AudioModule>()),
-    m_musicInfo(musicInfo)
+    m_audioModule(tgon::Application::GetEngine()->FindModule<tgon::AudioModule>())
 {
 }
 
 void MusicPlayScene::Initialize()
 {
     Super::Initialize();
-    
-    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_audioPlayer.Initialize(assetModule->GetResource<tgon::AudioBuffer>(m_musicInfo.musicPath));
     
     this->InitializeBackgroundObject();
     this->InitializeNoteHitInfo();

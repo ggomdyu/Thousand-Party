@@ -196,9 +196,7 @@ void Note::PlayHitSound()
     auto audioPlayerGenerator = [&]()
     {
         auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-        tgon::AudioPlayer hitSoundPlayer;
-        hitSoundPlayer.Initialize(assetModule->GetResource<tgon::AudioBuffer>("Resource/Sound/HOCKEY.wav"));
-        return hitSoundPlayer;
+        return *tgon::AudioPlayer::Create(assetModule->GetResource<tgon::AudioBuffer>("Resource/Sound/HOCKEY.wav"));
     };
     static tgon::AudioPlayer hitSoundPlayer[5] = {
         audioPlayerGenerator(),
