@@ -5,10 +5,10 @@
 #include "Platform/Application.h"
 #include "Component/UISpriteRendererComponent.h"
 #include "Engine/TimeModule.h"
-#include "Engine/SceneModule.h"
 #include "Engine/InputModule.h"
 
 #include "../TitleScene/TitleScene.h"
+#include "../MultipleSceneModule.h"
 
 #include "LogoScene.h"
 
@@ -23,7 +23,7 @@ void LogoScene::Update()
     auto elapsedTime = tgon::Environment::GetTickCount() - m_beginTime;
     if (elapsedTime >= 8500)
     {
-        auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
+        auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
         sceneModule->ChangeScene<TitleScene>();
     }
     else if (elapsedTime >= 7500)

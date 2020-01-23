@@ -3,7 +3,6 @@
 #include "Platform/Application.h"
 #include "Engine/AssetModule.h"
 #include "Engine/TimeModule.h"
-#include "Engine/SceneModule.h"
 #include "Engine/InputModule.h"
 #include "Engine/TimerModule.h"
 #include "IO/Directory.h"
@@ -14,6 +13,7 @@
 #include "../MusicPlayScene/MusicPlayScene.h"
 #include "../MusicPlayScene/MusicEditScene.h"
 #include "../GameDataModule.h"
+#include "../MultipleSceneModule.h"
 
 namespace
 {
@@ -149,7 +149,7 @@ void MusicSelector::OnHandleInput()
             timerModule->ClearTimer(m_animationTimer);
         }
         
-        auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
+        auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
         sceneModule->ChangeScene<MusicPlayScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
     }
     else if (keyboard->IsKeyDown(tgon::KeyCode::F1))
@@ -160,7 +160,7 @@ void MusicSelector::OnHandleInput()
             timerModule->ClearTimer(m_animationTimer);
         }
 
-        auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
+        auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
         sceneModule->ChangeScene<MusicEditScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
     }
 }

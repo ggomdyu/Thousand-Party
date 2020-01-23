@@ -4,6 +4,7 @@
 
 #include "ThousandParty.h"
 #include "GameDataModule.h"
+#include "MultipleSceneModule.h"
 
 TGON_DECLARE_ENGINE(ThousandParty);
 
@@ -20,10 +21,10 @@ void ThousandParty::Initialize()
 {
     Super::Initialize();
     
+    this->RemoveModule<tgon::SceneModule>();
+    this->AddModule<MultipleSceneModule>()->ChangeScene<LogoScene>();
     this->AddModule<GameDataModule>();
 
     auto uiRendererModule = this->FindModule<tgon::UIRendererModule>();
     uiRendererModule->SetMaxSortingLayer(10);
-
-    this->FindModule<tgon::SceneModule>()->ChangeScene<LogoScene>();
 }

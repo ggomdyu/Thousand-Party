@@ -3,7 +3,6 @@
 #include "Engine/TimerModule.h"
 #include "Engine/AssetModule.h"
 #include "Engine/InputModule.h"
-#include "Engine/SceneModule.h"
 #include "Math/Mathematics.h"
 #include "IO/Path.h"
 #include "Component/UISpriteRendererComponent.h"
@@ -14,6 +13,7 @@
 
 #include "../MusicSelectScene/MusicSelectScene.h"
 #include "../MusicPlayScene/Note.h"
+#include "../MultipleSceneModule.h"
 
 TitleScene::TitleScene()
 {
@@ -163,7 +163,7 @@ void TitleScene::OnHandleInput()
     auto keyboard = m_inputModule->GetKeyboard();
     if (m_fadeInTimerHandle == tgon::TimerHandle() && (keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return)))
     {
-        auto sceneModule = tgon::Application::GetEngine()->FindModule<tgon::SceneModule>();
+        auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
         sceneModule->ChangeScene<MusicSelectScene>();
     }
 }

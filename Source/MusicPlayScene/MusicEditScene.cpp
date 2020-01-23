@@ -14,15 +14,13 @@
 
 MusicEditScene::MusicEditScene(const MusicInfo& musicInfo) :
     m_musicInfo(musicInfo),
-    m_audioPlayer([&]()
-    {
-        auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-        return *tgon::AudioPlayer::Create(assetModule->GetResource<tgon::AudioBuffer>(musicInfo.musicPath));
-    } ()),
+    m_audioPlayer(*tgon::AudioPlayer::Create()),
     m_keyboard(tgon::Application::GetEngine()->FindModule<tgon::InputModule>()->GetKeyboard()),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
     m_audioModule(tgon::Application::GetEngine()->FindModule<tgon::AudioModule>())
 {
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    m_audioPlayer.SetAudioBuffer(assetModule->GetResource<tgon::AudioBuffer>(musicInfo.musicPath));
 }
 
 void MusicEditScene::Initialize()

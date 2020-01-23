@@ -195,8 +195,12 @@ void Note::PlayHitSound()
 {
     auto audioPlayerGenerator = [&]()
     {
+        auto audioPlayer = tgon::AudioPlayer::Create();
+
         auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-        return *tgon::AudioPlayer::Create(assetModule->GetResource<tgon::AudioBuffer>("Resource/Sound/HOCKEY.wav"));
+        audioPlayer->SetAudioBuffer(assetModule->GetResource<tgon::AudioBuffer>("Resource/Sound/HOCKEY.wav"));
+
+        return std::move(*audioPlayer);
     };
     static tgon::AudioPlayer hitSoundPlayer[5] = {
         audioPlayerGenerator(),
