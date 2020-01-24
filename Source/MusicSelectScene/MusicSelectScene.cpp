@@ -32,7 +32,7 @@ void MusicSelectScene::CreateSquareBackgroundObject()
     auto squareBackground = tgon::GameObject::Create();
     squareBackground->AddComponent<SquareBackground>();
     squareBackground->FindComponent<tgon::UISpriteRendererComponent>()->SetSortingLayer(1);
-    this->AddObject(squareBackground);
+    this->AddChild(squareBackground);
 }
 
 void MusicSelectScene::CreateMusicSelectorObject()
@@ -43,7 +43,7 @@ void MusicSelectScene::CreateMusicSelectorObject()
     auto musicSelectorComponent = musicSelectorObject->AddComponent<MusicSelector>();
     musicSelectorComponent->OnChangeSelectedMusic = tgon::Delegate(&MusicSelectScene::OnChangeSelectedMusic, this);
     
-    this->AddObject(musicSelectorObject);
+    this->AddChild(musicSelectorObject);
 }
 
 void MusicSelectScene::CreateMusicNameObject()
@@ -69,7 +69,7 @@ void MusicSelectScene::CreateMusicNameObject()
 
     m_musicNameRendererComponent = textComponent;
 
-    this->AddObject(object);
+    this->AddChild(object);
 }
 
 void MusicSelectScene::CreateMusicArtistNameObject()
@@ -95,7 +95,7 @@ void MusicSelectScene::CreateMusicArtistNameObject()
 
     m_musicArtistNameRendererComponent = textComponent;
 
-    this->AddObject(object);
+    this->AddChild(object);
 }
 
 void MusicSelectScene::OnChangeSelectedMusic(const MusicInfo& musicInfo)
@@ -143,7 +143,7 @@ void MusicSelectScene::CreateSpriteObjects()
         spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(texturePathList[i]));
         spriteRendererComponent->SetSortingLayer(sortingLayerList[i]);
         spriteRendererComponent->SetPivot(pivotList[i]);
-        this->AddObject(object);
+        this->AddChild(object);
     }
 
     m_musicText = this->FindObject("MUSIC");

@@ -211,7 +211,7 @@ void MusicEditScene::InitializeBackgroundObject()
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/Background/MusicPlayScene/green.png"));
     spriteRendererComponent->SetPivot({0.0f, 0.5f});
     
-    this->AddObject(backgroundObject);
+    this->AddChild(backgroundObject);
     
     m_backgroundObject = std::move(backgroundObject);
 }
@@ -221,7 +221,7 @@ void MusicEditScene::InitializeNoteLineUI()
     auto noteLineObject = tgon::GameObject::Create();
     noteLineObject->GetTransform()->SetLocalPosition(tgon::Vector3(-10.0f, -40.0f, 0.0f));
     auto noteLineComponent = noteLineObject->AddComponent<NoteLineUI>();
-    this->AddObject(noteLineObject);
+    this->AddChild(noteLineObject);
 
     m_noteLine = std::move(noteLineComponent);
 }
@@ -265,7 +265,7 @@ void MusicEditScene::InitializeMusicNameObject()
 
     m_musicNameRendererComponent = textComponent;
 
-    this->AddObject(object);
+    this->AddChild(object);
 }
 
 void MusicEditScene::InitializeMusicArtistNameObject()
@@ -285,7 +285,7 @@ void MusicEditScene::InitializeMusicArtistNameObject()
 
     m_musicArtistNameRendererComponent = textComponent;
 
-    this->AddObject(object);
+    this->AddChild(object);
 }
 
 void MusicEditScene::RefreshNotes()

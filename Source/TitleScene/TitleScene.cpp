@@ -88,7 +88,7 @@ void TitleScene::CreateNightSkyObject()
     auto nightSky = tgon::GameObject::Create();
     nightSky->AddComponent<NightSky>();
     
-    this->AddObject(std::move(nightSky));
+    this->AddChild(std::move(nightSky));
 }
 
 void TitleScene::CreateSpriteObjects()
@@ -140,7 +140,7 @@ void TitleScene::CreateSpriteObjects()
         spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(texturePathList[i]));
         spriteRendererComponent->SetSortingLayer(sortingLayerList[i]);
         spriteRendererComponent->SetPivot(pivotList[i]);
-        this->AddObject(object);
+        this->AddChild(object);
     }
 
     m_girl = this->FindObject(u8"girl");
@@ -154,7 +154,7 @@ void TitleScene::CreateFireFlyObjects()
         auto fireflyObject = tgon::GameObject::Create();
         fireflyObject->AddComponent<FireFly>();
 
-        this->AddObject(std::move(fireflyObject));
+        this->AddChild(std::move(fireflyObject));
     }
 }
 
@@ -164,7 +164,7 @@ void TitleScene::OnHandleInput()
     if (m_fadeInTimerHandle == tgon::TimerHandle() && (keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return)))
     {
         auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene<MusicSelectScene>();
+        sceneModule->ChangeScene<MusicSelectScene>(MultipleSceneModule::ChangeSceneAnimationType::NoAnim);
     }
 }
 

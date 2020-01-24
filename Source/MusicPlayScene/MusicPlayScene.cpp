@@ -159,7 +159,7 @@ void MusicPlayScene::InitializeNoteHitInfo()
 {
     auto noteHitInfoObject = tgon::GameObject::Create();
     m_noteHitInfo = noteHitInfoObject->AddComponent<NoteHitInfo>();
-    this->AddObject(std::move(noteHitInfoObject));
+    this->AddChild(std::move(noteHitInfoObject));
 }
 
 void MusicPlayScene::InitializeBackgroundObject()
@@ -173,7 +173,7 @@ void MusicPlayScene::InitializeBackgroundObject()
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/Background/MusicPlayScene/green.png"));
     spriteRendererComponent->SetPivot({0.0f, 0.5f});
     
-    this->AddObject(backgroundObject);
+    this->AddChild(backgroundObject);
     
     m_backgroundObject = std::move(backgroundObject);
 }
@@ -183,7 +183,7 @@ void MusicPlayScene::InitializeNoteLineUI()
     auto noteLineObject = tgon::GameObject::Create();
     noteLineObject->GetTransform()->SetLocalPosition(tgon::Vector3(-10.0f, -40.0f, 0.0f));
     m_noteLine = noteLineObject->AddComponent<NoteLineUI>();
-    this->AddObject(noteLineObject);
+    this->AddChild(noteLineObject);
 }
 
 void MusicPlayScene::InitializeMusicLeftTimeUI()
@@ -191,7 +191,7 @@ void MusicPlayScene::InitializeMusicLeftTimeUI()
     auto musicLeftTimeObject = tgon::GameObject::Create();
     musicLeftTimeObject->GetTransform()->SetLocalPosition(tgon::Vector3(161.0f, 96.0f, 0.0f));
     m_musicLeftTime = musicLeftTimeObject->AddComponent<MusicLeftTimeUI>();
-    this->AddObject(musicLeftTimeObject);
+    this->AddChild(musicLeftTimeObject);
 }
 
 void MusicPlayScene::InitializeNoteObjectPool()
@@ -233,7 +233,7 @@ void MusicPlayScene::InitializeMusicNameObject()
 
     m_musicNameRendererComponent = textComponent;
 
-    this->AddObject(object);
+    this->AddChild(object);
 }
 
 void MusicPlayScene::InitializeMusicArtistNameObject()
@@ -253,7 +253,7 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
 
     m_musicArtistNameRendererComponent = textComponent;
 
-    this->AddObject(object);
+    this->AddChild(object);
 }
 
 void MusicPlayScene::InitializeTimer()
