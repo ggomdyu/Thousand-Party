@@ -7,7 +7,6 @@ void MultipleSceneModule::Update()
     if (m_nextScene != nullptr)
     {
         m_currScene = std::move(m_nextScene);
-        m_currScene->Initialize();
     }
 
     if (m_currScene != nullptr)
