@@ -7,7 +7,7 @@
 #pragma once
 #include <memory>
 
-#include "Game/Scene.h"
+#include "Game/GameObject.h"
 #include "Engine/TimerHandle.h"
 
 namespace tgon
@@ -20,7 +20,7 @@ class UISpriteRendererComponent;
 } /* namespace tgon */
 
 class TitleScene :
-    public tgon::Scene
+    public tgon::GameObject
 {
 public:
     TGON_DECLARE_RTTI(TitleScene)

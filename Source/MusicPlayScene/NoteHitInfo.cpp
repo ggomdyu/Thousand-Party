@@ -33,11 +33,13 @@ void NoteHitInfo::OnMissNote()
 
 void NoteHitInfo::InitializeSprite()
 {
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
+
+    auto gameObject = weakGameObject.lock();
     
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
     gameObject->GetTransform()->SetLocalPosition(tgon::Vector3(windowSize.width / 2 - 35.0f, windowSize.height / 2 - 45.0f, 0.0f));
@@ -51,12 +53,14 @@ void NoteHitInfo::InitializeSprite()
 
 void NoteHitInfo::InitializeCurrentComboTextObject()
 {
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
-    
+
+    auto gameObject = weakGameObject.lock();
+
     auto textComponent = gameObject->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/malgun.ttf");
     textComponent->SetFontSize(40);
@@ -69,12 +73,14 @@ void NoteHitInfo::InitializeCurrentComboTextObject()
 
 void NoteHitInfo::InitializeMaxComboTextObject()
 {
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
-    
+
+    auto gameObject = weakGameObject.lock();
+
     auto textComponent = gameObject->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/malgun.ttf");
     textComponent->SetFontSize(24);

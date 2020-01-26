@@ -22,7 +22,7 @@ void ThousandParty::Initialize()
     Super::Initialize();
     
     this->RemoveModule<tgon::SceneModule>();
-    this->AddModule<MultipleSceneModule>()->ChangeScene<LogoScene>();
+    this->AddModule<MultipleSceneModule>()->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::GameObject::Create<LogoScene>());
     this->AddModule<GameDataModule>();
 
     auto uiRendererModule = this->FindModule<tgon::UIRendererModule>();

@@ -39,11 +39,13 @@ void Note::Initialize()
 {
     Super::Initialize();
     
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
+
+    auto gameObject = weakGameObject.lock();
 
     m_transform = gameObject->GetTransform();
     
@@ -54,11 +56,13 @@ void Note::SetNoteLineIndex(int32_t index) noexcept
 {
     m_noteLineIndex = index;
 
-    auto gameObject = this->GetGameObject();
-    if (gameObject != nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
-        gameObject->GetTransform()->SetLocalPosition(m_noteLine->GetNoteStartPosition(index));
+        return;
     }
+
+    weakGameObject.lock()->GetTransform()->SetLocalPosition(m_noteLine->GetNoteStartPosition(index));
 }
 
 void Note::SetElapsedTime(float elapsedTime) noexcept
@@ -88,11 +92,13 @@ bool Note::IsHolding() const noexcept
 
 void Note::InitializeSprite()
 {
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
+
+    auto gameObject = weakGameObject.lock();
 
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     m_noteRendererComponent = gameObject->AddComponent<tgon::UISpriteRendererComponent>();
@@ -338,8 +344,8 @@ void HoldNote::OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming)
 
 void HoldNote::InitializeSprite()
 {
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
@@ -347,7 +353,8 @@ void HoldNote::InitializeSprite()
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
 
     auto ringObject = tgon::GameObject::Create();
-    ringObject->GetTransform()->SetParent(gameObject->GetTransform());
+    weakGameObject.lock()->AddChild(ringObject);
+
     m_holdNoteRendererComponent = ringObject->AddComponent<tgon::UISpriteRendererComponent>();
     m_holdNoteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/MusicPlayScene/holdNote.png"));
     

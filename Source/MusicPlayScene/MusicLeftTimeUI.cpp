@@ -34,8 +34,16 @@ float MusicLeftTimeUI::GetProgress() const noexcept
 
 void MusicLeftTimeUI::InitializeLeftTimeBGImage()
 {
+    auto gameObject = this->GetGameObject();
+    if (gameObject.expired())
+    {
+        return;
+    }
+
+
     m_leftTimeBG = tgon::GameObject::Create();
-    m_leftTimeBG->GetTransform()->SetParent(this->GetGameObject()->GetTransform());
+
+    gameObject.lock()->AddChild(m_leftTimeBG);
 
     auto spriteRendererComponent = m_leftTimeBG->AddComponent<tgon::UISpriteRendererComponent>();
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
@@ -51,13 +59,19 @@ void MusicLeftTimeUI::InitializeLeftTimeBGImage()
 
 void MusicLeftTimeUI::InitializeLeftTimeCircle()
 {
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
+    {
+        return;
+    }
+
     m_leftTimeCircleStartXPos = -m_leftTimeBGRendererComponent->GetTexture()->GetSize().width / 2;
     m_leftTimeCircleEndXPos = m_leftTimeCircleStartXPos + m_leftTimeBGRendererComponent->GetTexture()->GetSize().width;
 
     m_leftTimeCircle = tgon::GameObject::Create();
 
     auto leftTimeCircleTransform = m_leftTimeCircle->GetTransform();
-    leftTimeCircleTransform->SetParent(this->GetGameObject()->GetTransform());
+    weakGameObject.lock()->AddChild(m_leftTimeCircle);
     leftTimeCircleTransform->SetLocalPosition(tgon::Vector3(m_leftTimeCircleStartXPos, 0.0f, 0.0f));
 
     auto spriteRendererComponent = m_leftTimeCircle->AddComponent<tgon::UISpriteRendererComponent>();

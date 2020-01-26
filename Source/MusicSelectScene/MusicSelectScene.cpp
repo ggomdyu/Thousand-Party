@@ -146,8 +146,8 @@ void MusicSelectScene::CreateSpriteObjects()
         this->AddChild(object);
     }
 
-    m_musicText = this->FindObject("MUSIC");
-    m_selectText = this->FindObject("SELECT");
+    m_musicText = this->FindChild("MUSIC");
+    m_selectText = this->FindChild("SELECT");
 }
     
 void MusicSelectScene::Update()

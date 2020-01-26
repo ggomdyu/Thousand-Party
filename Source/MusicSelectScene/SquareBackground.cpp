@@ -19,11 +19,13 @@ void SquareBackground::Initialize()
 
 void SquareBackground::InitializeSpriteComponent()
 {
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
+
+    auto gameObject = weakGameObject.lock();
 
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     auto spriteRendererComponent = gameObject->AddComponent<tgon::UISpriteRendererComponent>();
@@ -32,11 +34,13 @@ void SquareBackground::InitializeSpriteComponent()
 
 void SquareBackground::InitializePosition()
 {
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
+
+    auto gameObject = weakGameObject.lock();
 
     gameObject->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, 0.0f, 0.0f));
 }
@@ -45,11 +49,13 @@ void SquareBackground::Update()
 {
     Super::Update();
 
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
+
+    auto gameObject = weakGameObject.lock();
 
     auto transform = gameObject->GetTransform();
     auto newPos = transform->GetLocalPosition();

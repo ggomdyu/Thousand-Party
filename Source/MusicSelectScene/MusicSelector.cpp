@@ -67,7 +67,7 @@ void MusicSelector::Update()
 void MusicSelector::InitializeMusicCoverObjects()
 {
     auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    if (gameObject.expired())
     {
         return;
     }
@@ -91,7 +91,7 @@ void MusicSelector::InitializeMusicCoverObjects()
         }
 
         auto coverImageObject = tgon::GameObject::Create();
-        coverImageObject->GetTransform()->SetParent(gameObject->GetTransform());
+        gameObject.lock()->AddChild(coverImageObject);
         auto spriteRendererComponent = coverImageObject->AddComponent<tgon::UISpriteRendererComponent>();
         spriteRendererComponent->SetTexture(std::move(texture));
         spriteRendererComponent->SetTextureSize({222.0f, 222.0f});
@@ -150,7 +150,8 @@ void MusicSelector::OnHandleInput()
         }
         
         auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene<MusicPlayScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::GameObject::Create<MusicPlayScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]));
+
     }
     else if (keyboard->IsKeyDown(tgon::KeyCode::F1))
     {
@@ -161,7 +162,7 @@ void MusicSelector::OnHandleInput()
         }
 
         auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene<MusicEditScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::GameObject::Create<MusicEditScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]));
     }
 }
 
@@ -209,8 +210,8 @@ void MusicSelector::AnimateMusicCoverObject()
 
 void MusicSelector::RefreshMusicCoverHighlight()
 {
-    auto transform = m_coverImageObjects[m_currSelectedCoverImageIndex + 3]->GetTransform();
-    m_highlight->GetTransform()->SetParent(transform);
+    auto& object = m_coverImageObjects[m_currSelectedCoverImageIndex + 3];
+    object->AddChild(m_highlight);
 }
 
 void MusicSelector::SortMusicLayer()

@@ -143,8 +143,8 @@ void TitleScene::CreateSpriteObjects()
         this->AddChild(object);
     }
 
-    m_girl = this->FindObject(u8"girl");
-    m_fadeInSpriteRendererComponent = this->FindObject(u8"FadeInOut")->FindComponent<tgon::UISpriteRendererComponent>();
+    m_girl = this->FindChild(u8"girl");
+    m_fadeInSpriteRendererComponent = this->FindChild(u8"FadeInOut")->FindComponent<tgon::UISpriteRendererComponent>();
 }
 
 void TitleScene::CreateFireFlyObjects()
@@ -164,7 +164,7 @@ void TitleScene::OnHandleInput()
     if (m_fadeInTimerHandle == tgon::TimerHandle() && (keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return)))
     {
         auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene<MusicSelectScene>(MultipleSceneModule::ChangeSceneAnimationType::NoAnim);
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::GameObject::Create<MusicSelectScene>());
     }
 }
 

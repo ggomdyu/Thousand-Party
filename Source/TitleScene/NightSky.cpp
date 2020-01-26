@@ -14,12 +14,14 @@ void NightSky::Initialize()
 {
     Super::Initialize();
     
-    auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    auto weakGameObject = this->GetGameObject();
+    if (weakGameObject.expired())
     {
         return;
     }
-    
+
+    auto gameObject = weakGameObject.lock();
+
     m_transform = gameObject->GetTransform();
 
     this->InitializeSpriteComponent();

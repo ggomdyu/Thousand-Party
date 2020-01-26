@@ -27,5 +27,5 @@ void RenderTestScene::CreateFontObjects()
     textComponent->SetRect(tgon::I32Rect(-200, 100, 400, 200));
     textComponent->SetTextAlignment(tgon::TextAlignment::MiddleCenter);
 
-    this->AddObject(object);
+    this->AddChild(object);
 }

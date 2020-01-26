@@ -7,7 +7,7 @@
 #pragma once
 #include <memory>
 
-#include "Game/Scene.h"
+#include "Game/GameObject.h"
 
 namespace tgon
 {
@@ -23,7 +23,7 @@ class MusicSelector;
 class GameDataModule;
 
 class MusicSelectScene :
-    public tgon::Scene
+    public tgon::GameObject
 {
 public:
     TGON_DECLARE_RTTI(MusicSelectScene)

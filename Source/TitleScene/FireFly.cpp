@@ -18,19 +18,19 @@ FireFly::FireFly() :
 void FireFly::Initialize()
 {
     auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    if (gameObject.expired())
     {
         return;
     }
 
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-    auto transform = gameObject->FindComponent<tgon::Transform>();
+    auto transform = gameObject.lock()->FindComponent<tgon::Transform>();
     auto scale = static_cast<float>(tgon::Random().NextDouble(0.3, 1.0));
     transform->SetLocalScale(tgon::Vector3(scale, scale, 1.0f));
     transform->SetLocalPosition(tgon::Vector3(static_cast<float>(tgon::Random().NextDouble(-clientSize.width / 2, clientSize.width / 2)), static_cast<float>(tgon::Random().NextDouble(-clientSize.height / 2 - 80.0f, clientSize.height / 2)), 0.0f));
     
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_spriteRendererComponent = gameObject->AddComponent<tgon::UISpriteRendererComponent>();
+    m_spriteRendererComponent = gameObject.lock()->AddComponent<tgon::UISpriteRendererComponent>();
     m_spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/TitleScene/Firefly.png"));
     m_spriteRendererComponent->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, static_cast<float>(tgon::Random().NextDouble(0.4, 1.0))));
     m_spriteRendererComponent->SetSortingLayer(tgon::Random().Next(0, 2) == 0 ? 1 : 2);
@@ -39,13 +39,13 @@ void FireFly::Initialize()
 void FireFly::Reset()
 {
     auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    if (gameObject.expired())
     {
         return;
     }
 
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
-    auto transform = gameObject->FindComponent<tgon::Transform>();
+    auto transform = gameObject.lock()->FindComponent<tgon::Transform>();
     auto scale = static_cast<float>(tgon::Random().NextDouble(0.3, 1.0));
     transform->SetLocalScale(tgon::Vector3(scale, scale, 1.0f));
     transform->SetLocalPosition(tgon::Vector3(static_cast<float>(tgon::Random().NextDouble(-windowSize.width / 2, windowSize.width / 2)), static_cast<float>(-windowSize.height / 2 - m_spriteRendererComponent->GetTexture()->GetSize().height / 2), 0.0f));
@@ -63,7 +63,7 @@ void FireFly::Update()
     Super::Update();
 
     auto gameObject = this->GetGameObject();
-    if (gameObject == nullptr)
+    if (gameObject.expired())
     {
         return;
     }
@@ -71,7 +71,7 @@ void FireFly::Update()
     auto tickTime = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()->GetTickTime();
 
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
-    auto transform = gameObject->FindComponent<tgon::Transform>();
+    auto transform = gameObject.lock()->FindComponent<tgon::Transform>();
     auto newPos = transform->GetLocalPosition();
     if (newPos.y >= windowSize.height / 2 + 123.0F)
     {

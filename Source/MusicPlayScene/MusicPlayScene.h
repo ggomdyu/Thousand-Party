@@ -9,7 +9,7 @@
 #include <deque>
 
 #include "Audio/AudioPlayer.h"
-#include "Game/Scene.h"
+#include "Game/GameObject.h"
 
 #include "../GameDataModule.h"
 
@@ -30,7 +30,7 @@ class NoteLineUI;
 class MusicLeftTimeUI;
 
 class MusicPlayScene :
-    public tgon::Scene
+    public tgon::GameObject
 {
 public:
     TGON_DECLARE_RTTI(MusicPlayScene)
