@@ -1,5 +1,5 @@
 #include "Platform/Application.h"
-#include "Component/UITextRendererComponent.h"
+#include "Game/UITextRendererComponent.h"
 #include "Math/Rect.h"
 #include "Math/Vector3.h"
 #include "Math/Rect.h"

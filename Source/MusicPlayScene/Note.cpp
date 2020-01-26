@@ -1,6 +1,8 @@
+#include <fmt/format.h>
+
 #include "Math/Mathematics.h"
 #include "Platform/Application.h"
-#include "Component/UISpriteRendererComponent.h"
+#include "Game/UISpriteRendererComponent.h"
 #include "Engine/InputModule.h"
 #include "Engine/AssetModule.h"
 #include "Engine/TimeModule.h"
@@ -255,8 +257,8 @@ void HoldNote::Reset()
     Super::Reset();
     
     m_holdTime = 0.0f;
-    m_holdNoteRendererComponent->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 1.0f));
-    m_ringObject->GetTransform()->SetLocalScale(tgon::Vector3(1.0f, 1.0f, 1.0f));
+    m_holdNoteRendererComponent->SetBlendColor({1.0f, 1.0f, 1.0f, 1.0f});
+    m_ringObject->GetTransform()->SetLocalScale({1.0f, 1.0f, 1.0f});
     m_autoHitted = false;
 }
 
@@ -344,17 +346,18 @@ void HoldNote::OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming)
 
 void HoldNote::InitializeSprite()
 {
-    auto weakGameObject = this->GetGameObject();
-    if (weakGameObject.expired())
+    auto weakOwner = this->GetGameObject();
+    if (weakOwner.expired())
     {
         return;
     }
 
-    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-
     auto ringObject = tgon::GameObject::Create();
-    weakGameObject.lock()->AddChild(ringObject);
 
+    auto owner = weakOwner.lock();
+    owner->AddChild(ringObject);
+
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     m_holdNoteRendererComponent = ringObject->AddComponent<tgon::UISpriteRendererComponent>();
     m_holdNoteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/MusicPlayScene/holdNote.png"));
     

@@ -6,7 +6,7 @@
 #include "Engine/InputModule.h"
 #include "Engine/TimerModule.h"
 #include "IO/Directory.h"
-#include "Component/UISpriteRendererComponent.h"
+#include "Game/UISpriteRendererComponent.h"
 #include "Math/Mathematics.h"
 #include "Graphics/OpenGL/OpenGLShaderCode.h"
 

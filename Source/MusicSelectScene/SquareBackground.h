@@ -33,9 +33,10 @@ public:
     
 private:
     void InitializeSpriteComponent();
-    void InitializePosition();
 
 /**@section Variable */
 private:
     std::shared_ptr<tgon::TimeModule> m_timeModule;
+    std::shared_ptr<tgon::Material> m_material;
+    float m_backgroundXOffset = 0.0f;
 };

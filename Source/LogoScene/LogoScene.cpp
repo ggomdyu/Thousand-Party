@@ -3,7 +3,7 @@
 #include "Diagnostics/Debug.h"
 #include "Platform/Environment.h"
 #include "Platform/Application.h"
-#include "Component/UISpriteRendererComponent.h"
+#include "Game/UISpriteRendererComponent.h"
 #include "Engine/TimeModule.h"
 #include "Engine/InputModule.h"
 

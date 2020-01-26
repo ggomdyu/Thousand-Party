@@ -13,6 +13,7 @@ namespace tgon
 {
 
 class TimeModule;
+class Material;
 
 } /* namespace tgon */
 
@@ -39,4 +40,6 @@ private:
 private:
     std::shared_ptr<tgon::Transform> m_transform;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
+    std::shared_ptr<tgon::Material> m_material;
+    float m_nightSkyXOffset = 0.0f;
 };

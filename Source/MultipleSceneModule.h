@@ -12,7 +12,7 @@
 enum class MultipleSceneChangeAnimType
 {
     NoAnim,
-    LeftToRightAnim,
+    RightToLeftAnim,
 };
 
 class MultipleSceneModule :
@@ -28,5 +28,6 @@ public:
 
 /**@section Variable */
 private:
+    std::shared_ptr<tgon::Scene> m_currScene2;
     MultipleSceneChangeAnimType m_sceneChangeAnimType;
 };

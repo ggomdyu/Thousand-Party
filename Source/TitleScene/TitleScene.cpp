@@ -5,7 +5,7 @@
 #include "Engine/InputModule.h"
 #include "Math/Mathematics.h"
 #include "IO/Path.h"
-#include "Component/UISpriteRendererComponent.h"
+#include "Game/UISpriteRendererComponent.h"
 
 #include "TitleScene.h"
 #include "FireFly.h"
@@ -164,7 +164,7 @@ void TitleScene::OnHandleInput()
     if (m_fadeInTimerHandle == tgon::TimerHandle() && (keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return)))
     {
         auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::GameObject::Create<MusicSelectScene>());
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::RightToLeftAnim, tgon::GameObject::Create<MusicSelectScene>());
     }
 }
 

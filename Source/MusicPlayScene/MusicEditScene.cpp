@@ -4,8 +4,8 @@
 #include "Engine/InputModule.h"
 #include "Engine/TimeModule.h"
 #include "Engine/TimerModule.h"
-#include "Component/UISpriteRendererComponent.h"
-#include "Component/UITextRendererComponent.h"
+#include "Game/UISpriteRendererComponent.h"
+#include "Game/UITextRendererComponent.h"
 #include "Diagnostics/Debug.h"
 
 #include "MusicEditScene.h"

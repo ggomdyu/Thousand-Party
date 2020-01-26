@@ -1,6 +1,6 @@
 #include "Platform/Application.h"
-#include "Component/UISpriteRendererComponent.h"
-#include "Component/UITextRendererComponent.h"
+#include "Game/UISpriteRendererComponent.h"
+#include "Game/UITextRendererComponent.h"
 #include "Engine/AssetModule.h"
 #include "Engine/TimeModule.h"
 #include "IO/Path.h"

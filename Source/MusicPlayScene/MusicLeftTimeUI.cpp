@@ -1,6 +1,6 @@
 #include "Math/Mathematics.h"
 #include "Platform/Application.h"
-#include "Component/UISpriteRendererComponent.h"
+#include "Game/UISpriteRendererComponent.h"
 #include "Engine/InputModule.h"
 #include "Engine/AssetModule.h"
 #include "Engine/TimeModule.h"
