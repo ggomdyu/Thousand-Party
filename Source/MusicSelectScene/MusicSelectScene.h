@@ -7,7 +7,8 @@
 #pragma once
 #include <memory>
 
-#include "Game/GameObject.h"
+#include "Game/Scene.h"
+#include "Math/Vector2.h"
 
 namespace tgon
 {
@@ -15,6 +16,7 @@ namespace tgon
 class GameObject;
 class TimeModule;
 class UITextRendererComponent;
+class Material;
 
 } /* namespace tgon */
 
@@ -23,7 +25,7 @@ class MusicSelector;
 class GameDataModule;
 
 class MusicSelectScene :
-    public tgon::GameObject
+    public tgon::Scene
 {
 public:
     TGON_DECLARE_RTTI(MusicSelectScene)
@@ -53,4 +55,6 @@ private:
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::UITextRendererComponent> m_musicNameRendererComponent;
     std::shared_ptr<tgon::UITextRendererComponent> m_musicArtistNameRendererComponent;
+    std::shared_ptr<tgon::Material> m_musicTextMaterial;
+    tgon::Vector2 m_musicTextOffset;
 };

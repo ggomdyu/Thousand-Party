@@ -4,6 +4,7 @@
 #include "Engine/AssetModule.h"
 #include "Engine/TimeModule.h"
 #include "IO/Path.h"
+#include "Graphics/OpenGL/OpenGLShaderCode.h"
 
 #include "MusicSelectScene.h"
 #include "MusicSelector.h"
@@ -119,7 +120,7 @@ void MusicSelectScene::CreateSpriteObjects()
     {
         tgon::Vector3(0.0f, 0.0f, 0.0f),
         tgon::Vector3(0.0f, 0.0f, 0.0f),
-        tgon::Vector3(static_cast<float>(-clientSize.width) * 0.5f - 50.0f, static_cast<float>(clientSize.height) * 0.5f + 250.0f, 0.0f),
+        tgon::Vector3(static_cast<float>(-clientSize.width) * 0.5f, static_cast<float>(clientSize.height) * 0.5f + 300.0f, 0.0f),
         tgon::Vector3(static_cast<float>(-clientSize.width) * 0.5f + 640.0f, static_cast<float>(clientSize.height) * 0.5f + 10.0f, 0.0f),
         tgon::Vector3(10000.0f, 0.0f, 0.0f),
     };
@@ -140,13 +141,19 @@ void MusicSelectScene::CreateSpriteObjects()
         object->GetTransform()->SetLocalPosition(texturePosList[i]);
         
         auto spriteRendererComponent = object->AddComponent<tgon::UISpriteRendererComponent>();
-        spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(texturePathList[i]));
+        auto texture = assetModule->GetResource<tgon::Texture>(texturePathList[i]);
+        spriteRendererComponent->SetTexture(texture);
         spriteRendererComponent->SetSortingLayer(sortingLayerList[i]);
         spriteRendererComponent->SetPivot(pivotList[i]);
         this->AddChild(object);
     }
 
     m_musicText = this->FindChild("MUSIC");
+    m_musicTextMaterial = std::make_shared<tgon::Material>(g_positionColorUVVert, g_uvOffsetFrag);
+    auto musicTextSpriteComponent = m_musicText->FindComponent<tgon::UISpriteRendererComponent>();
+    musicTextSpriteComponent->GetTexture()->SetWrapMode(tgon::WrapMode::Repeat);
+    musicTextSpriteComponent->SetMaterial(m_musicTextMaterial);
+
     m_selectText = this->FindChild("SELECT");
 }
     
@@ -159,17 +166,14 @@ void MusicSelectScene::Update()
     auto tickTime = m_timeModule->GetTickTime();
     
     // MUSIC
-    auto musicTextTransform = m_musicText->GetTransform();
-    auto musicTextPos = musicTextTransform->GetLocalPosition();
-    if (musicTextPos.x <= -270.0f - clientSize.width / 2)
+    if (m_musicTextOffset.x >= 220.0f / 1434.0f)
     {
-        musicTextTransform->SetLocalPosition(tgon::Vector3(-clientSize.width / 2 - 50.0f, clientSize.height / 2 + 250.0f, 0.0f));
+        m_musicTextOffset = {};
     }
-    else
-    {
-        musicTextPos += tgon::Vector3(-11.05f * tickTime, -10.15f * tickTime, 0.0f);
-        musicTextTransform->SetLocalPosition(musicTextPos);
-    }
+
+    m_musicTextOffset.x += tickTime * 0.01f;
+    m_musicTextOffset.y -= tickTime * 0.01f;
+    m_musicTextMaterial->SetParameter2f("uvOffset", m_musicTextOffset.x, m_musicTextOffset.y);
 
     // SELECT
     auto selectTextTransform = m_selectText->GetTransform();

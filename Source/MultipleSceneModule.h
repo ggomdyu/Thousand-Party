@@ -5,9 +5,8 @@
  */
 
 #pragma once
-#include <unordered_map>
-
-#include "Engine/SceneModule.h"
+#include "Game/Scene.h"
+#include "Engine/Module.h"
 
 enum class MultipleSceneChangeAnimType
 {
@@ -16,7 +15,7 @@ enum class MultipleSceneChangeAnimType
 };
 
 class MultipleSceneModule :
-    public tgon::SceneModule
+    public tgon::Module
 {
 public:
     TGON_DECLARE_RTTI(MultipleSceneModule)
@@ -24,10 +23,12 @@ public:
 /**@section Method */
 public:
     void Update() override;
-    void ChangeScene(MultipleSceneChangeAnimType sceneChangeAnimType, const std::shared_ptr<tgon::GameObject>& scene);
+    void ChangeScene(MultipleSceneChangeAnimType sceneChangeAnimType, const std::shared_ptr<tgon::Scene>& scene);
 
 /**@section Variable */
 private:
-    std::shared_ptr<tgon::Scene> m_currScene2;
+    std::shared_ptr<tgon::Scene> m_scene1;
+    std::shared_ptr<tgon::Scene> m_scene2;
+    float m_animElapsedTime;
     MultipleSceneChangeAnimType m_sceneChangeAnimType;
 };

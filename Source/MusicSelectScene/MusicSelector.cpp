@@ -150,7 +150,7 @@ void MusicSelector::OnHandleInput()
         }
         
         auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::GameObject::Create<MusicPlayScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]));
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::Scene::Create<MusicPlayScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]));
 
     }
     else if (keyboard->IsKeyDown(tgon::KeyCode::F1))
@@ -162,7 +162,7 @@ void MusicSelector::OnHandleInput()
         }
 
         auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::GameObject::Create<MusicEditScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]));
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::Scene::Create<MusicEditScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]));
     }
 }
 

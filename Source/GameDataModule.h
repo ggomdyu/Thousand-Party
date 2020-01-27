@@ -15,8 +15,13 @@ namespace tgon
 
 class AudioPlayer;
 class AssetModule;
+class Scene;
 
 } /* namespace tgon */
+
+class LogoScene;
+class TitleScene;
+class MusicSelectScene;
 
 struct NoteInfo
 {
@@ -47,14 +52,38 @@ public:
     void Initialize() override;
     void Update() override;
     const std::vector<MusicInfo>& GetMusicInfos() const noexcept;
-    
+    template <typename _SceneType>
+    std::shared_ptr<_SceneType> GetCachedScene() noexcept;
+
 private:
     void InitializeMusicInfos();
     MusicInfo ParseMusicInfo(const std::string& noteDirectory);
     std::vector<NoteInfo> ParseNoteInfo(const std::string& noteDirectory, float bpm, float sync);
     void PreloadMusicCoverTexture(const std::shared_ptr<tgon::AssetModule>& assetModule, const std::string& noteDirectory);
+    void PreloadScene();
     
 /**@section Variable */
 private:
     std::vector<MusicInfo> m_musicInfos;
+    std::shared_ptr<LogoScene> m_cachedLogoScene;
+    std::shared_ptr<TitleScene> m_cachedTitleScene;
+    std::shared_ptr<MusicSelectScene> m_cachedMusicSelectScene;
 };
+
+template <>
+inline std::shared_ptr<LogoScene> GameDataModule::GetCachedScene() noexcept
+{
+    return m_cachedLogoScene;
+}
+
+template <>
+inline std::shared_ptr<TitleScene> GameDataModule::GetCachedScene() noexcept
+{
+    return m_cachedTitleScene;
+}
+
+template <>
+inline std::shared_ptr<MusicSelectScene> GameDataModule::GetCachedScene() noexcept
+{
+    return m_cachedMusicSelectScene;
+}

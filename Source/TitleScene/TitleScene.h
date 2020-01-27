@@ -7,7 +7,7 @@
 #pragma once
 #include <memory>
 
-#include "Game/GameObject.h"
+#include "Game/Scene.h"
 #include "Engine/TimerHandle.h"
 
 namespace tgon
@@ -20,7 +20,7 @@ class UISpriteRendererComponent;
 } /* namespace tgon */
 
 class TitleScene :
-    public tgon::GameObject
+    public tgon::Scene
 {
 public:
     TGON_DECLARE_RTTI(TitleScene)
@@ -37,6 +37,7 @@ public:
 public:
     void Initialize() override;
     void Update() override;
+    void OnStart() override;
     
 private:
     void CreateNightSkyObject();

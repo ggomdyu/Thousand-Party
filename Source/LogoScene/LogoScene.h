@@ -7,7 +7,7 @@
 #pragma once
 #include <memory>
 
-#include "Game/GameObject.h"
+#include "Game/Scene.h"
 
 namespace tgon
 {
@@ -19,15 +19,10 @@ class UISpriteRendererComponent;
 } /* namespace tgon */
 
 class LogoScene :
-    public tgon::GameObject
+    public tgon::Scene
 {
 public:
     TGON_DECLARE_RTTI(LogoScene)
-
-        LogoScene()
-    {
-        int n = 3;
-    }
 
 /**@section Method */
 public:

@@ -14,16 +14,10 @@
 #include "../MusicSelectScene/MusicSelectScene.h"
 #include "../MusicPlayScene/Note.h"
 #include "../MultipleSceneModule.h"
+#include "../GameDataModule.h"
 
 TitleScene::TitleScene()
 {
-}
-
-void TitleScene::Update()
-{
-    Super::Update();
-
-    this->OnHandleInput();
 }
 
 TitleScene::~TitleScene()
@@ -36,12 +30,23 @@ void TitleScene::Initialize()
     this->CreateNightSkyObject();
     this->CreateSpriteObjects();
     this->CreateFireFlyObjects();
-    
+
+    m_inputModule = tgon::Application::GetEngine()->FindModule<tgon::InputModule>();
+}
+
+void TitleScene::Update()
+{
+    Super::Update();
+
+    this->OnHandleInput();
+}
+
+void TitleScene::OnStart()
+{
     auto engine = tgon::Application::GetEngine();
     auto timerModule = engine->FindModule<tgon::TimerModule>();
     auto timeModule = engine->FindModule<tgon::TimeModule>();
-    
-    m_inputModule = engine->FindModule<tgon::InputModule>();
+
     m_fadeInTimerHandle = timerModule->SetTimer([this, timeModule, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule)](tgon::TimerHandle timerHandle)
     {
         auto blendColor = m_fadeInSpriteRendererComponent->GetBlendColor();
@@ -55,21 +60,21 @@ void TitleScene::Initialize()
             m_fadeInTimerHandle = {};
             return;
         }
-        
+
         blendColor.a = std::max(0.0f, blendColor.a - 1.0f * timeModule->GetTickTime());
         m_fadeInSpriteRendererComponent->SetBlendColor(blendColor);
     }, 0.0f, true);
-    
+
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     m_girlMoveTimerHandler = timerModule->SetTimer([this, clientSize, timeModule, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule)](tgon::TimerHandle timerHandle)
     {
-        auto destXPos = -clientSize.width / 2 + 640.0f;
+        auto destXPos = -clientSize.width / 2 + 593.0f;
         auto position = m_girl->GetTransform()->GetLocalPosition();
         if (std::abs(position.x - destXPos) <= 0.0001f)
         {
             position.x = destXPos;
             m_girl->GetTransform()->SetLocalPosition(position);
-            
+
             if (auto timerModule = weakTimerModule.lock(); timerModule != nullptr)
             {
                 timerModule->ClearTimer(timerHandle);
@@ -163,8 +168,10 @@ void TitleScene::OnHandleInput()
     auto keyboard = m_inputModule->GetKeyboard();
     if (m_fadeInTimerHandle == tgon::TimerHandle() && (keyboard->IsKeyUp(tgon::KeyCode::Space) || keyboard->IsKeyUp(tgon::KeyCode::Return)))
     {
-        auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene(MultipleSceneChangeAnimType::RightToLeftAnim, tgon::GameObject::Create<MusicSelectScene>());
+        auto engine = tgon::Application::GetEngine();
+        auto gameDataModule = engine->FindModule<GameDataModule>();
+        auto sceneModule = engine->FindModule<MultipleSceneModule>();
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::RightToLeftAnim, gameDataModule->GetCachedScene<MusicSelectScene>());
     }
 }
 

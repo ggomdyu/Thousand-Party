@@ -27,15 +27,15 @@ tgon::Vector3 NoteLineUI::GetNoteStartPosition(int32_t index) const
 
 tgon::Vector3 NoteLineUI::GetNoteHitPosition(int32_t index) const
 {
-    auto weakGameObject = this->GetGameObject();
-    if (weakGameObject.expired())
+    auto weakOwner = this->GetGameObject();
+    if (weakOwner.expired())
     {
         return {};
     }
 
-    auto gameObject = weakGameObject.lock();
+    auto owner = weakOwner.lock();
 
-    tgon::Vector3 ret = m_lines[index]->GetTransform()->GetLocalPosition() + gameObject->GetTransform()->GetLocalPosition();
+    tgon::Vector3 ret = m_lines[index]->GetTransform()->GetLocalPosition() + owner->GetTransform()->GetLocalPosition();
     ret.x -= 303.0f;
     return ret;
 }

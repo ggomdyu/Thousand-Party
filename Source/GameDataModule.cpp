@@ -1,10 +1,14 @@
 #include "PrecompiledHeader.h"
 
+#include "Game/Scene.h"
 #include "Engine/AssetModule.h"
 #include "Platform/Application.h"
 #include "IO/Path.h"
 #include "IO/Directory.h"
 
+#include "LogoScene/LogoScene.h"
+#include "TitleScene/TitleScene.h"
+#include "MusicSelectScene/MusicSelectScene.h"
 #include "GameDataModule.h"
 
 void GameDataModule::Initialize()
@@ -12,6 +16,7 @@ void GameDataModule::Initialize()
     Super::Initialize();
     
     this->InitializeMusicInfos();
+    this->PreloadScene();
 }
 
 void GameDataModule::Update()
@@ -192,4 +197,11 @@ void GameDataModule::PreloadMusicCoverTexture(const std::shared_ptr<tgon::AssetM
         assetModule->GetResource<tgon::Texture>(jpgCoverPath);
         return;
     }
+}
+
+void GameDataModule::PreloadScene()
+{
+    m_cachedLogoScene = tgon::Scene::Create<LogoScene>();
+    m_cachedTitleScene = tgon::Scene::Create<TitleScene>();
+    m_cachedMusicSelectScene = tgon::Scene::Create<MusicSelectScene>();
 }

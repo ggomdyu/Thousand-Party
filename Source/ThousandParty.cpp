@@ -22,9 +22,10 @@ void ThousandParty::Initialize()
     Super::Initialize();
     
     this->RemoveModule<tgon::SceneModule>();
-    this->AddModule<MultipleSceneModule>()->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::GameObject::Create<LogoScene>());
-    this->AddModule<GameDataModule>();
 
     auto uiRendererModule = this->FindModule<tgon::UIRendererModule>();
     uiRendererModule->SetMaxSortingLayer(10);
+
+    auto gameDataModule = this->AddModule<GameDataModule>();
+    this->AddModule<MultipleSceneModule>()->ChangeScene(MultipleSceneChangeAnimType::NoAnim, gameDataModule->GetCachedScene<LogoScene>());
 }

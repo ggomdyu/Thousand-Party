@@ -8,6 +8,7 @@
 #include "Engine/InputModule.h"
 
 #include "../TitleScene/TitleScene.h"
+#include "../GameDataModule.h"
 #include "../MultipleSceneModule.h"
 
 #include "LogoScene.h"
@@ -23,8 +24,11 @@ void LogoScene::Update()
     auto elapsedTime = tgon::Environment::GetTickCount() - m_beginTime;
     if (elapsedTime >= 8500)
     {
-        auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::GameObject::Create<TitleScene>());
+        auto engine = tgon::Application::GetEngine();
+
+        auto gameDataModule = engine->FindModule<GameDataModule>();
+        auto sceneModule = engine->FindModule<MultipleSceneModule>();
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, gameDataModule->GetCachedScene<TitleScene>());
     }
     else if (elapsedTime >= 7500)
     {

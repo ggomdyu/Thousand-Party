@@ -5,10 +5,10 @@
  */
 
 #pragma once
-#include "Game/GameObject.h"
+#include "Game/Scene.h"
 
 class RenderTestScene :
-    public tgon::GameObject
+    public tgon::Scene
 {
 public:
     TGON_DECLARE_RTTI(RenderTestScene)
