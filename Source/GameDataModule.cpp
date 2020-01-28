@@ -9,6 +9,7 @@
 #include "LogoScene/LogoScene.h"
 #include "TitleScene/TitleScene.h"
 #include "MusicSelectScene/MusicSelectScene.h"
+#include "MusicPlayScene/MusicPlayScene.h"
 #include "GameDataModule.h"
 
 void GameDataModule::Initialize()
@@ -204,4 +205,5 @@ void GameDataModule::PreloadScene()
     m_cachedLogoScene = tgon::Scene::Create<LogoScene>();
     m_cachedTitleScene = tgon::Scene::Create<TitleScene>();
     m_cachedMusicSelectScene = tgon::Scene::Create<MusicSelectScene>();
+    m_cachedMusicPlayScene = tgon::Scene::Create<MusicPlayScene>();
 }

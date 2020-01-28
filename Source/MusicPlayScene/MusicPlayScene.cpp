@@ -3,6 +3,7 @@
 #include "Engine/AudioModule.h"
 #include "Engine/TimeModule.h"
 #include "Engine/TimerModule.h"
+#include "Engine/TaskModule.h"
 #include "Game/UISpriteRendererComponent.h"
 #include "Game/UITextRendererComponent.h"
 
@@ -12,14 +13,11 @@
 #include "NoteLineUI.h"
 #include "MusicLeftTimeUI.h"
 
-MusicPlayScene::MusicPlayScene(const MusicInfo& musicInfo) :
-    m_musicInfo(musicInfo),
+MusicPlayScene::MusicPlayScene() :
     m_audioPlayer(*tgon::AudioPlayer::Create()),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
     m_audioModule(tgon::Application::GetEngine()->FindModule<tgon::AudioModule>())
 {
-    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_audioPlayer.SetAudioBuffer(assetModule->GetResource<tgon::AudioBuffer>(musicInfo.musicPath));
 }
 
 void MusicPlayScene::Initialize()
@@ -34,7 +32,6 @@ void MusicPlayScene::Initialize()
     this->InitializeHoldNoteObjectPool();
     this->InitializeMusicNameObject();
     this->InitializeMusicArtistNameObject();
-    this->InitializeTimer();
 }
 
 void MusicPlayScene::Update()
@@ -53,6 +50,38 @@ void MusicPlayScene::Update()
     m_musicLeftTime->SetProgress(m_elapsedTime / m_audioPlayer.GetTotalProgressInSeconds());
     
     this->UpdateNotes();
+}
+
+void MusicPlayScene::OnActivate()
+{
+    m_musicNameRendererComponent->SetText(m_musicInfo.musicName);
+    m_musicArtistNameRendererComponent->SetText(m_musicInfo.musicAuthorName);
+
+    auto taskModule = tgon::Application::GetEngine()->FindModule<tgon::TaskModule>();
+    taskModule->GetGlobalDispatchQueue().AddAsyncTask([&, taskModule]()
+    {
+        auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+        m_audioPlayer.SetAudioBuffer(assetModule->GetResource<tgon::AudioBuffer>(m_musicInfo.musicPath));
+        
+        taskModule->GetMainDispatchQueue().AddAsyncTask([&]()
+        {
+            auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
+            timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
+            {
+                m_audioPlayer.Play(1.0f, false);
+                m_isMusicWaiting = false;
+            }, 3.0f, false);
+            timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
+            {
+                m_elapsedTime = m_audioPlayer.GetProgressInSeconds();
+            }, 0.5f, true);
+        });
+    });
+}
+
+void MusicPlayScene::SetMusicInfo(const MusicInfo& musicInfo)
+{
+    m_musicInfo = musicInfo;
 }
 
 void MusicPlayScene::UpdateNotes()
@@ -229,7 +258,6 @@ void MusicPlayScene::InitializeMusicNameObject()
     textComponent->SetRect(tgon::I32Rect(0, 0, 500, 50));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
     textComponent->SetSortingLayer(4);
-    textComponent->SetText(m_musicInfo.musicName);
 
     m_musicNameRendererComponent = textComponent;
 
@@ -249,25 +277,10 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
     textComponent->SetRect(tgon::I32Rect(-0, 0, 500, 50));
     textComponent->SetTextAlignment(tgon::TextAlignment::UpperLeft);
     textComponent->SetSortingLayer(4);
-    textComponent->SetText(m_musicInfo.musicAuthorName);
-
+    
     m_musicArtistNameRendererComponent = textComponent;
 
     this->AddChild(object);
-}
-
-void MusicPlayScene::InitializeTimer()
-{
-    auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
-    timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
-    {
-        m_audioPlayer.Play(1.0f, false);
-        m_isMusicWaiting = false;
-    }, 3.0f, false);
-    timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
-    {
-        m_elapsedTime = m_audioPlayer.GetProgressInSeconds();
-    }, 0.5f, true);
 }
 
 MusicPlayScene::NoteObjectPair MusicPlayScene::GetNoteObjectFromPool()

@@ -41,7 +41,7 @@ void TitleScene::Update()
     this->OnHandleInput();
 }
 
-void TitleScene::OnStart()
+void TitleScene::OnActivate()
 {
     auto engine = tgon::Application::GetEngine();
     auto timerModule = engine->FindModule<tgon::TimerModule>();

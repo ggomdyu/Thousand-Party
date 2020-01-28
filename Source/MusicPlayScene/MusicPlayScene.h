@@ -42,12 +42,14 @@ private:
 
 /**@section Constructor */
 public:
-    explicit MusicPlayScene(const MusicInfo& musicInfo);
+    MusicPlayScene();
     
 /**@section Method */
 public:
     void Initialize() override;
     void Update() override;
+    void OnActivate() override;
+    void SetMusicInfo(const MusicInfo& musicInfo);
     
 private:
     void InitializeBackgroundObject();
@@ -62,7 +64,6 @@ private:
     void UpdateBackgroundObjectPosition();
     void InitializeMusicNameObject();
     void InitializeMusicArtistNameObject();
-    void InitializeTimer();
 
 /**@section Variable */
 private:

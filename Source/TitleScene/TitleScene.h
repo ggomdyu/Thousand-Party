@@ -37,7 +37,7 @@ public:
 public:
     void Initialize() override;
     void Update() override;
-    void OnStart() override;
+    void OnActivate() override;
     
 private:
     void CreateNightSkyObject();

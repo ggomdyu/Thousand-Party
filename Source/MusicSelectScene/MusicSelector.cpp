@@ -149,8 +149,13 @@ void MusicSelector::OnHandleInput()
             timerModule->ClearTimer(m_animationTimer);
         }
         
-        auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::Scene::Create<MusicPlayScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]));
+        auto engine = tgon::Application::GetEngine();
+        auto gameDataModule = engine->FindModule<GameDataModule>();
+        auto cachedScene = gameDataModule->GetCachedScene<MusicPlayScene>();
+        cachedScene->SetMusicInfo(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
+        
+        auto sceneModule = engine->FindModule<MultipleSceneModule>();
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::RightToLeftAnim, cachedScene);
 
     }
     else if (keyboard->IsKeyDown(tgon::KeyCode::F1))

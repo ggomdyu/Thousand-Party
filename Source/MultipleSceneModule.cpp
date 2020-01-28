@@ -44,18 +44,19 @@ void MultipleSceneModule::Update()
 void MultipleSceneModule::ChangeScene(MultipleSceneChangeAnimType sceneChangeAnimType, const std::shared_ptr<tgon::Scene>& scene)
 {
     m_sceneChangeAnimType = sceneChangeAnimType;
+    m_animElapsedTime = 0.0f;
 
-    scene->OnStart();
+    scene->OnActivate();
 
     if (sceneChangeAnimType == MultipleSceneChangeAnimType::NoAnim)
     {
         if (m_scene1 != nullptr)
         {
-            m_scene1->OnFinish();
+            m_scene1->OnDeactivate();
         }
         if (m_scene2 != nullptr)
         {
-            m_scene2->OnFinish();
+            m_scene2->OnDeactivate();
         }
 
         m_scene1 = scene;
@@ -96,7 +97,7 @@ void MultipleSceneModule::ChangeScene(MultipleSceneChangeAnimType sceneChangeAni
             {
                 if (m_scene1 != nullptr)
                 {
-                    m_scene1->OnFinish();
+                    m_scene1->OnDeactivate();
                 }
 
                 m_scene1 = std::move(m_scene2);
