@@ -120,8 +120,8 @@ void MusicSelectScene::CreateSpriteObjects()
     {
         tgon::Vector3(0.0f, 0.0f, 0.0f),
         tgon::Vector3(0.0f, 0.0f, 0.0f),
-        tgon::Vector3(static_cast<float>(-clientSize.width) * 0.5f, static_cast<float>(clientSize.height) * 0.5f + 300.0f, 0.0f),
-        tgon::Vector3(static_cast<float>(-clientSize.width) * 0.5f + 640.0f, static_cast<float>(clientSize.height) * 0.5f + 10.0f, 0.0f),
+        tgon::Vector3(static_cast<float>(-clientSize.width) * 0.5f, static_cast<float>(clientSize.height) * 0.5f + 305.0f, 0.0f),
+        tgon::Vector3(static_cast<float>(clientSize.width) * 0.5f, 10.0f, 0.0f),
         tgon::Vector3(10000.0f, 0.0f, 0.0f),
     };
     tgon::Vector2 pivotList[] =
@@ -129,7 +129,7 @@ void MusicSelectScene::CreateSpriteObjects()
         tgon::Vector2(0.5f, 0.5f),
         tgon::Vector2(0.5f, 0.5f),
         tgon::Vector2(0.0f, 0.0f),
-        tgon::Vector2(0.0f, 0.0f),
+        tgon::Vector2(1.0f, 0.0f),
         tgon::Vector2(0.0f, 1.0f),
     };
     
@@ -148,13 +148,22 @@ void MusicSelectScene::CreateSpriteObjects()
         this->AddChild(object);
     }
 
+    auto uberFragShaderCode = std::string("#version 330 core\n#define USE_SCISSOR 1\n#define USE_UV_OFFSET 1\n") + g_uberShaderFrag;
+
     m_musicText = this->FindChild("MUSIC");
-    m_musicTextMaterial = std::make_shared<tgon::Material>(g_positionColorUVVert, g_uvOffsetFrag);
+    m_musicTextMaterial = std::make_shared<tgon::Material>(g_positionColorUVVert, uberFragShaderCode.c_str());
+    m_musicTextMaterial->SetParameter4f("clipUV", 0.0f, 0.0f, 0.5f, 1.0f);
     auto musicTextSpriteComponent = m_musicText->FindComponent<tgon::UISpriteRendererComponent>();
     musicTextSpriteComponent->GetTexture()->SetWrapMode(tgon::WrapMode::Repeat);
     musicTextSpriteComponent->SetMaterial(m_musicTextMaterial);
 
     m_selectText = this->FindChild("SELECT");
+    m_selectTextMaterial = std::make_shared<tgon::Material>(g_positionColorUVVert, uberFragShaderCode.c_str());
+    m_selectTextMaterial->SetParameter2f("uvOffset", m_selectTextOffset, m_selectTextOffset);
+    m_selectTextMaterial->SetParameter4f("clipUV", 0.5f, 0.0f,1.0f, 1.0f);
+    auto selectTextSpriteComponent = m_selectText->FindComponent<tgon::UISpriteRendererComponent>();
+    selectTextSpriteComponent->GetTexture()->SetWrapMode(tgon::WrapMode::Repeat);
+    selectTextSpriteComponent->SetMaterial(m_selectTextMaterial);
 }
     
 void MusicSelectScene::Update()
@@ -166,25 +175,20 @@ void MusicSelectScene::Update()
     auto tickTime = m_timeModule->GetTickTime();
     
     // MUSIC
-    if (m_musicTextOffset.x >= 220.0f / 1434.0f)
+    if (m_musicTextOffset >= 220.0f / 567.0f)
     {
         m_musicTextOffset = {};
     }
 
-    m_musicTextOffset.x += tickTime * 0.01f;
-    m_musicTextOffset.y -= tickTime * 0.01f;
-    m_musicTextMaterial->SetParameter2f("uvOffset", m_musicTextOffset.x, m_musicTextOffset.y);
+    m_musicTextOffset += tickTime * 0.03f;
+    m_musicTextMaterial->SetParameter2f("uvOffset", m_musicTextOffset, -m_musicTextOffset);
 
     // SELECT
-    auto selectTextTransform = m_selectText->GetTransform();
-    auto selectTextPos = selectTextTransform->GetLocalPosition();
-    if (selectTextPos.x <= 418.0f - clientSize.width / 2)
+    if (m_selectTextOffset >= -0.55f + 222.0f / 591.0f)
     {
-        selectTextTransform->SetLocalPosition(tgon::Vector3(-clientSize.width / 2 + 640.0f, clientSize.height / 2 + 10.0f, 0.0f));
+        m_selectTextOffset = -0.55f;
     }
-    else
-    {
-        selectTextPos += tgon::Vector3(-11.1f * tickTime, -11.15f * tickTime, 0.0f);
-        selectTextTransform->SetLocalPosition(selectTextPos);
-    }
+
+    m_selectTextOffset += tickTime * 0.03f;
+    m_selectTextMaterial->SetParameter2f("uvOffset", m_selectTextOffset, -m_selectTextOffset);
 }

@@ -56,5 +56,7 @@ private:
     std::shared_ptr<tgon::UITextRendererComponent> m_musicNameRendererComponent;
     std::shared_ptr<tgon::UITextRendererComponent> m_musicArtistNameRendererComponent;
     std::shared_ptr<tgon::Material> m_musicTextMaterial;
-    tgon::Vector2 m_musicTextOffset;
+    std::shared_ptr<tgon::Material> m_selectTextMaterial;
+    float m_musicTextOffset = {};
+    float m_selectTextOffset = -0.55f;
 };
