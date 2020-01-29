@@ -15,15 +15,13 @@ void NightSky::Initialize()
 {
     Super::Initialize();
     
-    auto weakGameObject = this->GetGameObject();
-    if (weakGameObject.expired())
+    auto owner = this->GetGameObject().lock();
+    if (owner == nullptr)
     {
         return;
     }
 
-    auto gameObject = weakGameObject.lock();
-
-    m_transform = gameObject->GetTransform();
+    m_transform = owner->GetTransform();
 
     this->InitializeSpriteComponent();
     this->InitializePosition();

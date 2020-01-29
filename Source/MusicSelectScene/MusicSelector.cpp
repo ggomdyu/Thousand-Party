@@ -124,7 +124,7 @@ void MusicSelector::OnHandleInput()
 
             if (OnChangeSelectedMusic != nullptr)
             {
-                OnChangeSelectedMusic(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
+                OnChangeSelectedMusic(m_gameDataModule.lock()->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
             }
         }
     }
@@ -137,7 +137,7 @@ void MusicSelector::OnHandleInput()
 
             if (OnChangeSelectedMusic != nullptr)
             {
-                OnChangeSelectedMusic(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
+                OnChangeSelectedMusic(m_gameDataModule.lock()->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
             }
         }
     }
@@ -152,7 +152,7 @@ void MusicSelector::OnHandleInput()
         auto engine = tgon::Application::GetEngine();
         auto gameDataModule = engine->FindModule<GameDataModule>();
         auto cachedScene = gameDataModule->GetCachedScene<MusicPlayScene>();
-        cachedScene->SetMusicInfo(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
+        cachedScene->SetMusicInfo(m_gameDataModule.lock()->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]);
         
         auto sceneModule = engine->FindModule<MultipleSceneModule>();
         sceneModule->ChangeScene(MultipleSceneChangeAnimType::RightToLeftAnim, cachedScene);
@@ -167,7 +167,7 @@ void MusicSelector::OnHandleInput()
         }
 
         auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::Scene::Create<MusicEditScene>(m_gameDataModule->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]));
+        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, tgon::Scene::Create<MusicEditScene>(m_gameDataModule.lock()->GetMusicInfos()[m_currSelectedCoverImageIndex + 3]));
     }
 }
 

@@ -13,10 +13,8 @@
 #include "../GameDataModule.h"
 
 MusicSelectScene::MusicSelectScene() :
-    m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
-    m_gameDataModule(tgon::Application::GetEngine()->FindModule<GameDataModule>())
+    m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>())
 {
-    Super::Update();
 }
 
 void MusicSelectScene::Initialize()
@@ -62,7 +60,8 @@ void MusicSelectScene::CreateMusicNameObject()
     textComponent->SetTextAlignment(tgon::TextAlignment::MiddleCenter);
     textComponent->SetSortingLayer(4);
     
-    auto musicInfos = m_gameDataModule->GetMusicInfos();
+    auto gameDataModule = tgon::Application::GetEngine()->FindModule<GameDataModule>();
+    auto musicInfos = gameDataModule->GetMusicInfos();
     if (musicInfos.size() > 0)
     {
         textComponent->SetText(musicInfos[0].musicName);
@@ -88,7 +87,8 @@ void MusicSelectScene::CreateMusicArtistNameObject()
     textComponent->SetTextAlignment(tgon::TextAlignment::MiddleCenter);
     textComponent->SetSortingLayer(4);
     
-    auto musicInfos = m_gameDataModule->GetMusicInfos();
+    auto gameDataModule = tgon::Application::GetEngine()->FindModule<GameDataModule>();
+    auto musicInfos = gameDataModule->GetMusicInfos();
     if (musicInfos.size() > 0)
     {
         textComponent->SetText(musicInfos[0].musicAuthorName);

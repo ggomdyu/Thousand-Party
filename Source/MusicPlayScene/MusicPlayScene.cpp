@@ -23,7 +23,7 @@ MusicPlayScene::MusicPlayScene() :
 void MusicPlayScene::Initialize()
 {
     Super::Initialize();
-    
+
     this->InitializeBackgroundObject();
     this->InitializeNoteHitInfo();
     this->InitializeNoteLineUI();
@@ -37,7 +37,7 @@ void MusicPlayScene::Initialize()
 void MusicPlayScene::Update()
 {
     Super::Update();
-    
+
     this->UpdateBackgroundObjectPosition();
     
     m_elapsedTime += m_timeModule->GetTickTime();

@@ -20,12 +20,6 @@ double EaseOutBack(double t)
     return 1 + (--t) * t * (2.70158 * t + 1.70158);
 }
 
-double EaseOutCirc(double t)
-{
-    return sqrt(t);
-}
-
-
 } /* namespace */
 
 void MultipleSceneModule::Update()
@@ -80,7 +74,7 @@ void MultipleSceneModule::ChangeScene(MultipleSceneChangeAnimType sceneChangeAni
 
         auto timerModule = engine->FindModule<tgon::TimerModule>();
         auto timeModule = engine->FindModule<tgon::TimeModule>();
-        timerModule->SetTimer([&, timeModule, timerModule, clientSize](tgon::TimerHandle timerHandle)
+        timerModule->SetTimer([&, timeModule, timerModule = std::weak_ptr<tgon::TimerModule>(timerModule), clientSize](tgon::TimerHandle timerHandle)
         {
             if (m_scene1 == nullptr || m_scene2 == nullptr)
             {
@@ -103,7 +97,7 @@ void MultipleSceneModule::ChangeScene(MultipleSceneChangeAnimType sceneChangeAni
                 m_scene1 = std::move(m_scene2);
                 m_scene1->GetTransform()->SetLocalPosition({0.0f, 0.0f, 0.0f});
 
-                timerModule->ClearTimer(timerHandle);
+                timerModule.lock()->ClearTimer(timerHandle);
             }
         }, 0.0f, true);
     }

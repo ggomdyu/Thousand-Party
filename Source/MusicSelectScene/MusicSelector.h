@@ -55,7 +55,7 @@ public:
 private:
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::InputModule> m_inputModule;
-    std::shared_ptr<GameDataModule> m_gameDataModule;
+    std::weak_ptr<GameDataModule> m_gameDataModule;
     std::shared_ptr<tgon::GameObject> m_highlight;
     std::vector<std::shared_ptr<tgon::GameObject>> m_coverImageObjects;
     tgon::TimerHandle m_animationTimer;
