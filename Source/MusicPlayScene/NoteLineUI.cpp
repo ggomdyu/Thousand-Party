@@ -59,7 +59,7 @@ void NoteLineUI::InitializeLines()
 
         auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
         auto spriteRendererComponent = lineObject->AddComponent<tgon::UISpriteRendererComponent>();;
-        spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/MusicPlayScene/ring.png"));
+        spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/UI/MusicPlayScene/ring.png"));
         
         m_lines[i] = lineObject;
     }

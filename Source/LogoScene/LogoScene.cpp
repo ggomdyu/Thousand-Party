@@ -94,12 +94,20 @@ void LogoScene::CreateSpriteObject()
     {
         u8"Resource/Background/IntroScene/Team_logo.png",
         u8"Resource/Background/IntroScene/ON_logo.png",
-        u8"Resource/UI/Common/FadeInOut.png",
+        u8"Resource/UI/Common/board01.png",
+    };
+    tgon::Vector3 scaleList[] =
+    {
+        tgon::Vector3(1.0f, 1.0f, 1.0f),
+        tgon::Vector3(1.0f, 1.0f, 1.0f),
+        tgon::Vector3(858.0f, 462.0f, 1.0f),
     };
 
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
         auto object = tgon::GameObject::Create(tgon::StringHash(std::to_string(i)));
+        object->GetTransform()->SetLocalScale(scaleList[i]);
+
         m_logoSpriteRendererComponents[i] = object->AddComponent<tgon::UISpriteRendererComponent>();
         m_logoSpriteRendererComponents[i]->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f));
         m_logoSpriteRendererComponents[i]->SetTexture(std::make_shared<tgon::Texture>(*Image::Create(texturePathList[i]), tgon::FilterMode::Linear, tgon::WrapMode::Repeat, false, false));
