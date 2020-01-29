@@ -102,7 +102,7 @@ void LogoScene::CreateSpriteObject()
         auto object = tgon::GameObject::Create(tgon::StringHash(std::to_string(i)));
         m_logoSpriteRendererComponents[i] = object->AddComponent<tgon::UISpriteRendererComponent>();
         m_logoSpriteRendererComponents[i]->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f));
-        m_logoSpriteRendererComponents[i]->SetTexture(std::make_shared<tgon::Texture>(*Image::Create(texturePathList[i]), tgon::FilterMode::Linear, tgon::WrapMode::Repeat, true, false));
+        m_logoSpriteRendererComponents[i]->SetTexture(std::make_shared<tgon::Texture>(*Image::Create(texturePathList[i]), tgon::FilterMode::Linear, tgon::WrapMode::Repeat, false, false));
         
         this->AddChild(object);
     }
