@@ -106,13 +106,13 @@ void TitleScene::CreateSpriteObjects()
         u8"Resource/UI/TitleScene/gameLogo.png",
         u8"Resource/UI/TitleScene/pressDesc.png",
         u8"Resource/UI/TitleScene/creatorBtn.png",
-        u8"Resource/UI/Common/FadeInOut.png",
+        u8"Resource/UI/Common/board01.png",
     };
 
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
     float halfWindowWidth = clientSize.width * 0.5f;
     float halfWindowHeight = clientSize.height * 0.5f;
-    tgon::Vector3 texturePosList[] =
+    tgon::Vector3 posList[] =
     {
         tgon::Vector3(-halfWindowWidth + 640.0f, halfWindowHeight - 360.0f, 0.0f),
         tgon::Vector3(-halfWindowWidth + 612.0f, halfWindowHeight - 388.0f, 0.0f),
@@ -122,7 +122,16 @@ void TitleScene::CreateSpriteObjects()
         tgon::Vector3(-halfWindowWidth, -halfWindowHeight, 0.0f),
         tgon::Vector3(0.0f, 0.0f, 0.0f),
     };
-    
+    tgon::Vector3 scaleList[] =
+    {
+        tgon::Vector3(1.0f, 1.0f, 1.0f),
+        tgon::Vector3(1.0f, 1.0f, 1.0f),
+        tgon::Vector3(1.0f, 1.0f, 1.0f),
+        tgon::Vector3(1.0f, 1.0f, 1.0f),
+        tgon::Vector3(1.0f, 1.0f, 1.0f),
+        tgon::Vector3(1.0f, 1.0f, 1.0f),
+        tgon::Vector3(858.0f, 462.0f, 1.0f),
+    };
     tgon::Vector2 pivotList[] =
     {
         tgon::Vector2(0.5f, 0.5f),
@@ -139,7 +148,8 @@ void TitleScene::CreateSpriteObjects()
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
         auto object = tgon::GameObject::Create(tgon::Path::GetFileNameWithoutExtension(texturePathList[i]));
-        object->GetTransform()->SetLocalPosition(texturePosList[i]);
+        object->GetTransform()->SetLocalPosition(posList[i]);
+        object->GetTransform()->SetLocalScale(scaleList[i]);
         
         auto spriteRendererComponent = object->AddComponent<tgon::UISpriteRendererComponent>();
         spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(texturePathList[i]));
@@ -149,7 +159,7 @@ void TitleScene::CreateSpriteObjects()
     }
 
     m_girl = this->FindChild(u8"girl");
-    m_fadeInSpriteRendererComponent = this->FindChild(u8"FadeInOut")->FindComponent<tgon::UISpriteRendererComponent>();
+    m_fadeInSpriteRendererComponent = this->FindChild(u8"board01")->FindComponent<tgon::UISpriteRendererComponent>();
 }
 
 void TitleScene::CreateFireFlyObjects()
@@ -171,7 +181,10 @@ void TitleScene::OnHandleInput()
         auto engine = tgon::Application::GetEngine();
         auto gameDataModule = engine->FindModule<GameDataModule>();
         auto sceneModule = engine->FindModule<MultipleSceneModule>();
-        sceneModule->ChangeScene(MultipleSceneChangeAnimType::RightToLeftAnim, gameDataModule->GetCachedScene<MusicSelectScene>());
+        if (sceneModule->IsEndChangeSceneAnimation())
+        {
+            sceneModule->ChangeScene(MultipleSceneChangeAnimType::RightToLeftAnim, gameDataModule->GetCachedScene<MusicSelectScene>());
+        }
     }
 }
 

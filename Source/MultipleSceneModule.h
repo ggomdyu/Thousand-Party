@@ -24,11 +24,12 @@ public:
 public:
     void Update() override;
     void ChangeScene(MultipleSceneChangeAnimType sceneChangeAnimType, const std::shared_ptr<tgon::Scene>& scene);
+    bool IsEndChangeSceneAnimation() const noexcept;
 
 /**@section Variable */
 private:
     std::shared_ptr<tgon::Scene> m_scene1;
     std::shared_ptr<tgon::Scene> m_scene2;
-    float m_animElapsedTime;
+    float m_animElapsedTime = 1.0f;
     MultipleSceneChangeAnimType m_sceneChangeAnimType;
 };

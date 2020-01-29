@@ -20,6 +20,7 @@ class GameObject;
 class AudioModule;
 class TimeModule;
 class UITextRendererComponent;
+class Material;
 
 } /* namespace tgon */
 
@@ -54,7 +55,7 @@ public:
 private:
     void InitializeBackgroundObject();
     void InitializeNoteHitInfo();
-    void InitializeNoteLineUI();
+    void InitializeNoteLineBoxUI();
     void InitializeMusicLeftTimeUI();
     void InitializeNoteObjectPool();
     void InitializeHoldNoteObjectPool();
@@ -81,6 +82,7 @@ private:
     std::array<std::deque<NoteObjectPair>, 5> m_notes;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::AudioModule> m_audioModule;
+    std::shared_ptr<tgon::Material> m_noteLineEdgeMaterial;
     std::shared_ptr<tgon::UITextRendererComponent> m_comboRendererComponent;
     std::shared_ptr<tgon::UITextRendererComponent> m_musicNameRendererComponent;
     std::shared_ptr<tgon::UITextRendererComponent> m_musicArtistNameRendererComponent;

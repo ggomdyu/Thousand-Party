@@ -6,6 +6,7 @@
 #include "Engine/TaskModule.h"
 #include "Game/UISpriteRendererComponent.h"
 #include "Game/UITextRendererComponent.h"
+#include "Graphics/OpenGL/OpenGLShaderCode.h"
 
 #include "MusicPlayScene.h"
 #include "Note.h"
@@ -26,7 +27,7 @@ void MusicPlayScene::Initialize()
 
     this->InitializeBackgroundObject();
     this->InitializeNoteHitInfo();
-    this->InitializeNoteLineUI();
+    this->InitializeNoteLineBoxUI();
     this->InitializeMusicLeftTimeUI();
     this->InitializeNoteObjectPool();
     this->InitializeHoldNoteObjectPool();
@@ -201,18 +202,47 @@ void MusicPlayScene::InitializeBackgroundObject()
     auto spriteRendererComponent = backgroundObject->AddComponent<tgon::UISpriteRendererComponent>();
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/Background/MusicPlayScene/green.png"));
     spriteRendererComponent->SetPivot({0.0f, 0.5f});
+    spriteRendererComponent->SetBlendColor({0.5f, 0.5f, 0.5f, 1.0f});
     
     this->AddChild(backgroundObject);
     
     m_backgroundObject = std::move(backgroundObject);
 }
 
-void MusicPlayScene::InitializeNoteLineUI()
+void MusicPlayScene::InitializeNoteLineBoxUI()
 {
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+
+    // Create NoteLineUI's background
+    auto noteLineBackground = tgon::GameObject::Create();
+    noteLineBackground->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -40.0f, 0.0f));
+    auto noteLineBackgroundRendererComponent = noteLineBackground->AddComponent<tgon::UISpriteRendererComponent>();
+    noteLineBackgroundRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/UI/MusicPlayScene/noteLineBg.png"));
+    this->AddChild(noteLineBackground);
+
+    auto noteLineEdgeMaterial = std::make_shared<tgon::Material>(g_positionColorUVVert, g_uvOffsetFrag);
+
+    auto noteLineEdge1 = tgon::GameObject::Create();
+    noteLineEdge1->GetTransform()->SetLocalPosition({0.0f, noteLineBackgroundRendererComponent->GetTexture()->GetSize().height * 0.5f + 4.0f, 0.0f});
+    auto noteLineEdge1RendererComponent = noteLineEdge1->AddComponent<tgon::UISpriteRendererComponent>();
+    noteLineEdge1RendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/UI/MusicPlayScene/line.png"));
+    noteLineEdge1RendererComponent->SetMaterial(noteLineEdgeMaterial);
+    noteLineBackground->AddChild(noteLineEdge1);
+
+    auto noteLineEdge2 = tgon::GameObject::Create();
+    noteLineEdge2->GetTransform()->SetLocalPosition({0.0f, -noteLineBackgroundRendererComponent->GetTexture()->GetSize().height * 0.5f - 4.0f, 0.0f});
+    auto noteLineEdge2RendererComponent = noteLineEdge2->AddComponent<tgon::UISpriteRendererComponent>();
+    noteLineEdge2RendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/UI/MusicPlayScene/line.png"));
+    noteLineEdge2RendererComponent->SetMaterial(noteLineEdgeMaterial);
+    noteLineBackground->AddChild(noteLineEdge2);
+
+    m_noteLineEdgeMaterial = std::move(noteLineEdgeMaterial);
+
+    // Create NoteLineUI
     auto noteLineObject = tgon::GameObject::Create();
-    noteLineObject->GetTransform()->SetLocalPosition(tgon::Vector3(-10.0f, -40.0f, 0.0f));
+    noteLineObject->GetTransform()->SetLocalPosition(tgon::Vector3(-10.0f, 4.0f, 0.0f));
     m_noteLine = noteLineObject->AddComponent<NoteLineUI>();
-    this->AddChild(noteLineObject);
+    noteLineBackground->AddChild(noteLineObject);
 }
 
 void MusicPlayScene::InitializeMusicLeftTimeUI()
