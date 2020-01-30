@@ -29,9 +29,9 @@ public:
     void OnMissNote();
     
 private:
-    void InitializeSprite();
-    void InitializeCurrentComboTextObject();
-    void InitializeMaxComboTextObject();
+    void InitializeLine();
+    void InitializeCurrentComboText();
+    void InitializeMaxComboText();
     void RefreshComboText();
     
 /**@section Variable */

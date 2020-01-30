@@ -55,6 +55,7 @@ public:
 private:
     void InitializeBackgroundObject();
     void InitializeNoteHitInfo();
+    void InitializeCoverImageUI();
     void InitializeNoteLineBoxUI();
     void InitializeMusicLeftTimeUI();
     void InitializeNoteObjectPool();
@@ -86,4 +87,5 @@ private:
     std::shared_ptr<tgon::UITextRendererComponent> m_comboRendererComponent;
     std::shared_ptr<tgon::UITextRendererComponent> m_musicNameRendererComponent;
     std::shared_ptr<tgon::UITextRendererComponent> m_musicArtistNameRendererComponent;
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_coverImageSpriteRendererComponent;
 };

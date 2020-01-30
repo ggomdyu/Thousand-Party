@@ -1,4 +1,6 @@
 #include "Platform/Application.h"
+#include "IO/Path.h"
+#include "IO/File.h"
 #include "Engine/AssetModule.h"
 #include "Engine/AudioModule.h"
 #include "Engine/TimeModule.h"
@@ -27,6 +29,7 @@ void MusicPlayScene::Initialize()
 
     this->InitializeBackgroundObject();
     this->InitializeNoteHitInfo();
+    this->InitializeCoverImageUI();
     this->InitializeNoteLineBoxUI();
     this->InitializeMusicLeftTimeUI();
     this->InitializeNoteObjectPool();
@@ -56,13 +59,24 @@ void MusicPlayScene::Update()
 
 void MusicPlayScene::OnActivate()
 {
+    std::string musicDirectory = std::string(tgon::Path::GetDirectoryName(m_musicInfo.musicPath));
+    std::string coverImagePath = musicDirectory + "/cover.png";
+    if (tgon::File::Exists(coverImagePath.c_str()) == false)
+    {
+        coverImagePath = musicDirectory + "/cover.jpg";
+    }
+    
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    m_coverImageSpriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(coverImagePath));
+    m_coverImageSpriteRendererComponent->SetTextureSize({58.0f, 58.0f});
+    m_coverImageSpriteRendererComponent->SetTextureRect({0.0f, 0.0f, 58.0f, 58.0f});
+
     m_musicNameRendererComponent->SetText(m_musicInfo.musicName);
     m_musicArtistNameRendererComponent->SetText(m_musicInfo.musicAuthorName);
 
     auto taskModule = tgon::Application::GetEngine()->FindModule<tgon::TaskModule>();
-    taskModule->GetGlobalDispatchQueue().AddAsyncTask([&, taskModule]()
+    taskModule->GetGlobalDispatchQueue().AddAsyncTask([&, taskModule, assetModule]()
     {
-        auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
         m_audioPlayer.SetAudioBuffer(assetModule->GetResource<tgon::AudioBuffer>(m_musicInfo.musicPath));
         
         taskModule->GetMainDispatchQueue().AddAsyncTask([&]()
@@ -203,13 +217,33 @@ void MusicPlayScene::InitializeBackgroundObject()
     m_backgroundObject = std::move(backgroundObject);
 }
 
+void MusicPlayScene::InitializeCoverImageUI()
+{
+    auto coverImage = tgon::GameObject::Create();
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
+    coverImage->GetTransform()->SetLocalPosition({-clientSize.width * 0.5f + 60.0f, clientSize.height * 0.5f - 54.0f, 0.0f});
+    
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    auto coverImageSpriteRendererComponent = coverImage->AddComponent<tgon::UISpriteRendererComponent>();
+    m_coverImageSpriteRendererComponent = coverImageSpriteRendererComponent;
+    
+    auto highlight = tgon::GameObject::Create();
+    highlight->GetTransform()->SetLocalScale({0.28f, 0.28f, 1.0f});
+    auto highlightSpriteRendererComponent = highlight->AddComponent<tgon::UISpriteRendererComponent>();
+    highlightSpriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/UI/MusicSelectScene/highlight.png"));
+    highlightSpriteRendererComponent->SetBlendColor({0.0f, 0.0f, 0.0f, 0.2f});
+    coverImage->AddChild(highlight);
+    
+    this->AddChild(coverImage);
+}
+
 void MusicPlayScene::InitializeNoteLineBoxUI()
 {
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
 
     // Create NoteLineUI's background
     auto noteLineBackground = tgon::GameObject::Create();
-    noteLineBackground->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -40.0f, 0.0f));
+    noteLineBackground->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -65.0f, 0.0f));
     auto noteLineBackgroundRendererComponent = noteLineBackground->AddComponent<tgon::UISpriteRendererComponent>();
     noteLineBackgroundRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/UI/MusicPlayScene/noteLineBg.png"));
     this->AddChild(noteLineBackground);
@@ -244,7 +278,6 @@ void MusicPlayScene::InitializeNoteLineBoxUI()
 void MusicPlayScene::InitializeMusicLeftTimeUI()
 {
     auto musicLeftTimeObject = tgon::GameObject::Create();
-    musicLeftTimeObject->GetTransform()->SetLocalPosition(tgon::Vector3(161.0f, 96.0f, 0.0f));
     m_musicLeftTime = musicLeftTimeObject->AddComponent<MusicLeftTimeUI>();
     this->AddChild(musicLeftTimeObject);
 }
@@ -276,13 +309,13 @@ void MusicPlayScene::InitializeMusicNameObject()
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
 
     auto object = tgon::GameObject::Create(u8"musicName");
-    object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 33.0f, windowSize.height / 2 - 24.0f, 0.0f));
+    object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 103.0f, windowSize.height / 2 - 19.0f, 0.0f));
 
     auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
-    textComponent->SetFontSize(36);
+    textComponent->SetFontSize(31);
     textComponent->SetRect(tgon::I32Rect(0, 0, 500, 50));
-    textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
+    textComponent->SetTextAlignment(tgon::TextAlignment::MiddleLeft);
     textComponent->SetSortingLayer(4);
 
     m_musicNameRendererComponent = textComponent;
@@ -295,7 +328,7 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
     auto windowSize = tgon::Application::GetRootWindow()->GetClientSize();
 
     auto object = tgon::GameObject::Create(u8"musicArtistName");
-    object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 33.0f, windowSize.height / 2 - 82.0f, 0.0f));
+    object->GetTransform()->SetLocalPosition(tgon::Vector3(-windowSize.width / 2 + 104.0f, windowSize.height / 2 - 65.0f, 0.0f));
 
     auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
