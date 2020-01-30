@@ -42,7 +42,7 @@ void MusicPlayScene::Update()
     m_noteLineEdgeOffset += m_timeModule->GetTickTime() * 0.02;
     m_elapsedTime += m_timeModule->GetTickTime();
     
-    m_noteLineEdgeMaterial->SetParameter2f("uvOffset", m_noteLineEdgeOffseta, 0.0f);
+    m_noteLineEdgeMaterial->SetParameter2f("uvOffset", m_noteLineEdgeOffset, 0.0f);
     
     if (m_isMusicWaiting)
     {
@@ -280,7 +280,7 @@ void MusicPlayScene::InitializeMusicNameObject()
 
     auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
-    textComponent->SetFontSize(45);
+    textComponent->SetFontSize(36);
     textComponent->SetRect(tgon::I32Rect(0, 0, 500, 50));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
     textComponent->SetSortingLayer(4);
@@ -299,7 +299,7 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
 
     auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
-    textComponent->SetFontSize(18);
+    textComponent->SetFontSize(16);
     textComponent->SetRect(tgon::I32Rect(-0, 0, 500, 50));
     textComponent->SetTextAlignment(tgon::TextAlignment::UpperLeft);
     textComponent->SetSortingLayer(4);

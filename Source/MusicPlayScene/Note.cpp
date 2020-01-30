@@ -346,15 +346,14 @@ void HoldNote::OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming)
 
 void HoldNote::InitializeSprite()
 {
-    auto weakOwner = this->GetGameObject();
-    if (weakOwner.expired())
+    auto owner = this->GetGameObject().lock();
+    if (owner == nullptr)
     {
         return;
     }
 
     auto ringObject = tgon::GameObject::Create();
 
-    auto owner = weakOwner.lock();
     owner->AddChild(ringObject);
 
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();

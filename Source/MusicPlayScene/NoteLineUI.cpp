@@ -19,7 +19,7 @@ tgon::Vector3 NoteLineUI::GetNoteStartPosition(int32_t index) const
     }
 
     auto matWorld = m_lines[index]->GetTransform()->GetWorldMatrix();
-    tgon::Vector3 ret = tgon::Vector3(matWorld.m31, matWorld.m32, matWorld.m33);
+    tgon::Vector3 ret = tgon::Vector3(matWorld.m30, matWorld.m31, matWorld.m32);
     ret.x += 604.0f;
     return ret;
 }
@@ -33,7 +33,7 @@ tgon::Vector3 NoteLineUI::GetNoteHitPosition(int32_t index) const
     }
 
     auto matWorld = m_lines[index]->GetTransform()->GetWorldMatrix();
-    tgon::Vector3 ret = tgon::Vector3(matWorld.m31, matWorld.m32, matWorld.m33);
+    tgon::Vector3 ret = tgon::Vector3(matWorld.m30, matWorld.m31, matWorld.m32);
     ret.x -= 303.0f;
     return ret;
 }
