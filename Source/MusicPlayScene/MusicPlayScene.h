@@ -62,7 +62,6 @@ private:
     NoteObjectPair GetNoteObjectFromPool();
     HoldNoteObjectPair GetHoldNoteObjectFromPool();
     void UpdateNotes();
-    void UpdateBackgroundObjectPosition();
     void InitializeMusicNameObject();
     void InitializeMusicArtistNameObject();
 
@@ -70,6 +69,7 @@ private:
 private:
     bool m_isMusicWaiting = true;
     float m_elapsedTime = 0.0f;
+    float m_noteLineEdgeOffset = 0.0f;
     size_t m_noteInfoIndex = 0;
     MusicInfo m_musicInfo;
     tgon::AudioPlayer m_audioPlayer;

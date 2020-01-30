@@ -39,9 +39,10 @@ void MusicPlayScene::Update()
 {
     Super::Update();
 
-    this->UpdateBackgroundObjectPosition();
-    
+    m_noteLineEdgeOffset += m_timeModule->GetTickTime() * 0.02;
     m_elapsedTime += m_timeModule->GetTickTime();
+    
+    m_noteLineEdgeMaterial->SetParameter2f("uvOffset", m_noteLineEdgeOffseta, 0.0f);
     
     if (m_isMusicWaiting)
     {
@@ -178,13 +179,6 @@ void MusicPlayScene::UpdateNotes()
     }
 }
 
-void MusicPlayScene::UpdateBackgroundObjectPosition()
-{
-    auto backgroundObjectPos = m_backgroundObject->GetTransform()->GetLocalPosition();
-    backgroundObjectPos.x -= 3.0f * m_timeModule->GetTickTime();
-    m_backgroundObject->GetTransform()->SetLocalPosition(backgroundObjectPos);
-}
-
 void MusicPlayScene::InitializeNoteHitInfo()
 {
     auto noteHitInfoObject = tgon::GameObject::Create();
@@ -221,18 +215,20 @@ void MusicPlayScene::InitializeNoteLineBoxUI()
     this->AddChild(noteLineBackground);
 
     auto noteLineEdgeMaterial = std::make_shared<tgon::Material>(g_positionColorUVVert, g_uvOffsetFrag);
-
+    auto noteLineEdgeTexture = assetModule->GetResource<tgon::Texture>("Resource/UI/MusicPlayScene/line.png");
+    noteLineEdgeTexture->SetWrapMode(tgon::WrapMode::Repeat);
+    
     auto noteLineEdge1 = tgon::GameObject::Create();
     noteLineEdge1->GetTransform()->SetLocalPosition({0.0f, noteLineBackgroundRendererComponent->GetTexture()->GetSize().height * 0.5f + 4.0f, 0.0f});
     auto noteLineEdge1RendererComponent = noteLineEdge1->AddComponent<tgon::UISpriteRendererComponent>();
-    noteLineEdge1RendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/UI/MusicPlayScene/line.png"));
+    noteLineEdge1RendererComponent->SetTexture(noteLineEdgeTexture);
     noteLineEdge1RendererComponent->SetMaterial(noteLineEdgeMaterial);
     noteLineBackground->AddChild(noteLineEdge1);
 
     auto noteLineEdge2 = tgon::GameObject::Create();
     noteLineEdge2->GetTransform()->SetLocalPosition({0.0f, -noteLineBackgroundRendererComponent->GetTexture()->GetSize().height * 0.5f - 4.0f, 0.0f});
     auto noteLineEdge2RendererComponent = noteLineEdge2->AddComponent<tgon::UISpriteRendererComponent>();
-    noteLineEdge2RendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/UI/MusicPlayScene/line.png"));
+    noteLineEdge2RendererComponent->SetTexture(noteLineEdgeTexture);
     noteLineEdge2RendererComponent->SetMaterial(noteLineEdgeMaterial);
     noteLineBackground->AddChild(noteLineEdge2);
 
