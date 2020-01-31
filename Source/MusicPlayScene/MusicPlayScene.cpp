@@ -12,7 +12,7 @@
 
 #include "MusicPlayScene.h"
 #include "Note.h"
-#include "NoteHitInfo.h"
+#include "NoteComboInfo.h"
 #include "NoteLineUI.h"
 #include "MusicLeftTimeUI.h"
 
@@ -28,7 +28,7 @@ void MusicPlayScene::Initialize()
     Super::Initialize();
 
     this->InitializeBackgroundObject();
-    this->InitializeNoteHitInfo();
+    this->InitializeNoteComboInfo();
     this->InitializeCoverImageUI();
     this->InitializeNoteLineBoxUI();
     this->InitializeMusicLeftTimeUI();
@@ -140,14 +140,14 @@ void MusicPlayScene::UpdateNotes()
                 bool isNormalNote = iter->second->GetRTTI() != tgon::GetRTTI<HoldNote*>();
                 if (isNormalNote)
                 {
-                    m_noteHitInfo->OnMissNote();
+                    m_noteComboInfo->OnMissNote();
                     m_noteObjectPool.push_back(*iter);
                     iter = noteObjects.erase(iter);
                     continue;
                 }
                 else if (iter->second->IsHolding() == false)
                 {
-                    m_noteHitInfo->OnMissNote();
+                    m_noteComboInfo->OnMissNote();
                     m_holdNoteObjectPool.emplace_back(iter->first, std::static_pointer_cast<HoldNote>(iter->second));
                     iter = noteObjects.erase(iter);
                     continue;
@@ -173,14 +173,14 @@ void MusicPlayScene::UpdateNotes()
                 {
                     if (iter->second->GetRTTI() != tgon::GetRTTI<HoldNote*>())
                     {
-                        m_noteHitInfo->OnHitNote();
+                        m_noteComboInfo->OnHitNote();
                         m_noteObjectPool.push_back(*iter);
                         iter = noteObjects.erase(iter);
                         break;
                     }
                     else if (iter->second->IsHolding() == false)
                     {
-                        m_noteHitInfo->OnMissNote();
+                        m_noteComboInfo->OnMissNote();
                         m_holdNoteObjectPool.emplace_back(iter->first, std::static_pointer_cast<HoldNote>(iter->second));
                         iter = noteObjects.erase(iter);
                         continue;
@@ -193,11 +193,12 @@ void MusicPlayScene::UpdateNotes()
     }
 }
 
-void MusicPlayScene::InitializeNoteHitInfo()
+void MusicPlayScene::InitializeNoteComboInfo()
 {
-    auto noteHitInfoObject = tgon::GameObject::Create();
-    m_noteHitInfo = noteHitInfoObject->AddComponent<NoteHitInfo>();
-    this->AddChild(std::move(noteHitInfoObject));
+    auto noteComboInfoObject = tgon::GameObject::Create();
+    m_noteComboInfo = noteComboInfoObject->AddComponent<NoteComboInfo>();
+
+    this->AddChild(std::move(noteComboInfoObject));
 }
 
 void MusicPlayScene::InitializeBackgroundObject()
@@ -333,7 +334,7 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
     auto textComponent = object->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
     textComponent->SetFontSize(16);
-    textComponent->SetRect(tgon::I32Rect(-0, 0, 500, 50));
+    textComponent->SetRect(tgon::I32Rect(0, 0, 500, 50));
     textComponent->SetTextAlignment(tgon::TextAlignment::UpperLeft);
     textComponent->SetSortingLayer(4);
     

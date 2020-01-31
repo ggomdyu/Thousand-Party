@@ -26,7 +26,7 @@ class Material;
 
 class Note;
 class HoldNote;
-class NoteHitInfo;
+class NoteComboInfo;
 class NoteLineUI;
 class MusicLeftTimeUI;
 
@@ -54,7 +54,7 @@ public:
     
 private:
     void InitializeBackgroundObject();
-    void InitializeNoteHitInfo();
+    void InitializeNoteComboInfo();
     void InitializeCoverImageUI();
     void InitializeNoteLineBoxUI();
     void InitializeMusicLeftTimeUI();
@@ -75,7 +75,7 @@ private:
     MusicInfo m_musicInfo;
     tgon::AudioPlayer m_audioPlayer;
     std::shared_ptr<tgon::GameObject> m_backgroundObject;
-    std::shared_ptr<NoteHitInfo> m_noteHitInfo;
+    std::shared_ptr<NoteComboInfo> m_noteComboInfo;
     std::shared_ptr<NoteLineUI> m_noteLine;
     std::shared_ptr<MusicLeftTimeUI> m_musicLeftTime;
     std::vector<NoteObjectPair> m_noteObjectPool;

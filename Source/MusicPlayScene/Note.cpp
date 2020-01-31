@@ -359,6 +359,7 @@ void HoldNote::InitializeSprite()
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     m_holdNoteRendererComponent = ringObject->AddComponent<tgon::UISpriteRendererComponent>();
     m_holdNoteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/MusicPlayScene/holdNote.png"));
+    m_holdNoteRendererComponent->SetSortingLayer(m_noteRendererComponent->GetSortingLayer() + 1);
     
     m_ringObject = ringObject;
 }
