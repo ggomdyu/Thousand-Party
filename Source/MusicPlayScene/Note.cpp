@@ -87,6 +87,11 @@ bool Note::IsHitted() const noexcept
     return m_isHitted;
 }
 
+NoteTiming Note::GetHittedTiming() const noexcept
+{
+    return m_hittedTiming;
+}
+
 bool Note::IsHolding() const noexcept
 {
     return m_isHolding;
@@ -94,16 +99,14 @@ bool Note::IsHolding() const noexcept
 
 void Note::InitializeSprite()
 {
-    auto weakGameObject = this->GetGameObject();
-    if (weakGameObject.expired())
+    auto owner = this->GetGameObject().lock();
+    if (owner == nullptr)
     {
         return;
     }
-
-    auto gameObject = weakGameObject.lock();
-
+    
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_noteRendererComponent = gameObject->AddComponent<tgon::UISpriteRendererComponent>();
+    m_noteRendererComponent = owner->AddComponent<tgon::UISpriteRendererComponent>();
     m_noteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/Object/MusicPlayScene/note.png"));
 }
 
@@ -227,6 +230,7 @@ void Note::OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming)
     
     m_isHitted = true;
     m_hittedKeyCode = keyCode;
+    m_hittedTiming = noteTiming;
     
     if (noteTiming == NoteTiming::Perfect)
     {

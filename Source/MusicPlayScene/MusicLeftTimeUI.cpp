@@ -27,7 +27,7 @@ void MusicLeftTimeUI::InitialziePosition()
     }
     
     auto rootWindow = tgon::Application::GetRootWindow();
-    owner->GetTransform()->SetLocalPosition(tgon::Vector3(rootWindow->GetClientSize().width * 0.5f - 35.0f, 96.0f, 0.0f));
+    owner->GetTransform()->SetLocalPosition(tgon::Vector3(rootWindow->GetClientSize().width * 0.5f - 35.0f, rootWindow->GetClientSize().height * 0.5f - 100.0f, 0.0f));
 }
 
 void MusicLeftTimeUI::InitializeBGImage()

@@ -54,6 +54,7 @@ public:
     void SetHitTime(float hitTime) noexcept;
     float GetHitTime() const noexcept;
     bool IsHitted() const noexcept;
+    NoteTiming GetHittedTiming() const noexcept;
     bool IsHolding() const noexcept;
     
 protected:
@@ -72,6 +73,7 @@ protected:
     std::shared_ptr<tgon::Keyboard> m_keyboard;
     std::shared_ptr<tgon::Transform> m_transform;
     bool m_isHitted = false;
+    NoteTiming m_hittedTiming = NoteTiming::Miss;
     bool m_isHolding = false;
     tgon::KeyCode m_hittedKeyCode;
     float m_elapsedTime = 0.0f;

@@ -173,7 +173,7 @@ void MusicPlayScene::UpdateNotes()
                 {
                     if (iter->second->GetRTTI() != tgon::GetRTTI<HoldNote*>())
                     {
-                        m_noteComboInfo->OnHitNote();
+                        m_noteComboInfo->OnHitNote(iter->second->GetHittedTiming());
                         m_noteObjectPool.push_back(*iter);
                         iter = noteObjects.erase(iter);
                         break;
@@ -244,7 +244,7 @@ void MusicPlayScene::InitializeNoteLineBoxUI()
 
     // Create NoteLineUI's background
     auto noteLineBackground = tgon::GameObject::Create();
-    noteLineBackground->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -65.0f, 0.0f));
+    noteLineBackground->GetTransform()->SetLocalPosition(tgon::Vector3(0.0f, -45.0f, 0.0f));
     auto noteLineBackgroundRendererComponent = noteLineBackground->AddComponent<tgon::UISpriteRendererComponent>();
     noteLineBackgroundRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/UI/MusicPlayScene/noteLineBg.png"));
     this->AddChild(noteLineBackground);
