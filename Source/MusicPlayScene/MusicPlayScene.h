@@ -74,7 +74,6 @@ private:
     size_t m_noteInfoIndex = 0;
     MusicInfo m_musicInfo;
     tgon::AudioPlayer m_audioPlayer;
-    std::shared_ptr<tgon::GameObject> m_backgroundObject;
     std::shared_ptr<NoteComboInfo> m_noteComboInfo;
     std::shared_ptr<NoteLineUI> m_noteLine;
     std::shared_ptr<MusicLeftTimeUI> m_musicLeftTime;
@@ -84,8 +83,8 @@ private:
     std::shared_ptr<tgon::TimeModule> m_timeModule;
     std::shared_ptr<tgon::AudioModule> m_audioModule;
     std::shared_ptr<tgon::Material> m_noteLineEdgeMaterial;
-    std::shared_ptr<tgon::UITextRendererComponent> m_comboRendererComponent;
-    std::shared_ptr<tgon::UITextRendererComponent> m_musicNameRendererComponent;
-    std::shared_ptr<tgon::UITextRendererComponent> m_musicArtistNameRendererComponent;
-    std::shared_ptr<tgon::UISpriteRendererComponent> m_coverImageSpriteRendererComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_musicNameTextComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_musicArtistNameTextComponent;
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_backgroundSpriteComponent;
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_coverImageSpriteComponent;
 };

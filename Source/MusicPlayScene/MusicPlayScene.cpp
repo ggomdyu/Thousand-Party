@@ -67,12 +67,20 @@ void MusicPlayScene::OnActivate()
     }
     
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_coverImageSpriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(coverImagePath));
-    m_coverImageSpriteRendererComponent->SetTextureSize({58.0f, 58.0f});
-    m_coverImageSpriteRendererComponent->SetTextureRect({0.0f, 0.0f, 58.0f, 58.0f});
+    auto coverImageTexture = assetModule->GetResource<tgon::Texture>(coverImagePath);
+    m_coverImageSpriteComponent->SetTexture(coverImageTexture);
+    m_coverImageSpriteComponent->SetTextureSize({58.0f, 58.0f});
+    m_coverImageSpriteComponent->SetTextureRect({0.0f, 0.0f, 58.0f, 58.0f});
 
-    m_musicNameRendererComponent->SetText(m_musicInfo.musicName);
-    m_musicArtistNameRendererComponent->SetText(m_musicInfo.musicAuthorName);
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
+    float backgroundSize = std::max(clientSize.width, clientSize.height);
+    m_backgroundSpriteComponent->SetTexture(coverImageTexture);
+    m_backgroundSpriteComponent->SetTextureSize({backgroundSize, backgroundSize});
+    m_backgroundSpriteComponent->SetTextureRect({0, 0, backgroundSize, backgroundSize});
+    m_backgroundSpriteComponent->SetPivot({0.5f, 0.5f});
+
+    m_musicNameTextComponent->SetText(m_musicInfo.musicName);
+    m_musicArtistNameTextComponent->SetText(m_musicInfo.musicAuthorName);
 
     auto taskModule = tgon::Application::GetEngine()->FindModule<tgon::TaskModule>();
     taskModule->GetGlobalDispatchQueue().AddAsyncTask([&, taskModule, assetModule]()
@@ -206,16 +214,14 @@ void MusicPlayScene::InitializeBackgroundObject()
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     auto backgroundObject = tgon::GameObject::Create();
     auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-    backgroundObject->GetTransform()->SetLocalPosition({-static_cast<float>(clientSize.width) * 0.5f, 0.0f, 0.0f});
     
-    auto spriteRendererComponent = backgroundObject->AddComponent<tgon::UISpriteRendererComponent>();
-    spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>("Resource/Background/MusicPlayScene/green.png"));
-    spriteRendererComponent->SetPivot({0.0f, 0.5f});
-    spriteRendererComponent->SetBlendColor({0.5f, 0.5f, 0.5f, 1.0f});
+    auto spriteComponent = backgroundObject->AddComponent<tgon::UISpriteRendererComponent>();
+    spriteComponent->SetBlendColor({0.6f, 0.6f, 0.6f, 1.0f});
+    spriteComponent->SetMaterial(std::make_shared<tgon::Material>(g_positionColorUVVert, g_blurFrag));
     
     this->AddChild(backgroundObject);
     
-    m_backgroundObject = std::move(backgroundObject);
+    m_backgroundSpriteComponent = std::move(spriteComponent);
 }
 
 void MusicPlayScene::InitializeCoverImageUI()
@@ -225,14 +231,14 @@ void MusicPlayScene::InitializeCoverImageUI()
     coverImage->GetTransform()->SetLocalPosition({-clientSize.width * 0.5f + 60.0f, clientSize.height * 0.5f - 54.0f, 0.0f});
     
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    auto coverImageSpriteRendererComponent = coverImage->AddComponent<tgon::UISpriteRendererComponent>();
-    m_coverImageSpriteRendererComponent = coverImageSpriteRendererComponent;
+    auto coverImageSpriteComponent = coverImage->AddComponent<tgon::UISpriteRendererComponent>();
+    m_coverImageSpriteComponent = coverImageSpriteComponent;
     
     auto highlight = tgon::GameObject::Create();
-    highlight->GetTransform()->SetLocalScale({0.28f, 0.28f, 1.0f});
-    auto highlightSpriteRendererComponent = highlight->AddComponent<tgon::UISpriteRendererComponent>();
-    highlightSpriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/UI/MusicSelectScene/highlight.png"));
-    highlightSpriteRendererComponent->SetBlendColor({0.0f, 0.0f, 0.0f, 0.2f});
+    highlight->GetTransform()->SetLocalScale({0.265f, 0.265f, 1.0f});
+    auto highlightSpriteComponent = highlight->AddComponent<tgon::UISpriteRendererComponent>();
+    highlightSpriteComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/UI/MusicSelectScene/highlight.png"));
+    highlightSpriteComponent->SetBlendColor({0.0f, 0.0f, 0.0f, 0.4f});
     coverImage->AddChild(highlight);
     
     this->AddChild(coverImage);
@@ -254,7 +260,7 @@ void MusicPlayScene::InitializeNoteLineBoxUI()
     noteLineEdgeTexture->SetWrapMode(tgon::WrapMode::Repeat);
     
     auto noteLineEdge1 = tgon::GameObject::Create();
-    noteLineEdge1->GetTransform()->SetLocalPosition({0.0f, noteLineBackgroundRendererComponent->GetTexture()->GetSize().height * 0.5f + 4.0f, 0.0f});
+    noteLineEdge1->GetTransform()->SetLocalPosition({0.0f, noteLineBackgroundRendererComponent->GetTexture()->GetSize().height * 0.5f + 1.0f, 0.0f});
     auto noteLineEdge1RendererComponent = noteLineEdge1->AddComponent<tgon::UISpriteRendererComponent>();
     noteLineEdge1RendererComponent->SetTexture(noteLineEdgeTexture);
     noteLineEdge1RendererComponent->SetMaterial(noteLineEdgeMaterial);
@@ -319,7 +325,7 @@ void MusicPlayScene::InitializeMusicNameObject()
     textComponent->SetTextAlignment(tgon::TextAlignment::MiddleLeft);
     textComponent->SetSortingLayer(4);
 
-    m_musicNameRendererComponent = textComponent;
+    m_musicNameTextComponent = textComponent;
 
     this->AddChild(object);
 }
@@ -338,7 +344,7 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
     textComponent->SetTextAlignment(tgon::TextAlignment::UpperLeft);
     textComponent->SetSortingLayer(4);
     
-    m_musicArtistNameRendererComponent = textComponent;
+    m_musicArtistNameTextComponent = textComponent;
 
     this->AddChild(object);
 }
