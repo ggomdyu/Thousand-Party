@@ -155,6 +155,8 @@ void MusicPlayScene::UpdateNotes()
                 }
                 else if (iter->second->IsHolding() == false)
                 {
+                    // Call OnMissNote twice because Hold note has two hit timing.
+                    m_noteComboInfo->OnMissNote();
                     m_noteComboInfo->OnMissNote();
                     m_holdNoteObjectPool.emplace_back(iter->first, std::static_pointer_cast<HoldNote>(iter->second));
                     iter = noteObjects.erase(iter);
@@ -181,14 +183,12 @@ void MusicPlayScene::UpdateNotes()
                 {
                     if (iter->second->GetRTTI() != tgon::GetRTTI<HoldNote*>())
                     {
-                        m_noteComboInfo->OnHitNote(iter->second->GetHittedTiming());
                         m_noteObjectPool.push_back(*iter);
                         iter = noteObjects.erase(iter);
                         break;
                     }
                     else if (iter->second->IsHolding() == false)
                     {
-                        m_noteComboInfo->OnMissNote();
                         m_holdNoteObjectPool.emplace_back(iter->first, std::static_pointer_cast<HoldNote>(iter->second));
                         iter = noteObjects.erase(iter);
                         continue;
@@ -295,6 +295,7 @@ void MusicPlayScene::InitializeNoteObjectPool()
     {
         auto noteObject = tgon::GameObject::Create();
         auto noteComponent = noteObject->AddComponent<Note>(m_noteLine);
+        noteComponent->OnHit = tgon::Delegate(&MusicPlayScene::OnHitNote, this);
 
         m_noteObjectPool.emplace_back(std::move(noteObject), std::move(noteComponent));
     }
@@ -306,6 +307,7 @@ void MusicPlayScene::InitializeHoldNoteObjectPool()
     {
         auto holdNoteObject = tgon::GameObject::Create();
         auto holdNoteComponent = holdNoteObject->AddComponent<HoldNote>(m_noteLine);
+        holdNoteComponent->OnHit = tgon::Delegate(&MusicPlayScene::OnHitNote, this);
 
         m_holdNoteObjectPool.emplace_back(std::move(holdNoteObject), std::move(holdNoteComponent));
     }
@@ -349,12 +351,18 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
     this->AddChild(object);
 }
 
+void MusicPlayScene::OnHitNote(NoteTiming noteTiming)
+{
+    m_noteComboInfo->OnHitNote(noteTiming);
+}
+
 MusicPlayScene::NoteObjectPair MusicPlayScene::GetNoteObjectFromPool()
 {
     if (m_noteObjectPool.size() == 0)
     {
         auto noteObject = tgon::GameObject::Create();
         auto noteComponent = noteObject->AddComponent<Note>(m_noteLine);
+        noteComponent->OnHit = tgon::Delegate(&MusicPlayScene::OnHitNote, this);
 
         m_noteObjectPool.emplace_back(std::move(noteObject), std::move(noteComponent));
     }
@@ -373,6 +381,7 @@ std::pair<std::shared_ptr<tgon::GameObject>, std::shared_ptr<HoldNote>> MusicPla
     {
         auto holdNoteObject = tgon::GameObject::Create();
         auto holdNoteComponent = holdNoteObject->AddComponent<HoldNote>(m_noteLine);
+        holdNoteComponent->OnHit = tgon::Delegate(&MusicPlayScene::OnHitNote, this);
 
         m_holdNoteObjectPool.emplace_back(std::move(holdNoteObject), std::move(holdNoteComponent));
     }

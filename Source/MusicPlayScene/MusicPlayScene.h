@@ -29,6 +29,7 @@ class HoldNote;
 class NoteComboInfo;
 class NoteLineUI;
 class MusicLeftTimeUI;
+enum class NoteTiming;
 
 class MusicPlayScene :
     public tgon::Scene
@@ -65,6 +66,7 @@ private:
     void UpdateNotes();
     void InitializeMusicNameObject();
     void InitializeMusicArtistNameObject();
+    void OnHitNote(NoteTiming noteTiming);
 
 /**@section Variable */
 private:

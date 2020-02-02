@@ -254,6 +254,8 @@ void Note::OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming)
     }
     
     tgon::Debug::WriteLine(std::to_string(m_elapsedTime));
+
+    OnHit(noteTiming);
 }
 
 void HoldNote::Reset()

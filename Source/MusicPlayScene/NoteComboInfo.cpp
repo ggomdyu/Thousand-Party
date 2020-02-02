@@ -63,6 +63,11 @@ void NoteComboInfo::OnHitNote(NoteTiming noteTiming)
         ++m_perfectCount;
         this->RefreshPerfectText();
     }
+    else if (noteTiming == NoteTiming::Great)
+    {
+        ++m_perfectCount;
+        this->RefreshPerfectText();
+    }
     else if (noteTiming == NoteTiming::Early)
     {
         ++m_earlyCount;

@@ -65,6 +65,9 @@ private:
     void InitializeSprite();
     
 /**@section Variable */
+public:
+    tgon::Delegate<void(NoteTiming)> OnHit;
+
 protected:
     bool m_autoHitted = false;
     std::shared_ptr<NoteLineUI> m_noteLine;
