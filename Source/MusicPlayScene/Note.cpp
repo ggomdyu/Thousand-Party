@@ -6,7 +6,7 @@
 #include "Engine/InputModule.h"
 #include "Engine/AssetModule.h"
 #include "Engine/TimeModule.h"
-#include "Audio/AudioPlayer.h"
+#include "Audio/AudioSource.h"
 #include "Diagnostics/Debug.h"
 
 #include "Note.h"
@@ -152,14 +152,7 @@ NoteTiming Note::CheckNoteTiming(float timingOffset) const noexcept
     }
     else if (-0.15f < distance && distance < 0.15f)
     {
-        if (distance < 0)
-        {
-            return NoteTiming::Early;
-        }
-        else
-        {
-            return NoteTiming::Late;
-        }
+        return NoteTiming::Good;
     }
     
     return NoteTiming::Miss;
@@ -206,14 +199,14 @@ void Note::PlayHitSound()
 {
     auto audioPlayerGenerator = [&]()
     {
-        auto audioPlayer = tgon::AudioPlayer::Create();
+        auto audioPlayer = tgon::AudioSource::Create();
 
         auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-        audioPlayer->SetAudioBuffer(assetModule->GetResource<tgon::AudioBuffer>("Resource/Sound/HOCKEY.wav"));
+        audioPlayer->SetClip(assetModule->GetResource<tgon::AudioClip>("Resource/Sound/HOCKEY.wav"));
 
         return std::move(*audioPlayer);
     };
-    static tgon::AudioPlayer hitSoundPlayer[5] = {
+    static tgon::AudioSource hitSoundPlayer[5] = {
         audioPlayerGenerator(),
         audioPlayerGenerator(),
         audioPlayerGenerator(),
@@ -240,13 +233,9 @@ void Note::OnHitNote(tgon::KeyCode keyCode, NoteTiming noteTiming)
     {
         tgon::Debug::Write("Great:  ");
     }
-    else if (noteTiming == NoteTiming::Early)
+    else if (noteTiming == NoteTiming::Good)
     {
-        tgon::Debug::Write("Early:  ");
-    }
-    else if (noteTiming == NoteTiming::Late)
-    {
-        tgon::Debug::Write("Late:   ");
+        tgon::Debug::Write("Good:  ");
     }
     else if (noteTiming == NoteTiming::Miss)
     {

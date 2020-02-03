@@ -8,7 +8,7 @@
 #include <memory>
 #include <deque>
 
-#include "Audio/AudioPlayer.h"
+#include "Audio/AudioSource.h"
 #include "Game/Scene.h"
 
 #include "../GameDataModule.h"
@@ -75,7 +75,7 @@ private:
     float m_noteLineEdgeOffset = 0.0f;
     size_t m_noteInfoIndex = 0;
     MusicInfo m_musicInfo;
-    tgon::AudioPlayer m_audioPlayer;
+    tgon::AudioSource m_audioPlayer;
     std::shared_ptr<NoteComboInfo> m_noteComboInfo;
     std::shared_ptr<NoteLineUI> m_noteLine;
     std::shared_ptr<MusicLeftTimeUI> m_musicLeftTime;

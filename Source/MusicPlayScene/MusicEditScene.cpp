@@ -14,13 +14,13 @@
 
 MusicEditScene::MusicEditScene(const MusicInfo& musicInfo) :
     m_musicInfo(musicInfo),
-    m_audioPlayer(*tgon::AudioPlayer::Create()),
+    m_audioPlayer(*tgon::AudioSource::Create()),
     m_keyboard(tgon::Application::GetEngine()->FindModule<tgon::InputModule>()->GetKeyboard()),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
     m_audioModule(tgon::Application::GetEngine()->FindModule<tgon::AudioModule>())
 {
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    m_audioPlayer.SetAudioBuffer(assetModule->GetResource<tgon::AudioBuffer>(musicInfo.musicPath));
+    m_audioPlayer.SetClip(assetModule->GetResource<tgon::AudioClip>(musicInfo.musicPath));
 }
 
 void MusicEditScene::Initialize()
@@ -37,7 +37,9 @@ void MusicEditScene::Initialize()
     auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
     timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
     {
-        m_audioPlayer.Play(1.0f, false);
+        m_audioPlayer.SetVolume(1.0f);
+        m_audioPlayer.SetLoop(false);
+        m_audioPlayer.Play();
         m_isMusicWaiting = false;
     }, 3.0f, false);
     timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
@@ -100,7 +102,7 @@ void MusicEditScene::OnHandleInput()
         if (m_isMusicStopped)
         {
             m_isMusicStopped = false;
-            m_audioPlayer.Resume();
+            m_audioPlayer.UnPause();
         }
         else
         {

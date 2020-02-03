@@ -25,8 +25,7 @@ enum class NoteTiming
 {
     Perfect,
     Great,
-    Early,
-    Late,
+    Good,
     Miss
 };
 

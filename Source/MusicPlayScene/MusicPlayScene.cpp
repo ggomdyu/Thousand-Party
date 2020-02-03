@@ -17,7 +17,7 @@
 #include "MusicLeftTimeUI.h"
 
 MusicPlayScene::MusicPlayScene() :
-    m_audioPlayer(*tgon::AudioPlayer::Create()),
+    m_audioPlayer(*tgon::AudioSource::Create()),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
     m_audioModule(tgon::Application::GetEngine()->FindModule<tgon::AudioModule>())
 {
@@ -85,14 +85,16 @@ void MusicPlayScene::OnActivate()
     auto taskModule = tgon::Application::GetEngine()->FindModule<tgon::TaskModule>();
     taskModule->GetGlobalDispatchQueue().AddAsyncTask([&, taskModule, assetModule]()
     {
-        m_audioPlayer.SetAudioBuffer(assetModule->GetResource<tgon::AudioBuffer>(m_musicInfo.musicPath));
+        m_audioPlayer.SetClip(assetModule->GetResource<tgon::AudioClip>(m_musicInfo.musicPath));
+        m_audioPlayer.SetVolume(1.0f);
+        m_audioPlayer.SetLoop(false);
         
         taskModule->GetMainDispatchQueue().AddAsyncTask([&]()
         {
             auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
             timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
             {
-                m_audioPlayer.Play(1.0f, false);
+                m_audioPlayer.Play();
                 m_isMusicWaiting = false;
             }, 3.0f, false);
             timerModule->SetTimer([this](tgon::TimerHandle timerHandle)

@@ -37,15 +37,15 @@ private:
     void InitializeCurrentComboText();
     void InitializeMaxComboText();
     void InitializePerfectText();
-    void InitializeEarlyText();
-    void InitializeLazyText();
+    void InitializeGreatText();
+    void InitializeGoodText();
     void InitializeMissText();
     void RefreshText();
     void RefreshCurrentComboText();
     void RefreshMaxComboText();
     void RefreshPerfectText();
-    void RefreshEarlyText();
-    void RefreshLazyText();
+    void RefreshGreatText();
+    void RefreshGoodText();
     void RefreshMissText();
 
 /**@section Variable */
@@ -53,13 +53,13 @@ protected:
     int32_t m_currCombo = 0;
     int32_t m_maxCombo = 0;
     int32_t m_perfectCount = 0;
-    int32_t m_earlyCount = 0;
-    int32_t m_lazyCount = 0;
+    int32_t m_greatCount = 0;
+    int32_t m_goodCount = 0;
     int32_t m_missCount = 0;
     std::shared_ptr<tgon::UITextRendererComponent> m_currComboTextComponent;
     std::shared_ptr<tgon::UITextRendererComponent> m_maxComboTextComponent;
     std::shared_ptr<tgon::UITextRendererComponent> m_perfectTextComponent;
-    std::shared_ptr<tgon::UITextRendererComponent> m_earlyTextComponent;
-    std::shared_ptr<tgon::UITextRendererComponent> m_lazyTextComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_greatTextComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_goodTextComponent;
     std::shared_ptr<tgon::UITextRendererComponent> m_missTextComponent;
 };

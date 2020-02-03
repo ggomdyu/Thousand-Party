@@ -16,8 +16,8 @@ void NoteComboInfo::Initialize()
     this->InitializeCurrentComboText();
     this->InitializeMaxComboText();
     this->InitializePerfectText();
-    this->InitializeEarlyText();
-    this->InitializeLazyText();
+    this->InitializeGreatText();
+    this->InitializeGoodText();
     this->InitializeMissText();
     
     this->RefreshText();
@@ -65,18 +65,13 @@ void NoteComboInfo::OnHitNote(NoteTiming noteTiming)
     }
     else if (noteTiming == NoteTiming::Great)
     {
-        ++m_perfectCount;
-        this->RefreshPerfectText();
+        ++m_greatCount;
+        this->RefreshGreatText();
     }
-    else if (noteTiming == NoteTiming::Early)
+    else if (noteTiming == NoteTiming::Good)
     {
-        ++m_earlyCount;
-        this->RefreshEarlyText();
-    }
-    else if (noteTiming == NoteTiming::Late)
-    {
-        ++m_lazyCount;
-        this->RefreshLazyText();
+        ++m_goodCount;
+        this->RefreshGoodText();
     }
 
     ++m_currCombo;
@@ -150,7 +145,7 @@ void NoteComboInfo::InitializePerfectText()
     auto textComponent = perfectText->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
     textComponent->SetFontSize(12);
-    textComponent->SetRect(tgon::I32Rect(18, 30, 500, 15));
+    textComponent->SetRect(tgon::I32Rect(18, 31, 500, 15));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
     textComponent->SetSortingLayer(3);
     textComponent->SetBlendColor({240.0f / 255.0f, 37.0f / 255.0f, 37.0f / 255.0f, 1.0f});
@@ -160,7 +155,7 @@ void NoteComboInfo::InitializePerfectText()
     m_perfectTextComponent = textComponent;
 }
 
-void NoteComboInfo::InitializeEarlyText()
+void NoteComboInfo::InitializeGreatText()
 {
     auto owner = this->GetGameObject().lock();
     if (owner == nullptr)
@@ -168,22 +163,22 @@ void NoteComboInfo::InitializeEarlyText()
         return;
     }
 
-    auto earlyText = tgon::GameObject::Create();
+    auto greatText = tgon::GameObject::Create();
 
-    auto textComponent = earlyText->AddComponent<tgon::UITextRendererComponent>();
+    auto textComponent = greatText->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
     textComponent->SetFontSize(12);
-    textComponent->SetRect(tgon::I32Rect(18, 14, 500, 15));
+    textComponent->SetRect(tgon::I32Rect(18, 17, 500, 15));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
     textComponent->SetSortingLayer(3);
     textComponent->SetBlendColor({238.0f / 255.0f, 167.0f / 255.0f, 13.0f / 255.0f, 1.0f});
 
-    owner->AddChild(earlyText);
+    owner->AddChild(greatText);
 
-    m_earlyTextComponent = textComponent;
+    m_greatTextComponent = textComponent;
 }
 
-void NoteComboInfo::InitializeLazyText()
+void NoteComboInfo::InitializeGoodText()
 {
     auto owner = this->GetGameObject().lock();
     if (owner == nullptr)
@@ -191,19 +186,19 @@ void NoteComboInfo::InitializeLazyText()
         return;
     }
 
-    auto lazyText = tgon::GameObject::Create();
+    auto goodText = tgon::GameObject::Create();
 
-    auto textComponent = lazyText->AddComponent<tgon::UITextRendererComponent>();
+    auto textComponent = goodText->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
     textComponent->SetFontSize(12);
-    textComponent->SetRect(tgon::I32Rect(18, 1, 500, 15));
+    textComponent->SetRect(tgon::I32Rect(18, 3, 500, 15));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
     textComponent->SetSortingLayer(3);
     textComponent->SetBlendColor({238.0f / 255.0f, 167.0f / 255.0f, 13.0f / 255.0f, 1.0f});
 
-    owner->AddChild(lazyText);
+    owner->AddChild(goodText);
 
-    m_lazyTextComponent = textComponent;
+    m_goodTextComponent = textComponent;
 }
 
 void NoteComboInfo::InitializeMissText()
@@ -219,7 +214,7 @@ void NoteComboInfo::InitializeMissText()
     auto textComponent = missText->AddComponent<tgon::UITextRendererComponent>();
     textComponent->SetFontAtlas(u8"Resource/Font/NanumBarunGothicBold.otf");
     textComponent->SetFontSize(12);
-    textComponent->SetRect(tgon::I32Rect(18, -9, 500, 15));
+    textComponent->SetRect(tgon::I32Rect(18, -11, 500, 15));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
     textComponent->SetSortingLayer(3);
     textComponent->SetBlendColor({127.0f / 255.0f, 124.0f / 255.0f, 125.0f / 255.0f, 1.0f});
@@ -234,8 +229,8 @@ void NoteComboInfo::RefreshText()
     this->RefreshCurrentComboText();
     this->RefreshMaxComboText();
     this->RefreshPerfectText();
-    this->RefreshEarlyText();
-    this->RefreshLazyText();
+    this->RefreshGreatText();
+    this->RefreshGoodText();
     this->RefreshMissText();
 }
 
@@ -254,14 +249,14 @@ void NoteComboInfo::RefreshPerfectText()
     m_perfectTextComponent->SetText(fmt::format("{0} Perfect", m_perfectCount));
 }
 
-void NoteComboInfo::RefreshEarlyText()
+void NoteComboInfo::RefreshGreatText()
 {
-    m_earlyTextComponent->SetText(fmt::format("{0} Early", m_earlyCount));
+    m_greatTextComponent->SetText(fmt::format("{0} Great", m_greatCount));
 }
 
-void NoteComboInfo::RefreshLazyText()
+void NoteComboInfo::RefreshGoodText()
 {
-    m_lazyTextComponent->SetText(fmt::format("{0} Lazy", m_lazyCount));
+    m_goodTextComponent->SetText(fmt::format("{0} Good", m_goodCount));
 }
 
 void NoteComboInfo::RefreshMissText()

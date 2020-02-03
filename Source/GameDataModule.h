@@ -13,7 +13,7 @@
 namespace tgon
 {
 
-class AudioPlayer;
+class AudioSource;
 class AssetModule;
 class Scene;
 

@@ -4,7 +4,7 @@
 #include "Engine/InputModule.h"
 #include "Engine/AssetModule.h"
 #include "Engine/TimeModule.h"
-#include "Audio/AudioPlayer.h"
+#include "Audio/AudioSource.h"
 #include "Diagnostics/Debug.h"
 #include "Graphics/Material.h"
 #include "Graphics/OpenGL/OpenGLShaderCode.h"
