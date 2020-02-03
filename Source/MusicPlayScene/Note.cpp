@@ -41,15 +41,13 @@ void Note::Initialize()
 {
     Super::Initialize();
     
-    auto weakGameObject = this->GetGameObject();
-    if (weakGameObject.expired())
+    auto owner = this->GetGameObject().lock();
+    if (owner == nullptr)
     {
         return;
     }
 
-    auto gameObject = weakGameObject.lock();
-
-    m_transform = gameObject->GetTransform();
+    m_transform = owner->GetTransform();
     
     this->InitializeSprite();
 }
@@ -58,13 +56,13 @@ void Note::SetNoteLineIndex(int32_t index) noexcept
 {
     m_noteLineIndex = index;
 
-    auto weakGameObject = this->GetGameObject();
-    if (weakGameObject.expired())
+    auto owner = this->GetGameObject().lock();
+    if (owner == nullptr)
     {
         return;
     }
 
-    weakGameObject.lock()->GetTransform()->SetLocalPosition(m_noteLine->GetNoteStartPosition(index));
+    owner->GetTransform()->SetLocalPosition(m_noteLine->GetNoteStartPosition(index));
 }
 
 void Note::SetElapsedTime(float elapsedTime) noexcept

@@ -39,5 +39,5 @@ private:
     int64_t m_beginTime = 0;
     std::shared_ptr<tgon::InputModule> m_inputModule;
     std::shared_ptr<tgon::TimeModule> m_timeModule;
-    std::shared_ptr<tgon::UISpriteRendererComponent> m_logoSpriteRendererComponents[4];
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_logoSpriteComponents[4];
 };

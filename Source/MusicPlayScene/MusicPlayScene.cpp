@@ -36,25 +36,52 @@ void MusicPlayScene::Initialize()
     this->InitializeHoldNoteObjectPool();
     this->InitializeMusicNameObject();
     this->InitializeMusicArtistNameObject();
+    this->InitializeFadeOutUI();
 }
 
 void MusicPlayScene::Update()
 {
     Super::Update();
 
-    m_noteLineEdgeOffset += m_timeModule->GetTickTime() * 0.02;
-    m_elapsedTime += m_timeModule->GetTickTime();
-    
-    m_noteLineEdgeMaterial->SetParameter2f("uvOffset", m_noteLineEdgeOffset, 0.0f);
+    this->UpdateNoteLineEdgeOffset();
     
     if (m_isMusicWaiting)
     {
         return;
     }
     
+    m_elapsedTime += m_timeModule->GetTickTime();
     m_musicLeftTime->SetProgress(m_elapsedTime / m_audioPlayer.GetTotalProgressInSeconds());
     
     this->UpdateNotes();
+}
+
+void MusicPlayScene::UpdateNoteLineEdgeOffset()
+{
+    m_noteLineEdgeOffset += m_timeModule->GetTickTime() * 0.02;
+    m_noteLineEdgeMaterial->SetParameter2f("uvOffset", m_noteLineEdgeOffset, 0.0f);
+}
+
+void MusicPlayScene::MoveToScoreScene()
+{
+    auto timeModule = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>();
+    auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
+    timerModule->SetTimer([this, timeModule, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule)](tgon::TimerHandle timerHandle)
+    {
+        auto blendColor = m_fadeOutSpriteComponent->GetBlendColor();
+        blendColor.a += timeModule->GetTickTime();
+        m_fadeOutSpriteComponent->SetBlendColor(blendColor);
+        
+        if (blendColor.a >= 1.0f)
+        {
+            auto timerModule = weakTimerModule.lock();
+            if (timerModule != nullptr)
+            {
+                timerModule->ClearTimer(timerHandle);
+            }
+        }
+        
+    }, 0.0f, true);
 }
 
 void MusicPlayScene::OnActivate()
@@ -81,6 +108,8 @@ void MusicPlayScene::OnActivate()
 
     m_musicNameTextComponent->SetText(m_musicInfo.musicName);
     m_musicArtistNameTextComponent->SetText(m_musicInfo.musicAuthorName);
+    
+    m_fadeOutSpriteComponent->SetBlendColor({1.0f, 1.0f, 1.0f, 0.0f});
 
     auto taskModule = tgon::Application::GetEngine()->FindModule<tgon::TaskModule>();
     taskModule->GetGlobalDispatchQueue().AddAsyncTask([&, taskModule, assetModule]()
@@ -97,10 +126,23 @@ void MusicPlayScene::OnActivate()
                 m_audioPlayer.Play();
                 m_isMusicWaiting = false;
             }, 3.0f, false);
-            timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
+            auto loopTimer = timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
             {
                 m_elapsedTime = m_audioPlayer.GetProgressInSeconds();
             }, 0.5f, true);
+            
+            timerModule->SetTimer([this, loopTimer, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule)](tgon::TimerHandle timerHandle)
+            {
+                auto timerModule = weakTimerModule.lock();
+                if (timerModule != nullptr)
+                {
+                    timerModule->ClearTimer(loopTimer);
+                }
+                
+                m_isMusicWaiting = true;
+                this->MoveToScoreScene();
+            }, 3.0f + m_audioPlayer.GetTotalProgressInSeconds(), false);
+            
         });
     });
 }
@@ -215,8 +257,7 @@ void MusicPlayScene::InitializeBackgroundObject()
 {
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     auto backgroundObject = tgon::GameObject::Create();
-    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-    
+ 
     auto spriteComponent = backgroundObject->AddComponent<tgon::UISpriteRendererComponent>();
     spriteComponent->SetBlendColor({0.6f, 0.6f, 0.6f, 1.0f});
     spriteComponent->SetMaterial(std::make_shared<tgon::Material>(g_positionColorUVVert, g_blurFrag));
@@ -286,9 +327,22 @@ void MusicPlayScene::InitializeNoteLineBoxUI()
 
 void MusicPlayScene::InitializeMusicLeftTimeUI()
 {
-    auto musicLeftTimeObject = tgon::GameObject::Create();
-    m_musicLeftTime = musicLeftTimeObject->AddComponent<MusicLeftTimeUI>();
-    this->AddChild(musicLeftTimeObject);
+    auto object = tgon::GameObject::Create();
+    m_musicLeftTime = object->AddComponent<MusicLeftTimeUI>();
+    this->AddChild(object);
+}
+
+void MusicPlayScene::InitializeFadeOutUI()
+{
+    auto object = tgon::GameObject::Create();
+    object->GetTransform()->SetLocalScale(tgon::Vector3(858.0f, 462.0f, 1.0f));
+        
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    auto texture = assetModule->GetResource<tgon::Texture>("Resource/UI/Common/board01.png");
+    m_fadeOutSpriteComponent = object->AddComponent<tgon::UISpriteRendererComponent>();
+    m_fadeOutSpriteComponent->SetTexture(texture);
+    
+    this->AddChild(object);
 }
 
 void MusicPlayScene::InitializeNoteObjectPool()

@@ -59,14 +59,17 @@ private:
     void InitializeCoverImageUI();
     void InitializeNoteLineBoxUI();
     void InitializeMusicLeftTimeUI();
+    void InitializeFadeOutUI();
     void InitializeNoteObjectPool();
     void InitializeHoldNoteObjectPool();
     NoteObjectPair GetNoteObjectFromPool();
     HoldNoteObjectPair GetHoldNoteObjectFromPool();
-    void UpdateNotes();
     void InitializeMusicNameObject();
     void InitializeMusicArtistNameObject();
     void OnHitNote(NoteTiming noteTiming);
+    void UpdateNotes();
+    void UpdateNoteLineEdgeOffset();
+    void MoveToScoreScene();
 
 /**@section Variable */
 private:
@@ -89,4 +92,5 @@ private:
     std::shared_ptr<tgon::UITextRendererComponent> m_musicArtistNameTextComponent;
     std::shared_ptr<tgon::UISpriteRendererComponent> m_backgroundSpriteComponent;
     std::shared_ptr<tgon::UISpriteRendererComponent> m_coverImageSpriteComponent;
+    std::shared_ptr<tgon::UISpriteRendererComponent> m_fadeOutSpriteComponent;
 };

@@ -19,16 +19,14 @@ void SquareBackground::Initialize()
 
 void SquareBackground::InitializeSpriteComponent()
 {
-    auto weakGameObject = this->GetGameObject();
-    if (weakGameObject.expired())
+    auto owner = this->GetGameObject().lock();
+    if (owner == nullptr)
     {
         return;
     }
 
-    auto gameObject = weakGameObject.lock();
-
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    auto spriteRendererComponent = gameObject->AddComponent<tgon::UISpriteRendererComponent>();
+    auto spriteRendererComponent = owner->AddComponent<tgon::UISpriteRendererComponent>();
     auto material = std::make_shared<tgon::Material>(g_positionColorUVVert, g_uvOffsetFrag);
     spriteRendererComponent->SetMaterial(material);
 

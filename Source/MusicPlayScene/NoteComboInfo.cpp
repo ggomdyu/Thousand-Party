@@ -87,6 +87,14 @@ void NoteComboInfo::OnMissNote()
 
 void NoteComboInfo::Reset()
 {
+    m_currCombo = 0;
+    m_maxCombo = 0;
+    m_perfectCount = 0;
+    m_greatCount = 0;
+    m_goodCount = 0;
+    m_missCount = 0;
+    
+    this->RefreshText();
 }
 
 void NoteComboInfo::InitializeCurrentComboText()

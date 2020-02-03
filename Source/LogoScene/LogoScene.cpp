@@ -33,48 +33,48 @@ void LogoScene::Update()
     else if (elapsedTime >= 7500)
     {
         {
-            auto blendColor = m_logoSpriteRendererComponents[2]->GetBlendColor();
+            auto blendColor = m_logoSpriteComponents[2]->GetBlendColor();
             if (blendColor.a <= 1.0f)
             {
                 blendColor.a += 2.5f * m_timeModule->GetTickTime();
-                m_logoSpriteRendererComponents[2]->SetBlendColor(blendColor);
+                m_logoSpriteComponents[2]->SetBlendColor(blendColor);
             }
         }
 
         {
-            auto blendColor = m_logoSpriteRendererComponents[1]->GetBlendColor();
+            auto blendColor = m_logoSpriteComponents[1]->GetBlendColor();
             if (blendColor.a <= 1.0f)
             {
                 blendColor.a += 2.0f * m_timeModule->GetTickTime();
-                m_logoSpriteRendererComponents[1]->SetBlendColor(blendColor);
+                m_logoSpriteComponents[1]->SetBlendColor(blendColor);
             }
         }
     }
     else if (elapsedTime >= 5000)
     {
-        auto blendColor = m_logoSpriteRendererComponents[1]->GetBlendColor();
+        auto blendColor = m_logoSpriteComponents[1]->GetBlendColor();
         if (blendColor.a <= 1.0f)
         {
             blendColor.a += 2.0f * m_timeModule->GetTickTime();
-            m_logoSpriteRendererComponents[1]->SetBlendColor(blendColor);
+            m_logoSpriteComponents[1]->SetBlendColor(blendColor);
         }
     }
     else if (elapsedTime >= 3500)
     {
-        auto blendColor = m_logoSpriteRendererComponents[0]->GetBlendColor();
+        auto blendColor = m_logoSpriteComponents[0]->GetBlendColor();
         if (blendColor.a >= 0.0f)
         {
             blendColor.a -= 2.0f * m_timeModule->GetTickTime();
-            m_logoSpriteRendererComponents[0]->SetBlendColor(blendColor);
+            m_logoSpriteComponents[0]->SetBlendColor(blendColor);
         }
     }
     else if (elapsedTime >= 1000)
     {
-        auto blendColor = m_logoSpriteRendererComponents[0]->GetBlendColor();
+        auto blendColor = m_logoSpriteComponents[0]->GetBlendColor();
         if (blendColor.a <= 1.0f)
         {
             blendColor.a += 2.0f * m_timeModule->GetTickTime();
-            m_logoSpriteRendererComponents[0]->SetBlendColor(blendColor);
+            m_logoSpriteComponents[0]->SetBlendColor(blendColor);
         }
     }
 }
@@ -108,9 +108,9 @@ void LogoScene::CreateSpriteObject()
         auto object = tgon::GameObject::Create(tgon::StringHash(std::to_string(i)));
         object->GetTransform()->SetLocalScale(scaleList[i]);
 
-        m_logoSpriteRendererComponents[i] = object->AddComponent<tgon::UISpriteRendererComponent>();
-        m_logoSpriteRendererComponents[i]->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f));
-        m_logoSpriteRendererComponents[i]->SetTexture(std::make_shared<tgon::Texture>(*Image::Create(texturePathList[i]), tgon::FilterMode::Linear, tgon::WrapMode::Repeat, false, false));
+        m_logoSpriteComponents[i] = object->AddComponent<tgon::UISpriteRendererComponent>();
+        m_logoSpriteComponents[i]->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f));
+        m_logoSpriteComponents[i]->SetTexture(std::make_shared<tgon::Texture>(*Image::Create(texturePathList[i]), tgon::FilterMode::Linear, tgon::WrapMode::Repeat, false, false));
         
         this->AddChild(object);
     }
