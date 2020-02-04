@@ -16,6 +16,9 @@
 #include "NoteLineUI.h"
 #include "MusicLeftTimeUI.h"
 
+#include "../MusicResultScene/MusicResultScene.h"
+#include "../MultipleSceneModule.h"
+
 MusicPlayScene::MusicPlayScene() :
     m_audioPlayer(*tgon::AudioSource::Create()),
     m_timeModule(tgon::Application::GetEngine()->FindModule<tgon::TimeModule>()),
@@ -62,22 +65,22 @@ void MusicPlayScene::UpdateNoteLineEdgeOffset()
     m_noteLineEdgeMaterial->SetParameter2f("uvOffset", m_noteLineEdgeOffset, 0.0f);
 }
 
-void MusicPlayScene::MoveToScoreScene()
+void MusicPlayScene::PlayMusicFinishFadeOut(tgon::Delegate<void()>&& onFinishFadeOut)
 {
     auto timeModule = tgon::Application::GetEngine()->FindModule<tgon::TimeModule>();
     auto timerModule = tgon::Application::GetEngine()->FindModule<tgon::TimerModule>();
-    timerModule->SetTimer([this, timeModule, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule)](tgon::TimerHandle timerHandle)
+    timerModule->SetTimer([this, timeModule, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule), onFinishFadeOut = std::move(onFinishFadeOut)](tgon::TimerHandle timerHandle)
     {
         auto blendColor = m_fadeOutSpriteComponent->GetBlendColor();
-        blendColor.a += timeModule->GetTickTime();
+        blendColor.a += timeModule->GetTickTime() * 3.0f;
         m_fadeOutSpriteComponent->SetBlendColor(blendColor);
         
         if (blendColor.a >= 1.0f)
         {
-            auto timerModule = weakTimerModule.lock();
-            if (timerModule != nullptr)
+            if (auto timerModule = weakTimerModule.lock(); timerModule != nullptr)
             {
                 timerModule->ClearTimer(timerHandle);
+                onFinishFadeOut();
             }
         }
         
@@ -124,6 +127,7 @@ void MusicPlayScene::OnActivate()
             timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
             {
                 m_audioPlayer.Play();
+                m_audioPlayer.SetProgressInSeconds(1.5f);
                 m_isMusicWaiting = false;
             }, 3.0f, false);
             auto loopTimer = timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
@@ -133,14 +137,24 @@ void MusicPlayScene::OnActivate()
             
             timerModule->SetTimer([this, loopTimer, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule)](tgon::TimerHandle timerHandle)
             {
+                m_isMusicWaiting = true;
+
                 auto timerModule = weakTimerModule.lock();
-                if (timerModule != nullptr)
+                if (timerModule == nullptr)
                 {
-                    timerModule->ClearTimer(loopTimer);
+                    return;
                 }
                 
-                m_isMusicWaiting = true;
-                this->MoveToScoreScene();
+                timerModule->ClearTimer(loopTimer);
+                timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
+                {
+                    this->PlayMusicFinishFadeOut([]()
+                    {
+                        auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
+                        auto gameDataModule = tgon::Application::GetEngine()->FindModule<GameDataModule>();
+                        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, gameDataModule->GetCachedScene<MusicResultScene>());
+                    });
+                }, 1.5f, false);
             }, 3.0f + m_audioPlayer.GetTotalProgressInSeconds(), false);
             
         });
@@ -381,7 +395,6 @@ void MusicPlayScene::InitializeMusicNameObject()
     textComponent->SetFontSize(31);
     textComponent->SetRect(tgon::I32Rect(0, 0, 500, 50));
     textComponent->SetTextAlignment(tgon::TextAlignment::MiddleLeft);
-    textComponent->SetSortingLayer(4);
 
     m_musicNameTextComponent = textComponent;
 
@@ -400,7 +413,6 @@ void MusicPlayScene::InitializeMusicArtistNameObject()
     textComponent->SetFontSize(16);
     textComponent->SetRect(tgon::I32Rect(0, 0, 500, 50));
     textComponent->SetTextAlignment(tgon::TextAlignment::UpperLeft);
-    textComponent->SetSortingLayer(4);
     
     m_musicArtistNameTextComponent = textComponent;
 

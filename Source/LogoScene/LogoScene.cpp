@@ -8,6 +8,7 @@
 #include "Engine/InputModule.h"
 
 #include "../TitleScene/TitleScene.h"
+#include "../MusicResultScene/MusicResultScene.h"
 #include "../GameDataModule.h"
 #include "../MultipleSceneModule.h"
 
@@ -102,6 +103,12 @@ void LogoScene::CreateSpriteObject()
         tgon::Vector3(1.0f, 1.0f, 1.0f),
         tgon::Vector3(858.0f, 462.0f, 1.0f),
     };
+    tgon::Color4f blendColorList[] =
+    {
+        tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f),
+        tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f),
+        tgon::Color4f(0.0f, 0.0f, 0.0f, 0.0f),
+    };
 
     for (int i = 0; i < std::extent_v<decltype(texturePathList)>; ++i)
     {
@@ -109,7 +116,7 @@ void LogoScene::CreateSpriteObject()
         object->GetTransform()->SetLocalScale(scaleList[i]);
 
         m_logoSpriteComponents[i] = object->AddComponent<tgon::UISpriteRendererComponent>();
-        m_logoSpriteComponents[i]->SetBlendColor(tgon::Color4f(1.0f, 1.0f, 1.0f, 0.0f));
+        m_logoSpriteComponents[i]->SetBlendColor(blendColorList[i]);
         m_logoSpriteComponents[i]->SetTexture(std::make_shared<tgon::Texture>(*Image::Create(texturePathList[i]), tgon::FilterMode::Linear, tgon::WrapMode::Repeat, false, false));
         
         this->AddChild(object);

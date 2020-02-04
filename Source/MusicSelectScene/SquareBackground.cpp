@@ -32,7 +32,9 @@ void SquareBackground::InitializeSpriteComponent()
 
     auto texture = assetModule->GetResource<tgon::Texture>(u8"Resource/Background/MusicSelectScene/Layer.png");
     texture->SetWrapMode(tgon::WrapMode::Repeat);
+
     spriteRendererComponent->SetTexture(std::move(texture));
+    spriteRendererComponent->SetTextureSize({838, 441});
 
     m_material = std::move(material);
 }

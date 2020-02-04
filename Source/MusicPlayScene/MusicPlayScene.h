@@ -69,7 +69,7 @@ private:
     void OnHitNote(NoteTiming noteTiming);
     void UpdateNotes();
     void UpdateNoteLineEdgeOffset();
-    void MoveToScoreScene();
+    void PlayMusicFinishFadeOut(tgon::Delegate<void()>&& onFinishFadeOut);
 
 /**@section Variable */
 private:

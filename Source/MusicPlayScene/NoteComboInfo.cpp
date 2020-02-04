@@ -112,7 +112,6 @@ void NoteComboInfo::InitializeCurrentComboText()
     textComponent->SetFontSize(27);
     textComponent->SetRect(tgon::I32Rect(-500, 34, 482, 30));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerRight);
-    textComponent->SetSortingLayer(3);
     
     owner->AddChild(currComboText);
     
@@ -134,7 +133,6 @@ void NoteComboInfo::InitializeMaxComboText()
     textComponent->SetFontSize(20);
     textComponent->SetRect(tgon::I32Rect(-500, -4, 482, 30));
     textComponent->SetTextAlignment(tgon::TextAlignment::UpperRight);
-    textComponent->SetSortingLayer(3);
     
     owner->AddChild(maxComboText);
     
@@ -155,7 +153,6 @@ void NoteComboInfo::InitializePerfectText()
     textComponent->SetFontSize(12);
     textComponent->SetRect(tgon::I32Rect(18, 31, 500, 15));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
-    textComponent->SetSortingLayer(3);
     textComponent->SetBlendColor({240.0f / 255.0f, 37.0f / 255.0f, 37.0f / 255.0f, 1.0f});
 
     owner->AddChild(perfectText);
@@ -178,7 +175,6 @@ void NoteComboInfo::InitializeGreatText()
     textComponent->SetFontSize(12);
     textComponent->SetRect(tgon::I32Rect(18, 17, 500, 15));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
-    textComponent->SetSortingLayer(3);
     textComponent->SetBlendColor({238.0f / 255.0f, 167.0f / 255.0f, 13.0f / 255.0f, 1.0f});
 
     owner->AddChild(greatText);
@@ -201,7 +197,6 @@ void NoteComboInfo::InitializeGoodText()
     textComponent->SetFontSize(12);
     textComponent->SetRect(tgon::I32Rect(18, 3, 500, 15));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
-    textComponent->SetSortingLayer(3);
     textComponent->SetBlendColor({238.0f / 255.0f, 167.0f / 255.0f, 13.0f / 255.0f, 1.0f});
 
     owner->AddChild(goodText);
@@ -224,7 +219,6 @@ void NoteComboInfo::InitializeMissText()
     textComponent->SetFontSize(12);
     textComponent->SetRect(tgon::I32Rect(18, -11, 500, 15));
     textComponent->SetTextAlignment(tgon::TextAlignment::LowerLeft);
-    textComponent->SetSortingLayer(3);
     textComponent->SetBlendColor({127.0f / 255.0f, 124.0f / 255.0f, 125.0f / 255.0f, 1.0f});
 
     owner->AddChild(missText);

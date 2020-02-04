@@ -23,6 +23,7 @@ class LogoScene;
 class TitleScene;
 class MusicSelectScene;
 class MusicPlayScene;
+class MusicResultScene;
 
 struct NoteInfo
 {
@@ -70,6 +71,7 @@ private:
     std::shared_ptr<TitleScene> m_cachedTitleScene;
     std::shared_ptr<MusicSelectScene> m_cachedMusicSelectScene;
     std::shared_ptr<MusicPlayScene> m_cachedMusicPlayScene;
+    std::shared_ptr<MusicResultScene> m_cachedMusicResultScene;
 };
 
 template <>
@@ -94,4 +96,10 @@ template <>
 inline std::shared_ptr<MusicPlayScene> GameDataModule::GetCachedScene() noexcept
 {
     return m_cachedMusicPlayScene;
+}
+
+template <>
+inline std::shared_ptr<MusicResultScene> GameDataModule::GetCachedScene() noexcept
+{
+    return m_cachedMusicResultScene;
 }

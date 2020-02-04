@@ -41,7 +41,6 @@ void MusicLeftTimeUI::InitializeBGImage()
     auto spriteRendererComponent = owner->AddComponent<tgon::UISpriteRendererComponent>();
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/UI/MusicPlayScene/leftTimeBar.png"));
-    spriteRendererComponent->SetSortingLayer(4);
     spriteRendererComponent->SetPivot(tgon::Vector2(1.0f, 0.5f));
     
     auto leftTimeBGMaterial = std::make_shared<tgon::Material>(g_positionColorUVVert, g_scissorFrag);
@@ -64,7 +63,6 @@ void MusicLeftTimeUI::InitializeCircleImage()
     auto spriteRendererComponent = m_leftTimeCircle->AddComponent<tgon::UISpriteRendererComponent>();
     auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
     spriteRendererComponent->SetTexture(assetModule->GetResource<tgon::Texture>(u8"Resource/UI/MusicPlayScene/leftTimeCircle.png"));
-    spriteRendererComponent->SetSortingLayer(4);
 
     owner->AddChild(m_leftTimeCircle);
     

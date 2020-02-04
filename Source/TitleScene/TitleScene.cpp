@@ -102,7 +102,7 @@ void TitleScene::CreateSpriteObjects()
     {
         u8"Resource/Background/TitleScene/star.png",
         u8"Resource/Background/TitleScene/earth.png",
-        u8"Resource/Background/TitleScene/girl.png",
+        u8"Resource/Object/Common/girl.png",
         u8"Resource/UI/TitleScene/gameLogo.png",
         u8"Resource/UI/TitleScene/pressDesc.png",
         u8"Resource/UI/TitleScene/creatorBtn.png",
@@ -159,7 +159,9 @@ void TitleScene::CreateSpriteObjects()
     }
 
     m_girl = this->FindChild(u8"girl");
+
     m_fadeInSpriteRendererComponent = this->FindChild(u8"board01")->FindComponent<tgon::UISpriteRendererComponent>();
+    m_fadeInSpriteRendererComponent->SetBlendColor({0.0f, 0.0f, 0.0f, 1.0f});
 }
 
 void TitleScene::CreateFireFlyObjects()
