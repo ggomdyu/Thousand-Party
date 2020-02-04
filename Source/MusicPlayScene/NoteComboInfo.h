@@ -30,6 +30,11 @@ public:
     void OnHitNote(NoteTiming noteTiming);
     void OnMissNote();
     void Reset();
+    int32_t GetMaxComboCount() const noexcept;
+    int32_t GetPerfectCount() const noexcept;
+    int32_t GetGreatCount() const noexcept;
+    int32_t GetGoodCount() const noexcept;
+    int32_t GetMissCount() const noexcept;
 
 private:
     void InitializePosition();

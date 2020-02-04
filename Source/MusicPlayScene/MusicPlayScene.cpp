@@ -127,18 +127,15 @@ void MusicPlayScene::OnActivate()
             timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
             {
                 m_audioPlayer.Play();
-                m_audioPlayer.SetProgressInSeconds(1.5f);
                 m_isMusicWaiting = false;
             }, 3.0f, false);
             auto loopTimer = timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
             {
-                m_elapsedTime = m_audioPlayer.GetProgressInSeconds();
+                m_elapsedTime = std::max(m_elapsedTime, m_audioPlayer.GetProgressInSeconds());
             }, 0.5f, true);
             
             timerModule->SetTimer([this, loopTimer, weakTimerModule = std::weak_ptr<tgon::TimerModule>(timerModule)](tgon::TimerHandle timerHandle)
             {
-                m_isMusicWaiting = true;
-
                 auto timerModule = weakTimerModule.lock();
                 if (timerModule == nullptr)
                 {
@@ -148,14 +145,18 @@ void MusicPlayScene::OnActivate()
                 timerModule->ClearTimer(loopTimer);
                 timerModule->SetTimer([this](tgon::TimerHandle timerHandle)
                 {
-                    this->PlayMusicFinishFadeOut([]()
+                    this->PlayMusicFinishFadeOut([this]()
                     {
                         auto sceneModule = tgon::Application::GetEngine()->FindModule<MultipleSceneModule>();
                         auto gameDataModule = tgon::Application::GetEngine()->FindModule<GameDataModule>();
-                        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, gameDataModule->GetCachedScene<MusicResultScene>());
+                        auto musicResultScene = gameDataModule->GetCachedScene<MusicResultScene>();
+                        
+                        MusicResultInfo musicResultInfo{m_noteComboInfo->GetPerfectCount(), m_noteComboInfo->GetGreatCount(), m_noteComboInfo->GetGoodCount(), m_noteComboInfo->GetMissCount(), m_noteComboInfo->GetMaxComboCount()};
+                        musicResultScene->SetMusicResultInfo(musicResultInfo);
+                        sceneModule->ChangeScene(MultipleSceneChangeAnimType::NoAnim, musicResultScene);
                     });
                 }, 1.5f, false);
-            }, 3.0f + m_audioPlayer.GetTotalProgressInSeconds(), false);
+            }, m_audioPlayer.GetTotalProgressInSeconds(), false);
             
         });
     });

@@ -16,10 +16,20 @@ namespace tgon
 class TimerModule;
 class TimeModule;
 class InputModule;
+class UITextRendererComponent;
 
 } /* namespace tgon */
 
 class ThousandPartyCircle;
+
+struct MusicResultInfo
+{
+    int32_t perfectCount;
+    int32_t greatCount;
+    int32_t goodCount;
+    int32_t missCount;
+    int32_t maxCombo;
+};
 
 class MusicResultScene :
     public tgon::Scene
@@ -35,6 +45,7 @@ public:
     void Initialize() override;
     void Update() override;
     void OnActivate() override;
+    void SetMusicResultInfo(const MusicResultInfo& musicResultInfo);
     
 /**@section Variable */
 private:
@@ -56,6 +67,11 @@ private:
     std::shared_ptr<tgon::GameObject> m_girl;
     std::shared_ptr<tgon::GameObject> m_resultText;
     std::shared_ptr<tgon::GameObject> m_resultInfo;
+    std::shared_ptr<tgon::UITextRendererComponent> m_perfectTextComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_greatTextComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_goodTextComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_missTextComponent;
+    std::shared_ptr<tgon::UITextRendererComponent> m_maxComboTextComponent;
     tgon::Vector3 m_girlInitialPos;
     tgon::Vector3 m_resultTextInitialPos;
     tgon::Vector3 m_resultInfoInitialPos;

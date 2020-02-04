@@ -97,6 +97,31 @@ void NoteComboInfo::Reset()
     this->RefreshText();
 }
 
+int32_t NoteComboInfo::GetMaxComboCount() const noexcept
+{
+    return m_maxCombo;
+}
+
+int32_t NoteComboInfo::GetPerfectCount() const noexcept
+{
+    return m_perfectCount;
+}
+
+int32_t NoteComboInfo::GetGreatCount() const noexcept
+{
+    return m_greatCount;
+}
+
+int32_t NoteComboInfo::GetGoodCount() const noexcept
+{
+    return m_goodCount;
+}
+
+int32_t NoteComboInfo::GetMissCount() const noexcept
+{
+    return m_missCount;
+}
+
 void NoteComboInfo::InitializeCurrentComboText()
 {
     auto owner = this->GetGameObject().lock();

@@ -102,7 +102,7 @@ void TitleScene::CreateSpriteObjects()
     {
         u8"Resource/Background/TitleScene/star.png",
         u8"Resource/Background/TitleScene/earth.png",
-        u8"Resource/Object/Common/girl.png",
+        u8"Resource/Object/TitleScene/girl.png",
         u8"Resource/UI/TitleScene/gameLogo.png",
         u8"Resource/UI/TitleScene/pressDesc.png",
         u8"Resource/UI/TitleScene/creatorBtn.png",

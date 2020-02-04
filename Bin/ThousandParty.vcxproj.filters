@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\GameDataModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\LogoScene\LogoScene.cpp">
+      <Filter>Source\LogoScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MultipleSceneModule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\MusicEditScene.cpp">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\MusicLeftTimeUI.cpp">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\MusicPlayScene.cpp">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\Note.cpp">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\NoteComboInfo.cpp">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\NoteLineUI.cpp">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicResultScene\MusicResultScene.cpp">
+      <Filter>Source\MusicResultScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicResultScene\ThousandPartyCircle.cpp">
+      <Filter>Source\MusicResultScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicSelectScene\MusicSelectScene.cpp">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicSelectScene\MusicSelector.cpp">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicSelectScene\SquareBackground.cpp">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\TestScene\RenderTestScene.cpp">
+      <Filter>Source\TestScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\ThousandParty.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\TitleScene\FireFly.cpp">
+      <Filter>Source\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\TitleScene\NightSky.cpp">
+      <Filter>Source\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\TitleScene\TitleScene.cpp">
+      <Filter>Source\TitleScene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\GameDataModule.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\LogoScene\LogoScene.h">
+      <Filter>Source\LogoScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MultipleSceneModule.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\MusicEditScene.h">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\MusicLeftTimeUI.h">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\MusicPlayScene.h">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\Note.h">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\NoteComboInfo.h">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicPlayScene\NoteLineUI.h">
+      <Filter>Source\MusicPlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicResultScene\MusicResultScene.h">
+      <Filter>Source\MusicResultScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicResultScene\ThousandPartyCircle.h">
+      <Filter>Source\MusicResultScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicSelectScene\MusicSelectScene.h">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicSelectScene\MusicSelector.h">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\MusicSelectScene\SquareBackground.h">
+      <Filter>Source\MusicSelectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\TestScene\RenderTestScene.h">
+      <Filter>Source\TestScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\ThousandParty.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\TitleScene\FireFly.h">
+      <Filter>Source\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\TitleScene\NightSky.h">
+      <Filter>Source\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\Source\TitleScene\TitleScene.h">
+      <Filter>Source\TitleScene</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ggomdyu\Desktop\프로그래밍\Git\Thousand-Party\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{C027A642-9B29-3EC3-964C-4D155F67230E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\LogoScene">
+      <UniqueIdentifier>{8827A2A3-2FA8-35EB-9D82-411F0061D553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MusicPlayScene">
+      <UniqueIdentifier>{F4BF4441-8925-3672-8628-8B71B79C2F9C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MusicResultScene">
+      <UniqueIdentifier>{B7DB9DA6-552B-334E-B327-2F2A91FE6C92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MusicSelectScene">
+      <UniqueIdentifier>{D63D9620-5CCC-3EBC-84B4-A5722690C92D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TestScene">
+      <UniqueIdentifier>{6FD20B8A-8055-3792-B836-96E6AB2078DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TitleScene">
+      <UniqueIdentifier>{730D0C07-0938-3A8C-BBDD-550BBC1E35EE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
