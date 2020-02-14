@@ -87,6 +87,37 @@ void MusicPlayScene::PlayMusicFinishFadeOut(tgon::Delegate<void()>&& onFinishFad
     }, 0.0f, true);
 }
 
+void MusicPlayScene::RefreshCoverImage(const std::string& coverImagePath)
+{
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    auto coverImageTexture = assetModule->GetResource<tgon::Texture>(coverImagePath);
+    m_coverImageSpriteComponent->SetTexture(coverImageTexture);
+    m_coverImageSpriteComponent->SetTextureSize({58.0f, 58.0f});
+    m_coverImageSpriteComponent->SetTextureRect({0.0f, 0.0f, 58.0f, 58.0f});
+}
+
+void MusicPlayScene::RefreshBackgroundObject(const std::string& coverImagePath)
+{
+    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
+    auto coverImageTexture = assetModule->GetResource<tgon::Texture>(coverImagePath);
+    m_backgroundSpriteComponent->SetTexture(coverImageTexture);
+    
+    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
+    float backgroundSize = std::max(clientSize.width, clientSize.height);
+    m_backgroundSpriteComponent->SetTextureSize({backgroundSize, backgroundSize});
+    m_backgroundSpriteComponent->SetTextureRect({0, 0, backgroundSize, backgroundSize});
+}
+
+void MusicPlayScene::RefreshMusicNameObject()
+{
+    m_musicNameTextComponent->SetText(m_musicInfo.musicName);
+}
+
+void MusicPlayScene::RefreshMusicArtistNameObject()
+{
+    m_musicArtistNameTextComponent->SetText(m_musicInfo.musicAuthorName);
+}
+
 void MusicPlayScene::OnActivate()
 {
     std::string musicDirectory = std::string(tgon::Path::GetDirectoryName(m_musicInfo.musicPath));
@@ -96,30 +127,27 @@ void MusicPlayScene::OnActivate()
         coverImagePath = musicDirectory + "/cover.jpg";
     }
     
-    auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
-    auto coverImageTexture = assetModule->GetResource<tgon::Texture>(coverImagePath);
-    m_coverImageSpriteComponent->SetTexture(coverImageTexture);
-    m_coverImageSpriteComponent->SetTextureSize({58.0f, 58.0f});
-    m_coverImageSpriteComponent->SetTextureRect({0.0f, 0.0f, 58.0f, 58.0f});
-
-    auto clientSize = tgon::Application::GetRootWindow()->GetClientSize();
-    float backgroundSize = std::max(clientSize.width, clientSize.height);
-    m_backgroundSpriteComponent->SetTexture(coverImageTexture);
-    m_backgroundSpriteComponent->SetTextureSize({backgroundSize, backgroundSize});
-    m_backgroundSpriteComponent->SetTextureRect({0, 0, backgroundSize, backgroundSize});
-    m_backgroundSpriteComponent->SetPivot({0.5f, 0.5f});
-
-    m_musicNameTextComponent->SetText(m_musicInfo.musicName);
-    m_musicArtistNameTextComponent->SetText(m_musicInfo.musicAuthorName);
+    this->RefreshCoverImage(coverImagePath);
+    this->RefreshBackgroundObject(coverImagePath);
+    this->RefreshMusicNameObject();
+    this->RefreshMusicArtistNameObject();
     
+    m_audioPlayer.SetVolume(1.0f);
+    m_audioPlayer.SetLoop(false);
+    m_audioPlayer.SetProgressInSeconds(0.0f);
+    m_musicLeftTime->SetProgress(0.0f);
+    m_noteComboInfo->Reset();
     m_fadeOutSpriteComponent->SetBlendColor({1.0f, 1.0f, 1.0f, 0.0f});
-
+    m_isMusicWaiting = true;
+    m_elapsedTime = 0.0f;
+    m_noteLineEdgeOffset = 0.0f;
+    m_noteInfoIndex = 0;
+    
     auto taskModule = tgon::Application::GetEngine()->FindModule<tgon::TaskModule>();
-    taskModule->GetGlobalDispatchQueue().AddAsyncTask([&, taskModule, assetModule]()
+    taskModule->GetGlobalDispatchQueue().AddAsyncTask([&, taskModule]()
     {
+        auto assetModule = tgon::Application::GetEngine()->FindModule<tgon::AssetModule>();
         m_audioPlayer.SetClip(assetModule->GetResource<tgon::AudioClip>(m_musicInfo.musicPath));
-        m_audioPlayer.SetVolume(1.0f);
-        m_audioPlayer.SetLoop(false);
         
         taskModule->GetMainDispatchQueue().AddAsyncTask([&]()
         {
@@ -157,7 +185,6 @@ void MusicPlayScene::OnActivate()
                     });
                 }, 1.5f, false);
             }, m_audioPlayer.GetTotalProgressInSeconds(), false);
-            
         });
     });
 }

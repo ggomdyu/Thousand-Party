@@ -66,6 +66,10 @@ private:
     HoldNoteObjectPair GetHoldNoteObjectFromPool();
     void InitializeMusicNameObject();
     void InitializeMusicArtistNameObject();
+    void RefreshCoverImage(const std::string& coverImagePath);
+    void RefreshBackgroundObject(const std::string& coverImagePath);
+    void RefreshMusicNameObject();
+    void RefreshMusicArtistNameObject();
     void OnHitNote(NoteTiming noteTiming);
     void UpdateNotes();
     void UpdateNoteLineEdgeOffset();
