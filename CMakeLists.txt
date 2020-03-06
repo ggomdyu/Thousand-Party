@@ -13,7 +13,11 @@ if (APPLE)
     set(CMAKE_CXX_FLAGS "-x objective-c++")
 endif ()
 
-function (init_thousand_party)
+function(init_thirdparty_subdirectories)
+    add_subdirectory(../TGON "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/TGON")
+endfunction()
+
+function (init_thousandparty_subdirectories)
     set(GLOB_AGRUMENTS Source/*.cpp Source/*.c Source/*.h)
     file(GLOB_RECURSE SRC_PATH_LIST ${GLOB_AGRUMENTS})
 
@@ -23,23 +27,15 @@ function (init_thousand_party)
         add_executable(ThousandParty ${SRC_PATH_LIST})
     endif ()
     source_group(TREE ${THOUSAND_PARTY_PATH} FILES ${SRC_PATH_LIST})
-    init_thousand_party_properties()
 endfunction ()
 
-function (init_thousand_party_properties)
-    set_target_properties(ThousandParty PROPERTIES
-        CXX_STANDARD 17
-        CXX_STANDARD_REQUIRED YES
-        CXX_EXTENSIONS NO
-        FOLDER ThousandParty
-    )
+function (init_thousandparty_properties)
+    set_target_properties(ThousandParty PROPERTIES CXX_STANDARD 20 CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS NO FOLDER ThousandParty)
+    target_link_libraries(ThousandParty PUBLIC TGON)
 endfunction ()
 
-function (init_tgon)
-    add_subdirectory(../TGON "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/TGON")
-endfunction ()
 
-init_thousand_party()
-init_tgon()
+init_thirdparty_subdirectories()
 
-target_link_libraries(ThousandParty PUBLIC TGON)
+init_thousandparty_subdirectories()
+init_thousandparty_properties()
