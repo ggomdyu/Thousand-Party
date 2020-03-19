@@ -1,0 +1,820 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		658C6F0E57364945A62F8EEF /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B574871603774A7DBBF95F33 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				965746A410434B6C806BE0FF /* CMake Rules */,
+			);
+			dependencies = (
+				86FEA464018C47DFB0E4187D /* PBXTargetDependency */,
+				BB31726D70484D95AC2AF6BD /* PBXTargetDependency */,
+				A37200D8D4124B1C8B7A8AF6 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		76FF63AD85B7480FAF775640 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D350D41BFCCC4E40B2F65CDF /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				77701448FA8D4483B4FCBC6E /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		336F33543A07442C95FC8F5D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bin2h.c */ = {isa = PBXBuildFile; fileRef = 0C887611AC2A4D579E8956C4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bin2h.c */; };
+		AA91B0C51E9B41A48E1EC3F8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bsincgen.c */ = {isa = PBXBuildFile; fileRef = 82E526AF74B046669DE1DA3F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bsincgen.c */; };
+		C092439D25204DBE9F0D7687 = {isa = PBXBuildFile; fileRef = 4AB46E5DDA6040E8A60F62D7; };
+		F625BE3997A34439AF43CF45 = {isa = PBXBuildFile; fileRef = 6959A3ACCB9C45BFA8E037F5; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		253D75D56E9E498393117FB1 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		281ABFC3DEAB46878DCD0095 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		A7B3E6EFB2E54205BF306A4F /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		B9C076C13D1C4AC7A1B3F374 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		1E7740F9F6404BD9A52BACE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC694598514741E3BDAAD253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76FF63AD85B7480FAF775640;
+			remoteInfo = ZERO_CHECK;
+		};
+		4C4E31CDA0F6455BB43DEB14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC694598514741E3BDAAD253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76FF63AD85B7480FAF775640;
+			remoteInfo = ZERO_CHECK;
+		};
+		A64948D4C8D8467F91F82308 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC694598514741E3BDAAD253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F4022BE6630485B85809C36;
+			remoteInfo = bsincgen;
+		};
+		DF76E3A182E84AA8A7177153 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC694598514741E3BDAAD253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76FF63AD85B7480FAF775640;
+			remoteInfo = ZERO_CHECK;
+		};
+		F639B7D9F0B244CBBE0CEBFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC694598514741E3BDAAD253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4A4B1ADF7FB4D12805B757A;
+			remoteInfo = bin2h;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C887611AC2A4D579E8956C4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bin2h.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bin2h.c; path = bin2h.c; sourceTree = SOURCE_ROOT; };
+		18894F9DAA5947A8B88BD841 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		4AB46E5DDA6040E8A60F62D7 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		6959A3ACCB9C45BFA8E037F5 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		7FACD4F5DFBD4D8188FA5AAF /* bsincgen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = bsincgen; sourceTree = BUILT_PRODUCTS_DIR; };
+		82E526AF74B046669DE1DA3F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bsincgen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bsincgen.c; path = bsincgen.c; sourceTree = SOURCE_ROOT; };
+		87A7EC71EE8C495995048B05 /* bin2h */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = bin2h; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00345DF67E1540D8BA384D45 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				3827529118FD46E885B06E12 /* CMake Rules */,
+				18894F9DAA5947A8B88BD841,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		0CB33E9323544416A2415B33 = {
+			isa = PBXGroup;
+			children = (
+				27B017AA4163423FB6E97A63 /* bsincgen */,
+				CB2FFAC282F3421CB564FB7A /* bin2h */,
+				00345DF67E1540D8BA384D45 /* ALL_BUILD */,
+				763948DCAA4447D8BF71659A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27B017AA4163423FB6E97A63 /* bsincgen */ = {
+			isa = PBXGroup;
+			children = (
+				F203A4DF02E042A0B2C97FBA /* Source Files */,
+				4AB46E5DDA6040E8A60F62D7,
+			);
+			name = bsincgen;
+			sourceTree = "<group>";
+		};
+		3827529118FD46E885B06E12 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		58C0C547617D4DB78F9E4F05 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C887611AC2A4D579E8956C4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bin2h.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		763948DCAA4447D8BF71659A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87A7EC71EE8C495995048B05 /* bin2h */,
+				7FACD4F5DFBD4D8188FA5AAF /* bsincgen */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB2FFAC282F3421CB564FB7A /* bin2h */ = {
+			isa = PBXGroup;
+			children = (
+				58C0C547617D4DB78F9E4F05 /* Source Files */,
+				6959A3ACCB9C45BFA8E037F5,
+			);
+			name = bin2h;
+			sourceTree = "<group>";
+		};
+		F203A4DF02E042A0B2C97FBA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				82E526AF74B046669DE1DA3F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bsincgen.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F4022BE6630485B85809C36 /* bsincgen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DF8467F468B4CB4A1EDFF63 /* Build configuration list for PBXNativeTarget "bsincgen" */;
+			buildPhases = (
+				57D57C7BB0444B2990B1D1BB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				609B5EC31BE04986ABA0770F /* PBXTargetDependency */,
+			);
+			name = bsincgen;
+			productName = bsincgen;
+			productReference = 7FACD4F5DFBD4D8188FA5AAF /* bsincgen */;
+			productType = "com.apple.product-type.tool";
+		};
+		C4A4B1ADF7FB4D12805B757A /* bin2h */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD8B15DA88A14E86B1C406D7 /* Build configuration list for PBXNativeTarget "bin2h" */;
+			buildPhases = (
+				3986DC791BFE4BC8B955E62A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA7BF3602ADF4BE1BF6D61E7 /* PBXTargetDependency */,
+			);
+			name = bin2h;
+			productName = bin2h;
+			productReference = 87A7EC71EE8C495995048B05 /* bin2h */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC694598514741E3BDAAD253 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = 9B2E85E74975458192DA4102 /* Build configuration list for PBXProject "native-tools" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				253D75D56E9E498393117FB1 /* Debug */,
+				A7B3E6EFB2E54205BF306A4F /* Release */,
+				281ABFC3DEAB46878DCD0095 /* MinSizeRel */,
+				B9C076C13D1C4AC7A1B3F374 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 0CB33E9323544416A2415B33;
+			projectDirPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+			projectRoot = "";
+			targets = (
+				658C6F0E57364945A62F8EEF /* ALL_BUILD */,
+				76FF63AD85B7480FAF775640 /* ZERO_CHECK */,
+				C4A4B1ADF7FB4D12805B757A /* bin2h */,
+				5F4022BE6630485B85809C36 /* bsincgen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18DBC80DD762432792A7A607 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		77701448FA8D4483B4FCBC6E /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		965746A410434B6C806BE0FF /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		E338199E962E46A28CF5408E = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3986DC791BFE4BC8B955E62A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336F33543A07442C95FC8F5D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bin2h.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57D57C7BB0444B2990B1D1BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA91B0C51E9B41A48E1EC3F8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/bsincgen.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		609B5EC31BE04986ABA0770F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76FF63AD85B7480FAF775640 /* ZERO_CHECK */;
+			targetProxy = 4C4E31CDA0F6455BB43DEB14 /* PBXContainerItemProxy */;
+		};
+		86FEA464018C47DFB0E4187D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4A4B1ADF7FB4D12805B757A /* bin2h */;
+			targetProxy = F639B7D9F0B244CBBE0CEBFF /* PBXContainerItemProxy */;
+		};
+		A37200D8D4124B1C8B7A8AF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F4022BE6630485B85809C36 /* bsincgen */;
+			targetProxy = A64948D4C8D8467F91F82308 /* PBXContainerItemProxy */;
+		};
+		BB31726D70484D95AC2AF6BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76FF63AD85B7480FAF775640 /* ZERO_CHECK */;
+			targetProxy = 1E7740F9F6404BD9A52BACE6 /* PBXContainerItemProxy */;
+		};
+		EA7BF3602ADF4BE1BF6D61E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76FF63AD85B7480FAF775640 /* ZERO_CHECK */;
+			targetProxy = DF76E3A182E84AA8A7177153 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0389D2A2699E4112B21AB8C2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1044016F2E2B437C85212EEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/build";
+			};
+			name = Debug;
+		};
+		29097FA8CC1B43D094AE9B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2A61A0C6CCB849E6A10B6F2D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2B2FE35CEAAA4394AD6A7DE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		318CA899CC5D44BBAF587182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		32652DD763FE4C6ABE3C3A63 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bin2h;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		382D18E4DCCE4E67AF4296A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bsincgen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		4111A368883E41C280006DBB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/build";
+			};
+			name = MinSizeRel;
+		};
+		5DF8A1AAAB944CA99194E7D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/build";
+			};
+			name = Release;
+		};
+		6A51109783C344F2ACAAE363 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bsincgen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7282B0A2716246DF80BE8731 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		78E4CE1B0B694700A4D129E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bin2h;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		844662DE708647028AAEBC41 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bsincgen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		986AA6463618465F90705EF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bsincgen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		9B92EE775EC847A0AB154479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		BD7B5DFEC47240C6A16508C9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bin2h;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C596CE4FF0BA4F4E9A7752E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bin2h;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DED68FED44F74FBC9D7B5A17 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools/build";
+			};
+			name = RelWithDebInfo;
+		};
+		FEC1D0CFB0474A02BEB4A09E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/native-tools";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DF8467F468B4CB4A1EDFF63 /* Build configuration list for PBXNativeTarget "bsincgen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				382D18E4DCCE4E67AF4296A8 /* Debug */,
+				986AA6463618465F90705EF5 /* Release */,
+				844662DE708647028AAEBC41 /* MinSizeRel */,
+				6A51109783C344F2ACAAE363 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9B2E85E74975458192DA4102 /* Build configuration list for PBXProject "native-tools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1044016F2E2B437C85212EEF /* Debug */,
+				5DF8A1AAAB944CA99194E7D3 /* Release */,
+				4111A368883E41C280006DBB /* MinSizeRel */,
+				DED68FED44F74FBC9D7B5A17 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B574871603774A7DBBF95F33 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29097FA8CC1B43D094AE9B87 /* Debug */,
+				9B92EE775EC847A0AB154479 /* Release */,
+				7282B0A2716246DF80BE8731 /* MinSizeRel */,
+				0389D2A2699E4112B21AB8C2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D350D41BFCCC4E40B2F65CDF /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B2FE35CEAAA4394AD6A7DE3 /* Debug */,
+				318CA899CC5D44BBAF587182 /* Release */,
+				2A61A0C6CCB849E6A10B6F2D /* MinSizeRel */,
+				FEC1D0CFB0474A02BEB4A09E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FD8B15DA88A14E86B1C406D7 /* Build configuration list for PBXNativeTarget "bin2h" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78E4CE1B0B694700A4D129E1 /* Debug */,
+				C596CE4FF0BA4F4E9A7752E9 /* Release */,
+				BD7B5DFEC47240C6A16508C9 /* MinSizeRel */,
+				32652DD763FE4C6ABE3C3A63 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC694598514741E3BDAAD253 /* Project object */;
+}

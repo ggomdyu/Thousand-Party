@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/MacOS/MacOSMain.mm \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/PrecompiledHeader.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/core.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include/AL/al.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include/AL/alc.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/Application.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Engine/Engine.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Engine/Module.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Core/RuntimeObject.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Core/RTTI.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Core/TypeTraits.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Engine/EngineConfig.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Graphics/VideoMode.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Math/Color.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/GSL-2.0.0/include/gsl/span \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/GSL-2.0.0/include/gsl/gsl_assert \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/GSL-2.0.0/include/gsl/gsl_byte \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/GSL-2.0.0/include/gsl/gsl_util \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/WindowStyle.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Engine/InputMode.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/Window.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Core/DelegateChain.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Core/Delegate.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Math/Extent.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Math/Vector2.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Core/ExpressionTemplate.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/MacOS/MacOSWindow.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Core/NonCopyable.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/Config.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/MacOS/MacOSConfig.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/MacOS/MacOSApplication.h

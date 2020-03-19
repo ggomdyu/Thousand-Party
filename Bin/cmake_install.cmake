@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party
+# Install script for directory: /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/ThousandParty")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/cmake_install.cmake")
+  include("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

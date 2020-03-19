@@ -1,0 +1,1318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4156E4D848854E10A7A07CC7 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 805C9778ABB04885A7CE23FB /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				A3A757E678A749739D0640A9 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				470ADCD2B2C04B6E83948041 /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		52A2736E4FFF445B96FC72ED /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 22B8C7DBB8824A139E33B7DA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				8C238FC822A44F6BAB4156A8 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		8EE6656C0226482E9A63D590 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 21A73E994D5243E0ABEB9610 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				B3B6009A16D3468D8ED73716 /* CMake Rules */,
+			);
+			dependencies = (
+				10B473AF204C42709823E645 /* PBXTargetDependency */,
+				A356C111872548188CA506BB /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		C58F5371E311477AB906A11C /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 28C97AB00D3A49489128E9CF /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				F4889AC188CC4C8BBD399B02 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				476349072CFF41918283D5E1 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0023E7484AC948BB85382480 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgasp.h */ = {isa = PBXBuildFile; fileRef = EF5F06700BCC4C06AADB382D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgasp.h */; };
+		00B33006C613493F928225ED /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pcf/pcf.c */ = {isa = PBXBuildFile; fileRef = 9C20763FA56F431DA8AD7CF0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pcf/pcf.c */; };
+		020F5AA0EEE24F22B7A49F7A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftvalid.h */ = {isa = PBXBuildFile; fileRef = D9F94EC1FD7F4A5CA8A980DA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftvalid.h */; };
+		045056B3FA6C463EBA648C33 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftdebug.h */ = {isa = PBXBuildFile; fileRef = 54B657A2E2F84652802B49A9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftdebug.h */; };
+		067000EF9223415EA80C4943 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftstdlib.h */ = {isa = PBXBuildFile; fileRef = AF728EC866824ADAA7596448 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftstdlib.h */; };
+		06EDF7B96C8240668EA8C063 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/sfnt/sfnt.c */ = {isa = PBXBuildFile; fileRef = E2E973E1BAC04B95BE69D912 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/sfnt/sfnt.c */; };
+		07C80D474EA549CE89FEC0FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmac.h */ = {isa = PBXBuildFile; fileRef = 968D26C7933A4D2799BC9CA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmac.h */; };
+		0A3C98499AFA4761A1346981 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/gzip/ftgzip.c */ = {isa = PBXBuildFile; fileRef = 04C81105A95A4CEB939041ED /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/gzip/ftgzip.c */; };
+		0E895D87D7744DEAAB284661 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgxval.h */ = {isa = PBXBuildFile; fileRef = 743B9D7F935146B3A579BEBC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgxval.h */; };
+		0FEC723ACC064F6ABE94B386 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftwinfnt.c */ = {isa = PBXBuildFile; fileRef = CB15685B8E2242C8B1490931 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftwinfnt.c */; };
+		108BBDB5055643E796FF2843 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftobjs.h */ = {isa = PBXBuildFile; fileRef = CA4AB539B46948199AE9EE07 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftobjs.h */; };
+		10A9591714ED42AD92545F13 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftrfork.h */ = {isa = PBXBuildFile; fileRef = FC0919DE44EE48BBB04ABED2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftrfork.h */; };
+		1145E65F0C3B48BDBE84F642 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftstream.h */ = {isa = PBXBuildFile; fileRef = 7CD52716E3DC4AA8938468D6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftstream.h */; };
+		12FA78F47BFE49F6BE866B8D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftfstype.c */ = {isa = PBXBuildFile; fileRef = 142956E7421246C3B687EEB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftfstype.c */; };
+		154E5899481C4A6CAB461CA2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmoderr.h */ = {isa = PBXBuildFile; fileRef = 54A1ABF9FB4944C39EF147D0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmoderr.h */; };
+		155FE52A2CC7474FAF3AAFB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bdf/bdf.c */ = {isa = PBXBuildFile; fileRef = 6254F8451B6D43C7A547D60C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bdf/bdf.c */; };
+		16AD35BCAC0A4BB0BE78A94C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsystem.h */ = {isa = PBXBuildFile; fileRef = 2662ECA3D0C9475B96FCD599 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsystem.h */; };
+		16AFCAF3A2A64584BDFE46B8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftinit.c */ = {isa = PBXBuildFile; fileRef = 46D997A2EDDE421CA96B9F14 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftinit.c */; };
+		17D903F5D4C4440DA2DE8CF6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlcdfil.h */ = {isa = PBXBuildFile; fileRef = 6427B7C6414347568434BAB1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlcdfil.h */; };
+		18152AFCDA5F48EE9F3E644A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pfr/pfr.c */ = {isa = PBXBuildFile; fileRef = 4C2EBA1A154D47BE82334139 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pfr/pfr.c */; };
+		1AFF73ED257C4E279AD3E1A7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftchapters.h */ = {isa = PBXBuildFile; fileRef = 20DA45930D674D719C8DBB7D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftchapters.h */; };
+		2253E770978E44908751F09A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftcid.c */ = {isa = PBXBuildFile; fileRef = 867629D7B9F44989B788C2D4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftcid.c */; };
+		251DF028481C489098AEA63D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftdrv.h */ = {isa = PBXBuildFile; fileRef = 170681C54CB245BFBDF6DCA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftdrv.h */; };
+		257BE67B299D45D48375155B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftglyph.c */ = {isa = PBXBuildFile; fileRef = 5BE3ACC293394EF79C811C35 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftglyph.c */; };
+		299A27C9380646E184ED6A7A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fttypes.h */ = {isa = PBXBuildFile; fileRef = 6D18E9F68C5D42D7968DE5FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fttypes.h */; };
+		2A4E7EEAF2084D04B47D3E82 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/pshints.h */ = {isa = PBXBuildFile; fileRef = 501AA6336DE24F849524A366 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/pshints.h */; };
+		2C79838BC66F494EB3094B79 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftpfr.h */ = {isa = PBXBuildFile; fileRef = 719FF7C69E23443492FC1F7A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftpfr.h */; };
+		2E0FA537C3964F3F9E298BBC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/sfnt.h */ = {isa = PBXBuildFile; fileRef = BA4BF181059E4E448CB27942 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/sfnt.h */; };
+		2F7ABA61D07E4FD8B54FEA9A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbbox.h */ = {isa = PBXBuildFile; fileRef = 5512F496DB0D4AF7A466F3A8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbbox.h */; };
+		30B0FC257B394C2E80313BEB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgxval.c */ = {isa = PBXBuildFile; fileRef = F606574249C849788DBB89D2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgxval.c */; };
+		3158A3D51128443C92EF29AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftstroke.h */ = {isa = PBXBuildFile; fileRef = 2141BBC639304705AD70FBF7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftstroke.h */; };
+		31CE60A19ED24B0280C346C8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pshinter/pshinter.c */ = {isa = PBXBuildFile; fileRef = CC9D87741A4A41D1B78F6031 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pshinter/pshinter.c */; };
+		34634738881A4E93BEDC8F67 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftdriver.h */ = {isa = PBXBuildFile; fileRef = 6527009C49A14A02A5788274 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftdriver.h */; };
+		34A215769CED410A81A3D3EB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcid.h */ = {isa = PBXBuildFile; fileRef = C3AF15DC5B8846EBA9F7774F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcid.h */; };
+		37D1D7039B474D039FF53E60 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/winfonts/winfnt.c */ = {isa = PBXBuildFile; fileRef = B14716ADB2F7435E86EB6959 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/winfonts/winfnt.c */; };
+		3B3F730FA37B468899027B97 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cache/ftcache.c */ = {isa = PBXBuildFile; fileRef = 715DC328086E4ACB9F861578 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cache/ftcache.c */; };
+		3B62ED98AA0346C288B86BBC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftimage.h */ = {isa = PBXBuildFile; fileRef = 17A6ABDCBB4643D483F4E202 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftimage.h */; };
+		43C38DED00294DC792EAE185 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/autohint.h */ = {isa = PBXBuildFile; fileRef = B00721D4BFB64A15AE2782FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/autohint.h */; };
+		46DF751F35254E12B959D86A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbzip2.h */ = {isa = PBXBuildFile; fileRef = 32960EB2BF7B40F88B7E523A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbzip2.h */; };
+		471DDF8DE2124BA2AF77E3E6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftrender.h */ = {isa = PBXBuildFile; fileRef = E27D275C09CD47838333FCA7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftrender.h */; };
+		47E58527AB954909B6A90B90 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/t1types.h */ = {isa = PBXBuildFile; fileRef = 9D41D0B5A45341CB938E8A83 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/t1types.h */; };
+		49CA1600BB7943A0A786827A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/wofftypes.h */ = {isa = PBXBuildFile; fileRef = 28651EC97CC345AF99EA236C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/wofftypes.h */; };
+		4A3776DBBD904BF1AEBCA55C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftoption.h */ = {isa = PBXBuildFile; fileRef = BDEE1B145C5143CEB87BD1E5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftoption.h */; };
+		4AF11ED0ED28442E86400E02 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbdf.c */ = {isa = PBXBuildFile; fileRef = 8F5E1AF9EB824CE4A12468C7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbdf.c */; };
+		56D33A92694546ACB96B93C4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftparams.h */ = {isa = PBXBuildFile; fileRef = 8E2992D5541B49E49F884FF5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftparams.h */; };
+		57159AF12AD74AE79B67EC6F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftconfig.h */ = {isa = PBXBuildFile; fileRef = DA06D69C96DB42A78F7972A1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftconfig.h */; };
+		5718B22FE78F480998810E63 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftmodule.h */ = {isa = PBXBuildFile; fileRef = BE950E46E7B446FD973D1515 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftmodule.h */; };
+		57D13B9BF49D4A6AAC138629 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftdebug.c */ = {isa = PBXBuildFile; fileRef = 36732966CAFC413F87206AAD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftdebug.c */; };
+		59B4C3F389004AF6B4642F86 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/cffotypes.h */ = {isa = PBXBuildFile; fileRef = 050589ACA143463288791295 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/cffotypes.h */; };
+		59C1B70FD7F24CE2A162B82E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftadvanc.h */ = {isa = PBXBuildFile; fileRef = 9BAA743C54EA4D1295842306 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftadvanc.h */; };
+		5CB837AC282F42D08E32221C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftmemory.h */ = {isa = PBXBuildFile; fileRef = BF6550544BFC4095B2CACA8C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftmemory.h */; };
+		6A1474B0FFEE4B0C8D8DDF64 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/cfftypes.h */ = {isa = PBXBuildFile; fileRef = 68092DFF5F9A4B6F89FEA0B2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/cfftypes.h */; };
+		6AB3A3BDBF3B40518F140EC2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcache.h */ = {isa = PBXBuildFile; fileRef = B7C2658581BF4C5A9F1CEFAB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcache.h */; };
+		6B9D1A8E75A64A4A830738F5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftwinfnt.h */ = {isa = PBXBuildFile; fileRef = 75308ABC81B1405D952E9B6D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftwinfnt.h */; };
+		6BB076AB59CD4500AE2C03EA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/fttype1.c */ = {isa = PBXBuildFile; fileRef = EE624B069A674B818DD7511C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/fttype1.c */; };
+		6CD5D8927A7A4BE2BDC4E172 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bzip2/ftbzip2.c */ = {isa = PBXBuildFile; fileRef = 8AB6C3389B654FBEB2B496CD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bzip2/ftbzip2.c */; };
+		70613A8630A94E8EAC82A373 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fterrors.h */ = {isa = PBXBuildFile; fileRef = 01FD6496CB41418DA4C91DD3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fterrors.h */; };
+		70D3E8901414480686F6B1A9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type42/type42.c */ = {isa = PBXBuildFile; fileRef = 13C4CF6B0171406A858A3E70 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type42/type42.c */; };
+		727A084A176D400EB2F32A9E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/t1tables.h */ = {isa = PBXBuildFile; fileRef = E4C33054ADC24A3D84260AA0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/t1tables.h */; };
+		75F9CA0007DA41AFB976EC68 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftpsprop.h */ = {isa = PBXBuildFile; fileRef = 35F989455D6843B0BB874907 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftpsprop.h */; };
+		772A619FB1C84C28BF60EE66 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftotval.c */ = {isa = PBXBuildFile; fileRef = B2F3C4951EE34802BBD1C6D9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftotval.c */; };
+		79D78A2BF4AF408A8ED855FE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftfntfmt.h */ = {isa = PBXBuildFile; fileRef = 8380EBAF99C1438EA9467BEF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftfntfmt.h */; };
+		7D68EE60DF2145CFB32F32EB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type1/type1.c */ = {isa = PBXBuildFile; fileRef = 959A2ED1DD5645F7B6183254 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type1/type1.c */; };
+		7D8BCEEBB3274B4699EDEE75 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/tttypes.h */ = {isa = PBXBuildFile; fileRef = 26E4C3CB07B74992A092C00D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/tttypes.h */; };
+		7FD5F06BBDA747D7BA9F2A3F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmm.h */ = {isa = PBXBuildFile; fileRef = DE84DAD729AD4CC0B302140C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmm.h */; };
+		83830573B7774481826A6ADE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbase.c */ = {isa = PBXBuildFile; fileRef = 0D2ED1AD7D1F4D059CD97939 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbase.c */; };
+		841DEB872BF8455C92DFDDAE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlzw.h */ = {isa = PBXBuildFile; fileRef = A945FBF0AFC64DBB89B21348 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlzw.h */; };
+		8478E0B051BE4E50883BD2B8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlist.h */ = {isa = PBXBuildFile; fileRef = 820885DD31D44858A6F3785D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlist.h */; };
+		85D1DA7FAED54A0A9E3A8CF7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftotval.h */ = {isa = PBXBuildFile; fileRef = 98BA95DD913B4574831FA086 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftotval.h */; };
+		87F6348786C94E5F8938C3C9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftserv.h */ = {isa = PBXBuildFile; fileRef = 5B01DE8885B34476B6650D55 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftserv.h */; };
+		88EE146A35B344FFB8E07973 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsnames.h */ = {isa = PBXBuildFile; fileRef = 5D5EFD846C264A9083DBEA8C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsnames.h */; };
+		8B247192AEC242FC9700BB37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsystem.c */ = {isa = PBXBuildFile; fileRef = 8BD934CE09724E8F84669B0A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsystem.c */; };
+		8B328D117E4C4E97A90F8FC0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/tttables.h */ = {isa = PBXBuildFile; fileRef = 6CCDFB8561BC4E23A42A9AA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/tttables.h */; };
+		8EF4CD8FD5CC4BA095A8F3B1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/truetype/truetype.c */ = {isa = PBXBuildFile; fileRef = 14507319C81140EA8550FD95 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/truetype/truetype.c */; };
+		922C96C6028B4A029252A4A2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/psaux.h */ = {isa = PBXBuildFile; fileRef = A68B336B9E854448BF19290A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/psaux.h */; };
+		95DB7EE92623492BB8EDD680 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psaux/psaux.c */ = {isa = PBXBuildFile; fileRef = 860210BB3731479ABBD8AF47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psaux/psaux.c */; };
+		95E06696159249B1B0BEFFE6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsizes.h */ = {isa = PBXBuildFile; fileRef = D28F77C15F2B4AB78F60B27F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsizes.h */; };
+		968B9FE53A3B40A7A0AC1C3A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cid/type1cid.c */ = {isa = PBXBuildFile; fileRef = 4E3AB4BABE3D4A0B84196EFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cid/type1cid.c */; };
+		98F4E95C91854055BEB4A48E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftglyph.h */ = {isa = PBXBuildFile; fileRef = 6730607E531641CB94F55838 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftglyph.h */; };
+		9929062F06DE4469A46FE79C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fterrdef.h */ = {isa = PBXBuildFile; fileRef = 6CD061984749410CAA0DF89F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fterrdef.h */; };
+		9B90A3EDAD6F4095B37F684D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbitmap.c */ = {isa = PBXBuildFile; fileRef = 7AB577E9BD694386BFAB0895 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbitmap.c */; };
+		9EBBCAAD26124475BC599F48 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fttrigon.h */ = {isa = PBXBuildFile; fileRef = 0D6189981CB24DF795386D14 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fttrigon.h */; };
+		9ECE51D0BFBA42D3BDDF28F9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/autofit/autofit.c */ = {isa = PBXBuildFile; fileRef = FBF898BA421842AEB0EB3C84 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/autofit/autofit.c */; };
+		A26263C6D5DF4BB6AABB47CD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/tttags.h */ = {isa = PBXBuildFile; fileRef = 361EF1C8C0544802B394E937 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/tttags.h */; };
+		A43E6FB6BD0C49CA9CBCB81C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftincrem.h */ = {isa = PBXBuildFile; fileRef = AD19C64DFF624923A2FA3CD0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftincrem.h */; };
+		A879658ABA124A60AEAC1555 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftgloadr.h */ = {isa = PBXBuildFile; fileRef = 84E722D757C447EE805A004B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftgloadr.h */; };
+		A8D9473D2DF14B6E84E5AEF6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgzip.h */ = {isa = PBXBuildFile; fileRef = 30591694A76A4E548D5EA027 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgzip.h */; };
+		AD7E64CA3A3845C19F6EA3F0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbdf.h */ = {isa = PBXBuildFile; fileRef = 75EAF33F117949D6BB95E2B6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbdf.h */; };
+		AF8E3395D01F4394A6D4E8CF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftstroke.c */ = {isa = PBXBuildFile; fileRef = FA08F299CC964AD7B6F68B10 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftstroke.c */; };
+		B036246FF8F847C5B9D96F0A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsynth.h */ = {isa = PBXBuildFile; fileRef = 13035CB63D3048B7BE5A3778 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsynth.h */; };
+		B224090C4554411B81BD8BA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcolor.h */ = {isa = PBXBuildFile; fileRef = 06EE2A4032A648019416EFE6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcolor.h */; };
+		B4859CE37F754F3A9FA32546 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmodapi.h */ = {isa = PBXBuildFile; fileRef = E7DAE6E369F44343BFAB0949 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmodapi.h */; };
+		B645B8FA0D83428E9C4CC0FC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/ft2build.h */ = {isa = PBXBuildFile; fileRef = 87ED120BC50546AABBDC69FC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/ft2build.h */; };
+		B773EAB62E4B4C4CB1F61094 = {isa = PBXBuildFile; fileRef = E81B2132D7794CAB9D13E813; };
+		BB59CDE051894DD28B0BFB91 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psnames/psnames.c */ = {isa = PBXBuildFile; fileRef = 82DB8698B2AC437D93313C54 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psnames/psnames.c */; };
+		C08010468E4247A88AC42DC1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/fthash.h */ = {isa = PBXBuildFile; fileRef = 2D563DCA34834972A9A3F57F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/fthash.h */; };
+		C37435CB31954B4A9F069FF7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/internal.h */ = {isa = PBXBuildFile; fileRef = A9FE7893D62B4814A040C5A5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/internal.h */; };
+		C4843B0349F849748724DA31 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbbox.c */ = {isa = PBXBuildFile; fileRef = DF5D34038B7F41C0BBE7FE0C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbbox.c */; };
+		C49683E4FDD340858CD4ACE0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgasp.c */ = {isa = PBXBuildFile; fileRef = D7A971441CB54E65A36CBA37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgasp.c */; };
+		C613A8B1C59742698A98166C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpatent.c */ = {isa = PBXBuildFile; fileRef = 4E12F5E1F8044C4CB5FB5F47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpatent.c */; };
+		D89B4D0F18BD4B3F8EB14DB0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/freetype.h */ = {isa = PBXBuildFile; fileRef = 06B887D52CDF4F58A9387499 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/freetype.h */; };
+		D97AEEAF6DE04F36B451CD05 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsynth.c */ = {isa = PBXBuildFile; fileRef = 37B9A29CAD964152B65A0CAC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsynth.c */; };
+		DB806772E91C4475A36260C9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cff/cff.c */ = {isa = PBXBuildFile; fileRef = FD4ADA1A085C400F81B17F2A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cff/cff.c */; };
+		E04E224830CC443AB51D8C16 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/raster/raster.c */ = {isa = PBXBuildFile; fileRef = 57080701B2B14FD790CAAB1B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/raster/raster.c */; };
+		E613E78188B54DA180CD4D25 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/fttrace.h */ = {isa = PBXBuildFile; fileRef = 016A4B5AE76B46DF8C5CC18F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/fttrace.h */; };
+		EB5F2AD5D979490D90EEBF1E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftoutln.h */ = {isa = PBXBuildFile; fileRef = F50EC9E0045242D681BAF4EF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftoutln.h */; };
+		EC06C571A6D94089980FE55D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftheader.h */ = {isa = PBXBuildFile; fileRef = 38AC9F810F5B49DC834EB164 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftheader.h */; };
+		EC7A0725723D4782A8A4898D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftmm.c */ = {isa = PBXBuildFile; fileRef = 0C9782C2FD94400BADA42FAD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftmm.c */; };
+		ED985417496F4B49B3B149B9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/lzw/ftlzw.c */ = {isa = PBXBuildFile; fileRef = 2AE3A489B4A34107AB38670C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/lzw/ftlzw.c */; };
+		EE4708455AAC47B5B6E0830A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ttnameid.h */ = {isa = PBXBuildFile; fileRef = 061550012A2242AAB7C49380 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ttnameid.h */; };
+		EF30A4754F8A4F4FB0E75791 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpfr.c */ = {isa = PBXBuildFile; fileRef = 8A92D5D812DA4C43B9F47455 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpfr.c */; };
+		F657B3C3877D400FB3A7DDDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/smooth/smooth.c */ = {isa = PBXBuildFile; fileRef = 6CE24D8AA9E84402B4A63178 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/smooth/smooth.c */; };
+		F9F5A5455DEB4EC3B03CAC98 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftcalc.h */ = {isa = PBXBuildFile; fileRef = ACAD8CD3B4A2401EB5C6375B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftcalc.h */; };
+		FF159C00261F4810A4BCF2D2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbitmap.h */ = {isa = PBXBuildFile; fileRef = 5BFBB5405FA94580A26D0927 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbitmap.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		07E4B7E9BC4D47859C0CC16F /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		3A4A7D9FE03A4B0198D084C5 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		85427755E3FB4B2392D9F54F /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		E1CEDB32F21F4E21B6920156 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		2FF298A5CC594C9F8B7CDBC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C3A1463FD34F17B0AAAD22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+		67E9C8BBD9494365B42C35AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C3A1463FD34F17B0AAAD22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		8703AA8877D2426AAA700559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C3A1463FD34F17B0AAAD22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A17F6AF17DB48669B9904BA;
+			remoteInfo = freetype;
+		};
+		DD937A457FC046DA977A799A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C3A1463FD34F17B0AAAD22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		EDE04651AEA84126885E7112 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C3A1463FD34F17B0AAAD22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		016A4B5AE76B46DF8C5CC18F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/fttrace.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fttrace.h; path = include/freetype/internal/fttrace.h; sourceTree = SOURCE_ROOT; };
+		01FD6496CB41418DA4C91DD3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fterrors.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fterrors.h; path = include/freetype/fterrors.h; sourceTree = SOURCE_ROOT; };
+		04C81105A95A4CEB939041ED /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/gzip/ftgzip.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftgzip.c; path = src/gzip/ftgzip.c; sourceTree = SOURCE_ROOT; };
+		050589ACA143463288791295 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/cffotypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cffotypes.h; path = include/freetype/internal/cffotypes.h; sourceTree = SOURCE_ROOT; };
+		061550012A2242AAB7C49380 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ttnameid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ttnameid.h; path = include/freetype/ttnameid.h; sourceTree = SOURCE_ROOT; };
+		06B887D52CDF4F58A9387499 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/freetype.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = freetype.h; path = include/freetype/freetype.h; sourceTree = SOURCE_ROOT; };
+		06EE2A4032A648019416EFE6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcolor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftcolor.h; path = include/freetype/ftcolor.h; sourceTree = SOURCE_ROOT; };
+		0C9782C2FD94400BADA42FAD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftmm.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftmm.c; path = src/base/ftmm.c; sourceTree = SOURCE_ROOT; };
+		0D2ED1AD7D1F4D059CD97939 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbase.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftbase.c; path = src/base/ftbase.c; sourceTree = SOURCE_ROOT; };
+		0D6189981CB24DF795386D14 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fttrigon.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fttrigon.h; path = include/freetype/fttrigon.h; sourceTree = SOURCE_ROOT; };
+		13035CB63D3048B7BE5A3778 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsynth.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftsynth.h; path = include/freetype/ftsynth.h; sourceTree = SOURCE_ROOT; };
+		13C4CF6B0171406A858A3E70 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type42/type42.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = type42.c; path = src/type42/type42.c; sourceTree = SOURCE_ROOT; };
+		13FE28322C5A4BCB82762C5F /* freetype */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libfreetyped.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		142956E7421246C3B687EEB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftfstype.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftfstype.c; path = src/base/ftfstype.c; sourceTree = SOURCE_ROOT; };
+		14507319C81140EA8550FD95 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/truetype/truetype.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = truetype.c; path = src/truetype/truetype.c; sourceTree = SOURCE_ROOT; };
+		170681C54CB245BFBDF6DCA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftdrv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftdrv.h; path = include/freetype/internal/ftdrv.h; sourceTree = SOURCE_ROOT; };
+		17A6ABDCBB4643D483F4E202 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftimage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftimage.h; path = include/freetype/ftimage.h; sourceTree = SOURCE_ROOT; };
+		20DA45930D674D719C8DBB7D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftchapters.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftchapters.h; path = include/freetype/ftchapters.h; sourceTree = SOURCE_ROOT; };
+		2141BBC639304705AD70FBF7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftstroke.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftstroke.h; path = include/freetype/ftstroke.h; sourceTree = SOURCE_ROOT; };
+		2662ECA3D0C9475B96FCD599 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsystem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftsystem.h; path = include/freetype/ftsystem.h; sourceTree = SOURCE_ROOT; };
+		26E4C3CB07B74992A092C00D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/tttypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tttypes.h; path = include/freetype/internal/tttypes.h; sourceTree = SOURCE_ROOT; };
+		28651EC97CC345AF99EA236C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/wofftypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = wofftypes.h; path = include/freetype/internal/wofftypes.h; sourceTree = SOURCE_ROOT; };
+		2AE3A489B4A34107AB38670C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/lzw/ftlzw.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftlzw.c; path = src/lzw/ftlzw.c; sourceTree = SOURCE_ROOT; };
+		2D563DCA34834972A9A3F57F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/fthash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fthash.h; path = include/freetype/internal/fthash.h; sourceTree = SOURCE_ROOT; };
+		30591694A76A4E548D5EA027 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgzip.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftgzip.h; path = include/freetype/ftgzip.h; sourceTree = SOURCE_ROOT; };
+		32960EB2BF7B40F88B7E523A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbzip2.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftbzip2.h; path = include/freetype/ftbzip2.h; sourceTree = SOURCE_ROOT; };
+		35F989455D6843B0BB874907 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftpsprop.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftpsprop.h; path = include/freetype/internal/ftpsprop.h; sourceTree = SOURCE_ROOT; };
+		361EF1C8C0544802B394E937 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/tttags.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tttags.h; path = include/freetype/tttags.h; sourceTree = SOURCE_ROOT; };
+		36732966CAFC413F87206AAD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftdebug.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftdebug.c; path = src/base/ftdebug.c; sourceTree = SOURCE_ROOT; };
+		37B9A29CAD964152B65A0CAC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsynth.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftsynth.c; path = src/base/ftsynth.c; sourceTree = SOURCE_ROOT; };
+		38AC9F810F5B49DC834EB164 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftheader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftheader.h; path = include/freetype/config/ftheader.h; sourceTree = SOURCE_ROOT; };
+		46D997A2EDDE421CA96B9F14 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftinit.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftinit.c; path = src/base/ftinit.c; sourceTree = SOURCE_ROOT; };
+		4C2EBA1A154D47BE82334139 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pfr/pfr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pfr.c; path = src/pfr/pfr.c; sourceTree = SOURCE_ROOT; };
+		4E12F5E1F8044C4CB5FB5F47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpatent.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftpatent.c; path = src/base/ftpatent.c; sourceTree = SOURCE_ROOT; };
+		4E3AB4BABE3D4A0B84196EFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cid/type1cid.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = type1cid.c; path = src/cid/type1cid.c; sourceTree = SOURCE_ROOT; };
+		501AA6336DE24F849524A366 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/pshints.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pshints.h; path = include/freetype/internal/pshints.h; sourceTree = SOURCE_ROOT; };
+		54A1ABF9FB4944C39EF147D0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmoderr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftmoderr.h; path = include/freetype/ftmoderr.h; sourceTree = SOURCE_ROOT; };
+		54B657A2E2F84652802B49A9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftdebug.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftdebug.h; path = include/freetype/internal/ftdebug.h; sourceTree = SOURCE_ROOT; };
+		5512F496DB0D4AF7A466F3A8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbbox.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftbbox.h; path = include/freetype/ftbbox.h; sourceTree = SOURCE_ROOT; };
+		57080701B2B14FD790CAAB1B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/raster/raster.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = raster.c; path = src/raster/raster.c; sourceTree = SOURCE_ROOT; };
+		5B01DE8885B34476B6650D55 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftserv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftserv.h; path = include/freetype/internal/ftserv.h; sourceTree = SOURCE_ROOT; };
+		5BE3ACC293394EF79C811C35 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftglyph.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftglyph.c; path = src/base/ftglyph.c; sourceTree = SOURCE_ROOT; };
+		5BFBB5405FA94580A26D0927 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbitmap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftbitmap.h; path = include/freetype/ftbitmap.h; sourceTree = SOURCE_ROOT; };
+		5D5EFD846C264A9083DBEA8C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsnames.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftsnames.h; path = include/freetype/ftsnames.h; sourceTree = SOURCE_ROOT; };
+		6254F8451B6D43C7A547D60C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bdf/bdf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bdf.c; path = src/bdf/bdf.c; sourceTree = SOURCE_ROOT; };
+		6427B7C6414347568434BAB1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlcdfil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftlcdfil.h; path = include/freetype/ftlcdfil.h; sourceTree = SOURCE_ROOT; };
+		6527009C49A14A02A5788274 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftdriver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftdriver.h; path = include/freetype/ftdriver.h; sourceTree = SOURCE_ROOT; };
+		6730607E531641CB94F55838 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftglyph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftglyph.h; path = include/freetype/ftglyph.h; sourceTree = SOURCE_ROOT; };
+		68092DFF5F9A4B6F89FEA0B2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/cfftypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cfftypes.h; path = include/freetype/internal/cfftypes.h; sourceTree = SOURCE_ROOT; };
+		6CCDFB8561BC4E23A42A9AA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/tttables.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tttables.h; path = include/freetype/tttables.h; sourceTree = SOURCE_ROOT; };
+		6CD061984749410CAA0DF89F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fterrdef.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fterrdef.h; path = include/freetype/fterrdef.h; sourceTree = SOURCE_ROOT; };
+		6CE24D8AA9E84402B4A63178 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/smooth/smooth.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = smooth.c; path = src/smooth/smooth.c; sourceTree = SOURCE_ROOT; };
+		6D18E9F68C5D42D7968DE5FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fttypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fttypes.h; path = include/freetype/fttypes.h; sourceTree = SOURCE_ROOT; };
+		715DC328086E4ACB9F861578 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cache/ftcache.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftcache.c; path = src/cache/ftcache.c; sourceTree = SOURCE_ROOT; };
+		719FF7C69E23443492FC1F7A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftpfr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftpfr.h; path = include/freetype/ftpfr.h; sourceTree = SOURCE_ROOT; };
+		743B9D7F935146B3A579BEBC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgxval.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftgxval.h; path = include/freetype/ftgxval.h; sourceTree = SOURCE_ROOT; };
+		75308ABC81B1405D952E9B6D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftwinfnt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftwinfnt.h; path = include/freetype/ftwinfnt.h; sourceTree = SOURCE_ROOT; };
+		759D1D8C46D24F239DE0AA19 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		75EAF33F117949D6BB95E2B6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbdf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftbdf.h; path = include/freetype/ftbdf.h; sourceTree = SOURCE_ROOT; };
+		7AB577E9BD694386BFAB0895 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbitmap.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftbitmap.c; path = src/base/ftbitmap.c; sourceTree = SOURCE_ROOT; };
+		7CD52716E3DC4AA8938468D6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftstream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftstream.h; path = include/freetype/internal/ftstream.h; sourceTree = SOURCE_ROOT; };
+		820885DD31D44858A6F3785D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlist.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftlist.h; path = include/freetype/ftlist.h; sourceTree = SOURCE_ROOT; };
+		82DB8698B2AC437D93313C54 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psnames/psnames.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = psnames.c; path = src/psnames/psnames.c; sourceTree = SOURCE_ROOT; };
+		8380EBAF99C1438EA9467BEF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftfntfmt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftfntfmt.h; path = include/freetype/ftfntfmt.h; sourceTree = SOURCE_ROOT; };
+		84E722D757C447EE805A004B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftgloadr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftgloadr.h; path = include/freetype/internal/ftgloadr.h; sourceTree = SOURCE_ROOT; };
+		860210BB3731479ABBD8AF47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psaux/psaux.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = psaux.c; path = src/psaux/psaux.c; sourceTree = SOURCE_ROOT; };
+		867629D7B9F44989B788C2D4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftcid.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftcid.c; path = src/base/ftcid.c; sourceTree = SOURCE_ROOT; };
+		87ED120BC50546AABBDC69FC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/ft2build.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ft2build.h; path = include/ft2build.h; sourceTree = SOURCE_ROOT; };
+		8A92D5D812DA4C43B9F47455 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpfr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftpfr.c; path = src/base/ftpfr.c; sourceTree = SOURCE_ROOT; };
+		8AB6C3389B654FBEB2B496CD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bzip2/ftbzip2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftbzip2.c; path = src/bzip2/ftbzip2.c; sourceTree = SOURCE_ROOT; };
+		8BD934CE09724E8F84669B0A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsystem.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftsystem.c; path = src/base/ftsystem.c; sourceTree = SOURCE_ROOT; };
+		8E2992D5541B49E49F884FF5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftparams.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftparams.h; path = include/freetype/ftparams.h; sourceTree = SOURCE_ROOT; };
+		8F5E1AF9EB824CE4A12468C7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbdf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftbdf.c; path = src/base/ftbdf.c; sourceTree = SOURCE_ROOT; };
+		959A2ED1DD5645F7B6183254 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type1/type1.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = type1.c; path = src/type1/type1.c; sourceTree = SOURCE_ROOT; };
+		968D26C7933A4D2799BC9CA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftmac.h; path = include/freetype/ftmac.h; sourceTree = SOURCE_ROOT; };
+		98BA95DD913B4574831FA086 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftotval.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftotval.h; path = include/freetype/ftotval.h; sourceTree = SOURCE_ROOT; };
+		9BAA743C54EA4D1295842306 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftadvanc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftadvanc.h; path = include/freetype/ftadvanc.h; sourceTree = SOURCE_ROOT; };
+		9C20763FA56F431DA8AD7CF0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pcf/pcf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pcf.c; path = src/pcf/pcf.c; sourceTree = SOURCE_ROOT; };
+		9D41D0B5A45341CB938E8A83 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/t1types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = t1types.h; path = include/freetype/internal/t1types.h; sourceTree = SOURCE_ROOT; };
+		A68B336B9E854448BF19290A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/psaux.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = psaux.h; path = include/freetype/internal/psaux.h; sourceTree = SOURCE_ROOT; };
+		A945FBF0AFC64DBB89B21348 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlzw.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftlzw.h; path = include/freetype/ftlzw.h; sourceTree = SOURCE_ROOT; };
+		A9FE7893D62B4814A040C5A5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = include/freetype/internal/internal.h; sourceTree = SOURCE_ROOT; };
+		ACAD8CD3B4A2401EB5C6375B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftcalc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftcalc.h; path = include/freetype/internal/ftcalc.h; sourceTree = SOURCE_ROOT; };
+		AD19C64DFF624923A2FA3CD0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftincrem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftincrem.h; path = include/freetype/ftincrem.h; sourceTree = SOURCE_ROOT; };
+		AF728EC866824ADAA7596448 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftstdlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftstdlib.h; path = include/freetype/config/ftstdlib.h; sourceTree = SOURCE_ROOT; };
+		B00721D4BFB64A15AE2782FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/autohint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = autohint.h; path = include/freetype/internal/autohint.h; sourceTree = SOURCE_ROOT; };
+		B14716ADB2F7435E86EB6959 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/winfonts/winfnt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = winfnt.c; path = src/winfonts/winfnt.c; sourceTree = SOURCE_ROOT; };
+		B2F3C4951EE34802BBD1C6D9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftotval.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftotval.c; path = src/base/ftotval.c; sourceTree = SOURCE_ROOT; };
+		B7C2658581BF4C5A9F1CEFAB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftcache.h; path = include/freetype/ftcache.h; sourceTree = SOURCE_ROOT; };
+		BA4BF181059E4E448CB27942 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/sfnt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sfnt.h; path = include/freetype/internal/sfnt.h; sourceTree = SOURCE_ROOT; };
+		BDEE1B145C5143CEB87BD1E5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftoption.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftoption.h; path = include/freetype/config/ftoption.h; sourceTree = SOURCE_ROOT; };
+		BE950E46E7B446FD973D1515 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftmodule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftmodule.h; path = include/freetype/config/ftmodule.h; sourceTree = SOURCE_ROOT; };
+		BF6550544BFC4095B2CACA8C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftmemory.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftmemory.h; path = include/freetype/internal/ftmemory.h; sourceTree = SOURCE_ROOT; };
+		C3AF15DC5B8846EBA9F7774F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftcid.h; path = include/freetype/ftcid.h; sourceTree = SOURCE_ROOT; };
+		CA4AB539B46948199AE9EE07 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftobjs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftobjs.h; path = include/freetype/internal/ftobjs.h; sourceTree = SOURCE_ROOT; };
+		CB15685B8E2242C8B1490931 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftwinfnt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftwinfnt.c; path = src/base/ftwinfnt.c; sourceTree = SOURCE_ROOT; };
+		CC9D87741A4A41D1B78F6031 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pshinter/pshinter.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pshinter.c; path = src/pshinter/pshinter.c; sourceTree = SOURCE_ROOT; };
+		D28F77C15F2B4AB78F60B27F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsizes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftsizes.h; path = include/freetype/ftsizes.h; sourceTree = SOURCE_ROOT; };
+		D7A971441CB54E65A36CBA37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgasp.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftgasp.c; path = src/base/ftgasp.c; sourceTree = SOURCE_ROOT; };
+		D9F94EC1FD7F4A5CA8A980DA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftvalid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftvalid.h; path = include/freetype/internal/ftvalid.h; sourceTree = SOURCE_ROOT; };
+		DA06D69C96DB42A78F7972A1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftconfig.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftconfig.h; path = include/freetype/config/ftconfig.h; sourceTree = SOURCE_ROOT; };
+		DE84DAD729AD4CC0B302140C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftmm.h; path = include/freetype/ftmm.h; sourceTree = SOURCE_ROOT; };
+		DF5D34038B7F41C0BBE7FE0C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbbox.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftbbox.c; path = src/base/ftbbox.c; sourceTree = SOURCE_ROOT; };
+		E27D275C09CD47838333FCA7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftrender.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftrender.h; path = include/freetype/ftrender.h; sourceTree = SOURCE_ROOT; };
+		E2E973E1BAC04B95BE69D912 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/sfnt/sfnt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sfnt.c; path = src/sfnt/sfnt.c; sourceTree = SOURCE_ROOT; };
+		E4C33054ADC24A3D84260AA0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/t1tables.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = t1tables.h; path = include/freetype/t1tables.h; sourceTree = SOURCE_ROOT; };
+		E7DAE6E369F44343BFAB0949 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmodapi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftmodapi.h; path = include/freetype/ftmodapi.h; sourceTree = SOURCE_ROOT; };
+		E81B2132D7794CAB9D13E813 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		EE624B069A674B818DD7511C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/fttype1.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fttype1.c; path = src/base/fttype1.c; sourceTree = SOURCE_ROOT; };
+		EF5F06700BCC4C06AADB382D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgasp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftgasp.h; path = include/freetype/ftgasp.h; sourceTree = SOURCE_ROOT; };
+		F50EC9E0045242D681BAF4EF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftoutln.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftoutln.h; path = include/freetype/ftoutln.h; sourceTree = SOURCE_ROOT; };
+		F606574249C849788DBB89D2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgxval.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftgxval.c; path = src/base/ftgxval.c; sourceTree = SOURCE_ROOT; };
+		FA08F299CC964AD7B6F68B10 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftstroke.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ftstroke.c; path = src/base/ftstroke.c; sourceTree = SOURCE_ROOT; };
+		FBF898BA421842AEB0EB3C84 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/autofit/autofit.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = autofit.c; path = src/autofit/autofit.c; sourceTree = SOURCE_ROOT; };
+		FC0919DE44EE48BBB04ABED2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftrfork.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ftrfork.h; path = include/freetype/internal/ftrfork.h; sourceTree = SOURCE_ROOT; };
+		FD4ADA1A085C400F81B17F2A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cff/cff.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cff.c; path = src/cff/cff.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2028274EF4B842DAA27E3DA0 /* freetype */ = {
+			isa = PBXGroup;
+			children = (
+				644023EECF2F4C2DA19B0ADB /* Header Files */,
+				F29A6E9B05D34AEBBEC47363 /* Source Files */,
+				E81B2132D7794CAB9D13E813,
+			);
+			name = freetype;
+			sourceTree = "<group>";
+		};
+		32EE56D2F6A648C9825C4EAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13FE28322C5A4BCB82762C5F /* freetype */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B4A74D422644BF6ADBCB5D5 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				CD76A49F89554ACEB2CC6263 /* CMake Rules */,
+				759D1D8C46D24F239DE0AA19,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		644023EECF2F4C2DA19B0ADB /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA06D69C96DB42A78F7972A1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftconfig.h */,
+				38AC9F810F5B49DC834EB164 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftheader.h */,
+				BE950E46E7B446FD973D1515 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftmodule.h */,
+				BDEE1B145C5143CEB87BD1E5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftoption.h */,
+				AF728EC866824ADAA7596448 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/config/ftstdlib.h */,
+				06B887D52CDF4F58A9387499 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/freetype.h */,
+				9BAA743C54EA4D1295842306 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftadvanc.h */,
+				5512F496DB0D4AF7A466F3A8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbbox.h */,
+				75EAF33F117949D6BB95E2B6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbdf.h */,
+				5BFBB5405FA94580A26D0927 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbitmap.h */,
+				32960EB2BF7B40F88B7E523A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftbzip2.h */,
+				B7C2658581BF4C5A9F1CEFAB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcache.h */,
+				20DA45930D674D719C8DBB7D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftchapters.h */,
+				C3AF15DC5B8846EBA9F7774F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcid.h */,
+				06EE2A4032A648019416EFE6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftcolor.h */,
+				6527009C49A14A02A5788274 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftdriver.h */,
+				6CD061984749410CAA0DF89F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fterrdef.h */,
+				01FD6496CB41418DA4C91DD3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fterrors.h */,
+				8380EBAF99C1438EA9467BEF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftfntfmt.h */,
+				EF5F06700BCC4C06AADB382D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgasp.h */,
+				6730607E531641CB94F55838 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftglyph.h */,
+				743B9D7F935146B3A579BEBC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgxval.h */,
+				30591694A76A4E548D5EA027 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftgzip.h */,
+				17A6ABDCBB4643D483F4E202 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftimage.h */,
+				AD19C64DFF624923A2FA3CD0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftincrem.h */,
+				6427B7C6414347568434BAB1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlcdfil.h */,
+				820885DD31D44858A6F3785D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlist.h */,
+				A945FBF0AFC64DBB89B21348 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftlzw.h */,
+				968D26C7933A4D2799BC9CA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmac.h */,
+				DE84DAD729AD4CC0B302140C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmm.h */,
+				E7DAE6E369F44343BFAB0949 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmodapi.h */,
+				54A1ABF9FB4944C39EF147D0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftmoderr.h */,
+				98BA95DD913B4574831FA086 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftotval.h */,
+				F50EC9E0045242D681BAF4EF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftoutln.h */,
+				8E2992D5541B49E49F884FF5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftparams.h */,
+				719FF7C69E23443492FC1F7A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftpfr.h */,
+				E27D275C09CD47838333FCA7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftrender.h */,
+				D28F77C15F2B4AB78F60B27F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsizes.h */,
+				5D5EFD846C264A9083DBEA8C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsnames.h */,
+				2141BBC639304705AD70FBF7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftstroke.h */,
+				13035CB63D3048B7BE5A3778 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsynth.h */,
+				2662ECA3D0C9475B96FCD599 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftsystem.h */,
+				0D6189981CB24DF795386D14 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fttrigon.h */,
+				6D18E9F68C5D42D7968DE5FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/fttypes.h */,
+				75308ABC81B1405D952E9B6D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ftwinfnt.h */,
+				B00721D4BFB64A15AE2782FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/autohint.h */,
+				050589ACA143463288791295 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/cffotypes.h */,
+				68092DFF5F9A4B6F89FEA0B2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/cfftypes.h */,
+				ACAD8CD3B4A2401EB5C6375B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftcalc.h */,
+				54B657A2E2F84652802B49A9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftdebug.h */,
+				170681C54CB245BFBDF6DCA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftdrv.h */,
+				84E722D757C447EE805A004B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftgloadr.h */,
+				2D563DCA34834972A9A3F57F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/fthash.h */,
+				BF6550544BFC4095B2CACA8C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftmemory.h */,
+				CA4AB539B46948199AE9EE07 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftobjs.h */,
+				35F989455D6843B0BB874907 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftpsprop.h */,
+				FC0919DE44EE48BBB04ABED2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftrfork.h */,
+				5B01DE8885B34476B6650D55 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftserv.h */,
+				7CD52716E3DC4AA8938468D6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftstream.h */,
+				016A4B5AE76B46DF8C5CC18F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/fttrace.h */,
+				D9F94EC1FD7F4A5CA8A980DA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/ftvalid.h */,
+				A9FE7893D62B4814A040C5A5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/internal.h */,
+				A68B336B9E854448BF19290A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/psaux.h */,
+				501AA6336DE24F849524A366 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/pshints.h */,
+				BA4BF181059E4E448CB27942 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/sfnt.h */,
+				9D41D0B5A45341CB938E8A83 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/t1types.h */,
+				26E4C3CB07B74992A092C00D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/tttypes.h */,
+				28651EC97CC345AF99EA236C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/internal/wofftypes.h */,
+				E4C33054ADC24A3D84260AA0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/t1tables.h */,
+				061550012A2242AAB7C49380 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/ttnameid.h */,
+				6CCDFB8561BC4E23A42A9AA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/tttables.h */,
+				361EF1C8C0544802B394E937 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/freetype/tttags.h */,
+				87ED120BC50546AABBDC69FC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include/ft2build.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		A84ECF0635B5422B9680AA4C = {
+			isa = PBXGroup;
+			children = (
+				D7138AFD806247FF888C825C /* ThirdParty */,
+				4B4A74D422644BF6ADBCB5D5 /* ALL_BUILD */,
+				32EE56D2F6A648C9825C4EAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD76A49F89554ACEB2CC6263 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		D7138AFD806247FF888C825C /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				2028274EF4B842DAA27E3DA0 /* freetype */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		F29A6E9B05D34AEBBEC47363 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBF898BA421842AEB0EB3C84 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/autofit/autofit.c */,
+				0D2ED1AD7D1F4D059CD97939 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbase.c */,
+				DF5D34038B7F41C0BBE7FE0C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbbox.c */,
+				8F5E1AF9EB824CE4A12468C7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbdf.c */,
+				7AB577E9BD694386BFAB0895 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbitmap.c */,
+				867629D7B9F44989B788C2D4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftcid.c */,
+				36732966CAFC413F87206AAD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftdebug.c */,
+				142956E7421246C3B687EEB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftfstype.c */,
+				D7A971441CB54E65A36CBA37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgasp.c */,
+				5BE3ACC293394EF79C811C35 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftglyph.c */,
+				F606574249C849788DBB89D2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgxval.c */,
+				46D997A2EDDE421CA96B9F14 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftinit.c */,
+				0C9782C2FD94400BADA42FAD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftmm.c */,
+				B2F3C4951EE34802BBD1C6D9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftotval.c */,
+				4E12F5E1F8044C4CB5FB5F47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpatent.c */,
+				8A92D5D812DA4C43B9F47455 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpfr.c */,
+				FA08F299CC964AD7B6F68B10 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftstroke.c */,
+				37B9A29CAD964152B65A0CAC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsynth.c */,
+				8BD934CE09724E8F84669B0A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsystem.c */,
+				EE624B069A674B818DD7511C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/fttype1.c */,
+				CB15685B8E2242C8B1490931 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftwinfnt.c */,
+				6254F8451B6D43C7A547D60C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bdf/bdf.c */,
+				8AB6C3389B654FBEB2B496CD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bzip2/ftbzip2.c */,
+				715DC328086E4ACB9F861578 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cache/ftcache.c */,
+				FD4ADA1A085C400F81B17F2A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cff/cff.c */,
+				4E3AB4BABE3D4A0B84196EFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cid/type1cid.c */,
+				04C81105A95A4CEB939041ED /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/gzip/ftgzip.c */,
+				2AE3A489B4A34107AB38670C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/lzw/ftlzw.c */,
+				9C20763FA56F431DA8AD7CF0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pcf/pcf.c */,
+				4C2EBA1A154D47BE82334139 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pfr/pfr.c */,
+				860210BB3731479ABBD8AF47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psaux/psaux.c */,
+				CC9D87741A4A41D1B78F6031 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pshinter/pshinter.c */,
+				82DB8698B2AC437D93313C54 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psnames/psnames.c */,
+				57080701B2B14FD790CAAB1B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/raster/raster.c */,
+				E2E973E1BAC04B95BE69D912 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/sfnt/sfnt.c */,
+				6CE24D8AA9E84402B4A63178 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/smooth/smooth.c */,
+				14507319C81140EA8550FD95 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/truetype/truetype.c */,
+				959A2ED1DD5645F7B6183254 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type1/type1.c */,
+				13C4CF6B0171406A858A3E70 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type42/type42.c */,
+				B14716ADB2F7435E86EB6959 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/winfonts/winfnt.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A17F6AF17DB48669B9904BA /* freetype */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 032F1BDF37B8481BB0AEE434 /* Build configuration list for PBXNativeTarget "freetype" */;
+			buildPhases = (
+				E8FD9A297F514341AA6B8C01 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F72C1DED2E214AFEB75C8AF7 /* PBXTargetDependency */,
+			);
+			name = freetype;
+			productName = freetype;
+			productReference = 13FE28322C5A4BCB82762C5F /* freetype */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05C3A1463FD34F17B0AAAD22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = 376C6AA9FB274EA480839008 /* Build configuration list for PBXProject "freetype" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				3A4A7D9FE03A4B0198D084C5 /* Debug */,
+				E1CEDB32F21F4E21B6920156 /* Release */,
+				85427755E3FB4B2392D9F54F /* MinSizeRel */,
+				07E4B7E9BC4D47859C0CC16F /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = A84ECF0635B5422B9680AA4C;
+			projectDirPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1";
+			projectRoot = "";
+			targets = (
+				8EE6656C0226482E9A63D590 /* ALL_BUILD */,
+				52A2736E4FFF445B96FC72ED /* ZERO_CHECK */,
+				3A17F6AF17DB48669B9904BA /* freetype */,
+				C58F5371E311477AB906A11C /* install */,
+				4156E4D848854E10A7A07CC7 /* package */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		062142B3E738455D9ECCEB12 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		26B65E00014E4B45845E65AE = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		7E4CC4DC76054F44970A3318 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		8C238FC822A44F6BAB4156A8 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		A3A757E678A749739D0640A9 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/CMakeScripts/package_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		B3B6009A16D3468D8ED73716 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		B3FC38CE2A2448B190F4E77B = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F4889AC188CC4C8BBD399B02 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8FD9A297F514341AA6B8C01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ECE51D0BFBA42D3BDDF28F9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/autofit/autofit.c */,
+				83830573B7774481826A6ADE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbase.c */,
+				C4843B0349F849748724DA31 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbbox.c */,
+				4AF11ED0ED28442E86400E02 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbdf.c */,
+				9B90A3EDAD6F4095B37F684D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftbitmap.c */,
+				2253E770978E44908751F09A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftcid.c */,
+				57D13B9BF49D4A6AAC138629 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftdebug.c */,
+				12FA78F47BFE49F6BE866B8D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftfstype.c */,
+				C49683E4FDD340858CD4ACE0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgasp.c */,
+				257BE67B299D45D48375155B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftglyph.c */,
+				30B0FC257B394C2E80313BEB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftgxval.c */,
+				16AFCAF3A2A64584BDFE46B8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftinit.c */,
+				EC7A0725723D4782A8A4898D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftmm.c */,
+				772A619FB1C84C28BF60EE66 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftotval.c */,
+				C613A8B1C59742698A98166C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpatent.c */,
+				EF30A4754F8A4F4FB0E75791 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftpfr.c */,
+				AF8E3395D01F4394A6D4E8CF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftstroke.c */,
+				D97AEEAF6DE04F36B451CD05 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsynth.c */,
+				8B247192AEC242FC9700BB37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftsystem.c */,
+				6BB076AB59CD4500AE2C03EA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/fttype1.c */,
+				0FEC723ACC064F6ABE94B386 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/base/ftwinfnt.c */,
+				155FE52A2CC7474FAF3AAFB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bdf/bdf.c */,
+				6CD5D8927A7A4BE2BDC4E172 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/bzip2/ftbzip2.c */,
+				3B3F730FA37B468899027B97 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cache/ftcache.c */,
+				DB806772E91C4475A36260C9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cff/cff.c */,
+				968B9FE53A3B40A7A0AC1C3A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/cid/type1cid.c */,
+				0A3C98499AFA4761A1346981 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/gzip/ftgzip.c */,
+				ED985417496F4B49B3B149B9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/lzw/ftlzw.c */,
+				00B33006C613493F928225ED /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pcf/pcf.c */,
+				18152AFCDA5F48EE9F3E644A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pfr/pfr.c */,
+				95DB7EE92623492BB8EDD680 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psaux/psaux.c */,
+				31CE60A19ED24B0280C346C8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/pshinter/pshinter.c */,
+				BB59CDE051894DD28B0BFB91 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/psnames/psnames.c */,
+				E04E224830CC443AB51D8C16 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/raster/raster.c */,
+				06EDF7B96C8240668EA8C063 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/sfnt/sfnt.c */,
+				F657B3C3877D400FB3A7DDDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/smooth/smooth.c */,
+				8EF4CD8FD5CC4BA095A8F3B1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/truetype/truetype.c */,
+				7D68EE60DF2145CFB32F32EB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type1/type1.c */,
+				70D3E8901414480686F6B1A9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/type42/type42.c */,
+				37D1D7039B474D039FF53E60 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/src/winfonts/winfnt.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10B473AF204C42709823E645 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A17F6AF17DB48669B9904BA /* freetype */;
+			targetProxy = 8703AA8877D2426AAA700559 /* PBXContainerItemProxy */;
+		};
+		470ADCD2B2C04B6E83948041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = EDE04651AEA84126885E7112 /* PBXContainerItemProxy */;
+		};
+		476349072CFF41918283D5E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = 2FF298A5CC594C9F8B7CDBC1 /* PBXContainerItemProxy */;
+		};
+		A356C111872548188CA506BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = DD937A457FC046DA977A799A /* PBXContainerItemProxy */;
+		};
+		F72C1DED2E214AFEB75C8AF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = 67E9C8BBD9494365B42C35AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		125AEFABB1404F5FB542F487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		147D975EF2984FB68D102E68 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",FT2_BUILD_LIBRARY,FT_DEBUG_LEVEL_ERROR,FT_DEBUG_LEVEL_TRACE);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/include","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -fvisibility=hidden  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = freetype;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		24ECA196AA7F45679150B0C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		26202547004847FBAF45F635 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2F0F71CD8D034379A2ABC053 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/build";
+			};
+			name = RelWithDebInfo;
+		};
+		39414C10FFE74E2DBA7E0DDC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		3B5DF3E140AD4AEE875E3885 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		3F4576ACB7884D6ABCA4D432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/build";
+			};
+			name = Release;
+		};
+		4E71F6667159431B92F4EAB4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/build";
+			};
+			name = MinSizeRel;
+		};
+		5F8C45F935E644228759BE13 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",FT2_BUILD_LIBRARY,FT_DEBUG_LEVEL_ERROR,FT_DEBUG_LEVEL_TRACE);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/include","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fvisibility=hidden  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = freetype;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		70B1CF936FB245CE9FBEC6D1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7ED3EC8DCC3142AFB5787AD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		96D5C5B3446E4E93A112ED27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",FT2_BUILD_LIBRARY,FT_DEBUG_LEVEL_ERROR,FT_DEBUG_LEVEL_TRACE);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/include","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fvisibility=hidden  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = freetype;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		A1C5C486F958400187DC7E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",FT2_BUILD_LIBRARY,FT_DEBUG_LEVEL_ERROR,FT_DEBUG_LEVEL_TRACE);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/include","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/freetype-2.10.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fvisibility=hidden  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = freetyped;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A3581B94AB974D98A57C89FE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B9C240834B414018A1F20338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		CAB53C478DCE4A45A81FC60E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		CFA6E9F48A5D4643BAEED614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/build";
+			};
+			name = Debug;
+		};
+		E4B0E88F1AE54810AA612B11 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E7CE39A9358341D49C88E5E4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E8FF4774E77740759873415B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		E90F530D590746AF91DBB434 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FF775DE2C34C48B5B57AE7C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		FFC40F6FF718424BAA22C0FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		032F1BDF37B8481BB0AEE434 /* Build configuration list for PBXNativeTarget "freetype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1C5C486F958400187DC7E13 /* Debug */,
+				96D5C5B3446E4E93A112ED27 /* Release */,
+				5F8C45F935E644228759BE13 /* MinSizeRel */,
+				147D975EF2984FB68D102E68 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		21A73E994D5243E0ABEB9610 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				125AEFABB1404F5FB542F487 /* Debug */,
+				24ECA196AA7F45679150B0C2 /* Release */,
+				E90F530D590746AF91DBB434 /* MinSizeRel */,
+				3B5DF3E140AD4AEE875E3885 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		22B8C7DBB8824A139E33B7DA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26202547004847FBAF45F635 /* Debug */,
+				7ED3EC8DCC3142AFB5787AD6 /* Release */,
+				CAB53C478DCE4A45A81FC60E /* MinSizeRel */,
+				A3581B94AB974D98A57C89FE /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		28C97AB00D3A49489128E9CF /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8FF4774E77740759873415B /* Debug */,
+				B9C240834B414018A1F20338 /* Release */,
+				70B1CF936FB245CE9FBEC6D1 /* MinSizeRel */,
+				39414C10FFE74E2DBA7E0DDC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		376C6AA9FB274EA480839008 /* Build configuration list for PBXProject "freetype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA6E9F48A5D4643BAEED614 /* Debug */,
+				3F4576ACB7884D6ABCA4D432 /* Release */,
+				4E71F6667159431B92F4EAB4 /* MinSizeRel */,
+				2F0F71CD8D034379A2ABC053 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		805C9778ABB04885A7CE23FB /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC40F6FF718424BAA22C0FA /* Debug */,
+				FF775DE2C34C48B5B57AE7C1 /* Release */,
+				E7CE39A9358341D49C88E5E4 /* MinSizeRel */,
+				E4B0E88F1AE54810AA612B11 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05C3A1463FD34F17B0AAAD22 /* Project object */;
+}

@@ -1,5 +1,5 @@
-prefix=C:/Program Files (x86)/ThousandParty
-exec_prefix=C:/Program Files (x86)/ThousandParty
+prefix=/usr/local
+exec_prefix=/usr/local
 libdir=
 sharedlibdir=
 includedir=

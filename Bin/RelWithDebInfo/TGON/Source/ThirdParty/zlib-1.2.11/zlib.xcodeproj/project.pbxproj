@@ -1,0 +1,1032 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4156E4D848854E10A7A07CC7 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BC39902EA491456FB6408001 /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				E8C8A64D5C0245FA8E5EFE45 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				F015B140486A4DBCA395B312 /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		52A2736E4FFF445B96FC72ED /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E65898D3BF0644E8900F139A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				412ED54E98FA44EE94E0D7B6 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		8EE6656C0226482E9A63D590 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 08FD6BC63DC040698EB5557E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				463704594E524109A1B9B9CF /* CMake Rules */,
+			);
+			dependencies = (
+				F024ADA2354548C7944D6EC7 /* PBXTargetDependency */,
+				F7C4A0587606485D8009B72B /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		C58F5371E311477AB906A11C /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 680D8EA80F0D40BDB768C767 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				CDCCEF7AFBBA42E29ABCA888 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				81576BCEDE014747BB796F0F /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0705D162461F43A9B629ACDC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zlib.h */ = {isa = PBXBuildFile; fileRef = CC774689044842A9B29F222B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zlib.h */; };
+		07A753E856D74EE4A213F5C7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inftrees.c */ = {isa = PBXBuildFile; fileRef = 1B3FBA57A4774F3AB6E4A41B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inftrees.c */; };
+		1136DB2282934DBCA7F976D8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzwrite.c */ = {isa = PBXBuildFile; fileRef = 9D62BA1F15644163A4E549F3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzwrite.c */; };
+		225960D1CAAA45068634FA23 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zutil.h */ = {isa = PBXBuildFile; fileRef = 9F6D30AAB24949FE928EB77E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zutil.h */; };
+		35849B7D9480425BA6260627 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/crc32.h */ = {isa = PBXBuildFile; fileRef = 84D51ACBB6224133AD4493F1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/crc32.h */; };
+		40BD13710BA849B49B3EE593 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zutil.c */ = {isa = PBXBuildFile; fileRef = 245CAFB7480F45BE8EF3E464 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zutil.c */; };
+		47AC4E5397B84F0FBD8834A0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inflate.c */ = {isa = PBXBuildFile; fileRef = 47A814A8C3EC4A5B9E35D5D4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inflate.c */; };
+		47B6885F83ED4102882D15B0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffast.c */ = {isa = PBXBuildFile; fileRef = 308D0C64AB224DC09D0370F0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffast.c */; };
+		49395298F7264EC08E65FAE3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffast.h */ = {isa = PBXBuildFile; fileRef = D1EE3F23F1DF4E25917F0E92 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffast.h */; };
+		54AA79EE9FD54A45BA3819DC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/infback.c */ = {isa = PBXBuildFile; fileRef = 8FF953C1AB1C438F823BDCA3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/infback.c */; };
+		54B947F0B9254910A8F080D5 = {isa = PBXBuildFile; fileRef = E271C88481DC423C842F04EC; };
+		575D04592B8846C7ACFD9687 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzlib.c */ = {isa = PBXBuildFile; fileRef = DE6CD5856FED4D55AB03E818 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzlib.c */; };
+		717B8F51BC1A41229A903D8F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/trees.h */ = {isa = PBXBuildFile; fileRef = 83DF7E3FFDD145D095DC75C3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/trees.h */; };
+		75250919569E403CA1B731DB /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/zconf.h */ = {isa = PBXBuildFile; fileRef = DC1C28F97EAE4A59B748BBD8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/zconf.h */; };
+		75455C3D282744BEA48EDF90 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/uncompr.c */ = {isa = PBXBuildFile; fileRef = FB030CBCFBB8410D85FD2E05 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/uncompr.c */; };
+		7DB0872D523842E3A9FB8E64 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffixed.h */ = {isa = PBXBuildFile; fileRef = DECAF3DA50D64C1A885C534A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffixed.h */; };
+		88368D4B213A4F00810A5A58 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/trees.c */ = {isa = PBXBuildFile; fileRef = 2393C8703A134CF5B590ADCB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/trees.c */; };
+		910B50D7965B4E54A9C98194 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzguts.h */ = {isa = PBXBuildFile; fileRef = 211879886E4B4859B2A6FB23 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzguts.h */; };
+		A39F536AD4904F54B2401569 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/deflate.h */ = {isa = PBXBuildFile; fileRef = FB260EBFBB1D4560B449D309 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/deflate.h */; };
+		BC127222801C48EF8D4FF6C3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/compress.c */ = {isa = PBXBuildFile; fileRef = 1530294D5A524FC2AFA9F3F6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/compress.c */; };
+		BD7AB493FF9F40539AE13DEA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/crc32.c */ = {isa = PBXBuildFile; fileRef = 39F0C9C2A13F4F4889AFDA7F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/crc32.c */; };
+		C2D04CB8204442B0946E0A5B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/deflate.c */ = {isa = PBXBuildFile; fileRef = C18D2DE2CF354A6E8EA86D74 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/deflate.c */; };
+		CBA12FCB967D4C92B99CBB67 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inflate.h */ = {isa = PBXBuildFile; fileRef = 70DDE3C577784DB8BD9E9314 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inflate.h */; };
+		D361A0314CE041458299535D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzclose.c */ = {isa = PBXBuildFile; fileRef = B664C9A0866C43C4B2C0F753 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzclose.c */; };
+		DA0D4867101D4E9CB6C417BE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inftrees.h */ = {isa = PBXBuildFile; fileRef = BE0F7114A85D4633AC82BB25 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inftrees.h */; };
+		E79A72530E1F4904B9FA064D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzread.c */ = {isa = PBXBuildFile; fileRef = C0EBF4AA3A8C44E89F763CF3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzread.c */; };
+		FDB14A9A07204EBE8AE0381D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/adler32.c */ = {isa = PBXBuildFile; fileRef = 47480211F37146529A07597D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/adler32.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		14617D0B3E124ADA868972CC /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		769EC915D87245118D37552A /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		8238E4054EB142049882BE4E /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		9F8EDE7DADFE45E1A59EC7A5 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		0BA9E1CC3BF1459DA237A02C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37CAAC98D374CA9A72E23FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		6A8AE5B96F0943ABBD2D1C64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37CAAC98D374CA9A72E23FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		75F8A497F7C349449D9DF3FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37CAAC98D374CA9A72E23FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+		C083CE332352444ABBD99792 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37CAAC98D374CA9A72E23FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F571B6C2174A4636AC2A2CD4;
+			remoteInfo = zlib;
+		};
+		CBCD366D8B6A4DC4A68ADF96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37CAAC98D374CA9A72E23FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1530294D5A524FC2AFA9F3F6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = compress.c; path = compress.c; sourceTree = SOURCE_ROOT; };
+		1B3FBA57A4774F3AB6E4A41B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inftrees.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = inftrees.c; path = inftrees.c; sourceTree = SOURCE_ROOT; };
+		211879886E4B4859B2A6FB23 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzguts.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = gzguts.h; path = gzguts.h; sourceTree = SOURCE_ROOT; };
+		2393C8703A134CF5B590ADCB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/trees.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = trees.c; path = trees.c; sourceTree = SOURCE_ROOT; };
+		245CAFB7480F45BE8EF3E464 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zutil.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zutil.c; path = zutil.c; sourceTree = SOURCE_ROOT; };
+		308D0C64AB224DC09D0370F0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffast.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = inffast.c; path = inffast.c; sourceTree = SOURCE_ROOT; };
+		39F0C9C2A13F4F4889AFDA7F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/crc32.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = crc32.c; path = crc32.c; sourceTree = SOURCE_ROOT; };
+		47480211F37146529A07597D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/adler32.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = adler32.c; path = adler32.c; sourceTree = SOURCE_ROOT; };
+		47A814A8C3EC4A5B9E35D5D4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inflate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = inflate.c; path = inflate.c; sourceTree = SOURCE_ROOT; };
+		54D1866B07CE44F8BEA0C231 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		70DDE3C577784DB8BD9E9314 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inflate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inflate.h; path = inflate.h; sourceTree = SOURCE_ROOT; };
+		83DF7E3FFDD145D095DC75C3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/trees.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = trees.h; path = trees.h; sourceTree = SOURCE_ROOT; };
+		84D51ACBB6224133AD4493F1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/crc32.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = crc32.h; path = crc32.h; sourceTree = SOURCE_ROOT; };
+		8FF953C1AB1C438F823BDCA3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/infback.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = infback.c; path = infback.c; sourceTree = SOURCE_ROOT; };
+		9D62BA1F15644163A4E549F3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzwrite.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gzwrite.c; path = gzwrite.c; sourceTree = SOURCE_ROOT; };
+		9F6D30AAB24949FE928EB77E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zutil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zutil.h; path = zutil.h; sourceTree = SOURCE_ROOT; };
+		B664C9A0866C43C4B2C0F753 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzclose.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gzclose.c; path = gzclose.c; sourceTree = SOURCE_ROOT; };
+		BE0F7114A85D4633AC82BB25 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inftrees.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inftrees.h; path = inftrees.h; sourceTree = SOURCE_ROOT; };
+		C0EBF4AA3A8C44E89F763CF3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gzread.c; path = gzread.c; sourceTree = SOURCE_ROOT; };
+		C18D2DE2CF354A6E8EA86D74 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/deflate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = deflate.c; path = deflate.c; sourceTree = SOURCE_ROOT; };
+		CC774689044842A9B29F222B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zlib.h; path = zlib.h; sourceTree = SOURCE_ROOT; };
+		D1EE3F23F1DF4E25917F0E92 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inffast.h; path = inffast.h; sourceTree = SOURCE_ROOT; };
+		D38F3955C1CC489F875E562C /* zlib */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libz.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1C28F97EAE4A59B748BBD8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/zconf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zconf.h; path = "../../../../Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/zconf.h"; sourceTree = SOURCE_ROOT; };
+		DE6CD5856FED4D55AB03E818 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzlib.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gzlib.c; path = gzlib.c; sourceTree = SOURCE_ROOT; };
+		DECAF3DA50D64C1A885C534A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffixed.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inffixed.h; path = inffixed.h; sourceTree = SOURCE_ROOT; };
+		E271C88481DC423C842F04EC = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		FB030CBCFBB8410D85FD2E05 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/uncompr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = uncompr.c; path = uncompr.c; sourceTree = SOURCE_ROOT; };
+		FB260EBFBB1D4560B449D309 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/deflate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = deflate.h; path = deflate.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		082B9AD925904820B5AF39EE = {
+			isa = PBXGroup;
+			children = (
+				E63A19B7B268427E9A9FA6DE /* ThirdParty */,
+				126783F6FBDA483A90B6CC2A /* ALL_BUILD */,
+				8747E470D31642E589FF4315 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		126783F6FBDA483A90B6CC2A /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				35A6B0EDE43A4C31B42AFD9E /* CMake Rules */,
+				54D1866B07CE44F8BEA0C231,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		23E9EAB5FFF746BD8FEE809B /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				84D51ACBB6224133AD4493F1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/crc32.h */,
+				FB260EBFBB1D4560B449D309 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/deflate.h */,
+				211879886E4B4859B2A6FB23 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzguts.h */,
+				D1EE3F23F1DF4E25917F0E92 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffast.h */,
+				DECAF3DA50D64C1A885C534A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffixed.h */,
+				70DDE3C577784DB8BD9E9314 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inflate.h */,
+				BE0F7114A85D4633AC82BB25 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inftrees.h */,
+				83DF7E3FFDD145D095DC75C3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/trees.h */,
+				CC774689044842A9B29F222B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zlib.h */,
+				9F6D30AAB24949FE928EB77E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zutil.h */,
+				DC1C28F97EAE4A59B748BBD8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/zconf.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		35A6B0EDE43A4C31B42AFD9E /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		797535BF269849F9A6590FF8 /* zlib */ = {
+			isa = PBXGroup;
+			children = (
+				F42D608597924DCFA3A14F71 /* Source Files */,
+				23E9EAB5FFF746BD8FEE809B /* Header Files */,
+				E271C88481DC423C842F04EC,
+			);
+			name = zlib;
+			sourceTree = "<group>";
+		};
+		8747E470D31642E589FF4315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D38F3955C1CC489F875E562C /* zlib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E63A19B7B268427E9A9FA6DE /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				797535BF269849F9A6590FF8 /* zlib */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		F42D608597924DCFA3A14F71 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				47480211F37146529A07597D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/adler32.c */,
+				1530294D5A524FC2AFA9F3F6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/compress.c */,
+				39F0C9C2A13F4F4889AFDA7F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/crc32.c */,
+				C18D2DE2CF354A6E8EA86D74 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/deflate.c */,
+				B664C9A0866C43C4B2C0F753 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzclose.c */,
+				DE6CD5856FED4D55AB03E818 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzlib.c */,
+				C0EBF4AA3A8C44E89F763CF3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzread.c */,
+				9D62BA1F15644163A4E549F3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzwrite.c */,
+				8FF953C1AB1C438F823BDCA3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/infback.c */,
+				308D0C64AB224DC09D0370F0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffast.c */,
+				47A814A8C3EC4A5B9E35D5D4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inflate.c */,
+				1B3FBA57A4774F3AB6E4A41B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inftrees.c */,
+				2393C8703A134CF5B590ADCB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/trees.c */,
+				FB030CBCFBB8410D85FD2E05 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/uncompr.c */,
+				245CAFB7480F45BE8EF3E464 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zutil.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F571B6C2174A4636AC2A2CD4 /* zlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 363FEAD7CA004BCCA0C8F3D3 /* Build configuration list for PBXNativeTarget "zlib" */;
+			buildPhases = (
+				881D47F16F1D48DD8195EB6F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B8601336B7E4122AE1E55FD /* PBXTargetDependency */,
+			);
+			name = zlib;
+			productName = zlib;
+			productReference = D38F3955C1CC489F875E562C /* zlib */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F37CAAC98D374CA9A72E23FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = EDA0CDEC439F4A07A82C738A /* Build configuration list for PBXProject "zlib" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				9F8EDE7DADFE45E1A59EC7A5 /* Debug */,
+				769EC915D87245118D37552A /* Release */,
+				8238E4054EB142049882BE4E /* MinSizeRel */,
+				14617D0B3E124ADA868972CC /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 082B9AD925904820B5AF39EE;
+			projectDirPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11";
+			projectRoot = "";
+			targets = (
+				8EE6656C0226482E9A63D590 /* ALL_BUILD */,
+				52A2736E4FFF445B96FC72ED /* ZERO_CHECK */,
+				C58F5371E311477AB906A11C /* install */,
+				4156E4D848854E10A7A07CC7 /* package */,
+				F571B6C2174A4636AC2A2CD4 /* zlib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		060C614890074166B665C1F2 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		1E3CE078B5A6486BB89AD23E = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		412ED54E98FA44EE94E0D7B6 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		463704594E524109A1B9B9CF /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		87273F1084324BCC8F5C8137 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		CDCCEF7AFBBA42E29ABCA888 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		E8C8A64D5C0245FA8E5EFE45 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/CMakeScripts/package_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		EFF3A1BF046D42F2A298551C = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		881D47F16F1D48DD8195EB6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDB14A9A07204EBE8AE0381D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/adler32.c */,
+				BC127222801C48EF8D4FF6C3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/compress.c */,
+				BD7AB493FF9F40539AE13DEA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/crc32.c */,
+				C2D04CB8204442B0946E0A5B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/deflate.c */,
+				D361A0314CE041458299535D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzclose.c */,
+				575D04592B8846C7ACFD9687 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzlib.c */,
+				E79A72530E1F4904B9FA064D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzread.c */,
+				1136DB2282934DBCA7F976D8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/gzwrite.c */,
+				54AA79EE9FD54A45BA3819DC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/infback.c */,
+				47B6885F83ED4102882D15B0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inffast.c */,
+				47AC4E5397B84F0FBD8834A0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inflate.c */,
+				07A753E856D74EE4A213F5C7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/inftrees.c */,
+				88368D4B213A4F00810A5A58 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/trees.c */,
+				75455C3D282744BEA48EDF90 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/uncompr.c */,
+				40BD13710BA849B49B3EE593 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/zlib-1.2.11/zutil.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B8601336B7E4122AE1E55FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = 0BA9E1CC3BF1459DA237A02C /* PBXContainerItemProxy */;
+		};
+		81576BCEDE014747BB796F0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = 75F8A497F7C349449D9DF3FB /* PBXContainerItemProxy */;
+		};
+		F015B140486A4DBCA395B312 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = CBCD366D8B6A4DC4A68ADF96 /* PBXContainerItemProxy */;
+		};
+		F024ADA2354548C7944D6EC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F571B6C2174A4636AC2A2CD4 /* zlib */;
+			targetProxy = C083CE332352444ABBD99792 /* PBXContainerItemProxy */;
+		};
+		F7C4A0587606485D8009B72B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = 6A8AE5B96F0943ABBD2D1C64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1AEE0F0451F74B4BBEC7C9AA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11","/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = z;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		200791E5D4C842FC89272F49 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		20E79324E50C4058BD548BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2B2D41A086274DDA8ADD9FBA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		30996DFA252B4DFAB3733695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		310AE32842F148EFB00CED73 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		395F62334AE84E6CADB1D865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		56CA29D83D5041FB9977BFD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		585C1DDD474F453AAC43FEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		5C3D35E878B649E49FFA12C0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6B5F5EDA69734B2C9DB35F99 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/build";
+			};
+			name = MinSizeRel;
+		};
+		75AE335C37264397BB89A9ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		75B9AE0B91E24DB69EED8032 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11","/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = z;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		82CA93660393474DA37EF9C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11","/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = z;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9DC008922D4C4867AF832C1E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A6090BEE10A04C93812F3FC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/build";
+			};
+			name = Debug;
+		};
+		C169A172348045C28150FCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C32F1D488D044EDE99E599AE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		C8B84BD4D9B2470FB4AE53D2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CA5F28B94262461C8F1392B8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/build";
+			};
+			name = RelWithDebInfo;
+		};
+		E37CB1AF583F4227B5B93C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		EBB172ACD31D42DE9FEB7341 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EC4FFAB977F94F65A3312CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11","/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = z;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		FD14CFABB15E4DC6B9E01F9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08FD6BC63DC040698EB5557E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20E79324E50C4058BD548BEB /* Debug */,
+				30996DFA252B4DFAB3733695 /* Release */,
+				200791E5D4C842FC89272F49 /* MinSizeRel */,
+				EBB172ACD31D42DE9FEB7341 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		363FEAD7CA004BCCA0C8F3D3 /* Build configuration list for PBXNativeTarget "zlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82CA93660393474DA37EF9C6 /* Debug */,
+				EC4FFAB977F94F65A3312CB1 /* Release */,
+				1AEE0F0451F74B4BBEC7C9AA /* MinSizeRel */,
+				75B9AE0B91E24DB69EED8032 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		680D8EA80F0D40BDB768C767 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E37CB1AF583F4227B5B93C29 /* Debug */,
+				75AE335C37264397BB89A9ED /* Release */,
+				2B2D41A086274DDA8ADD9FBA /* MinSizeRel */,
+				C8B84BD4D9B2470FB4AE53D2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BC39902EA491456FB6408001 /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				395F62334AE84E6CADB1D865 /* Debug */,
+				56CA29D83D5041FB9977BFD4 /* Release */,
+				310AE32842F148EFB00CED73 /* MinSizeRel */,
+				C32F1D488D044EDE99E599AE /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E65898D3BF0644E8900F139A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C169A172348045C28150FCDE /* Debug */,
+				585C1DDD474F453AAC43FEDA /* Release */,
+				9DC008922D4C4867AF832C1E /* MinSizeRel */,
+				5C3D35E878B649E49FFA12C0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EDA0CDEC439F4A07A82C738A /* Build configuration list for PBXProject "zlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6090BEE10A04C93812F3FC0 /* Debug */,
+				FD14CFABB15E4DC6B9E01F9F /* Release */,
+				6B5F5EDA69734B2C9DB35F99 /* MinSizeRel */,
+				CA5F28B94262461C8F1392B8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F37CAAC98D374CA9A72E23FA /* Project object */;
+}

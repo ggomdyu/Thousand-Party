@@ -1,0 +1,2044 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		31E75391810445FFB925B0D8 /* native-tools */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BB36341C51EC4BAC9B92868B /* Build configuration list for PBXAggregateTarget "native-tools" */;
+			buildPhases = (
+				4F90A87D9B6F4B949D379CBF /* CMake Rules */,
+			);
+			dependencies = (
+				DFC80CE60C4F4CDAB739FABA /* PBXTargetDependency */,
+			);
+			name = "native-tools";
+			productName = "native-tools";
+		};
+		4156E4D848854E10A7A07CC7 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 89EBDF599D1B49DFB1C850E9 /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				AB7323701DFB4299BF6AE16C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				D981BA3D3C1146D397BD3F88 /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		52A2736E4FFF445B96FC72ED /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 16275AD21E544809A2DE8234 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				F139C223EF3545DBB32AE368 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		8EE6656C0226482E9A63D590 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 488AD4907B834470802F29D5 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				23F3495931FA404B8B2F7FAB /* CMake Rules */,
+			);
+			dependencies = (
+				0DBF1ED4435A4C5FA5FBA0FD /* PBXTargetDependency */,
+				C2495956D49B47DB9E0AD368 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		C58F5371E311477AB906A11C /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5134039960B446079E317625 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				310D68ED279D44A2B8068C5A /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				6538D79CFE5A4E02887592E7 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0389C4E1091D4D0BBFE529F2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alu.h */ = {isa = PBXBuildFile; fileRef = 22D8E98C6DFC4BDFBEFFD954 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alu.h */; };
+		072177B9724C4465AB45D87C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/fpu_modes.h */ = {isa = PBXBuildFile; fileRef = 189597722EBA4EA494AFCD56 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/fpu_modes.h */; };
+		09B91B26DEBF409D9D234A52 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/biquad.cpp */ = {isa = PBXBuildFile; fileRef = B001A5A6A14041BAA7175EFC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/biquad.cpp */; };
+		0A770D67F57D493480D296FD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.h */ = {isa = PBXBuildFile; fileRef = E7784FF2581F4A44A4E0A8FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.h */; };
+		0AB54BE8AC4C461D8CFBBFC1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alc.cpp */ = {isa = PBXBuildFile; fileRef = 0D0AD6382EA44FFBAFCE2EDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alc.cpp */; };
+		0AC972BB01284901B96C81E4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/albyte.h */ = {isa = PBXBuildFile; fileRef = A3877C8C8AA34E7DBC58669D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/albyte.h */; };
+		0DEBCD9166AB4C1CB4E188D5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.h */ = {isa = PBXBuildFile; fileRef = AC3F64C2B8AF417EB3BB89BD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.h */; };
+		0DF12775679649498A391D9B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/base.h */ = {isa = PBXBuildFile; fileRef = 35A88848595F45E0B220ED77 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/base.h */; };
+		1032614010A1428B820DF412 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.h */ = {isa = PBXBuildFile; fileRef = ED567B8EA8364EFBB9A1F459 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.h */; };
+		10DF77A88EB94EF3B20B295A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/defs.h */ = {isa = PBXBuildFile; fileRef = 33706A54F6EB4D91A27A272B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/defs.h */; };
+		122C353B7DA14F49BD84A89C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.h */ = {isa = PBXBuildFile; fileRef = 27C902EE7FEB459D9CB01087 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.h */; };
+		167031F8AA754E30BC1E9591 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambdec.h */ = {isa = PBXBuildFile; fileRef = A7622295F8EC4E49A6B159C6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambdec.h */; };
+		16A7AFD134514791AC64FF22 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.h */ = {isa = PBXBuildFile; fileRef = 51B583049A65455AB07B0651 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.h */; };
+		189237719F0A4E9DABB4D0E7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alspan.h */ = {isa = PBXBuildFile; fileRef = DFA571132FE14FD6B4C97F57 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alspan.h */; };
+		1C04D9A9346B47EAB1C38036 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.h */ = {isa = PBXBuildFile; fileRef = 3CFAD532691645CA9ED39C3F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.h */; };
+		1EFF70D69F3949B19289BC37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/echo.cpp */ = {isa = PBXBuildFile; fileRef = A0F46021A9824EA5BE23056F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/echo.cpp */; };
+		1F1D3F83AF3C4746AB050202 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/opthelpers.h */ = {isa = PBXBuildFile; fileRef = 17F9E0EC101D43B99504D98B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/opthelpers.h */; };
+		1F45B87C465644D187E84B38 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/devformat.h */ = {isa = PBXBuildFile; fileRef = 5E83AB3A43F145199B4F4404 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/devformat.h */; };
+		2031F902019842458E51845B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/albyte.h */ = {isa = PBXBuildFile; fileRef = 9AC7EF144A58450D87B6D179 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/albyte.h */; };
+		2318ADEC453C4CEAA31CB3B1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_c.cpp */ = {isa = PBXBuildFile; fileRef = D3881041DEA14023B9ADD939 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_c.cpp */; };
+		254F7D6D32AC437799CF7AB1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */ = {isa = PBXBuildFile; fileRef = 34EBFF08C01B403DB8C411DC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */; };
+		2A226B6A8370465F96000235 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h */ = {isa = PBXBuildFile; fileRef = 798598F9AC6F49D2B5785C99 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h */; };
+		2E0A5B459130498CAA1B5642 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bs2b.h */ = {isa = PBXBuildFile; fileRef = CA90E07426324309A8F0E0B4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bs2b.h */; };
+		2E57FD21AD9148398B67CBEC = {isa = PBXBuildFile; fileRef = 86ACC750BC3245CB88265197; };
+		2E5E9EDD35A546F9B52710E0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/panning.cpp */ = {isa = PBXBuildFile; fileRef = FE7E863942BF49F18AD31F47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/panning.cpp */; };
+		314F5B28C1B6432F91A1CF5D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/coreaudio.h */ = {isa = PBXBuildFile; fileRef = 6C75FDE5F698412B9330C44A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/coreaudio.h */; };
+		32D1BB8C0878407EA2AFE991 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/distortion.cpp */ = {isa = PBXBuildFile; fileRef = 34A3A82331A049DC8721A49B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/distortion.cpp */; };
+		3382E1AAF55341729DE7BAF5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/nfc.h */ = {isa = PBXBuildFile; fileRef = 77544FDFB69343D082CF5282 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/nfc.h */; };
+		3569C13E47AB4432AD58E57C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/source.h */ = {isa = PBXBuildFile; fileRef = 0423BD6EF4F241E7A494C49A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/source.h */; };
+		3882D1FD6C084AA88F25CAD2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/buffer.cpp */ = {isa = PBXBuildFile; fileRef = B37FA3DB09904038844CD286 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/buffer.cpp */; };
+		389FFB0CD5044BA984369AF3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/voice.h */ = {isa = PBXBuildFile; fileRef = 8BE6D75330B246AA90259D68 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/voice.h */; };
+		3A0705E5C43145D49BEFE302 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/effect.cpp */ = {isa = PBXBuildFile; fileRef = 2C3CFACCA430414EB38B03A4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/effect.cpp */; };
+		3A9980A233074DCB8DFF0C67 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/examples/common/alhelpers.c */ = {isa = PBXBuildFile; fileRef = 3D4DC13194B54A0D950A731D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/examples/common/alhelpers.c */; };
+		3D33C020460C4092B0C9362B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/endiantest.h */ = {isa = PBXBuildFile; fileRef = 7875221605CD4FE393376B02 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/endiantest.h */; };
+		47ED73624B104C92B389474D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/null.cpp */ = {isa = PBXBuildFile; fileRef = 8A926A3CBAE04FB5A20808BA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/null.cpp */; };
+		4849FFFBDE4847BEA999E4F4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/hrtf.cpp */ = {isa = PBXBuildFile; fileRef = CF077FE9DE20441D984542AD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/hrtf.cpp */; };
+		4C0CAABCB0C8465EAEC4E691 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vecmat.h */ = {isa = PBXBuildFile; fileRef = 3D9819B10EC246FAB49C344C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vecmat.h */; };
+		4C7F60F8C16B42E69F9DF6C6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.h */ = {isa = PBXBuildFile; fileRef = 05D56835E5D84B089DE03687 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.h */; };
+		4C9BFB01F33E44E3A69AAAB3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.h */ = {isa = PBXBuildFile; fileRef = 0C34B199C00446C59D72F9CF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.h */; };
+		4FEFDC8E0A034EAEBC9F9EB6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/filter.cpp */ = {isa = PBXBuildFile; fileRef = 841A948802804963B96A2176 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/filter.cpp */; };
+		5149462787B649238B9F5AC5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.h */ = {isa = PBXBuildFile; fileRef = 020FF5D99CDD4C42B8E72C41 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.h */; };
+		55486EE9BB5D4BE1B1BEFD4D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse3.cpp */ = {isa = PBXBuildFile; fileRef = 22E572A72EB24763A65D9BDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse3.cpp */; settings = {COMPILER_FLAGS = "-msse3"; }; };
+		574215337EB547E595474FAA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mastering.cpp */ = {isa = PBXBuildFile; fileRef = 4A421637C82F462F9B3E18AA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mastering.cpp */; };
+		590A5286B1DF43EFA7F71088 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/hrtfbase.h */ = {isa = PBXBuildFile; fileRef = B9725A952A744D5FBA0B5492 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/hrtfbase.h */; };
+		591E431B33A747A8A99E9708 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vector.h */ = {isa = PBXBuildFile; fileRef = 1778F725FFA14ACDB48FEDA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vector.h */; };
+		5947607BC0A34CD9AAF12E65 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h.rule */ = {isa = PBXBuildFile; fileRef = 7D6F4CE8A3CA4556B4044F8F /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h.rule */; };
+		5989A24FC8984C83B77DE471 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.h */ = {isa = PBXBuildFile; fileRef = B01C7A175A0E4A68BB74A452 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.h */; };
+		5B85723766AF4690BFB54E91 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */ = {isa = PBXBuildFile; fileRef = 4CCA5CF403514877ACA51DE5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */; };
+		5C2B4172263745749C9D0CD7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */ = {isa = PBXBuildFile; fileRef = E1DCEEB81CBB4D97A8E6C884 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */; };
+		5CE168505EE640FD9752B445 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/null.h */ = {isa = PBXBuildFile; fileRef = 1C117F04626D49C7B23B642E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/null.h */; };
+		5D6D21A7AA74499C8A833BB5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/examples/common/alhelpers.h */ = {isa = PBXBuildFile; fileRef = C3D71D1D0E604089BCE4BD9D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/examples/common/alhelpers.h */; };
+		5E0A1624C9CD4DA9A7587F7D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.h */ = {isa = PBXBuildFile; fileRef = B7FD0AA881E04C2081125D7C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.h */; };
+		5F694D94373544E6AE943410 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bformatdec.cpp */ = {isa = PBXBuildFile; fileRef = EF074F2083A84CCB80EB392B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bformatdec.cpp */; };
+		63F399DF3DB74F2C93D37589 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/coreaudio.cpp */ = {isa = PBXBuildFile; fileRef = A2D2B3D1FFEF42B18FB881D0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/coreaudio.cpp */; };
+		64903B46E8F1452CA1BEFAB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/listener.h */ = {isa = PBXBuildFile; fileRef = 4A399C9BBC1647E3A2F778DF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/listener.h */; };
+		668546B1458C4438AE1F2106 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uiddefs.cpp */ = {isa = PBXBuildFile; fileRef = 940B92CEDA1B49DB9A55815A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uiddefs.cpp */; };
+		6882F5BF56C9404480FB89AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */ = {isa = PBXBuildFile; fileRef = 141E3512F7E64BD69C225058 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */; };
+		6A0731FF89E045558CE4787A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/equalizer.cpp */ = {isa = PBXBuildFile; fileRef = 57E13BF5F2B0481AB162D9AB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/equalizer.cpp */; };
+		6A88E2579DD9433AB8CEE99D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/logging.h */ = {isa = PBXBuildFile; fileRef = 14C522BAE4D444CDA47B9739 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/logging.h */; };
+		6A924D1363CA4E38B6ED19BF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */ = {isa = PBXBuildFile; fileRef = 66D9A03884C94D59BA7B4672 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */; };
+		6EDD34C908B941098411AB9C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alnumeric.h */ = {isa = PBXBuildFile; fileRef = 41DF371F9E144827BD11C643 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alnumeric.h */; };
+		70E535706CBC4FF0BC999917 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/chorus.cpp */ = {isa = PBXBuildFile; fileRef = DEF782C0007143B1B496614F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/chorus.cpp */; };
+		7249B26F69B142ECBAE6AD39 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/voice.cpp */ = {isa = PBXBuildFile; fileRef = 3259FF5CFA7040F6913E6258 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/voice.cpp */; };
+		72FBE3D3EDD54374B15E93FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alconfig.cpp */ = {isa = PBXBuildFile; fileRef = 4E014465219242BEA6CD4253 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alconfig.cpp */; };
+		73CC7E02183D47EC83B8E570 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/auxeffectslot.h */ = {isa = PBXBuildFile; fileRef = B4B51456831845D6B64A39CA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/auxeffectslot.h */; };
+		73EDD357BFD94C9EB0CD8B16 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */ = {isa = PBXBuildFile; fileRef = EE6503F60B834D3AB358F521 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */; };
+		7687A37E23954641B6F66B34 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/aloptional.h */ = {isa = PBXBuildFile; fileRef = 73E9C22F9B9847C9B8DD847E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/aloptional.h */; };
+		784952F063BF40899813B16F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse41.cpp */ = {isa = PBXBuildFile; fileRef = 7F06DD3BA1F941369F3EC9E3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse41.cpp */; settings = {COMPILER_FLAGS = "-msse4.1"; }; };
+		7868DB91631A4272B1BD9FA2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.h */ = {isa = PBXBuildFile; fileRef = 59DC23B369B9484CAEE7BE59 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.h */; };
+		79AF00F13ECB4219B351FEA6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bs2b.cpp */ = {isa = PBXBuildFile; fileRef = D28A23D8FCDF4E19A01C1664 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bs2b.cpp */; };
+		7AD6204C109A4B5999098473 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alspan.h */ = {isa = PBXBuildFile; fileRef = 52136F0F2D054B71B3A13B1F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alspan.h */; };
+		7B6C3DE0B44745F2BDF8B0C8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/wave.cpp */ = {isa = PBXBuildFile; fileRef = D24124372FB64737A1B49444 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/wave.cpp */; };
+		7B9F1EB1A223499690D81754 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/intrusive_ptr.h */ = {isa = PBXBuildFile; fileRef = D5AA865ADC214E3387EDF98C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/intrusive_ptr.h */; };
+		7D33DA69BDAF488D978E1B48 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ringbuffer.h */ = {isa = PBXBuildFile; fileRef = C6066F53F15D4104A23700B0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ringbuffer.h */; };
+		80978AE2C8A949CF88607711 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.h */ = {isa = PBXBuildFile; fileRef = 539B5EAEFC094ACFB1FD67AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.h */; };
+		81225A0D92DA4B1C83EBDF5E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alu.cpp */ = {isa = PBXBuildFile; fileRef = 167B605FC8F7405EBECB2735 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alu.cpp */; };
+		81DEA96ADE574B669EA6F50B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */ = {isa = PBXBuildFile; fileRef = CD50B5D888D14827A73CCA81 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */; };
+		83508E2058FB4CAB830D58F8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/pshifter.cpp */ = {isa = PBXBuildFile; fileRef = 47AF0F3CCA1F419D89EF1BC0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/pshifter.cpp */; };
+		839DCB87DA254F5E95B924CB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alcontext.h */ = {isa = PBXBuildFile; fileRef = C939D7B751924FD7882E4208 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alcontext.h */; };
+		85FE739D555D4D4FB7FC2078 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/opthelpers.h */ = {isa = PBXBuildFile; fileRef = 8201D872456E4710B6D571BB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/opthelpers.h */; };
+		87D7E308AD3B436FB370EEDE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */ = {isa = PBXBuildFile; fileRef = 76C75CF6956846FAB534FC94 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */; };
+		882F6FAEBDF14A13A479600D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/intrusive_ptr.h */ = {isa = PBXBuildFile; fileRef = FB51D1317CE640F790472AE1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/intrusive_ptr.h */; };
+		89BBAB08544243F9B46C19A5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */ = {isa = PBXBuildFile; fileRef = 0001906246BE4358AF8DAA0E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */; };
+		8B0A6F5303424E7EAB5B986A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vector.h */ = {isa = PBXBuildFile; fileRef = C6E715913D344BC48F78C840 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vector.h */; };
+		8C13AEEC9ABE42F2945EA188 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uhjfilter.cpp */ = {isa = PBXBuildFile; fileRef = 887D275161CB4B2ABE4971E8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uhjfilter.cpp */; };
+		8C4767477B1D4A8F99909941 = {isa = PBXBuildFile; fileRef = 63ECB4A7D7F94A54ACB5C409; };
+		8E2E3A4E4F814ED2A984923F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/effect.h */ = {isa = PBXBuildFile; fileRef = BE168C3923F6436CA3A7F7E7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/effect.h */; };
+		8EF11AE4CA9948379AAEB899 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */ = {isa = PBXBuildFile; fileRef = 5A0B8BC703F1467EB0E602D8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */; };
+		912428EDB25D42C9844F4B84 = {isa = PBXBuildFile; fileRef = D3000874022442719E224BDC; };
+		92C3D3D7B2274D24877BB893 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/pragmadefs.h */ = {isa = PBXBuildFile; fileRef = C4B271D46C2045C8BBE4BB75 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/pragmadefs.h */; };
+		92F0B5D396B04FC5BA6D3526 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/extension.cpp */ = {isa = PBXBuildFile; fileRef = 9D11CAE5CEB04DD18F620534 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/extension.cpp */; };
+		93C7FAC3E39F43EBB8D8B29D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/atomic.h */ = {isa = PBXBuildFile; fileRef = EC24D4E39CA243FE806FF80F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/atomic.h */; };
+		94AF857485124A00A3387453 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/converter.cpp */ = {isa = PBXBuildFile; fileRef = C5F718798D6142AB9279F8F3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/converter.cpp */; };
+		9C040025A45B4D7B8C7A7E87 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/dedicated.cpp */ = {isa = PBXBuildFile; fileRef = 9EDE3BBD1EAC4EDCBB5132D2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/dedicated.cpp */; };
+		9CB917F38ACF45B4A8DE35DB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/base.h */ = {isa = PBXBuildFile; fileRef = 698BD647A6404B40B213F748 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/base.h */; };
+		9DA354304B864350A97BB3D8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/pragmadefs.h */ = {isa = PBXBuildFile; fileRef = E6A233A1709C4B8ABB5322CA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/pragmadefs.h */; };
+		9EB0B355E9FD499BAA5AF2F9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/math_defs.h */ = {isa = PBXBuildFile; fileRef = 8A35381E3E804ADC978D5E75 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/math_defs.h */; };
+		9F9E79BD59594DD88A59A26B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.h */ = {isa = PBXBuildFile; fileRef = C680E173060A45D3A803E69B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.h */; };
+		9FCEF71E62C240B3B285E1C0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/loopback.h */ = {isa = PBXBuildFile; fileRef = A67E2D25D97A44AD9F34BFCF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/loopback.h */; };
+		A155CB84409346698C25D229 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/loopback.cpp */ = {isa = PBXBuildFile; fileRef = D38C24E28A964FE9B68D8C6F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/loopback.cpp */; };
+		A2760A0B47A145F1BCEFC635 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/auxeffectslot.cpp */ = {isa = PBXBuildFile; fileRef = C41337FDE22B4712819CC04A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/auxeffectslot.cpp */; };
+		A654E99EECE14AB8B089B136 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */ = {isa = PBXBuildFile; fileRef = 6E8B4AD677D04C44B3EAEFA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */; };
+		AC9CD02B184145C8A6BA6AC5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h.rule */ = {isa = PBXBuildFile; fileRef = 3B7E5F056B234F49ABB4A936 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h.rule */; };
+		AE645EB411C44215ABE124AA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/reverb.cpp */ = {isa = PBXBuildFile; fileRef = CE4611550A874E64910126C2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/reverb.cpp */; };
+		B12565D16EC34EC7B378EECF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse.cpp */ = {isa = PBXBuildFile; fileRef = 55F2C07F75574CC4B2EDDDCA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse.cpp */; settings = {COMPILER_FLAGS = "-msse2"; }; };
+		B31F4AE7CC654D279559DECD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/autowah.cpp */ = {isa = PBXBuildFile; fileRef = 7BBCE483D230447688961CBC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/autowah.cpp */; };
+		B8A44D2E57004DE7923B5F1F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/modulator.cpp */ = {isa = PBXBuildFile; fileRef = 489CD00BA2DC429DB149DAA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/modulator.cpp */; };
+		B96227BA0F24492E953EFBF8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */ = {isa = PBXBuildFile; fileRef = 470CDB91E0A34FF0BD969909 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */; };
+		BDD8F4589F844AC596D3FDD6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */ = {isa = PBXBuildFile; fileRef = 2D0A9442C9554D49B9570485 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */; };
+		BFCF1AE390194F1191DC9ECF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/base.cpp */ = {isa = PBXBuildFile; fileRef = 08819FEEFBA54732A31676B3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/base.cpp */; };
+		C009CB842D8A458F9305E3D1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/cpu_caps.h */ = {isa = PBXBuildFile; fileRef = 11AE26C0424C4E63B4696D0D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/cpu_caps.h */; };
+		C065F40CA6364D638F364E4A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.h */ = {isa = PBXBuildFile; fileRef = E4311EB840C64CD98733A2F8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.h */; };
+		C0C22C0998554336B76E4664 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */ = {isa = PBXBuildFile; fileRef = F53CBC42F3414C03885A8BDF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */; };
+		C5D774E9C3964A9EB4F79063 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/listener.cpp */ = {isa = PBXBuildFile; fileRef = E5931A8505D340539D37927E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/listener.cpp */; };
+		C87385CAF27A4DE49DA567D1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/vmorpher.cpp */ = {isa = PBXBuildFile; fileRef = AE3439F88E344E8DBA548406 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/vmorpher.cpp */; };
+		CAF01384D9D54544BF2DDF79 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.h */ = {isa = PBXBuildFile; fileRef = 7E2AC8AD81B0499CA2395A35 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.h */; };
+		CF26E20BF79B40F2BC0CAF90 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */ = {isa = PBXBuildFile; fileRef = BBA92B4577C3489A8AAC2FAC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */; };
+		CFD7C6F39E2946439F3D8BFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/source.cpp */ = {isa = PBXBuildFile; fileRef = 551FEBFAE3094DE7AE18D169 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/source.cpp */; };
+		D04042B837E54C21A09A027B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/buffer.h */ = {isa = PBXBuildFile; fileRef = A53356583B8F46BE8B8A3683 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/buffer.h */; };
+		D041157937404712B1BD8DEA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/compressor.cpp */ = {isa = PBXBuildFile; fileRef = 4E96366E95084136B1398C2A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/compressor.cpp */; };
+		D12453C2957D4A87AC972B47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/atomic.h */ = {isa = PBXBuildFile; fileRef = 2F5367EB37754DF18162A227 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/atomic.h */; };
+		D363DA15A53344FA9FDABAA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/math_defs.h */ = {isa = PBXBuildFile; fileRef = 06F4B771F4A34BDEB352B6C8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/math_defs.h */; };
+		D3E2C7BAF5D14244A92CCF31 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/converter.h */ = {isa = PBXBuildFile; fileRef = 1FEE33F949694991819CF70B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/converter.h */; };
+		D452E26F3EC642048BB1FD18 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */ = {isa = PBXBuildFile; fileRef = FFA2DDDA27E248CA863284FD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */; };
+		D59EA597541A4D839EA4F837 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/event.cpp */ = {isa = PBXBuildFile; fileRef = D640703DD2F64A66B3908AB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/event.cpp */; };
+		D5FA67A62ED242B2BE3826D9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/splitter.h */ = {isa = PBXBuildFile; fileRef = 48EDD75B8293483CBE8A2416 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/splitter.h */; };
+		D71F1D99BE5C48B89E8110FD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/compat.h */ = {isa = PBXBuildFile; fileRef = 4C034C0E8EE64F2E981FE792 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/compat.h */; };
+		D730D256809746138C7E947A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/inprogext.h */ = {isa = PBXBuildFile; fileRef = 5AC965C449D1447F820C28CF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/inprogext.h */; };
+		D8FA566C17064CFABD402BF6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/nfc.cpp */ = {isa = PBXBuildFile; fileRef = ED91B5B8D5CA4DF6945DCBA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/nfc.cpp */; };
+		DACC1EF5206D472DAED24870 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/null.cpp */ = {isa = PBXBuildFile; fileRef = 710F46D4059F423EB58CD091 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/null.cpp */; };
+		DCF9D20B4F064E11BB3364BC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bformatdec.h */ = {isa = PBXBuildFile; fileRef = 16A7FFAD44594665BD4A25D8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bformatdec.h */; };
+		DF2684D1DEA041BEA88DFD1B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/error.cpp */ = {isa = PBXBuildFile; fileRef = E167680D40CE4A62906A781B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/error.cpp */; };
+		E071CBF4A6ED46E29BBA4A91 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/aloptional.h */ = {isa = PBXBuildFile; fileRef = 48A0FC1B3F7C445199869A17 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/aloptional.h */; };
+		E1582D8C50D84AACBC370D47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h */ = {isa = PBXBuildFile; fileRef = FB3BD8ECBDD2402EB4D7FF77 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h */; };
+		E24D08D3B0D242EBA9E9D651 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/helpers.cpp */ = {isa = PBXBuildFile; fileRef = 3434E1B0EEF7455AA5CDEEDC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/helpers.cpp */; };
+		E3AC846B3F3E4BD4BB86C89E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/hrtf.h */ = {isa = PBXBuildFile; fileRef = EE1C01292B49448594A522B0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/hrtf.h */; };
+		E3EC0F1D5B5B4E939AD05CF2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */ = {isa = PBXBuildFile; fileRef = C5292E06AD924D2F86ACB65F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */; };
+		E5B45CA5BA464B96AB4CF5F4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambidefs.h */ = {isa = PBXBuildFile; fileRef = 0C4DADBA8BDD4D2D8AF1DD85 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambidefs.h */; };
+		E61E86685BEE48E48C840348 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.h */ = {isa = PBXBuildFile; fileRef = 2E79BC819E3D4EAA97C0BC65 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.h */; };
+		E890EAB0E8324AAA9AEC8BCE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alnumeric.h */ = {isa = PBXBuildFile; fileRef = ACB15D57F4E14D949B0AC9E0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alnumeric.h */; };
+		EAE40C53C46C46269CCAFE22 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambdec.cpp */ = {isa = PBXBuildFile; fileRef = F08D228D1EB24DF3BEB19B26 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambdec.cpp */; };
+		EB1FE5671CF749C1B024EEDD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vecmat.h */ = {isa = PBXBuildFile; fileRef = 052D04AF66714CA1A78AABFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vecmat.h */; };
+		ECC2DC4211704962A2D6CECA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/biquad.h */ = {isa = PBXBuildFile; fileRef = F83EE2BEB1984E60955F9969 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/biquad.h */; };
+		EE2EC59B8D7C46449F1C2C21 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ringbuffer.cpp */ = {isa = PBXBuildFile; fileRef = 097543DD5D56459682DC0541 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ringbuffer.cpp */; };
+		EEC3BEC319FD47B2A10CE018 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/wave.h */ = {isa = PBXBuildFile; fileRef = 95C2B1B7B78F45ECA1CB7862 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/wave.h */; };
+		F015B15A5BA84BCFA5506834 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse2.cpp */ = {isa = PBXBuildFile; fileRef = 42461A17EB724489B3592B42 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse2.cpp */; settings = {COMPILER_FLAGS = "-msse2"; }; };
+		F22B2FB5F5414DDBA4406BBA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/splitter.cpp */ = {isa = PBXBuildFile; fileRef = A44231D000C64A01B74B480B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/splitter.cpp */; };
+		F31A6A87FD1F4F008B2ABEFC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alconfig.h */ = {isa = PBXBuildFile; fileRef = 26FFCEC39F3C4F8B96C3606B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alconfig.h */; };
+		F49EAC8B54884230BF92C2F1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alcmain.h */ = {isa = PBXBuildFile; fileRef = D0AC97EAAD4642CAB0E034AE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alcmain.h */; };
+		F57A194FE281415495AE3484 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */ = {isa = PBXBuildFile; fileRef = 721431532C0149DF91F5AABD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */; };
+		F5FD65ED7B0C47FE9C6966E4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uhjfilter.h */ = {isa = PBXBuildFile; fileRef = 0CE606E638404823B386929B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uhjfilter.h */; };
+		F6C3E8FD89AF4F36A4DD1FAB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mastering.h */ = {isa = PBXBuildFile; fileRef = 060E9DB01ABD4AC8A4ED7930 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mastering.h */; };
+		F93C62422ED14B88BB13CE8A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.h */ = {isa = PBXBuildFile; fileRef = 3F2F50A3CE614C798B96F79C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.h */; };
+		F9E2B9AA1035487BB1B974F1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/event.h */ = {isa = PBXBuildFile; fileRef = 1473030EF2804B6BA2811462 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/event.h */; };
+		FA38B2B1866D401EB406C269 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/filter.h */ = {isa = PBXBuildFile; fileRef = 896C568E1F58468DBC0B28F1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/filter.h */; };
+		FBF0B110F1CC434A86976891 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/state.cpp */ = {isa = PBXBuildFile; fileRef = 033B3D1655D647C185873302 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/state.cpp */; };
+		FDFAF6F008FC48F69F87836D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/endiantest.h */ = {isa = PBXBuildFile; fileRef = 3A20DBB71DC94BB68A142DF1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/endiantest.h */; };
+		FEAEC7D4A3024A1AB10D8DAA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/fshifter.cpp */ = {isa = PBXBuildFile; fileRef = 7F88E820722F4992AD30B7D4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/fshifter.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		B4C11B02900A42C6920607FC /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		C64D328D667844D4AFA61D94 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		CB09E586B22A4CCE9CCACEA1 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		E72F4F5DCBC94990B1760F40 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		180E5707D2274DEA95B533A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		20EB2DCF710F4BB9B1F7077F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		46AE2A34E699404D8E580C75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		4BA9A631DE2D4353BAC7434C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31E75391810445FFB925B0D8;
+			remoteInfo = "native-tools";
+		};
+		5A18894369A44E1F8E5B5F51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		62C9746CD6644FECB0145064 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		82A870427711463E94A4E728 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00D7DBC743AA4AFCABDCE76D;
+			remoteInfo = OpenAL;
+		};
+		83A57AC9702B4B8E8B652554 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+		8B3407FF308840F88879E6F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00D7DBC743AA4AFCABDCE76D;
+			remoteInfo = OpenAL;
+		};
+		DFBBED50E08742B1AAD76611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED874551F5F042D29BBFFBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0001906246BE4358AF8DAA0E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alstring.cpp; path = common/alstring.cpp; sourceTree = SOURCE_ROOT; };
+		020FF5D99CDD4C42B8E72C41 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dynload.h; path = common/dynload.h; sourceTree = SOURCE_ROOT; };
+		033B3D1655D647C185873302 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/state.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = state.cpp; path = al/state.cpp; sourceTree = SOURCE_ROOT; };
+		0423BD6EF4F241E7A494C49A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/source.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = source.h; path = al/source.h; sourceTree = SOURCE_ROOT; };
+		052D04AF66714CA1A78AABFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vecmat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vecmat.h; path = common/vecmat.h; sourceTree = SOURCE_ROOT; };
+		05D56835E5D84B089DE03687 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alstring.h; path = common/alstring.h; sourceTree = SOURCE_ROOT; };
+		060E9DB01ABD4AC8A4ED7930 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mastering.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mastering.h; path = alc/mastering.h; sourceTree = SOURCE_ROOT; };
+		06F4B771F4A34BDEB352B6C8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/math_defs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = math_defs.h; path = common/math_defs.h; sourceTree = SOURCE_ROOT; };
+		08819FEEFBA54732A31676B3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/base.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base.cpp; path = alc/backends/base.cpp; sourceTree = SOURCE_ROOT; };
+		097543DD5D56459682DC0541 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ringbuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ringbuffer.cpp; path = alc/ringbuffer.cpp; sourceTree = SOURCE_ROOT; };
+		0C34B199C00446C59D72F9CF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alcomplex.h; path = common/alcomplex.h; sourceTree = SOURCE_ROOT; };
+		0C4DADBA8BDD4D2D8AF1DD85 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambidefs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ambidefs.h; path = alc/ambidefs.h; sourceTree = SOURCE_ROOT; };
+		0CE606E638404823B386929B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uhjfilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = uhjfilter.h; path = alc/uhjfilter.h; sourceTree = SOURCE_ROOT; };
+		0D0AD6382EA44FFBAFCE2EDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alc.cpp; path = alc/alc.cpp; sourceTree = SOURCE_ROOT; };
+		0F3F4352AFAB44409BB717A8 /* OpenAL */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libopenal.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		11AE26C0424C4E63B4696D0D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/cpu_caps.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cpu_caps.h; path = alc/cpu_caps.h; sourceTree = SOURCE_ROOT; };
+		141E3512F7E64BD69C225058 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alexcpt.cpp; path = common/alexcpt.cpp; sourceTree = SOURCE_ROOT; };
+		1473030EF2804B6BA2811462 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/event.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = event.h; path = al/event.h; sourceTree = SOURCE_ROOT; };
+		14C522BAE4D444CDA47B9739 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/logging.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = logging.h; path = alc/logging.h; sourceTree = SOURCE_ROOT; };
+		167B605FC8F7405EBECB2735 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alu.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alu.cpp; path = alc/alu.cpp; sourceTree = SOURCE_ROOT; };
+		16A7FFAD44594665BD4A25D8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bformatdec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bformatdec.h; path = alc/bformatdec.h; sourceTree = SOURCE_ROOT; };
+		1778F725FFA14ACDB48FEDA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vector.h; path = common/vector.h; sourceTree = SOURCE_ROOT; };
+		17F9E0EC101D43B99504D98B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/opthelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = opthelpers.h; path = common/opthelpers.h; sourceTree = SOURCE_ROOT; };
+		189597722EBA4EA494AFCD56 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/fpu_modes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fpu_modes.h; path = alc/fpu_modes.h; sourceTree = SOURCE_ROOT; };
+		18B56E496B434757992B1589 /* common */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C117F04626D49C7B23B642E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/null.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = null.h; path = alc/backends/null.h; sourceTree = SOURCE_ROOT; };
+		1FEE33F949694991819CF70B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/converter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = converter.h; path = alc/converter.h; sourceTree = SOURCE_ROOT; };
+		22D8E98C6DFC4BDFBEFFD954 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alu.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alu.h; path = alc/alu.h; sourceTree = SOURCE_ROOT; };
+		22E572A72EB24763A65D9BDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse3.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mixer_sse3.cpp; path = alc/mixer/mixer_sse3.cpp; sourceTree = SOURCE_ROOT; };
+		26FFCEC39F3C4F8B96C3606B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alconfig.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alconfig.h; path = alc/alconfig.h; sourceTree = SOURCE_ROOT; };
+		27C902EE7FEB459D9CB01087 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alexcpt.h; path = common/alexcpt.h; sourceTree = SOURCE_ROOT; };
+		2C3CFACCA430414EB38B03A4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/effect.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = effect.cpp; path = al/effect.cpp; sourceTree = SOURCE_ROOT; };
+		2D0A9442C9554D49B9570485 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alcomplex.cpp; path = common/alcomplex.cpp; sourceTree = SOURCE_ROOT; };
+		2E79BC819E3D4EAA97C0BC65 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dynload.h; path = common/dynload.h; sourceTree = SOURCE_ROOT; };
+		2F5367EB37754DF18162A227 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/atomic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = atomic.h; path = common/atomic.h; sourceTree = SOURCE_ROOT; };
+		3259FF5CFA7040F6913E6258 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/voice.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voice.cpp; path = alc/voice.cpp; sourceTree = SOURCE_ROOT; };
+		33706A54F6EB4D91A27A272B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/defs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = defs.h; path = alc/mixer/defs.h; sourceTree = SOURCE_ROOT; };
+		3434E1B0EEF7455AA5CDEEDC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/helpers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = helpers.cpp; path = alc/helpers.cpp; sourceTree = SOURCE_ROOT; };
+		34A3A82331A049DC8721A49B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/distortion.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = distortion.cpp; path = alc/effects/distortion.cpp; sourceTree = SOURCE_ROOT; };
+		34EBFF08C01B403DB8C411DC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dynload.cpp; path = common/dynload.cpp; sourceTree = SOURCE_ROOT; };
+		35A88848595F45E0B220ED77 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base.h; path = alc/backends/base.h; sourceTree = SOURCE_ROOT; };
+		3A20DBB71DC94BB68A142DF1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/endiantest.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = endiantest.h; path = common/endiantest.h; sourceTree = SOURCE_ROOT; };
+		3B076E3C97334F2CBAB690FD = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		3B7E5F056B234F49ABB4A936 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = bsinc_inc.h.rule; path = "../../../../Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h.rule"; sourceTree = SOURCE_ROOT; };
+		3CFAD532691645CA9ED39C3F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = polyphase_resampler.h; path = common/polyphase_resampler.h; sourceTree = SOURCE_ROOT; };
+		3D4DC13194B54A0D950A731D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/examples/common/alhelpers.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alhelpers.c; path = examples/common/alhelpers.c; sourceTree = SOURCE_ROOT; };
+		3D9819B10EC246FAB49C344C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vecmat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vecmat.h; path = common/vecmat.h; sourceTree = SOURCE_ROOT; };
+		3F2F50A3CE614C798B96F79C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = almalloc.h; path = common/almalloc.h; sourceTree = SOURCE_ROOT; };
+		41DF371F9E144827BD11C643 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alnumeric.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alnumeric.h; path = common/alnumeric.h; sourceTree = SOURCE_ROOT; };
+		42461A17EB724489B3592B42 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mixer_sse2.cpp; path = alc/mixer/mixer_sse2.cpp; sourceTree = SOURCE_ROOT; };
+		470CDB91E0A34FF0BD969909 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alfstream.cpp; path = common/alfstream.cpp; sourceTree = SOURCE_ROOT; };
+		47AF0F3CCA1F419D89EF1BC0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/pshifter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = pshifter.cpp; path = alc/effects/pshifter.cpp; sourceTree = SOURCE_ROOT; };
+		489CD00BA2DC429DB149DAA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/modulator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = modulator.cpp; path = alc/effects/modulator.cpp; sourceTree = SOURCE_ROOT; };
+		48A0FC1B3F7C445199869A17 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/aloptional.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = aloptional.h; path = common/aloptional.h; sourceTree = SOURCE_ROOT; };
+		48EDD75B8293483CBE8A2416 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/splitter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = splitter.h; path = alc/filters/splitter.h; sourceTree = SOURCE_ROOT; };
+		4A399C9BBC1647E3A2F778DF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/listener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = listener.h; path = al/listener.h; sourceTree = SOURCE_ROOT; };
+		4A421637C82F462F9B3E18AA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mastering.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mastering.cpp; path = alc/mastering.cpp; sourceTree = SOURCE_ROOT; };
+		4C034C0E8EE64F2E981FE792 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/compat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compat.h; path = alc/compat.h; sourceTree = SOURCE_ROOT; };
+		4CCA5CF403514877ACA51DE5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = threads.cpp; path = common/threads.cpp; sourceTree = SOURCE_ROOT; };
+		4E014465219242BEA6CD4253 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alconfig.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alconfig.cpp; path = alc/alconfig.cpp; sourceTree = SOURCE_ROOT; };
+		4E96366E95084136B1398C2A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/compressor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = compressor.cpp; path = alc/effects/compressor.cpp; sourceTree = SOURCE_ROOT; };
+		51B583049A65455AB07B0651 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threads.h; path = common/threads.h; sourceTree = SOURCE_ROOT; };
+		52136F0F2D054B71B3A13B1F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alspan.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alspan.h; path = common/alspan.h; sourceTree = SOURCE_ROOT; };
+		539B5EAEFC094ACFB1FD67AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alfstream.h; path = common/alfstream.h; sourceTree = SOURCE_ROOT; };
+		551FEBFAE3094DE7AE18D169 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/source.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = source.cpp; path = al/source.cpp; sourceTree = SOURCE_ROOT; };
+		55F2C07F75574CC4B2EDDDCA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mixer_sse.cpp; path = alc/mixer/mixer_sse.cpp; sourceTree = SOURCE_ROOT; };
+		57E13BF5F2B0481AB162D9AB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/equalizer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = equalizer.cpp; path = alc/effects/equalizer.cpp; sourceTree = SOURCE_ROOT; };
+		59DC23B369B9484CAEE7BE59 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = strutils.h; path = common/strutils.h; sourceTree = SOURCE_ROOT; };
+		5A0B8BC703F1467EB0E602D8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alfstream.cpp; path = common/alfstream.cpp; sourceTree = SOURCE_ROOT; };
+		5AC965C449D1447F820C28CF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/inprogext.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inprogext.h; path = alc/inprogext.h; sourceTree = SOURCE_ROOT; };
+		5E83AB3A43F145199B4F4404 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/devformat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = devformat.h; path = alc/devformat.h; sourceTree = SOURCE_ROOT; };
+		63ECB4A7D7F94A54ACB5C409 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		66D9A03884C94D59BA7B4672 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dynload.cpp; path = common/dynload.cpp; sourceTree = SOURCE_ROOT; };
+		698BD647A6404B40B213F748 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base.h; path = alc/effects/base.h; sourceTree = SOURCE_ROOT; };
+		6C75FDE5F698412B9330C44A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/coreaudio.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = coreaudio.h; path = alc/backends/coreaudio.h; sourceTree = SOURCE_ROOT; };
+		6E8B4AD677D04C44B3EAEFA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alexcpt.cpp; path = common/alexcpt.cpp; sourceTree = SOURCE_ROOT; };
+		710F46D4059F423EB58CD091 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/null.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = null.cpp; path = alc/effects/null.cpp; sourceTree = SOURCE_ROOT; };
+		721431532C0149DF91F5AABD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = polyphase_resampler.cpp; path = common/polyphase_resampler.cpp; sourceTree = SOURCE_ROOT; };
+		73E9C22F9B9847C9B8DD847E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/aloptional.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = aloptional.h; path = common/aloptional.h; sourceTree = SOURCE_ROOT; };
+		74F2E10A240145099EAFDDF0 /* ex-common */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libex-common.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C75CF6956846FAB534FC94 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = strutils.cpp; path = common/strutils.cpp; sourceTree = SOURCE_ROOT; };
+		77544FDFB69343D082CF5282 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/nfc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nfc.h; path = alc/filters/nfc.h; sourceTree = SOURCE_ROOT; };
+		7875221605CD4FE393376B02 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/endiantest.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = endiantest.h; path = common/endiantest.h; sourceTree = SOURCE_ROOT; };
+		796119B6C557403AB4A63011 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		798598F9AC6F49D2B5785C99 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = hrtf_default.h; path = "../../../../Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h"; sourceTree = SOURCE_ROOT; };
+		7BBCE483D230447688961CBC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/autowah.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = autowah.cpp; path = alc/effects/autowah.cpp; sourceTree = SOURCE_ROOT; };
+		7D6F4CE8A3CA4556B4044F8F /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = hrtf_default.h.rule; path = "../../../../Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h.rule"; sourceTree = SOURCE_ROOT; };
+		7E2AC8AD81B0499CA2395A35 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = polyphase_resampler.h; path = common/polyphase_resampler.h; sourceTree = SOURCE_ROOT; };
+		7F06DD3BA1F941369F3EC9E3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse41.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mixer_sse41.cpp; path = alc/mixer/mixer_sse41.cpp; sourceTree = SOURCE_ROOT; };
+		7F88E820722F4992AD30B7D4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/fshifter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fshifter.cpp; path = alc/effects/fshifter.cpp; sourceTree = SOURCE_ROOT; };
+		8201D872456E4710B6D571BB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/opthelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = opthelpers.h; path = common/opthelpers.h; sourceTree = SOURCE_ROOT; };
+		841A948802804963B96A2176 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/filter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = filter.cpp; path = al/filter.cpp; sourceTree = SOURCE_ROOT; };
+		86ACC750BC3245CB88265197 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		887D275161CB4B2ABE4971E8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uhjfilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = uhjfilter.cpp; path = alc/uhjfilter.cpp; sourceTree = SOURCE_ROOT; };
+		896C568E1F58468DBC0B28F1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/filter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = filter.h; path = al/filter.h; sourceTree = SOURCE_ROOT; };
+		8A35381E3E804ADC978D5E75 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/math_defs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = math_defs.h; path = common/math_defs.h; sourceTree = SOURCE_ROOT; };
+		8A926A3CBAE04FB5A20808BA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/null.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = null.cpp; path = alc/backends/null.cpp; sourceTree = SOURCE_ROOT; };
+		8BE6D75330B246AA90259D68 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/voice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = voice.h; path = alc/voice.h; sourceTree = SOURCE_ROOT; };
+		940B92CEDA1B49DB9A55815A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uiddefs.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = uiddefs.cpp; path = alc/uiddefs.cpp; sourceTree = SOURCE_ROOT; };
+		95C2B1B7B78F45ECA1CB7862 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/wave.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = wave.h; path = alc/backends/wave.h; sourceTree = SOURCE_ROOT; };
+		9AC7EF144A58450D87B6D179 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/albyte.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = albyte.h; path = common/albyte.h; sourceTree = SOURCE_ROOT; };
+		9D11CAE5CEB04DD18F620534 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/extension.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = extension.cpp; path = al/extension.cpp; sourceTree = SOURCE_ROOT; };
+		9EDE3BBD1EAC4EDCBB5132D2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/dedicated.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dedicated.cpp; path = alc/effects/dedicated.cpp; sourceTree = SOURCE_ROOT; };
+		A0F46021A9824EA5BE23056F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/echo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = echo.cpp; path = alc/effects/echo.cpp; sourceTree = SOURCE_ROOT; };
+		A2D2B3D1FFEF42B18FB881D0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/coreaudio.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = coreaudio.cpp; path = alc/backends/coreaudio.cpp; sourceTree = SOURCE_ROOT; };
+		A3877C8C8AA34E7DBC58669D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/albyte.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = albyte.h; path = common/albyte.h; sourceTree = SOURCE_ROOT; };
+		A44231D000C64A01B74B480B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/splitter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = splitter.cpp; path = alc/filters/splitter.cpp; sourceTree = SOURCE_ROOT; };
+		A53356583B8F46BE8B8A3683 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/buffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = buffer.h; path = al/buffer.h; sourceTree = SOURCE_ROOT; };
+		A67E2D25D97A44AD9F34BFCF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/loopback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = loopback.h; path = alc/backends/loopback.h; sourceTree = SOURCE_ROOT; };
+		A7622295F8EC4E49A6B159C6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambdec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ambdec.h; path = alc/ambdec.h; sourceTree = SOURCE_ROOT; };
+		AC3F64C2B8AF417EB3BB89BD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alcomplex.h; path = common/alcomplex.h; sourceTree = SOURCE_ROOT; };
+		ACB15D57F4E14D949B0AC9E0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alnumeric.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alnumeric.h; path = common/alnumeric.h; sourceTree = SOURCE_ROOT; };
+		AE3439F88E344E8DBA548406 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/vmorpher.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vmorpher.cpp; path = alc/effects/vmorpher.cpp; sourceTree = SOURCE_ROOT; };
+		B001A5A6A14041BAA7175EFC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/biquad.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = biquad.cpp; path = alc/filters/biquad.cpp; sourceTree = SOURCE_ROOT; };
+		B01C7A175A0E4A68BB74A452 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threads.h; path = common/threads.h; sourceTree = SOURCE_ROOT; };
+		B37FA3DB09904038844CD286 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/buffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = buffer.cpp; path = al/buffer.cpp; sourceTree = SOURCE_ROOT; };
+		B4B51456831845D6B64A39CA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/auxeffectslot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = auxeffectslot.h; path = al/auxeffectslot.h; sourceTree = SOURCE_ROOT; };
+		B7FD0AA881E04C2081125D7C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = almalloc.h; path = common/almalloc.h; sourceTree = SOURCE_ROOT; };
+		B9725A952A744D5FBA0B5492 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/hrtfbase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = hrtfbase.h; path = alc/mixer/hrtfbase.h; sourceTree = SOURCE_ROOT; };
+		BBA92B4577C3489A8AAC2FAC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = almalloc.cpp; path = common/almalloc.cpp; sourceTree = SOURCE_ROOT; };
+		BE168C3923F6436CA3A7F7E7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/effect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = effect.h; path = al/effect.h; sourceTree = SOURCE_ROOT; };
+		C3D71D1D0E604089BCE4BD9D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/examples/common/alhelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alhelpers.h; path = examples/common/alhelpers.h; sourceTree = SOURCE_ROOT; };
+		C41337FDE22B4712819CC04A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/auxeffectslot.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = auxeffectslot.cpp; path = al/auxeffectslot.cpp; sourceTree = SOURCE_ROOT; };
+		C4B271D46C2045C8BBE4BB75 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/pragmadefs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pragmadefs.h; path = common/pragmadefs.h; sourceTree = SOURCE_ROOT; };
+		C5292E06AD924D2F86ACB65F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alcomplex.cpp; path = common/alcomplex.cpp; sourceTree = SOURCE_ROOT; };
+		C5F718798D6142AB9279F8F3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/converter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = converter.cpp; path = alc/converter.cpp; sourceTree = SOURCE_ROOT; };
+		C6066F53F15D4104A23700B0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ringbuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ringbuffer.h; path = alc/ringbuffer.h; sourceTree = SOURCE_ROOT; };
+		C680E173060A45D3A803E69B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alexcpt.h; path = common/alexcpt.h; sourceTree = SOURCE_ROOT; };
+		C6E715913D344BC48F78C840 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vector.h; path = common/vector.h; sourceTree = SOURCE_ROOT; };
+		C939D7B751924FD7882E4208 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alcontext.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alcontext.h; path = alc/alcontext.h; sourceTree = SOURCE_ROOT; };
+		CA90E07426324309A8F0E0B4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bs2b.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bs2b.h; path = alc/bs2b.h; sourceTree = SOURCE_ROOT; };
+		CD50B5D888D14827A73CCA81 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alstring.cpp; path = common/alstring.cpp; sourceTree = SOURCE_ROOT; };
+		CE4611550A874E64910126C2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/reverb.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = reverb.cpp; path = alc/effects/reverb.cpp; sourceTree = SOURCE_ROOT; };
+		CF077FE9DE20441D984542AD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/hrtf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = hrtf.cpp; path = alc/hrtf.cpp; sourceTree = SOURCE_ROOT; };
+		D0AC97EAAD4642CAB0E034AE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alcmain.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alcmain.h; path = alc/alcmain.h; sourceTree = SOURCE_ROOT; };
+		D24124372FB64737A1B49444 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/wave.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = wave.cpp; path = alc/backends/wave.cpp; sourceTree = SOURCE_ROOT; };
+		D28A23D8FCDF4E19A01C1664 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bs2b.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = bs2b.cpp; path = alc/bs2b.cpp; sourceTree = SOURCE_ROOT; };
+		D3000874022442719E224BDC = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		D3881041DEA14023B9ADD939 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_c.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mixer_c.cpp; path = alc/mixer/mixer_c.cpp; sourceTree = SOURCE_ROOT; };
+		D38C24E28A964FE9B68D8C6F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/loopback.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = loopback.cpp; path = alc/backends/loopback.cpp; sourceTree = SOURCE_ROOT; };
+		D5AA865ADC214E3387EDF98C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/intrusive_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = intrusive_ptr.h; path = common/intrusive_ptr.h; sourceTree = SOURCE_ROOT; };
+		D640703DD2F64A66B3908AB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/event.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = event.cpp; path = al/event.cpp; sourceTree = SOURCE_ROOT; };
+		DEF782C0007143B1B496614F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/chorus.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = chorus.cpp; path = alc/effects/chorus.cpp; sourceTree = SOURCE_ROOT; };
+		DFA571132FE14FD6B4C97F57 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alspan.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alspan.h; path = common/alspan.h; sourceTree = SOURCE_ROOT; };
+		E167680D40CE4A62906A781B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/error.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = error.cpp; path = al/error.cpp; sourceTree = SOURCE_ROOT; };
+		E1DCEEB81CBB4D97A8E6C884 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = almalloc.cpp; path = common/almalloc.cpp; sourceTree = SOURCE_ROOT; };
+		E4311EB840C64CD98733A2F8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alstring.h; path = common/alstring.h; sourceTree = SOURCE_ROOT; };
+		E5931A8505D340539D37927E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/listener.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = listener.cpp; path = al/listener.cpp; sourceTree = SOURCE_ROOT; };
+		E6A233A1709C4B8ABB5322CA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/pragmadefs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pragmadefs.h; path = common/pragmadefs.h; sourceTree = SOURCE_ROOT; };
+		E7784FF2581F4A44A4E0A8FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alfstream.h; path = common/alfstream.h; sourceTree = SOURCE_ROOT; };
+		EC24D4E39CA243FE806FF80F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/atomic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = atomic.h; path = common/atomic.h; sourceTree = SOURCE_ROOT; };
+		ED567B8EA8364EFBB9A1F459 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = strutils.h; path = common/strutils.h; sourceTree = SOURCE_ROOT; };
+		ED91B5B8D5CA4DF6945DCBA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/nfc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = nfc.cpp; path = alc/filters/nfc.cpp; sourceTree = SOURCE_ROOT; };
+		EE1C01292B49448594A522B0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/hrtf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = hrtf.h; path = alc/hrtf.h; sourceTree = SOURCE_ROOT; };
+		EE6503F60B834D3AB358F521 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = threads.cpp; path = common/threads.cpp; sourceTree = SOURCE_ROOT; };
+		EF074F2083A84CCB80EB392B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bformatdec.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = bformatdec.cpp; path = alc/bformatdec.cpp; sourceTree = SOURCE_ROOT; };
+		F08D228D1EB24DF3BEB19B26 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambdec.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ambdec.cpp; path = alc/ambdec.cpp; sourceTree = SOURCE_ROOT; };
+		F53CBC42F3414C03885A8BDF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = polyphase_resampler.cpp; path = common/polyphase_resampler.cpp; sourceTree = SOURCE_ROOT; };
+		F83EE2BEB1984E60955F9969 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/biquad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = biquad.h; path = alc/filters/biquad.h; sourceTree = SOURCE_ROOT; };
+		FB3BD8ECBDD2402EB4D7FF77 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bsinc_inc.h; path = "../../../../Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h"; sourceTree = SOURCE_ROOT; };
+		FB51D1317CE640F790472AE1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/intrusive_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = intrusive_ptr.h; path = common/intrusive_ptr.h; sourceTree = SOURCE_ROOT; };
+		FE7E863942BF49F18AD31F47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/panning.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = panning.cpp; path = alc/panning.cpp; sourceTree = SOURCE_ROOT; };
+		FFA2DDDA27E248CA863284FD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = strutils.cpp; path = common/strutils.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2F76529E942C4B059ACBE449 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		46267444412D4C77A12A173F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		4960CA94A35746839AC42317 /* OpenAL */ = {
+			isa = PBXGroup;
+			children = (
+				BA83BAED0B5544E6A1ACA1E0 /* Header Files */,
+				AF44F8087FB44073A98FA37C /* Source Files */,
+				9767B596BFE140CCB260DD65 /* CMake Rules */,
+				86ACC750BC3245CB88265197,
+			);
+			name = OpenAL;
+			sourceTree = "<group>";
+		};
+		49CAEB55498D4E16938E9395 /* ex-common */ = {
+			isa = PBXGroup;
+			children = (
+				A0769A4A2B5746BA9CACE2EC /* Source Files */,
+				EDFF3CAD918B4BFC85A5A6B2 /* Header Files */,
+				D3000874022442719E224BDC,
+			);
+			name = "ex-common";
+			sourceTree = "<group>";
+		};
+		6930E3B6CFAE49D5B3A08492 = {
+			isa = PBXGroup;
+			children = (
+				AA452DDB50E14881A0693BED /* ThirdParty */,
+				EDDAB8A2315F427CAB3E5C8F /* ALL_BUILD */,
+				DA3741E7CD2C424793D5A7CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9767B596BFE140CCB260DD65 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+				3B7E5F056B234F49ABB4A936 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h.rule */,
+				7D6F4CE8A3CA4556B4044F8F /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h.rule */,
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		A0769A4A2B5746BA9CACE2EC /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DC13194B54A0D950A731D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/examples/common/alhelpers.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A49850438A31416FAC5963A8 /* native-tools */ = {
+			isa = PBXGroup;
+			children = (
+				2F76529E942C4B059ACBE449 /* CMake Rules */,
+				3B076E3C97334F2CBAB690FD,
+			);
+			name = "native-tools";
+			sourceTree = "<group>";
+		};
+		AA452DDB50E14881A0693BED /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				FD588F6B3EAE490B8B6865A4 /* common */,
+				49CAEB55498D4E16938E9395 /* ex-common */,
+				4960CA94A35746839AC42317 /* OpenAL */,
+				A49850438A31416FAC5963A8 /* native-tools */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		AF44F8087FB44073A98FA37C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C41337FDE22B4712819CC04A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/auxeffectslot.cpp */,
+				B37FA3DB09904038844CD286 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/buffer.cpp */,
+				2C3CFACCA430414EB38B03A4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/effect.cpp */,
+				E167680D40CE4A62906A781B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/error.cpp */,
+				D640703DD2F64A66B3908AB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/event.cpp */,
+				9D11CAE5CEB04DD18F620534 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/extension.cpp */,
+				841A948802804963B96A2176 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/filter.cpp */,
+				E5931A8505D340539D37927E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/listener.cpp */,
+				551FEBFAE3094DE7AE18D169 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/source.cpp */,
+				033B3D1655D647C185873302 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/state.cpp */,
+				0D0AD6382EA44FFBAFCE2EDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alc.cpp */,
+				4E014465219242BEA6CD4253 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alconfig.cpp */,
+				167B605FC8F7405EBECB2735 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alu.cpp */,
+				F08D228D1EB24DF3BEB19B26 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambdec.cpp */,
+				08819FEEFBA54732A31676B3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/base.cpp */,
+				A2D2B3D1FFEF42B18FB881D0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/coreaudio.cpp */,
+				D38C24E28A964FE9B68D8C6F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/loopback.cpp */,
+				8A926A3CBAE04FB5A20808BA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/null.cpp */,
+				D24124372FB64737A1B49444 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/wave.cpp */,
+				EF074F2083A84CCB80EB392B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bformatdec.cpp */,
+				D28A23D8FCDF4E19A01C1664 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bs2b.cpp */,
+				C5F718798D6142AB9279F8F3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/converter.cpp */,
+				7BBCE483D230447688961CBC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/autowah.cpp */,
+				DEF782C0007143B1B496614F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/chorus.cpp */,
+				4E96366E95084136B1398C2A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/compressor.cpp */,
+				9EDE3BBD1EAC4EDCBB5132D2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/dedicated.cpp */,
+				34A3A82331A049DC8721A49B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/distortion.cpp */,
+				A0F46021A9824EA5BE23056F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/echo.cpp */,
+				57E13BF5F2B0481AB162D9AB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/equalizer.cpp */,
+				7F88E820722F4992AD30B7D4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/fshifter.cpp */,
+				489CD00BA2DC429DB149DAA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/modulator.cpp */,
+				710F46D4059F423EB58CD091 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/null.cpp */,
+				47AF0F3CCA1F419D89EF1BC0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/pshifter.cpp */,
+				CE4611550A874E64910126C2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/reverb.cpp */,
+				AE3439F88E344E8DBA548406 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/vmorpher.cpp */,
+				B001A5A6A14041BAA7175EFC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/biquad.cpp */,
+				ED91B5B8D5CA4DF6945DCBA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/nfc.cpp */,
+				A44231D000C64A01B74B480B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/splitter.cpp */,
+				3434E1B0EEF7455AA5CDEEDC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/helpers.cpp */,
+				CF077FE9DE20441D984542AD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/hrtf.cpp */,
+				4A421637C82F462F9B3E18AA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mastering.cpp */,
+				D3881041DEA14023B9ADD939 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_c.cpp */,
+				55F2C07F75574CC4B2EDDDCA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse.cpp */,
+				42461A17EB724489B3592B42 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse2.cpp */,
+				22E572A72EB24763A65D9BDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse3.cpp */,
+				7F06DD3BA1F941369F3EC9E3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse41.cpp */,
+				FE7E863942BF49F18AD31F47 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/panning.cpp */,
+				097543DD5D56459682DC0541 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ringbuffer.cpp */,
+				887D275161CB4B2ABE4971E8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uhjfilter.cpp */,
+				940B92CEDA1B49DB9A55815A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uiddefs.cpp */,
+				3259FF5CFA7040F6913E6258 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/voice.cpp */,
+				2D0A9442C9554D49B9570485 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */,
+				141E3512F7E64BD69C225058 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */,
+				470CDB91E0A34FF0BD969909 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */,
+				E1DCEEB81CBB4D97A8E6C884 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */,
+				0001906246BE4358AF8DAA0E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */,
+				66D9A03884C94D59BA7B4672 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */,
+				721431532C0149DF91F5AABD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */,
+				76C75CF6956846FAB534FC94 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */,
+				EE6503F60B834D3AB358F521 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		BA83BAED0B5544E6A1ACA1E0 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4B51456831845D6B64A39CA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/auxeffectslot.h */,
+				A53356583B8F46BE8B8A3683 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/buffer.h */,
+				BE168C3923F6436CA3A7F7E7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/effect.h */,
+				1473030EF2804B6BA2811462 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/event.h */,
+				896C568E1F58468DBC0B28F1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/filter.h */,
+				4A399C9BBC1647E3A2F778DF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/listener.h */,
+				0423BD6EF4F241E7A494C49A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/source.h */,
+				D0AC97EAAD4642CAB0E034AE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alcmain.h */,
+				26FFCEC39F3C4F8B96C3606B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alconfig.h */,
+				C939D7B751924FD7882E4208 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alcontext.h */,
+				22D8E98C6DFC4BDFBEFFD954 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alu.h */,
+				A7622295F8EC4E49A6B159C6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambdec.h */,
+				0C4DADBA8BDD4D2D8AF1DD85 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambidefs.h */,
+				35A88848595F45E0B220ED77 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/base.h */,
+				6C75FDE5F698412B9330C44A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/coreaudio.h */,
+				A67E2D25D97A44AD9F34BFCF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/loopback.h */,
+				1C117F04626D49C7B23B642E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/null.h */,
+				95C2B1B7B78F45ECA1CB7862 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/wave.h */,
+				16A7FFAD44594665BD4A25D8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bformatdec.h */,
+				CA90E07426324309A8F0E0B4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bs2b.h */,
+				4C034C0E8EE64F2E981FE792 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/compat.h */,
+				1FEE33F949694991819CF70B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/converter.h */,
+				11AE26C0424C4E63B4696D0D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/cpu_caps.h */,
+				5E83AB3A43F145199B4F4404 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/devformat.h */,
+				698BD647A6404B40B213F748 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/base.h */,
+				F83EE2BEB1984E60955F9969 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/biquad.h */,
+				77544FDFB69343D082CF5282 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/nfc.h */,
+				48EDD75B8293483CBE8A2416 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/splitter.h */,
+				189597722EBA4EA494AFCD56 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/fpu_modes.h */,
+				EE1C01292B49448594A522B0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/hrtf.h */,
+				5AC965C449D1447F820C28CF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/inprogext.h */,
+				14C522BAE4D444CDA47B9739 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/logging.h */,
+				060E9DB01ABD4AC8A4ED7930 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mastering.h */,
+				33706A54F6EB4D91A27A272B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/defs.h */,
+				B9725A952A744D5FBA0B5492 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/hrtfbase.h */,
+				C6066F53F15D4104A23700B0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ringbuffer.h */,
+				0CE606E638404823B386929B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uhjfilter.h */,
+				8BE6D75330B246AA90259D68 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/voice.h */,
+				A3877C8C8AA34E7DBC58669D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/albyte.h */,
+				0C34B199C00446C59D72F9CF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.h */,
+				27C902EE7FEB459D9CB01087 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.h */,
+				539B5EAEFC094ACFB1FD67AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.h */,
+				B7FD0AA881E04C2081125D7C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.h */,
+				ACB15D57F4E14D949B0AC9E0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alnumeric.h */,
+				48A0FC1B3F7C445199869A17 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/aloptional.h */,
+				DFA571132FE14FD6B4C97F57 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alspan.h */,
+				05D56835E5D84B089DE03687 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.h */,
+				EC24D4E39CA243FE806FF80F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/atomic.h */,
+				2E79BC819E3D4EAA97C0BC65 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.h */,
+				3A20DBB71DC94BB68A142DF1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/endiantest.h */,
+				FB51D1317CE640F790472AE1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/intrusive_ptr.h */,
+				06F4B771F4A34BDEB352B6C8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/math_defs.h */,
+				8201D872456E4710B6D571BB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/opthelpers.h */,
+				7E2AC8AD81B0499CA2395A35 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.h */,
+				C4B271D46C2045C8BBE4BB75 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/pragmadefs.h */,
+				ED567B8EA8364EFBB9A1F459 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.h */,
+				51B583049A65455AB07B0651 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.h */,
+				3D9819B10EC246FAB49C344C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vecmat.h */,
+				C6E715913D344BC48F78C840 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vector.h */,
+				FB3BD8ECBDD2402EB4D7FF77 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/bsinc_inc.h */,
+				798598F9AC6F49D2B5785C99 /* /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/hrtf_default.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		C5DCF49569F1412EAD08B6B3 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AC7EF144A58450D87B6D179 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/albyte.h */,
+				AC3F64C2B8AF417EB3BB89BD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.h */,
+				C680E173060A45D3A803E69B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.h */,
+				E7784FF2581F4A44A4E0A8FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.h */,
+				3F2F50A3CE614C798B96F79C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.h */,
+				41DF371F9E144827BD11C643 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alnumeric.h */,
+				73E9C22F9B9847C9B8DD847E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/aloptional.h */,
+				52136F0F2D054B71B3A13B1F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alspan.h */,
+				E4311EB840C64CD98733A2F8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.h */,
+				2F5367EB37754DF18162A227 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/atomic.h */,
+				020FF5D99CDD4C42B8E72C41 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.h */,
+				7875221605CD4FE393376B02 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/endiantest.h */,
+				D5AA865ADC214E3387EDF98C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/intrusive_ptr.h */,
+				8A35381E3E804ADC978D5E75 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/math_defs.h */,
+				17F9E0EC101D43B99504D98B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/opthelpers.h */,
+				3CFAD532691645CA9ED39C3F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.h */,
+				E6A233A1709C4B8ABB5322CA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/pragmadefs.h */,
+				59DC23B369B9484CAEE7BE59 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.h */,
+				B01C7A175A0E4A68BB74A452 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.h */,
+				052D04AF66714CA1A78AABFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vecmat.h */,
+				1778F725FFA14ACDB48FEDA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/vector.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		DA3741E7CD2C424793D5A7CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F3F4352AFAB44409BB717A8 /* OpenAL */,
+				18B56E496B434757992B1589 /* common */,
+				74F2E10A240145099EAFDDF0 /* ex-common */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBDF2EBF780E44F7946B1490 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5292E06AD924D2F86ACB65F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */,
+				6E8B4AD677D04C44B3EAEFA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */,
+				5A0B8BC703F1467EB0E602D8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */,
+				BBA92B4577C3489A8AAC2FAC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */,
+				CD50B5D888D14827A73CCA81 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */,
+				34EBFF08C01B403DB8C411DC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */,
+				F53CBC42F3414C03885A8BDF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */,
+				FFA2DDDA27E248CA863284FD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */,
+				4CCA5CF403514877ACA51DE5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		EDDAB8A2315F427CAB3E5C8F /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				46267444412D4C77A12A173F /* CMake Rules */,
+				796119B6C557403AB4A63011,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		EDFF3CAD918B4BFC85A5A6B2 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3D71D1D0E604089BCE4BD9D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/examples/common/alhelpers.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		FD588F6B3EAE490B8B6865A4 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				C5DCF49569F1412EAD08B6B3 /* Header Files */,
+				DBDF2EBF780E44F7946B1490 /* Source Files */,
+				63ECB4A7D7F94A54ACB5C409,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		003D18A7030146679D8AE796 /* ex-common */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E59207801E9845AD940291CD /* Build configuration list for PBXNativeTarget "ex-common" */;
+			buildPhases = (
+				D26445A33C6B42E08EE8099B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				567A3B76DA71413B9FA0F87C /* PBXTargetDependency */,
+				5C0ACD9D15674011B9D9E276 /* PBXTargetDependency */,
+			);
+			name = "ex-common";
+			productName = "ex-common";
+			productReference = 74F2E10A240145099EAFDDF0 /* ex-common */;
+			productType = "com.apple.product-type.library.static";
+		};
+		00D7DBC743AA4AFCABDCE76D /* OpenAL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EECCFA5F0044923A4C0859F /* Build configuration list for PBXNativeTarget "OpenAL" */;
+			buildPhases = (
+				A6F6747CA44C4F2786DCF296 /* CMake Rules */,
+				1FFDABA467214F8E944D5DB1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E99260D1D364B25850EF635 /* PBXTargetDependency */,
+				EF06DD7F209C44E68BA951D3 /* PBXTargetDependency */,
+			);
+			name = OpenAL;
+			productName = OpenAL;
+			productReference = 0F3F4352AFAB44409BB717A8 /* OpenAL */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F48810C163AA4206A8FE6AF9 /* common */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8A7FAFEFD64B189FA11F08 /* Build configuration list for PBXNativeTarget "common" */;
+			buildPhases = (
+				2541881EB37E41B7A965D153 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDCDE7DED2FE410CAB372B21 /* PBXTargetDependency */,
+			);
+			name = common;
+			productName = common;
+			productReference = 18B56E496B434757992B1589 /* common */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED874551F5F042D29BBFFBE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = F7FB21653AC5432195660BD3 /* Build configuration list for PBXProject "OpenAL" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				C64D328D667844D4AFA61D94 /* Debug */,
+				CB09E586B22A4CCE9CCACEA1 /* Release */,
+				E72F4F5DCBC94990B1760F40 /* MinSizeRel */,
+				B4C11B02900A42C6920607FC /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 6930E3B6CFAE49D5B3A08492;
+			projectDirPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1";
+			projectRoot = "";
+			targets = (
+				8EE6656C0226482E9A63D590 /* ALL_BUILD */,
+				00D7DBC743AA4AFCABDCE76D /* OpenAL */,
+				52A2736E4FFF445B96FC72ED /* ZERO_CHECK */,
+				F48810C163AA4206A8FE6AF9 /* common */,
+				003D18A7030146679D8AE796 /* ex-common */,
+				C58F5371E311477AB906A11C /* install */,
+				31E75391810445FFB925B0D8 /* native-tools */,
+				4156E4D848854E10A7A07CC7 /* package */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1283DE0EF57F455BA3CB4A55 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		23F3495931FA404B8B2F7FAB /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		310D68ED279D44A2B8068C5A /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		4F90A87D9B6F4B949D379CBF /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/CMakeScripts/native-tools_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		582898E48BD14325983A5CB6 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		608BC3E5FBC9462B9A34F5F0 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A6F6747CA44C4F2786DCF296 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/CMakeScripts/OpenAL_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		AB7323701DFB4299BF6AE16C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/CMakeScripts/package_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		BDD5EE7DCCEF4ACB8D5C9F52 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F0F912C2116A44DDA377FAEC = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F139C223EF3545DBB32AE368 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FFDABA467214F8E944D5DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2760A0B47A145F1BCEFC635 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/auxeffectslot.cpp */,
+				3882D1FD6C084AA88F25CAD2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/buffer.cpp */,
+				3A0705E5C43145D49BEFE302 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/effect.cpp */,
+				DF2684D1DEA041BEA88DFD1B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/error.cpp */,
+				D59EA597541A4D839EA4F837 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/event.cpp */,
+				92F0B5D396B04FC5BA6D3526 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/extension.cpp */,
+				4FEFDC8E0A034EAEBC9F9EB6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/filter.cpp */,
+				C5D774E9C3964A9EB4F79063 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/listener.cpp */,
+				CFD7C6F39E2946439F3D8BFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/source.cpp */,
+				FBF0B110F1CC434A86976891 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/al/state.cpp */,
+				0AB54BE8AC4C461D8CFBBFC1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alc.cpp */,
+				72FBE3D3EDD54374B15E93FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alconfig.cpp */,
+				81225A0D92DA4B1C83EBDF5E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/alu.cpp */,
+				EAE40C53C46C46269CCAFE22 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ambdec.cpp */,
+				BFCF1AE390194F1191DC9ECF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/base.cpp */,
+				63F399DF3DB74F2C93D37589 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/coreaudio.cpp */,
+				A155CB84409346698C25D229 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/loopback.cpp */,
+				47ED73624B104C92B389474D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/null.cpp */,
+				7B6C3DE0B44745F2BDF8B0C8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/backends/wave.cpp */,
+				5F694D94373544E6AE943410 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bformatdec.cpp */,
+				79AF00F13ECB4219B351FEA6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/bs2b.cpp */,
+				94AF857485124A00A3387453 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/converter.cpp */,
+				B31F4AE7CC654D279559DECD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/autowah.cpp */,
+				70E535706CBC4FF0BC999917 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/chorus.cpp */,
+				D041157937404712B1BD8DEA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/compressor.cpp */,
+				9C040025A45B4D7B8C7A7E87 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/dedicated.cpp */,
+				32D1BB8C0878407EA2AFE991 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/distortion.cpp */,
+				1EFF70D69F3949B19289BC37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/echo.cpp */,
+				6A0731FF89E045558CE4787A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/equalizer.cpp */,
+				FEAEC7D4A3024A1AB10D8DAA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/fshifter.cpp */,
+				B8A44D2E57004DE7923B5F1F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/modulator.cpp */,
+				DACC1EF5206D472DAED24870 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/null.cpp */,
+				83508E2058FB4CAB830D58F8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/pshifter.cpp */,
+				AE645EB411C44215ABE124AA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/reverb.cpp */,
+				C87385CAF27A4DE49DA567D1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/effects/vmorpher.cpp */,
+				09B91B26DEBF409D9D234A52 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/biquad.cpp */,
+				D8FA566C17064CFABD402BF6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/nfc.cpp */,
+				F22B2FB5F5414DDBA4406BBA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/filters/splitter.cpp */,
+				E24D08D3B0D242EBA9E9D651 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/helpers.cpp */,
+				4849FFFBDE4847BEA999E4F4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/hrtf.cpp */,
+				574215337EB547E595474FAA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mastering.cpp */,
+				2318ADEC453C4CEAA31CB3B1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_c.cpp */,
+				B12565D16EC34EC7B378EECF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse.cpp */,
+				F015B15A5BA84BCFA5506834 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse2.cpp */,
+				55486EE9BB5D4BE1B1BEFD4D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse3.cpp */,
+				784952F063BF40899813B16F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/mixer/mixer_sse41.cpp */,
+				2E5E9EDD35A546F9B52710E0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/panning.cpp */,
+				EE2EC59B8D7C46449F1C2C21 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/ringbuffer.cpp */,
+				8C13AEEC9ABE42F2945EA188 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uhjfilter.cpp */,
+				668546B1458C4438AE1F2106 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/uiddefs.cpp */,
+				7249B26F69B142ECBAE6AD39 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc/voice.cpp */,
+				BDD8F4589F844AC596D3FDD6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */,
+				6882F5BF56C9404480FB89AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */,
+				B96227BA0F24492E953EFBF8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */,
+				5C2B4172263745749C9D0CD7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */,
+				89BBAB08544243F9B46C19A5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */,
+				6A924D1363CA4E38B6ED19BF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */,
+				F57A194FE281415495AE3484 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */,
+				87D7E308AD3B436FB370EEDE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */,
+				73EDD357BFD94C9EB0CD8B16 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2541881EB37E41B7A965D153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3EC0F1D5B5B4E939AD05CF2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alcomplex.cpp */,
+				A654E99EECE14AB8B089B136 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alexcpt.cpp */,
+				8EF11AE4CA9948379AAEB899 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alfstream.cpp */,
+				CF26E20BF79B40F2BC0CAF90 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/almalloc.cpp */,
+				81DEA96ADE574B669EA6F50B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/alstring.cpp */,
+				254F7D6D32AC437799CF7AB1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/dynload.cpp */,
+				C0C22C0998554336B76E4664 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/polyphase_resampler.cpp */,
+				D452E26F3EC642048BB1FD18 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/strutils.cpp */,
+				5B85723766AF4690BFB54E91 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common/threads.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26445A33C6B42E08EE8099B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9980A233074DCB8DFF0C67 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/examples/common/alhelpers.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DBF1ED4435A4C5FA5FBA0FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00D7DBC743AA4AFCABDCE76D /* OpenAL */;
+			targetProxy = 8B3407FF308840F88879E6F4 /* PBXContainerItemProxy */;
+		};
+		567A3B76DA71413B9FA0F87C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00D7DBC743AA4AFCABDCE76D /* OpenAL */;
+			targetProxy = 82A870427711463E94A4E728 /* PBXContainerItemProxy */;
+		};
+		5C0ACD9D15674011B9D9E276 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = 62C9746CD6644FECB0145064 /* PBXContainerItemProxy */;
+		};
+		6538D79CFE5A4E02887592E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = DFBBED50E08742B1AAD76611 /* PBXContainerItemProxy */;
+		};
+		8E99260D1D364B25850EF635 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31E75391810445FFB925B0D8 /* native-tools */;
+			targetProxy = 4BA9A631DE2D4353BAC7434C /* PBXContainerItemProxy */;
+		};
+		C2495956D49B47DB9E0AD368 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = 180E5707D2274DEA95B533A6 /* PBXContainerItemProxy */;
+		};
+		CDCDE7DED2FE410CAB372B21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = 46AE2A34E699404D8E580C75 /* PBXContainerItemProxy */;
+		};
+		D981BA3D3C1146D397BD3F88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = 83A57AC9702B4B8E8B652554 /* PBXContainerItemProxy */;
+		};
+		DFC80CE60C4F4CDAB739FABA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = 20EB2DCF710F4BB9B1F7077F /* PBXContainerItemProxy */;
+		};
+		EF06DD7F209C44E68BA951D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = 5A18894369A44E1F8E5B5F51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0113968EEAEC461AA4268C7D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		060D55F7E391472885E80796 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++     -DNDEBUG -fPIC -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -Wold-style-cast -Wnon-virtual-dtor -Woverloaded-virtual -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		0C3EA82012D54E48A01A40B3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		10177CD81F83487AA0080ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		163A05F89B774338AD4E1DCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		16E2CEE76AF04D26A2B9F9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_BUILD_LIBRARY,AL_ALEXT_PROTOTYPES,AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include","/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++     -DNDEBUG -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -Wold-style-cast -Wnon-virtual-dtor -Woverloaded-virtual -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = openal;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		3872323B0FF44CCAA0012722 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "native-tools";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3A6B6F0974974F78A549EC9F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		42E659A38C7A4AD6BEE34F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/build";
+			};
+			name = Release;
+		};
+		4E593A0F696342F499520462 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		5685D4A98B51466DAF547524 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5B996B16C4AC4527B8813D6D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/build";
+			};
+			name = MinSizeRel;
+		};
+		64F6054F3ACA41AFA11DE8F7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_BUILD_LIBRARY,AL_ALEXT_PROTOTYPES,AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include","/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++     -DNDEBUG -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -Wold-style-cast -Wnon-virtual-dtor -Woverloaded-virtual -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = openal;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		69E1BB034BF5499F898D1F1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "native-tools";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6FBA9417CD9A4787B5933FA6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		71ECFA6F5E3543BC87442329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "ex-common";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		7243D4E50BC4425E89A35555 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		7C3843285E17431B9C01EA39 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "ex-common";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		83A479B7A4B94D23919404F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8E1218B4A10F4FBC99FA250E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++        -D_DEBUG -fPIC -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -Wold-style-cast -Wnon-virtual-dtor -Woverloaded-virtual -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9BFF0AFF544F4F3682913A34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9E0A9190B6984DC68BCF038F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B624F0C277544C608267C63B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B97FB87F8C9D457C83F6AC29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		C1904A11C1A7404490E68BB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/build";
+			};
+			name = Debug;
+		};
+		C1A894E2571547358C485292 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_BUILD_LIBRARY,AL_ALEXT_PROTOTYPES,AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include","/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++        -D_DEBUG -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -Wold-style-cast -Wnon-virtual-dtor -Woverloaded-virtual -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = openal;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CB5E3580A0E044C18FC6A92C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "native-tools";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CC83B41FFF9A4E51BF72CF2E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/build";
+			};
+			name = RelWithDebInfo;
+		};
+		D7FE10B2981F4A7E800D90DD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++     -DNDEBUG -fPIC -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -Wold-style-cast -Wnon-virtual-dtor -Woverloaded-virtual -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D9BB4240120B42EB96F53B98 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DE463CEF6F52485A9B56C629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "native-tools";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		E43A6D10A93D4AD0B22F5EAF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E9E5EAEAEDC347939F11A6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++    -fPIC -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -Wold-style-cast -Wnon-virtual-dtor -Woverloaded-virtual -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		EB5348A8B1C54911B1D46A73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_BUILD_LIBRARY,AL_ALEXT_PROTOTYPES,AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include","/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/alc","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++    -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -Wold-style-cast -Wnon-virtual-dtor -Woverloaded-virtual -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = openal;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F714AE813A08438C9BF16E5B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -D_DEBUG -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "ex-common";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		FD5072A09D974DA49801F14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",AL_LIBTYPE_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/common","/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -Winline -Wunused -Wall -Wextra -Wshadow -Wconversion -Wcast-align -Wpedantic -fno-math-errno '-fvisibility=hidden' -pthread '-std=gnu11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "ex-common";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16275AD21E544809A2DE8234 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				163A05F89B774338AD4E1DCC /* Debug */,
+				10177CD81F83487AA0080ACC /* Release */,
+				5685D4A98B51466DAF547524 /* MinSizeRel */,
+				0113968EEAEC461AA4268C7D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2C8A7FAFEFD64B189FA11F08 /* Build configuration list for PBXNativeTarget "common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9E5EAEAEDC347939F11A6FC /* Debug */,
+				060D55F7E391472885E80796 /* Release */,
+				D7FE10B2981F4A7E800D90DD /* MinSizeRel */,
+				8E1218B4A10F4FBC99FA250E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		488AD4907B834470802F29D5 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BFF0AFF544F4F3682913A34 /* Debug */,
+				83A479B7A4B94D23919404F0 /* Release */,
+				3A6B6F0974974F78A549EC9F /* MinSizeRel */,
+				0C3EA82012D54E48A01A40B3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5134039960B446079E317625 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E0A9190B6984DC68BCF038F /* Debug */,
+				7243D4E50BC4425E89A35555 /* Release */,
+				D9BB4240120B42EB96F53B98 /* MinSizeRel */,
+				6FBA9417CD9A4787B5933FA6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		89EBDF599D1B49DFB1C850E9 /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E593A0F696342F499520462 /* Debug */,
+				B97FB87F8C9D457C83F6AC29 /* Release */,
+				E43A6D10A93D4AD0B22F5EAF /* MinSizeRel */,
+				B624F0C277544C608267C63B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8EECCFA5F0044923A4C0859F /* Build configuration list for PBXNativeTarget "OpenAL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB5348A8B1C54911B1D46A73 /* Debug */,
+				16E2CEE76AF04D26A2B9F9B6 /* Release */,
+				64F6054F3ACA41AFA11DE8F7 /* MinSizeRel */,
+				C1A894E2571547358C485292 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BB36341C51EC4BAC9B92868B /* Build configuration list for PBXAggregateTarget "native-tools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE463CEF6F52485A9B56C629 /* Debug */,
+				69E1BB034BF5499F898D1F1C /* Release */,
+				3872323B0FF44CCAA0012722 /* MinSizeRel */,
+				CB5E3580A0E044C18FC6A92C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E59207801E9845AD940291CD /* Build configuration list for PBXNativeTarget "ex-common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71ECFA6F5E3543BC87442329 /* Debug */,
+				FD5072A09D974DA49801F14F /* Release */,
+				7C3843285E17431B9C01EA39 /* MinSizeRel */,
+				F714AE813A08438C9BF16E5B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F7FB21653AC5432195660BD3 /* Build configuration list for PBXProject "OpenAL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1904A11C1A7404490E68BB1 /* Debug */,
+				42E659A38C7A4AD6BEE34F7A /* Release */,
+				5B996B16C4AC4527B8813D6D /* MinSizeRel */,
+				CC83B41FFF9A4E51BF72CF2E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED874551F5F042D29BBFFBE3 /* Project object */;
+}

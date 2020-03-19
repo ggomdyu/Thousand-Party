@@ -1,0 +1,32 @@
+dependencies: \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/Path.cpp \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/PrecompiledHeader.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/core.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include/AL/al.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include/AL/alc.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Random/Random.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/Environment.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/GSL-2.0.0/include/gsl/span \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/GSL-2.0.0/include/gsl/gsl_assert \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/GSL-2.0.0/include/gsl/gsl_byte \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/GSL-2.0.0/include/gsl/gsl_util \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/Version.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/Path.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/Unix/UnixPath.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/Config.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Platform/MacOS/MacOSConfig.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/Unix/UnixPath.inl \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/Directory.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/DirectoryInfo.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/FileSystemEnumerable.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/Unix/UnixFileSystemEnumerable.inl \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Core/TypeTraits.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/Unix/../Path.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/Unix/../FileSystemEnumerable.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/File.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Time/DateTime.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Time/TimeSpan.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/FileStream.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/IO/Stream.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/Core/NonCopyable.h

@@ -1,0 +1,26 @@
+dependencies: \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.cpp \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gainput.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputAllocator.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputContainers.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputState.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevice.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputListener.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputManager.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputMap.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceMouse.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceKeyboard.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevicePad.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceTouch.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceBuiltIn.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputGestures.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputButtonStickGesture.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputDoubleClickGesture.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputHoldGesture.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputPinchGesture.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputRotateGesture.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputSimultaneouslyDownGesture.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputTapGesture.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecording.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputPlayer.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecorder.h

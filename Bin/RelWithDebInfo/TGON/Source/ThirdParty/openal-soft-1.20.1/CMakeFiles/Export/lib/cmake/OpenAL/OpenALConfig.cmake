@@ -56,7 +56,7 @@ add_library(OpenAL::OpenAL STATIC IMPORTED)
 set_target_properties(OpenAL::OpenAL PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "AL_LIBTYPE_STATIC"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include/AL"
-  INTERFACE_LINK_LIBRARIES "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.18362.0/um/x64/WinMM.Lib"
+  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:-pthread>;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AudioToolbox.framework;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreAudio.framework;/System/Library/Frameworks/AudioUnit.framework;/System/Library/Frameworks/ApplicationServices.framework;\$<LINK_ONLY:pthread>;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

@@ -1,0 +1,1295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4156E4D848854E10A7A07CC7 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 19A3B2B8086C49D3B421F739 /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				96F979C4C8E546D7942A11A2 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				AE8464F5A8204F9686D1B7D5 /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		52A2736E4FFF445B96FC72ED /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D98C87BEB4CF47C5A1BE8F40 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				05F03A4AC2154B3D9EACEA4E /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		8EE6656C0226482E9A63D590 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2A0505085EAE41F8AAD8A73C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				4EFF88F36C68405FA877F816 /* CMake Rules */,
+			);
+			dependencies = (
+				732AE521264A4088B4B5ED38 /* PBXTargetDependency */,
+				04CC1F52B8D249448EA6C1EF /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		C58F5371E311477AB906A11C /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5991D7596A08422BADEA387E /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				6F1B87190E6B42A3B3CB6132 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				8EC390E8540843298A229194 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00B9320E4E884FC0935750D6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardWinRaw.h */ = {isa = PBXBuildFile; fileRef = D5A3DA3A01F94B20BD04E9B5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardWinRaw.h */; };
+		0709C97DB6234798B5C04FCB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputMouseInfo.h */ = {isa = PBXBuildFile; fileRef = 73D68D137B944384B50B7D9D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputMouseInfo.h */; };
+		091EC3308D554C4CA2C828CD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceBuiltIn.h */ = {isa = PBXBuildFile; fileRef = 2BA516C5E7EB41BCBF2CE4F9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceBuiltIn.h */; };
+		0C73E412517A4F83A85C227C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputManager.h */ = {isa = PBXBuildFile; fileRef = 355E4920E4954DDA961227DE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputManager.h */; };
+		0E4813335B5E4F4FA1489453 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceMouse.h */ = {isa = PBXBuildFile; fileRef = 9F3FAA96E6B940D0B3CF3CB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceMouse.h */; };
+		124C07EF530A4AD09F415BA9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseLinux.h */ = {isa = PBXBuildFile; fileRef = 7F073751B6EA436A99410EDE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseLinux.h */; };
+		14C27642D9294FFB94BD4076 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardMac.h */ = {isa = PBXBuildFile; fileRef = 5B909FDD9DAC44E3AE20319F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardMac.h */; };
+		15DAEF66534840ED8FDFA866 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputDebugRenderer.h */ = {isa = PBXBuildFile; fileRef = E1F7B82B9EE6407D97387298 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputDebugRenderer.h */; };
+		1A1E76D74AEB4D77834EF448 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDev.cpp */ = {isa = PBXBuildFile; fileRef = 47D5E5A6191149498F405354 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDev.cpp */; };
+		1E8AF39BA4074BA485B974F7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadWin.h */ = {isa = PBXBuildFile; fileRef = 301215FB9EC544DD9B78C240 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadWin.h */; };
+		22B1347C16DB46ECA8A941B7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardAndroid.h */ = {isa = PBXBuildFile; fileRef = BDEBE203A68542D29D2D9D38 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardAndroid.h */; };
+		237A9BBC2F3741E2A930CCD9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gainput.h */ = {isa = PBXBuildFile; fileRef = 161AC3035C5549928B2DC79E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gainput.h */; };
+		2635771A74B84DC68E0BB7EE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInIos.h */ = {isa = PBXBuildFile; fileRef = 2E2C51FD26104A7AA753E788 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInIos.h */; };
+		265A41FA5637457DB1535341 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardMac.cpp */ = {isa = PBXBuildFile; fileRef = 4824C9EA3D444221A991484D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardMac.cpp */; };
+		27B1759FC958438EBE185671 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputContainers.h */ = {isa = PBXBuildFile; fileRef = 19124C8693984A4BB3A03351 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputContainers.h */; };
+		27FD4FD659C748B7880B7557 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecorder.h */ = {isa = PBXBuildFile; fileRef = 060BD3696E8B4705AB9665E9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecorder.h */; };
+		2886D00FE93340DBA7521E5D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadLinux.h */ = {isa = PBXBuildFile; fileRef = 4038552B95954F828A7FB9B6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadLinux.h */; };
+		2A5A7889BBF64FCBAAEFECA4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDev.h */ = {isa = PBXBuildFile; fileRef = 09563C3AA03544D8B630F879 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDev.h */; };
+		2C0F77612CC84D7286D19329 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputIos.h */ = {isa = PBXBuildFile; fileRef = BD6E88B4F0E647958A4C9A42 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputIos.h */; };
+		2C7BF6966EF24E41A1F1BD0F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputKeyboardKeyNames.h */ = {isa = PBXBuildFile; fileRef = 7BC8BCB42A7347A29D3478E3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputKeyboardKeyNames.h */; };
+		2CF8482B487347E380A9EDB5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDeltaState.cpp */ = {isa = PBXBuildFile; fileRef = 382C17931D92414486B1C98A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDeltaState.cpp */; };
+		309799640E6C4F91B7B01740 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputIos.mm */ = {isa = PBXBuildFile; fileRef = B926DEDAFB344D78831713DA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputIos.mm */; };
+		34392EBE97904428BAF8FA26 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadAndroid.h */ = {isa = PBXBuildFile; fileRef = 4175EEAB6FBF4CC0B555A2BE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadAndroid.h */; };
+		355F8A3626164168BA8BF679 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputMapFilters.h */ = {isa = PBXBuildFile; fileRef = 325D361ECF494E619FD56A37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputMapFilters.h */; };
+		3658DC752854476A9DC270F2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadIos.h */ = {isa = PBXBuildFile; fileRef = 1914DFD11D824BEA8441A5B7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadIos.h */; };
+		39D0457670B648A0BC162B4A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDevice.cpp */ = {isa = PBXBuildFile; fileRef = 57B15BAA2B3447E1857CD5E3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDevice.cpp */; };
+		3B451E532B2C47A1995ABFC9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputRotateGesture.cpp */ = {isa = PBXBuildFile; fileRef = 902824FE47AC43E09B49D897 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputRotateGesture.cpp */; };
+		3BAAA97D5F304D42B5713918 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.h */ = {isa = PBXBuildFile; fileRef = C204586FF5104AE3A246104C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.h */; };
+		3EC198A96608454EB45E8C57 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputSimultaneouslyDownGesture.h */ = {isa = PBXBuildFile; fileRef = 8BB532EC9BF048B4A89FB4CE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputSimultaneouslyDownGesture.h */; };
+		42F59C4919914ECB8EDA63EB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputSimultaneouslyDownGesture.cpp */ = {isa = PBXBuildFile; fileRef = 6C172174457C4BD6AD77D54C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputSimultaneouslyDownGesture.cpp */; };
+		43E06CF88262470C8FB349C2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardImpl.h */ = {isa = PBXBuildFile; fileRef = EFEEE0B1398945DB9164A734 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardImpl.h */; };
+		4748521D4EA3456BB8CFFBD2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseNull.h */ = {isa = PBXBuildFile; fileRef = C5024E417DD44AD891DD7754 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseNull.h */; };
+		482C6659EA974BDF9B174DF4 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchNull.h */ = {isa = PBXBuildFile; fileRef = DA4F1E6B991145B5878C1FDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchNull.h */; };
+		4A0CF0CC2B364C0D963EBA0B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputMap.h */ = {isa = PBXBuildFile; fileRef = 6ED41E869D234586B2A68CB6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputMap.h */; };
+		4E76D31B8A4145DCBCFA14F9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadImpl.h */ = {isa = PBXBuildFile; fileRef = 39E39EC326294B94BBBB37D1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadImpl.h */; };
+		4F3E1BDF134741AFB658716B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInImpl.h */ = {isa = PBXBuildFile; fileRef = 964573F1A3C244399233C1B9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInImpl.h */; };
+		50C6660ECB3C4E4DB401FA60 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardLinux.h */ = {isa = PBXBuildFile; fileRef = 8FF5FEDC7EE84FEB8E995098 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardLinux.h */; };
+		50F202F90A0143F486B3041E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadIos.mm */ = {isa = PBXBuildFile; fileRef = A3F7081D81A54CCD8E7F18A3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadIos.mm */; };
+		5129570E23E146768A5B689E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadMac.h */ = {isa = PBXBuildFile; fileRef = B08B3F1F0799442CB36EF910 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadMac.h */; };
+		5636A7D3FA744F588E674F0F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.cpp */ = {isa = PBXBuildFile; fileRef = 5727C6E3AC684AEB857A80EB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.cpp */; };
+		5656A6AFBBF145C489CA9274 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputGestures.h */ = {isa = PBXBuildFile; fileRef = 987CADCD88844EDEBA8C38E8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputGestures.h */; };
+		58AD79F6B96542D298F0DAC5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputHoldGesture.cpp */ = {isa = PBXBuildFile; fileRef = 60E0216C2C404B48B8AEE4B9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputHoldGesture.cpp */; };
+		5D20C0EB47DA4BDE8C5193F2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputDoubleClickGesture.h */ = {isa = PBXBuildFile; fileRef = 6FEA9C8AB985404F8ABBBBB8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputDoubleClickGesture.h */; };
+		5F817B2F19F2446E8EF0419E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMapFilters.cpp */ = {isa = PBXBuildFile; fileRef = 6D19F49CBED04496A707D68E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMapFilters.cpp */; };
+		600F41A61AC44C23B7019BFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchIos.h */ = {isa = PBXBuildFile; fileRef = F5028F956B5C40F7A49E846B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchIos.h */; };
+		60D063295094434F88B5EEDE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputAllocator.h */ = {isa = PBXBuildFile; fileRef = FA87DA1D68DB4E0F893D39FA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputAllocator.h */; };
+		619E32C1ADAA4E509B28EB32 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputButtonStickGesture.cpp */ = {isa = PBXBuildFile; fileRef = 2C2AEDA60D284A71B079EFDD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputButtonStickGesture.cpp */; };
+		62221F7A7BF949E1A412E083 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputState.cpp */ = {isa = PBXBuildFile; fileRef = 27CF64C1895B49859635169F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputState.cpp */; };
+		64DE18A2CB7C4897BD9012DE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputPlayer.h */ = {isa = PBXBuildFile; fileRef = 7E5EF25DC2E3453F80C4A559 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputPlayer.h */; };
+		6C818A0825A84E088774576E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputStream.h */ = {isa = PBXBuildFile; fileRef = 3A52BBBFC45A401E8EE2F01B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputStream.h */; };
+		6E25EA921989424FBE350AAA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevice.h */ = {isa = PBXBuildFile; fileRef = 7EB7E4C2CD8D41D28817DE16 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevice.h */; };
+		707FCF5E67914CE895FA8C00 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadMac.cpp */ = {isa = PBXBuildFile; fileRef = 5B1E488435CC48E1AC45D377 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadMac.cpp */; };
+		732D5A3289884DF18D56B9C0 = {isa = PBXBuildFile; fileRef = 9589ED89216544CDA9AC4F3A; };
+		777BBCE33AEB4D3CA15D429C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePad.cpp */ = {isa = PBXBuildFile; fileRef = E6A26F48E8B24B31B3628B7C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePad.cpp */; };
+		799EBD042E6D4888990554A7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputPlayer.cpp */ = {isa = PBXBuildFile; fileRef = D40A0876902B410EA68E23E7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputPlayer.cpp */; };
+		7DE275F65C6F4701A3A588DC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputHelpers.h */ = {isa = PBXBuildFile; fileRef = 030C92E5BA8B41B9B3404B08 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputHelpers.h */; };
+		82B1359967D4443D9CE4022E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseMac.mm */ = {isa = PBXBuildFile; fileRef = F6A4255E37984264ADA820C9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseMac.mm */; };
+		835848DEC2E54FCC9C58B9DD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecording.h */ = {isa = PBXBuildFile; fileRef = 11A4DBAE96774B678948C10B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecording.h */; };
+		840EAFB47B714076BA614314 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltIn.cpp */ = {isa = PBXBuildFile; fileRef = EF8A05FD5319462CBBD68098 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltIn.cpp */; };
+		858C5DDA26774CB0AEFC18B8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputWindows.h */ = {isa = PBXBuildFile; fileRef = 034DF56D9B8C47FD8B7E820B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputWindows.h */; };
+		885FDC3FDBA644CD9C92A1F0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevicePad.h */ = {isa = PBXBuildFile; fileRef = E14F9292066C4D6DAE8E455F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevicePad.h */; };
+		8A3556203F6F4E0599ABF4A1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputRotateGesture.h */ = {isa = PBXBuildFile; fileRef = 1D7F1FCD2EC84213BEC785D7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputRotateGesture.h */; };
+		8B01F4F2FB22422E9EF5AE63 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetAddress.h */ = {isa = PBXBuildFile; fileRef = 7FB55CF53BE84642B8037585 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetAddress.h */; };
+		8B4AB2B1586F47A6A984EB16 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputManager.cpp */ = {isa = PBXBuildFile; fileRef = 1CD707801E414F3DB8A3F0BD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputManager.cpp */; };
+		8BF08A78204C4174A4B7A914 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputMemoryStream.h */ = {isa = PBXBuildFile; fileRef = 5D927E9EFAC24E6DA8DCF1FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputMemoryStream.h */; };
+		8CF27E0001E6482DB9C59022 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardNull.h */ = {isa = PBXBuildFile; fileRef = 91C8E1E1FFC647EC8A7E2EF0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardNull.h */; };
+		8DF22F46291F48DFB03158C0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseWinRaw.h */ = {isa = PBXBuildFile; fileRef = 15791D53D3A3444CB58E24E9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseWinRaw.h */; };
+		975BD40E821146C2ACDF88AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gainput.cpp */ = {isa = PBXBuildFile; fileRef = ED0B18B9D0BF4F0AA6A52831 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gainput.cpp */; };
+		9828D1DFF8F441D7A546E3C8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInAndroid.h */ = {isa = PBXBuildFile; fileRef = E66A4E3F9AE740C9A54FAF87 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInAndroid.h */; };
+		9C2F0C01B736413DB94239B7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputMap.cpp */ = {isa = PBXBuildFile; fileRef = A969865783884B15872BEBFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputMap.cpp */; };
+		9D4F42A642A34688B93F0E62 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseEvdev.h */ = {isa = PBXBuildFile; fileRef = 1AD1FD07029940019A0325ED /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseEvdev.h */; };
+		9F326AD5798A47E980D4BEA5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputPinchGesture.cpp */ = {isa = PBXBuildFile; fileRef = 499EEBE8C6784A49A101D336 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputPinchGesture.cpp */; };
+		A27C0A83D08B4C5990A0094E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouse.cpp */ = {isa = PBXBuildFile; fileRef = DB30EC4ED4A44465A9E45C22 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouse.cpp */; };
+		A539803F0EE44024998C2A1F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputPinchGesture.h */ = {isa = PBXBuildFile; fileRef = 4031755D30614858980FBFDA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputPinchGesture.h */; };
+		A93C089CFDE84498B054C082 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputHelpersEvdev.h */ = {isa = PBXBuildFile; fileRef = 9CC94C2A797A489797FDDD01 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputHelpersEvdev.h */; };
+		AC51E0D22CBB4E66B659D312 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboard.cpp */ = {isa = PBXBuildFile; fileRef = BAEDC47D7C344D11BDEEE143 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboard.cpp */; };
+		ACD127EF831249408ADF9110 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouch.cpp */ = {isa = PBXBuildFile; fileRef = 460EEC6CBDD94C82BE695B8F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouch.cpp */; };
+		AE737194A3BB412896C72722 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputMemoryStream.cpp */ = {isa = PBXBuildFile; fileRef = E5B5C988C8D44DCC9FE71CB1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputMemoryStream.cpp */; };
+		B0083722442F450E80E3C231 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardEvdev.h */ = {isa = PBXBuildFile; fileRef = 5D1E4E1022F84438B9399385 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardEvdev.h */; };
+		B0BF04F1C3DD4EF7A192FC96 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetConnection.cpp */ = {isa = PBXBuildFile; fileRef = 95A6E782914E4422B7F1CDBB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetConnection.cpp */; };
+		B4D35CF1FE0241D4A9DE7CFF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecorder.cpp */ = {isa = PBXBuildFile; fileRef = 18369D52720E4FC39DB55F0E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecorder.cpp */; };
+		BE6A3646494F445CAE10F155 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardWin.h */ = {isa = PBXBuildFile; fileRef = 506202CD9BCC4DDF9A2175E8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardWin.h */; };
+		C071F9C1ACD846E3AEC9430A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDevProtocol.h */ = {isa = PBXBuildFile; fileRef = 8FDD79ABB36E46C5A83C4D56 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDevProtocol.h */; };
+		C2DB50D9AD2E4C908416C789 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputTapGesture.cpp */ = {isa = PBXBuildFile; fileRef = F1893873B3694034B0FA928C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputTapGesture.cpp */; };
+		C321FCC45AF04D52BE2AEBE6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputLog.h */ = {isa = PBXBuildFile; fileRef = BDDA6F5F48444B2FA7A33C27 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputLog.h */; };
+		C4578CF8036C4B56AF35891F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputTapGesture.h */ = {isa = PBXBuildFile; fileRef = 020DC9556F2C43E0BE56F17C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputTapGesture.h */; };
+		C74C0CB3E972454780E69234 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputState.h */ = {isa = PBXBuildFile; fileRef = 458E520CCD8C43DC9343FBA1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputState.h */; };
+		CAAF1A17DC75474DAE715869 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputTouchInfo.h */ = {isa = PBXBuildFile; fileRef = 6DE8AABCB220492FAE4DB940 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputTouchInfo.h */; };
+		CE201DA6ED274B80918D5A8B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputAllocator.cpp */ = {isa = PBXBuildFile; fileRef = 95BDC9F2C4B443E3A327DDDF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputAllocator.cpp */; };
+		D15ABF9E1DDF4C60BE64FE50 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetAddress.cpp */ = {isa = PBXBuildFile; fileRef = 64699EDAB9F346029EA3AC44 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetAddress.cpp */; };
+		D62A3D8FE47B46E4998D367D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseImpl.h */ = {isa = PBXBuildFile; fileRef = 98D8EAB24AB64D4580079C73 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseImpl.h */; };
+		D88867E07CAC4533B2242A1A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetConnection.h */ = {isa = PBXBuildFile; fileRef = E9FE82F45C854A668AA554AE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetConnection.h */; };
+		D8D91C0588E84158BDD99974 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecording.cpp */ = {isa = PBXBuildFile; fileRef = 416006935EE548788921F9AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecording.cpp */; };
+		D9799FC683084151AC420706 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputButtonStickGesture.h */ = {isa = PBXBuildFile; fileRef = 1E99724B17794CF399229D8A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputButtonStickGesture.h */; };
+		DCB8B4D147C74724AE68D583 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadNull.h */ = {isa = PBXBuildFile; fileRef = BCFA400BC7A24E8F9D78F9FC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadNull.h */; };
+		DF2342707CA645F18B8F6DC3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseWin.h */ = {isa = PBXBuildFile; fileRef = 347093132D7C4468A4ACA433 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseWin.h */; };
+		DF59DE1AEE984AC5B0996F52 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInIos.mm */ = {isa = PBXBuildFile; fileRef = 36FD27294CAF4147B9E7D454 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInIos.mm */; };
+		E00E744C38B640679777247C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchAndroid.h */ = {isa = PBXBuildFile; fileRef = 25C0D5C478334A578C57C04C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchAndroid.h */; };
+		E208E839F38845A2AC9FAC0B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceTouch.h */ = {isa = PBXBuildFile; fileRef = 62687926DB2F43BA9A3FE933 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceTouch.h */; };
+		E7B29E5B38F34122A7F0767F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputHoldGesture.h */ = {isa = PBXBuildFile; fileRef = 890B70348798492FB9B3F42D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputHoldGesture.h */; };
+		E94D6082CD624E0E8EF49D96 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceKeyboard.h */ = {isa = PBXBuildFile; fileRef = BED38A727EA24175AD8CCBD6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceKeyboard.h */; };
+		EA0811EFE83E47D1AFD28CD2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMac.mm */ = {isa = PBXBuildFile; fileRef = 4BDBA0BC65E044FD82985130 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMac.mm */; };
+		EFBEDCEAB96B47438B410B81 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchImpl.h */ = {isa = PBXBuildFile; fileRef = CAF320AB8383440A9A7587B2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchImpl.h */; };
+		F18957BE82D4486F98B6B91B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputListener.h */ = {isa = PBXBuildFile; fileRef = 5BAE26B65E5145149E4AACBB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputListener.h */; };
+		F3943DB579854A608FAF3880 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseMac.h */ = {isa = PBXBuildFile; fileRef = 0DB77F774B854FF385289915 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseMac.h */; };
+		FAB1564B4AF841C7AC852AB0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputDoubleClickGesture.cpp */ = {isa = PBXBuildFile; fileRef = 5030696A1BB14EB9896EB256 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputDoubleClickGesture.cpp */; };
+		FAF415A1FE4344A099168B4A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInNull.h */ = {isa = PBXBuildFile; fileRef = 22300C463C81483FB3862191 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInNull.h */; };
+		FDC074C4E46D4AC5B2EB5ED6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeltaState.h */ = {isa = PBXBuildFile; fileRef = C30D9776CBC0454CABC5E76F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeltaState.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		00D75DE7720142AC800732E6 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		072B867123944DEC877A54DC /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		7E0CB95F32D043878F6E7EA2 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		CCE4A3ED24574A1AB8CF513E /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		2CB5861DE4484D81B3F81A4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25C8E747EE2B47938622B4DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+		BC5643161330447798DDBC9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25C8E747EE2B47938622B4DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		C82B34187A894951A28F6003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25C8E747EE2B47938622B4DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AF0EBA227E4475A89571F9A;
+			remoteInfo = gainputstatic;
+		};
+		DF477A91783943C6A80C54A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25C8E747EE2B47938622B4DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+		EC90F70E59A242B899458250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25C8E747EE2B47938622B4DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		020DC9556F2C43E0BE56F17C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputTapGesture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputTapGesture.h; path = include/gainput/gestures/GainputTapGesture.h; sourceTree = SOURCE_ROOT; };
+		030C92E5BA8B41B9B3404B08 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputHelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputHelpers.h; path = include/gainput/GainputHelpers.h; sourceTree = SOURCE_ROOT; };
+		034DF56D9B8C47FD8B7E820B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputWindows.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputWindows.h; path = source/gainput/GainputWindows.h; sourceTree = SOURCE_ROOT; };
+		060BD3696E8B4705AB9665E9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputRecorder.h; path = include/gainput/recorder/GainputInputRecorder.h; sourceTree = SOURCE_ROOT; };
+		09563C3AA03544D8B630F879 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDev.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputDev.h; path = source/gainput/dev/GainputDev.h; sourceTree = SOURCE_ROOT; };
+		0DB77F774B854FF385289915 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseMac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceMouseMac.h; path = source/gainput/mouse/GainputInputDeviceMouseMac.h; sourceTree = SOURCE_ROOT; };
+		11A4DBAE96774B678948C10B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecording.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputRecording.h; path = include/gainput/recorder/GainputInputRecording.h; sourceTree = SOURCE_ROOT; };
+		15791D53D3A3444CB58E24E9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseWinRaw.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceMouseWinRaw.h; path = source/gainput/mouse/GainputInputDeviceMouseWinRaw.h; sourceTree = SOURCE_ROOT; };
+		161AC3035C5549928B2DC79E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gainput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = gainput.h; path = include/gainput/gainput.h; sourceTree = SOURCE_ROOT; };
+		18369D52720E4FC39DB55F0E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecorder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputRecorder.cpp; path = source/gainput/recorder/GainputInputRecorder.cpp; sourceTree = SOURCE_ROOT; };
+		19124C8693984A4BB3A03351 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputContainers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputContainers.h; path = include/gainput/GainputContainers.h; sourceTree = SOURCE_ROOT; };
+		1914DFD11D824BEA8441A5B7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadIos.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDevicePadIos.h; path = source/gainput/pad/GainputInputDevicePadIos.h; sourceTree = SOURCE_ROOT; };
+		1AD1FD07029940019A0325ED /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseEvdev.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceMouseEvdev.h; path = source/gainput/mouse/GainputInputDeviceMouseEvdev.h; sourceTree = SOURCE_ROOT; };
+		1CD707801E414F3DB8A3F0BD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputManager.cpp; path = source/gainput/GainputInputManager.cpp; sourceTree = SOURCE_ROOT; };
+		1D5D8F3F52DB4D7796E7973D = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		1D7F1FCD2EC84213BEC785D7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputRotateGesture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputRotateGesture.h; path = include/gainput/gestures/GainputRotateGesture.h; sourceTree = SOURCE_ROOT; };
+		1E99724B17794CF399229D8A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputButtonStickGesture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputButtonStickGesture.h; path = include/gainput/gestures/GainputButtonStickGesture.h; sourceTree = SOURCE_ROOT; };
+		22300C463C81483FB3862191 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInNull.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceBuiltInNull.h; path = source/gainput/builtin/GainputInputDeviceBuiltInNull.h; sourceTree = SOURCE_ROOT; };
+		25C0D5C478334A578C57C04C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchAndroid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceTouchAndroid.h; path = source/gainput/touch/GainputInputDeviceTouchAndroid.h; sourceTree = SOURCE_ROOT; };
+		27CF64C1895B49859635169F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputState.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputState.cpp; path = source/gainput/GainputInputState.cpp; sourceTree = SOURCE_ROOT; };
+		2BA516C5E7EB41BCBF2CE4F9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceBuiltIn.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceBuiltIn.h; path = include/gainput/GainputInputDeviceBuiltIn.h; sourceTree = SOURCE_ROOT; };
+		2C2AEDA60D284A71B079EFDD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputButtonStickGesture.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputButtonStickGesture.cpp; path = source/gainput/gestures/GainputButtonStickGesture.cpp; sourceTree = SOURCE_ROOT; };
+		2E2C51FD26104A7AA753E788 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInIos.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceBuiltInIos.h; path = source/gainput/builtin/GainputInputDeviceBuiltInIos.h; sourceTree = SOURCE_ROOT; };
+		301215FB9EC544DD9B78C240 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadWin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDevicePadWin.h; path = source/gainput/pad/GainputInputDevicePadWin.h; sourceTree = SOURCE_ROOT; };
+		325D361ECF494E619FD56A37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputMapFilters.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputMapFilters.h; path = include/gainput/GainputMapFilters.h; sourceTree = SOURCE_ROOT; };
+		347093132D7C4468A4ACA433 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseWin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceMouseWin.h; path = source/gainput/mouse/GainputInputDeviceMouseWin.h; sourceTree = SOURCE_ROOT; };
+		355E4920E4954DDA961227DE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputManager.h; path = include/gainput/GainputInputManager.h; sourceTree = SOURCE_ROOT; };
+		36FD27294CAF4147B9E7D454 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInIos.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = GainputInputDeviceBuiltInIos.mm; path = source/gainput/builtin/GainputInputDeviceBuiltInIos.mm; sourceTree = SOURCE_ROOT; };
+		382C17931D92414486B1C98A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDeltaState.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputDeltaState.cpp; path = source/gainput/GainputInputDeltaState.cpp; sourceTree = SOURCE_ROOT; };
+		39E39EC326294B94BBBB37D1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadImpl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDevicePadImpl.h; path = source/gainput/pad/GainputInputDevicePadImpl.h; sourceTree = SOURCE_ROOT; };
+		3A52BBBFC45A401E8EE2F01B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputStream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputStream.h; path = source/gainput/dev/GainputStream.h; sourceTree = SOURCE_ROOT; };
+		4031755D30614858980FBFDA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputPinchGesture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputPinchGesture.h; path = include/gainput/gestures/GainputPinchGesture.h; sourceTree = SOURCE_ROOT; };
+		4038552B95954F828A7FB9B6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadLinux.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDevicePadLinux.h; path = source/gainput/pad/GainputInputDevicePadLinux.h; sourceTree = SOURCE_ROOT; };
+		416006935EE548788921F9AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecording.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputRecording.cpp; path = source/gainput/recorder/GainputInputRecording.cpp; sourceTree = SOURCE_ROOT; };
+		4175EEAB6FBF4CC0B555A2BE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadAndroid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDevicePadAndroid.h; path = source/gainput/pad/GainputInputDevicePadAndroid.h; sourceTree = SOURCE_ROOT; };
+		458E520CCD8C43DC9343FBA1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputState.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputState.h; path = include/gainput/GainputInputState.h; sourceTree = SOURCE_ROOT; };
+		460EEC6CBDD94C82BE695B8F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputDeviceTouch.cpp; path = source/gainput/touch/GainputInputDeviceTouch.cpp; sourceTree = SOURCE_ROOT; };
+		47D5E5A6191149498F405354 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDev.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputDev.cpp; path = source/gainput/dev/GainputDev.cpp; sourceTree = SOURCE_ROOT; };
+		4824C9EA3D444221A991484D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardMac.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputDeviceKeyboardMac.cpp; path = source/gainput/keyboard/GainputInputDeviceKeyboardMac.cpp; sourceTree = SOURCE_ROOT; };
+		499EEBE8C6784A49A101D336 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputPinchGesture.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputPinchGesture.cpp; path = source/gainput/gestures/GainputPinchGesture.cpp; sourceTree = SOURCE_ROOT; };
+		4BDBA0BC65E044FD82985130 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMac.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = GainputMac.mm; path = source/gainput/GainputMac.mm; sourceTree = SOURCE_ROOT; };
+		5030696A1BB14EB9896EB256 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputDoubleClickGesture.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputDoubleClickGesture.cpp; path = source/gainput/gestures/GainputDoubleClickGesture.cpp; sourceTree = SOURCE_ROOT; };
+		506202CD9BCC4DDF9A2175E8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardWin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceKeyboardWin.h; path = source/gainput/keyboard/GainputInputDeviceKeyboardWin.h; sourceTree = SOURCE_ROOT; };
+		5727C6E3AC684AEB857A80EB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputNetListener.cpp; path = source/gainput/dev/GainputNetListener.cpp; sourceTree = SOURCE_ROOT; };
+		57B15BAA2B3447E1857CD5E3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDevice.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputDevice.cpp; path = source/gainput/GainputInputDevice.cpp; sourceTree = SOURCE_ROOT; };
+		5B1E488435CC48E1AC45D377 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadMac.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputDevicePadMac.cpp; path = source/gainput/pad/GainputInputDevicePadMac.cpp; sourceTree = SOURCE_ROOT; };
+		5B909FDD9DAC44E3AE20319F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardMac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceKeyboardMac.h; path = source/gainput/keyboard/GainputInputDeviceKeyboardMac.h; sourceTree = SOURCE_ROOT; };
+		5BAE26B65E5145149E4AACBB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputListener.h; path = include/gainput/GainputInputListener.h; sourceTree = SOURCE_ROOT; };
+		5D1E4E1022F84438B9399385 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardEvdev.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceKeyboardEvdev.h; path = source/gainput/keyboard/GainputInputDeviceKeyboardEvdev.h; sourceTree = SOURCE_ROOT; };
+		5D927E9EFAC24E6DA8DCF1FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputMemoryStream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputMemoryStream.h; path = source/gainput/dev/GainputMemoryStream.h; sourceTree = SOURCE_ROOT; };
+		60E0216C2C404B48B8AEE4B9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputHoldGesture.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputHoldGesture.cpp; path = source/gainput/gestures/GainputHoldGesture.cpp; sourceTree = SOURCE_ROOT; };
+		62687926DB2F43BA9A3FE933 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceTouch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceTouch.h; path = include/gainput/GainputInputDeviceTouch.h; sourceTree = SOURCE_ROOT; };
+		64699EDAB9F346029EA3AC44 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetAddress.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputNetAddress.cpp; path = source/gainput/dev/GainputNetAddress.cpp; sourceTree = SOURCE_ROOT; };
+		6C172174457C4BD6AD77D54C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputSimultaneouslyDownGesture.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputSimultaneouslyDownGesture.cpp; path = source/gainput/gestures/GainputSimultaneouslyDownGesture.cpp; sourceTree = SOURCE_ROOT; };
+		6D19F49CBED04496A707D68E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMapFilters.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputMapFilters.cpp; path = source/gainput/GainputMapFilters.cpp; sourceTree = SOURCE_ROOT; };
+		6DE8AABCB220492FAE4DB940 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputTouchInfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputTouchInfo.h; path = source/gainput/touch/GainputTouchInfo.h; sourceTree = SOURCE_ROOT; };
+		6ED41E869D234586B2A68CB6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputMap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputMap.h; path = include/gainput/GainputInputMap.h; sourceTree = SOURCE_ROOT; };
+		6FEA9C8AB985404F8ABBBBB8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputDoubleClickGesture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputDoubleClickGesture.h; path = include/gainput/gestures/GainputDoubleClickGesture.h; sourceTree = SOURCE_ROOT; };
+		73D68D137B944384B50B7D9D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputMouseInfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputMouseInfo.h; path = source/gainput/mouse/GainputMouseInfo.h; sourceTree = SOURCE_ROOT; };
+		7BC8BCB42A7347A29D3478E3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputKeyboardKeyNames.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputKeyboardKeyNames.h; path = source/gainput/keyboard/GainputKeyboardKeyNames.h; sourceTree = SOURCE_ROOT; };
+		7E5EF25DC2E3453F80C4A559 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputPlayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputPlayer.h; path = include/gainput/recorder/GainputInputPlayer.h; sourceTree = SOURCE_ROOT; };
+		7EB7E4C2CD8D41D28817DE16 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevice.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDevice.h; path = include/gainput/GainputInputDevice.h; sourceTree = SOURCE_ROOT; };
+		7F073751B6EA436A99410EDE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseLinux.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceMouseLinux.h; path = source/gainput/mouse/GainputInputDeviceMouseLinux.h; sourceTree = SOURCE_ROOT; };
+		7FB55CF53BE84642B8037585 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetAddress.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputNetAddress.h; path = source/gainput/dev/GainputNetAddress.h; sourceTree = SOURCE_ROOT; };
+		890B70348798492FB9B3F42D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputHoldGesture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputHoldGesture.h; path = include/gainput/gestures/GainputHoldGesture.h; sourceTree = SOURCE_ROOT; };
+		8BB532EC9BF048B4A89FB4CE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputSimultaneouslyDownGesture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputSimultaneouslyDownGesture.h; path = include/gainput/gestures/GainputSimultaneouslyDownGesture.h; sourceTree = SOURCE_ROOT; };
+		8FDD79ABB36E46C5A83C4D56 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDevProtocol.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputDevProtocol.h; path = source/gainput/dev/GainputDevProtocol.h; sourceTree = SOURCE_ROOT; };
+		8FF5FEDC7EE84FEB8E995098 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardLinux.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceKeyboardLinux.h; path = source/gainput/keyboard/GainputInputDeviceKeyboardLinux.h; sourceTree = SOURCE_ROOT; };
+		902824FE47AC43E09B49D897 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputRotateGesture.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputRotateGesture.cpp; path = source/gainput/gestures/GainputRotateGesture.cpp; sourceTree = SOURCE_ROOT; };
+		91C8E1E1FFC647EC8A7E2EF0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardNull.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceKeyboardNull.h; path = source/gainput/keyboard/GainputInputDeviceKeyboardNull.h; sourceTree = SOURCE_ROOT; };
+		9589ED89216544CDA9AC4F3A = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		95A6E782914E4422B7F1CDBB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetConnection.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputNetConnection.cpp; path = source/gainput/dev/GainputNetConnection.cpp; sourceTree = SOURCE_ROOT; };
+		95BDC9F2C4B443E3A327DDDF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputAllocator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputAllocator.cpp; path = source/gainput/GainputAllocator.cpp; sourceTree = SOURCE_ROOT; };
+		964573F1A3C244399233C1B9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInImpl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceBuiltInImpl.h; path = source/gainput/builtin/GainputInputDeviceBuiltInImpl.h; sourceTree = SOURCE_ROOT; };
+		987CADCD88844EDEBA8C38E8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputGestures.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputGestures.h; path = include/gainput/gestures/GainputGestures.h; sourceTree = SOURCE_ROOT; };
+		98D8EAB24AB64D4580079C73 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseImpl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceMouseImpl.h; path = source/gainput/mouse/GainputInputDeviceMouseImpl.h; sourceTree = SOURCE_ROOT; };
+		9CC94C2A797A489797FDDD01 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputHelpersEvdev.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputHelpersEvdev.h; path = source/gainput/GainputHelpersEvdev.h; sourceTree = SOURCE_ROOT; };
+		9F3FAA96E6B940D0B3CF3CB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceMouse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceMouse.h; path = include/gainput/GainputInputDeviceMouse.h; sourceTree = SOURCE_ROOT; };
+		A3F7081D81A54CCD8E7F18A3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadIos.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = GainputInputDevicePadIos.mm; path = source/gainput/pad/GainputInputDevicePadIos.mm; sourceTree = SOURCE_ROOT; };
+		A969865783884B15872BEBFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputMap.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputMap.cpp; path = source/gainput/GainputInputMap.cpp; sourceTree = SOURCE_ROOT; };
+		B08B3F1F0799442CB36EF910 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadMac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDevicePadMac.h; path = source/gainput/pad/GainputInputDevicePadMac.h; sourceTree = SOURCE_ROOT; };
+		B926DEDAFB344D78831713DA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputIos.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = GainputIos.mm; path = source/gainput/GainputIos.mm; sourceTree = SOURCE_ROOT; };
+		BAEDC47D7C344D11BDEEE143 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboard.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputDeviceKeyboard.cpp; path = source/gainput/keyboard/GainputInputDeviceKeyboard.cpp; sourceTree = SOURCE_ROOT; };
+		BCFA400BC7A24E8F9D78F9FC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadNull.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDevicePadNull.h; path = source/gainput/pad/GainputInputDevicePadNull.h; sourceTree = SOURCE_ROOT; };
+		BD6E88B4F0E647958A4C9A42 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputIos.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputIos.h; path = include/gainput/GainputIos.h; sourceTree = SOURCE_ROOT; };
+		BDDA6F5F48444B2FA7A33C27 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputLog.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputLog.h; path = include/gainput/GainputLog.h; sourceTree = SOURCE_ROOT; };
+		BDEBE203A68542D29D2D9D38 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardAndroid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceKeyboardAndroid.h; path = source/gainput/keyboard/GainputInputDeviceKeyboardAndroid.h; sourceTree = SOURCE_ROOT; };
+		BED38A727EA24175AD8CCBD6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceKeyboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceKeyboard.h; path = include/gainput/GainputInputDeviceKeyboard.h; sourceTree = SOURCE_ROOT; };
+		C204586FF5104AE3A246104C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputNetListener.h; path = source/gainput/dev/GainputNetListener.h; sourceTree = SOURCE_ROOT; };
+		C30D9776CBC0454CABC5E76F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeltaState.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeltaState.h; path = include/gainput/GainputInputDeltaState.h; sourceTree = SOURCE_ROOT; };
+		C5024E417DD44AD891DD7754 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseNull.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceMouseNull.h; path = source/gainput/mouse/GainputInputDeviceMouseNull.h; sourceTree = SOURCE_ROOT; };
+		CAF320AB8383440A9A7587B2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchImpl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceTouchImpl.h; path = source/gainput/touch/GainputInputDeviceTouchImpl.h; sourceTree = SOURCE_ROOT; };
+		D40A0876902B410EA68E23E7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputPlayer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputPlayer.cpp; path = source/gainput/recorder/GainputInputPlayer.cpp; sourceTree = SOURCE_ROOT; };
+		D5A3DA3A01F94B20BD04E9B5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardWinRaw.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceKeyboardWinRaw.h; path = source/gainput/keyboard/GainputInputDeviceKeyboardWinRaw.h; sourceTree = SOURCE_ROOT; };
+		DA4F1E6B991145B5878C1FDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchNull.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceTouchNull.h; path = source/gainput/touch/GainputInputDeviceTouchNull.h; sourceTree = SOURCE_ROOT; };
+		DB30EC4ED4A44465A9E45C22 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouse.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputDeviceMouse.cpp; path = source/gainput/mouse/GainputInputDeviceMouse.cpp; sourceTree = SOURCE_ROOT; };
+		E14F9292066C4D6DAE8E455F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevicePad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDevicePad.h; path = include/gainput/GainputInputDevicePad.h; sourceTree = SOURCE_ROOT; };
+		E1F7B82B9EE6407D97387298 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputDebugRenderer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputDebugRenderer.h; path = include/gainput/GainputDebugRenderer.h; sourceTree = SOURCE_ROOT; };
+		E5B5C988C8D44DCC9FE71CB1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputMemoryStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputMemoryStream.cpp; path = source/gainput/dev/GainputMemoryStream.cpp; sourceTree = SOURCE_ROOT; };
+		E66A4E3F9AE740C9A54FAF87 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInAndroid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceBuiltInAndroid.h; path = source/gainput/builtin/GainputInputDeviceBuiltInAndroid.h; sourceTree = SOURCE_ROOT; };
+		E6A26F48E8B24B31B3628B7C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePad.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputDevicePad.cpp; path = source/gainput/pad/GainputInputDevicePad.cpp; sourceTree = SOURCE_ROOT; };
+		E9FE82F45C854A668AA554AE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetConnection.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputNetConnection.h; path = source/gainput/dev/GainputNetConnection.h; sourceTree = SOURCE_ROOT; };
+		ED0B18B9D0BF4F0AA6A52831 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gainput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gainput.cpp; path = source/gainput/gainput.cpp; sourceTree = SOURCE_ROOT; };
+		EF8A05FD5319462CBBD68098 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltIn.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputInputDeviceBuiltIn.cpp; path = source/gainput/builtin/GainputInputDeviceBuiltIn.cpp; sourceTree = SOURCE_ROOT; };
+		EFEEE0B1398945DB9164A734 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardImpl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceKeyboardImpl.h; path = source/gainput/keyboard/GainputInputDeviceKeyboardImpl.h; sourceTree = SOURCE_ROOT; };
+		F1893873B3694034B0FA928C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputTapGesture.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GainputTapGesture.cpp; path = source/gainput/gestures/GainputTapGesture.cpp; sourceTree = SOURCE_ROOT; };
+		F5028F956B5C40F7A49E846B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchIos.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputInputDeviceTouchIos.h; path = source/gainput/touch/GainputInputDeviceTouchIos.h; sourceTree = SOURCE_ROOT; };
+		F535466C4E5C4A8380999611 /* gainputstatic */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libgainputstatic-d.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A4255E37984264ADA820C9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseMac.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = GainputInputDeviceMouseMac.mm; path = source/gainput/mouse/GainputInputDeviceMouseMac.mm; sourceTree = SOURCE_ROOT; };
+		FA87DA1D68DB4E0F893D39FA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputAllocator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GainputAllocator.h; path = include/gainput/GainputAllocator.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0294E8BA45354B1897FED659 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				86A35807568C489B93B0824B /* CMake Rules */,
+				1D5D8F3F52DB4D7796E7973D,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		19AF66D49E3E496CBA3432C8 = {
+			isa = PBXGroup;
+			children = (
+				3E6D225053A64A7B80F4957D /* ThirdParty */,
+				0294E8BA45354B1897FED659 /* ALL_BUILD */,
+				2ED6B0B90232449DA0A2FFCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2ED6B0B90232449DA0A2FFCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F535466C4E5C4A8380999611 /* gainputstatic */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E6D225053A64A7B80F4957D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				7C41AB0B08544AACA2078CAA /* gainputstatic */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		660B87ED616D4E0F9021D346 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				95BDC9F2C4B443E3A327DDDF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputAllocator.cpp */,
+				382C17931D92414486B1C98A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDeltaState.cpp */,
+				57B15BAA2B3447E1857CD5E3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDevice.cpp */,
+				1CD707801E414F3DB8A3F0BD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputManager.cpp */,
+				A969865783884B15872BEBFE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputMap.cpp */,
+				27CF64C1895B49859635169F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputState.cpp */,
+				B926DEDAFB344D78831713DA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputIos.mm */,
+				4BDBA0BC65E044FD82985130 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMac.mm */,
+				6D19F49CBED04496A707D68E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMapFilters.cpp */,
+				EF8A05FD5319462CBBD68098 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltIn.cpp */,
+				36FD27294CAF4147B9E7D454 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInIos.mm */,
+				47D5E5A6191149498F405354 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDev.cpp */,
+				E5B5C988C8D44DCC9FE71CB1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputMemoryStream.cpp */,
+				64699EDAB9F346029EA3AC44 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetAddress.cpp */,
+				95A6E782914E4422B7F1CDBB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetConnection.cpp */,
+				5727C6E3AC684AEB857A80EB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.cpp */,
+				ED0B18B9D0BF4F0AA6A52831 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gainput.cpp */,
+				2C2AEDA60D284A71B079EFDD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputButtonStickGesture.cpp */,
+				5030696A1BB14EB9896EB256 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputDoubleClickGesture.cpp */,
+				60E0216C2C404B48B8AEE4B9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputHoldGesture.cpp */,
+				499EEBE8C6784A49A101D336 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputPinchGesture.cpp */,
+				902824FE47AC43E09B49D897 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputRotateGesture.cpp */,
+				6C172174457C4BD6AD77D54C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputSimultaneouslyDownGesture.cpp */,
+				F1893873B3694034B0FA928C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputTapGesture.cpp */,
+				BAEDC47D7C344D11BDEEE143 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboard.cpp */,
+				4824C9EA3D444221A991484D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardMac.cpp */,
+				DB30EC4ED4A44465A9E45C22 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouse.cpp */,
+				F6A4255E37984264ADA820C9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseMac.mm */,
+				E6A26F48E8B24B31B3628B7C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePad.cpp */,
+				A3F7081D81A54CCD8E7F18A3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadIos.mm */,
+				5B1E488435CC48E1AC45D377 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadMac.cpp */,
+				D40A0876902B410EA68E23E7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputPlayer.cpp */,
+				18369D52720E4FC39DB55F0E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecorder.cpp */,
+				416006935EE548788921F9AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecording.cpp */,
+				460EEC6CBDD94C82BE695B8F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouch.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		7C41AB0B08544AACA2078CAA /* gainputstatic */ = {
+			isa = PBXGroup;
+			children = (
+				E1660970526947E986E905DE /* Header Files */,
+				660B87ED616D4E0F9021D346 /* Source Files */,
+				9589ED89216544CDA9AC4F3A,
+			);
+			name = gainputstatic;
+			sourceTree = "<group>";
+		};
+		86A35807568C489B93B0824B /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		E1660970526947E986E905DE /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA87DA1D68DB4E0F893D39FA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputAllocator.h */,
+				19124C8693984A4BB3A03351 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputContainers.h */,
+				E1F7B82B9EE6407D97387298 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputDebugRenderer.h */,
+				030C92E5BA8B41B9B3404B08 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputHelpers.h */,
+				C30D9776CBC0454CABC5E76F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeltaState.h */,
+				7EB7E4C2CD8D41D28817DE16 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevice.h */,
+				2BA516C5E7EB41BCBF2CE4F9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceBuiltIn.h */,
+				BED38A727EA24175AD8CCBD6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceKeyboard.h */,
+				9F3FAA96E6B940D0B3CF3CB9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceMouse.h */,
+				E14F9292066C4D6DAE8E455F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDevicePad.h */,
+				62687926DB2F43BA9A3FE933 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputDeviceTouch.h */,
+				5BAE26B65E5145149E4AACBB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputListener.h */,
+				355E4920E4954DDA961227DE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputManager.h */,
+				6ED41E869D234586B2A68CB6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputMap.h */,
+				458E520CCD8C43DC9343FBA1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputInputState.h */,
+				BD6E88B4F0E647958A4C9A42 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputIos.h */,
+				BDDA6F5F48444B2FA7A33C27 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputLog.h */,
+				325D361ECF494E619FD56A37 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/GainputMapFilters.h */,
+				161AC3035C5549928B2DC79E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gainput.h */,
+				1E99724B17794CF399229D8A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputButtonStickGesture.h */,
+				6FEA9C8AB985404F8ABBBBB8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputDoubleClickGesture.h */,
+				987CADCD88844EDEBA8C38E8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputGestures.h */,
+				890B70348798492FB9B3F42D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputHoldGesture.h */,
+				4031755D30614858980FBFDA /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputPinchGesture.h */,
+				1D7F1FCD2EC84213BEC785D7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputRotateGesture.h */,
+				8BB532EC9BF048B4A89FB4CE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputSimultaneouslyDownGesture.h */,
+				020DC9556F2C43E0BE56F17C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/gestures/GainputTapGesture.h */,
+				7E5EF25DC2E3453F80C4A559 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputPlayer.h */,
+				060BD3696E8B4705AB9665E9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecorder.h */,
+				11A4DBAE96774B678948C10B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput/recorder/GainputInputRecording.h */,
+				9CC94C2A797A489797FDDD01 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputHelpersEvdev.h */,
+				034DF56D9B8C47FD8B7E820B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputWindows.h */,
+				E66A4E3F9AE740C9A54FAF87 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInAndroid.h */,
+				964573F1A3C244399233C1B9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInImpl.h */,
+				2E2C51FD26104A7AA753E788 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInIos.h */,
+				22300C463C81483FB3862191 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInNull.h */,
+				09563C3AA03544D8B630F879 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDev.h */,
+				8FDD79ABB36E46C5A83C4D56 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDevProtocol.h */,
+				5D927E9EFAC24E6DA8DCF1FF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputMemoryStream.h */,
+				7FB55CF53BE84642B8037585 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetAddress.h */,
+				E9FE82F45C854A668AA554AE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetConnection.h */,
+				C204586FF5104AE3A246104C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.h */,
+				3A52BBBFC45A401E8EE2F01B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputStream.h */,
+				BDEBE203A68542D29D2D9D38 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardAndroid.h */,
+				5D1E4E1022F84438B9399385 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardEvdev.h */,
+				EFEEE0B1398945DB9164A734 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardImpl.h */,
+				8FF5FEDC7EE84FEB8E995098 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardLinux.h */,
+				5B909FDD9DAC44E3AE20319F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardMac.h */,
+				91C8E1E1FFC647EC8A7E2EF0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardNull.h */,
+				506202CD9BCC4DDF9A2175E8 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardWin.h */,
+				D5A3DA3A01F94B20BD04E9B5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardWinRaw.h */,
+				7BC8BCB42A7347A29D3478E3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputKeyboardKeyNames.h */,
+				1AD1FD07029940019A0325ED /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseEvdev.h */,
+				98D8EAB24AB64D4580079C73 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseImpl.h */,
+				7F073751B6EA436A99410EDE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseLinux.h */,
+				0DB77F774B854FF385289915 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseMac.h */,
+				C5024E417DD44AD891DD7754 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseNull.h */,
+				347093132D7C4468A4ACA433 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseWin.h */,
+				15791D53D3A3444CB58E24E9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseWinRaw.h */,
+				73D68D137B944384B50B7D9D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputMouseInfo.h */,
+				4175EEAB6FBF4CC0B555A2BE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadAndroid.h */,
+				39E39EC326294B94BBBB37D1 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadImpl.h */,
+				1914DFD11D824BEA8441A5B7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadIos.h */,
+				4038552B95954F828A7FB9B6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadLinux.h */,
+				B08B3F1F0799442CB36EF910 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadMac.h */,
+				BCFA400BC7A24E8F9D78F9FC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadNull.h */,
+				301215FB9EC544DD9B78C240 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadWin.h */,
+				25C0D5C478334A578C57C04C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchAndroid.h */,
+				CAF320AB8383440A9A7587B2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchImpl.h */,
+				F5028F956B5C40F7A49E846B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchIos.h */,
+				DA4F1E6B991145B5878C1FDB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouchNull.h */,
+				6DE8AABCB220492FAE4DB940 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputTouchInfo.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AF0EBA227E4475A89571F9A /* gainputstatic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 889D3DA13D9544258AEE3DFA /* Build configuration list for PBXNativeTarget "gainputstatic" */;
+			buildPhases = (
+				CC50A46ECA23471A8D12D6AE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCF32C0D8DC648DC8BA083DA /* PBXTargetDependency */,
+			);
+			name = gainputstatic;
+			productName = gainputstatic;
+			productReference = F535466C4E5C4A8380999611 /* gainputstatic */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25C8E747EE2B47938622B4DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = 49CB3C8ED49B4B849168BA88 /* Build configuration list for PBXProject "gainput" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				CCE4A3ED24574A1AB8CF513E /* Debug */,
+				072B867123944DEC877A54DC /* Release */,
+				00D75DE7720142AC800732E6 /* MinSizeRel */,
+				7E0CB95F32D043878F6E7EA2 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 19AF66D49E3E496CBA3432C8;
+			projectDirPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+			projectRoot = "";
+			targets = (
+				8EE6656C0226482E9A63D590 /* ALL_BUILD */,
+				52A2736E4FFF445B96FC72ED /* ZERO_CHECK */,
+				3AF0EBA227E4475A89571F9A /* gainputstatic */,
+				C58F5371E311477AB906A11C /* install */,
+				4156E4D848854E10A7A07CC7 /* package */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05F03A4AC2154B3D9EACEA4E /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		4EFF88F36C68405FA877F816 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		5B2092E030B044C4B3DA6597 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		6F1B87190E6B42A3B3CB6132 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		8BB6870FECF84E6BBFCC67FE = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		96F979C4C8E546D7942A11A2 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/CMakeScripts/package_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		AF7D51DD2F4E4F4AB5F5A114 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C17E39F435FC49C7BE371077 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC50A46ECA23471A8D12D6AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE201DA6ED274B80918D5A8B /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputAllocator.cpp */,
+				2CF8482B487347E380A9EDB5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDeltaState.cpp */,
+				39D0457670B648A0BC162B4A /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputDevice.cpp */,
+				8B4AB2B1586F47A6A984EB16 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputManager.cpp */,
+				9C2F0C01B736413DB94239B7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputMap.cpp */,
+				62221F7A7BF949E1A412E083 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputInputState.cpp */,
+				309799640E6C4F91B7B01740 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputIos.mm */,
+				EA0811EFE83E47D1AFD28CD2 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMac.mm */,
+				5F817B2F19F2446E8EF0419E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/GainputMapFilters.cpp */,
+				840EAFB47B714076BA614314 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltIn.cpp */,
+				DF59DE1AEE984AC5B0996F52 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/builtin/GainputInputDeviceBuiltInIos.mm */,
+				1A1E76D74AEB4D77834EF448 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputDev.cpp */,
+				AE737194A3BB412896C72722 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputMemoryStream.cpp */,
+				D15ABF9E1DDF4C60BE64FE50 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetAddress.cpp */,
+				B0BF04F1C3DD4EF7A192FC96 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetConnection.cpp */,
+				5636A7D3FA744F588E674F0F /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/dev/GainputNetListener.cpp */,
+				975BD40E821146C2ACDF88AC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gainput.cpp */,
+				619E32C1ADAA4E509B28EB32 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputButtonStickGesture.cpp */,
+				FAB1564B4AF841C7AC852AB0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputDoubleClickGesture.cpp */,
+				58AD79F6B96542D298F0DAC5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputHoldGesture.cpp */,
+				9F326AD5798A47E980D4BEA5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputPinchGesture.cpp */,
+				3B451E532B2C47A1995ABFC9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputRotateGesture.cpp */,
+				42F59C4919914ECB8EDA63EB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputSimultaneouslyDownGesture.cpp */,
+				C2DB50D9AD2E4C908416C789 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/gestures/GainputTapGesture.cpp */,
+				AC51E0D22CBB4E66B659D312 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboard.cpp */,
+				265A41FA5637457DB1535341 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/keyboard/GainputInputDeviceKeyboardMac.cpp */,
+				A27C0A83D08B4C5990A0094E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouse.cpp */,
+				82B1359967D4443D9CE4022E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/mouse/GainputInputDeviceMouseMac.mm */,
+				777BBCE33AEB4D3CA15D429C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePad.cpp */,
+				50F202F90A0143F486B3041E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadIos.mm */,
+				707FCF5E67914CE895FA8C00 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/pad/GainputInputDevicePadMac.cpp */,
+				799EBD042E6D4888990554A7 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputPlayer.cpp */,
+				B4D35CF1FE0241D4A9DE7CFF /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecorder.cpp */,
+				D8D91C0588E84158BDD99974 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/recorder/GainputInputRecording.cpp */,
+				ACD127EF831249408ADF9110 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/source/gainput/touch/GainputInputDeviceTouch.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04CC1F52B8D249448EA6C1EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = BC5643161330447798DDBC9D /* PBXContainerItemProxy */;
+		};
+		732AE521264A4088B4B5ED38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AF0EBA227E4475A89571F9A /* gainputstatic */;
+			targetProxy = C82B34187A894951A28F6003 /* PBXContainerItemProxy */;
+		};
+		8EC390E8540843298A229194 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = DF477A91783943C6A80C54A3 /* PBXContainerItemProxy */;
+		};
+		AE8464F5A8204F9686D1B7D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = 2CB5861DE4484D81B3F81A4A /* PBXContainerItemProxy */;
+		};
+		DCF32C0D8DC648DC8BA083DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = EC90F70E59A242B899458250 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05279E7C7C7A40969CAFB30D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1258FCAD4E734979A00C9E20 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1449F307A0C7439BBAEE69ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2112C8E192AA4AC6B54F5550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++     ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "gainputstatic-d";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2612A10E093040A0B947C98C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++        -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gainputstatic;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2C9E6A54A01A4C3BB2BCF90F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		43BC2A2EDE0545CE8B501882 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gainputstatic;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		78E1E11E330B4D3791C9D69B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		79A58228D11246B1BCB672BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		8F9D1A206BE24E629792BF77 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/build";
+			};
+			name = RelWithDebInfo;
+		};
+		931BD35DE85E4D349CF3397B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gainputstatic;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9AC4AD1C2E864B3B922529FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A12DD4B057C24EDD909A62EE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A5AA2B7261324449B28D6514 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		A79C8B2CEE194DC887A5F029 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A9855DE373394F528305CD84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/build";
+			};
+			name = Release;
+		};
+		B369C9E6B310403EB65D9824 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B42F3D6CA5F54B39A5C19BE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		B926A7A4A8904E07A57F7E28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C4C7744743C94944ACE8C16D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D440078A08BF4DD88C0F0B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E2D1C04EC1414864802FC9F7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		EA54BDE64B1D440C84A31557 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/build";
+			};
+			name = MinSizeRel;
+		};
+		F0011459FF134A6E86C603BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19A3B2B8086C49D3B421F739 /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AC4AD1C2E864B3B922529FB /* Debug */,
+				2C9E6A54A01A4C3BB2BCF90F /* Release */,
+				05279E7C7C7A40969CAFB30D /* MinSizeRel */,
+				A79C8B2CEE194DC887A5F029 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2A0505085EAE41F8AAD8A73C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1449F307A0C7439BBAEE69ED /* Debug */,
+				D440078A08BF4DD88C0F0B54 /* Release */,
+				78E1E11E330B4D3791C9D69B /* MinSizeRel */,
+				1258FCAD4E734979A00C9E20 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		49CB3C8ED49B4B849168BA88 /* Build configuration list for PBXProject "gainput" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0011459FF134A6E86C603BC /* Debug */,
+				A9855DE373394F528305CD84 /* Release */,
+				EA54BDE64B1D440C84A31557 /* MinSizeRel */,
+				8F9D1A206BE24E629792BF77 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5991D7596A08422BADEA387E /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B926A7A4A8904E07A57F7E28 /* Debug */,
+				A5AA2B7261324449B28D6514 /* Release */,
+				E2D1C04EC1414864802FC9F7 /* MinSizeRel */,
+				C4C7744743C94944ACE8C16D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		889D3DA13D9544258AEE3DFA /* Build configuration list for PBXNativeTarget "gainputstatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2112C8E192AA4AC6B54F5550 /* Debug */,
+				43BC2A2EDE0545CE8B501882 /* Release */,
+				931BD35DE85E4D349CF3397B /* MinSizeRel */,
+				2612A10E093040A0B947C98C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D98C87BEB4CF47C5A1BE8F40 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79A58228D11246B1BCB672BF /* Debug */,
+				B42F3D6CA5F54B39A5C19BE1 /* Release */,
+				A12DD4B057C24EDD909A62EE /* MinSizeRel */,
+				B369C9E6B310403EB65D9824 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25C8E747EE2B47938622B4DF /* Project object */;
+}

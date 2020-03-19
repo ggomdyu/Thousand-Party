@@ -1,11 +1,13 @@
 #include <fmt/format.h>
 
+#include "Core/Delegate.h"
 #include "Diagnostics/Debug.h"
 #include "Platform/Environment.h"
 #include "Platform/Application.h"
 #include "Game/UISpriteRendererComponent.h"
 #include "Engine/TimeModule.h"
 #include "Engine/InputModule.h"
+#include "Test/Core/DelegateTest.h"
 
 #include "../TitleScene/TitleScene.h"
 #include "../MusicResultScene/MusicResultScene.h"

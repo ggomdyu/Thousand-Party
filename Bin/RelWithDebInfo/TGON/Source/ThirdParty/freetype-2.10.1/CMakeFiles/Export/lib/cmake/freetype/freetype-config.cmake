@@ -56,7 +56,12 @@ add_library(freetype STATIC IMPORTED)
 set_target_properties(freetype PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/freetype2"
+  INTERFACE_LINK_LIBRARIES "/usr/lib/libz.dylib;/usr/lib/libbz2.dylib"
 )
+
+if(CMAKE_VERSION VERSION_LESS 2.8.12)
+  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
+endif()
 
 # Load information for each installed configuration.
 get_filename_component(_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)

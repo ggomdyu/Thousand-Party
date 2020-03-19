@@ -1,0 +1,986 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4156E4D848854E10A7A07CC7 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B9A548F6D40D4554B58237FA /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				9785FBA55FC74B909691E8E8 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				8756D3C2927F4301BAFB2DB9 /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		52A2736E4FFF445B96FC72ED /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6A11F6A9AE544D4B9B5A0622 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				C9CB1341968942CFA590F608 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		8EE6656C0226482E9A63D590 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 32001C2246E44086978BCB78 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				908DE1E1DD1840E29DAAAFC3 /* CMake Rules */,
+			);
+			dependencies = (
+				9004769974C3414CA7A4A1D8 /* PBXTargetDependency */,
+				F3733CE6E7FC4F609D789498 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		C58F5371E311477AB906A11C /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5EAD12452C624FF4B8F5D991 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				49ED7116C58441C4AA6217B6 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				9A2E1126DA6142A19E7B09B0 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0A01CCF1457845119FA03EDC = {isa = PBXBuildFile; fileRef = 972F5D9B823F4FD4A1D530D7; };
+		0E13733C8CD149A5BDDD4F61 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/locale.h */ = {isa = PBXBuildFile; fileRef = 7CE37D6CA8D545099A39BFFC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/locale.h */; };
+		183245DEED5E45DFABD1D37D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/format.cc */ = {isa = PBXBuildFile; fileRef = 95D2D88A92DB4E63A70D5794 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/format.cc */; };
+		272844BD25B04582830806AB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/ostream.h */ = {isa = PBXBuildFile; fileRef = BE01484BC5A44E1A9DABBADC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/ostream.h */; };
+		409274109E09409C967236CD /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/printf.h */ = {isa = PBXBuildFile; fileRef = B4B95D7736F54FAAB9A3B96C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/printf.h */; };
+		464BF7910E354861B0F595C6 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/chrono.h */ = {isa = PBXBuildFile; fileRef = 8FCB3C46CD754C69A5167C2D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/chrono.h */; };
+		4BE83E3B4E7E4BB1B4DAC1C0 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/compile.h */ = {isa = PBXBuildFile; fileRef = 7BE08EE9517940848366DA49 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/compile.h */; };
+		54893AA92B0B45AAAB60B294 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/ChangeLog.rst */ = {isa = PBXBuildFile; fileRef = 7A3C0B14A9D34241A5F59ECB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/ChangeLog.rst */; };
+		5F6168E15F114613A2280497 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format.h */ = {isa = PBXBuildFile; fileRef = 12206DBF374E45B59EB77690 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format.h */; };
+		702B83C584F3482887C6D77D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/core.h */ = {isa = PBXBuildFile; fileRef = 2C929D6A279E4A09B9A23BD3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/core.h */; };
+		78D4E464B0814369820EAF80 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format-inl.h */ = {isa = PBXBuildFile; fileRef = 06FCEEFFF2B148939A5F9116 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format-inl.h */; };
+		7DAFE8AFBA2B42DC818813C3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/README.rst */ = {isa = PBXBuildFile; fileRef = 9F20CE03DA7A43BAB4021D8D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/README.rst */; };
+		81B623313F424A9F8DE44E35 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/ranges.h */ = {isa = PBXBuildFile; fileRef = A5048E9B01B94332B0867CF9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/ranges.h */; };
+		8BF8D6740E59451A87E95B3D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/color.h */ = {isa = PBXBuildFile; fileRef = A143EE854D0C4679B5FE30C5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/color.h */; };
+		C43C4FDCAE5A437A836E3D3E /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/posix.h */ = {isa = PBXBuildFile; fileRef = 39EF92CBC0564F01B2980253 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/posix.h */; };
+		EC3B89F420A541BD9A37FEEE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/posix.cc */ = {isa = PBXBuildFile; fileRef = E356E4DCEF474D86938B6293 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/posix.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		1BA987F0E16A4538BAC04D0A /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		55E9A9E4984A4CE0B185AB48 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		CC5F42420A784A159593D3FD /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		F73396D954364E60A29C4C92 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		0CF648C88F3240BD8EB0FEBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F5E95E844043FE831E548F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+		22ADD293F7684DDAA89AF172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F5E95E844043FE831E548F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+		2918186DAE2A44098C54A129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F5E95E844043FE831E548F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 724F9FE465F7429295AD5C4F;
+			remoteInfo = fmt;
+		};
+		7563168BD2704A38858021DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F5E95E844043FE831E548F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EE6656C0226482E9A63D590;
+			remoteInfo = ALL_BUILD;
+		};
+		D56EEFE7ED51472E8A571CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F5E95E844043FE831E548F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2736E4FFF445B96FC72ED;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06FCEEFFF2B148939A5F9116 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format-inl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "format-inl.h"; path = "include/fmt/format-inl.h"; sourceTree = SOURCE_ROOT; };
+		12206DBF374E45B59EB77690 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = format.h; path = include/fmt/format.h; sourceTree = SOURCE_ROOT; };
+		2C929D6A279E4A09B9A23BD3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = core.h; path = include/fmt/core.h; sourceTree = SOURCE_ROOT; };
+		39EF92CBC0564F01B2980253 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/posix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix.h; path = include/fmt/posix.h; sourceTree = SOURCE_ROOT; };
+		7A3C0B14A9D34241A5F59ECB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/ChangeLog.rst */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ChangeLog.rst; path = ChangeLog.rst; sourceTree = SOURCE_ROOT; };
+		7BE08EE9517940848366DA49 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/compile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compile.h; path = include/fmt/compile.h; sourceTree = SOURCE_ROOT; };
+		7CE37D6CA8D545099A39BFFC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/locale.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = locale.h; path = include/fmt/locale.h; sourceTree = SOURCE_ROOT; };
+		8FCB3C46CD754C69A5167C2D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/chrono.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = chrono.h; path = include/fmt/chrono.h; sourceTree = SOURCE_ROOT; };
+		9106866B4F304F8BBA201C9D /* fmt */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libfmtd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D2D88A92DB4E63A70D5794 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/format.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = format.cc; path = src/format.cc; sourceTree = SOURCE_ROOT; };
+		972F5D9B823F4FD4A1D530D7 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		9F20CE03DA7A43BAB4021D8D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/README.rst */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = README.rst; path = README.rst; sourceTree = SOURCE_ROOT; };
+		A143EE854D0C4679B5FE30C5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/color.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = color.h; path = include/fmt/color.h; sourceTree = SOURCE_ROOT; };
+		A5048E9B01B94332B0867CF9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/ranges.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ranges.h; path = include/fmt/ranges.h; sourceTree = SOURCE_ROOT; };
+		B4B95D7736F54FAAB9A3B96C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/printf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = printf.h; path = include/fmt/printf.h; sourceTree = SOURCE_ROOT; };
+		BE01484BC5A44E1A9DABBADC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/ostream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ostream.h; path = include/fmt/ostream.h; sourceTree = SOURCE_ROOT; };
+		CF20454A9D79492EBD24E327 = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = ""; path = ""; sourceTree = SOURCE_ROOT; };
+		E356E4DCEF474D86938B6293 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/posix.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = posix.cc; path = src/posix.cc; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00C1DA639FA2472293213CD0 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				632A9205EE2846DF8CA3470D /* CMake Rules */,
+				CF20454A9D79492EBD24E327,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		632A9205EE2846DF8CA3470D /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		6E1057F65D524BBCAB3F9CDA = {
+			isa = PBXGroup;
+			children = (
+				BD40BA01E5834E23B7BF44AD /* ThirdParty */,
+				00C1DA639FA2472293213CD0 /* ALL_BUILD */,
+				8A5EE2F23A804001A61B1033 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76186A561EDE47249D82428A /* fmt */ = {
+			isa = PBXGroup;
+			children = (
+				7F01E135EB754E9398DD95C5 /* Source Files */,
+				B69352FAE07D4D338071A05D /* Header Files */,
+				972F5D9B823F4FD4A1D530D7,
+				7A3C0B14A9D34241A5F59ECB /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/ChangeLog.rst */,
+				9F20CE03DA7A43BAB4021D8D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/README.rst */,
+			);
+			name = fmt;
+			sourceTree = "<group>";
+		};
+		7F01E135EB754E9398DD95C5 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				95D2D88A92DB4E63A70D5794 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/format.cc */,
+				E356E4DCEF474D86938B6293 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/posix.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		8A5EE2F23A804001A61B1033 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9106866B4F304F8BBA201C9D /* fmt */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B69352FAE07D4D338071A05D /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FCB3C46CD754C69A5167C2D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/chrono.h */,
+				A143EE854D0C4679B5FE30C5 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/color.h */,
+				7BE08EE9517940848366DA49 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/compile.h */,
+				2C929D6A279E4A09B9A23BD3 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/core.h */,
+				06FCEEFFF2B148939A5F9116 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format-inl.h */,
+				12206DBF374E45B59EB77690 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/format.h */,
+				7CE37D6CA8D545099A39BFFC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/locale.h */,
+				BE01484BC5A44E1A9DABBADC /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/ostream.h */,
+				39EF92CBC0564F01B2980253 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/posix.h */,
+				B4B95D7736F54FAAB9A3B96C /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/printf.h */,
+				A5048E9B01B94332B0867CF9 /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include/fmt/ranges.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		BD40BA01E5834E23B7BF44AD /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				76186A561EDE47249D82428A /* fmt */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		724F9FE465F7429295AD5C4F /* fmt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0B5C5E181242ECA7C13F59 /* Build configuration list for PBXNativeTarget "fmt" */;
+			buildPhases = (
+				92EB1F6F0CEF4990A64AB051 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C024461C71014B8A91444470 /* PBXTargetDependency */,
+			);
+			name = fmt;
+			productName = fmt;
+			productReference = 9106866B4F304F8BBA201C9D /* fmt */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4F5E95E844043FE831E548F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = 03E9534F5A384D2A912A9A96 /* Build configuration list for PBXProject "FMT" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				F73396D954364E60A29C4C92 /* Debug */,
+				55E9A9E4984A4CE0B185AB48 /* Release */,
+				1BA987F0E16A4538BAC04D0A /* MinSizeRel */,
+				CC5F42420A784A159593D3FD /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 6E1057F65D524BBCAB3F9CDA;
+			projectDirPath = "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2";
+			projectRoot = "";
+			targets = (
+				8EE6656C0226482E9A63D590 /* ALL_BUILD */,
+				52A2736E4FFF445B96FC72ED /* ZERO_CHECK */,
+				724F9FE465F7429295AD5C4F /* fmt */,
+				C58F5371E311477AB906A11C /* install */,
+				4156E4D848854E10A7A07CC7 /* package */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49ED7116C58441C4AA6217B6 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		74421F44360A42ABB3EABFB8 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		84AD2265DECB4CFEA53A9657 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		908DE1E1DD1840E29DAAAFC3 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		9785FBA55FC74B909691E8E8 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/CMakeScripts/package_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		9CCB1D313D484779AC4E938D = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		BEFAE3DADBE14586945368EC = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C9CB1341968942CFA590F608 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2 -f /Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92EB1F6F0CEF4990A64AB051 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183245DEED5E45DFABD1D37D /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/format.cc */,
+				EC3B89F420A541BD9A37FEEE /* /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/src/posix.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8756D3C2927F4301BAFB2DB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = 22ADD293F7684DDAA89AF172 /* PBXContainerItemProxy */;
+		};
+		9004769974C3414CA7A4A1D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 724F9FE465F7429295AD5C4F /* fmt */;
+			targetProxy = 2918186DAE2A44098C54A129 /* PBXContainerItemProxy */;
+		};
+		9A2E1126DA6142A19E7B09B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EE6656C0226482E9A63D590 /* ALL_BUILD */;
+			targetProxy = 7563168BD2704A38858021DF /* PBXContainerItemProxy */;
+		};
+		C024461C71014B8A91444470 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = D56EEFE7ED51472E8A571CA4 /* PBXContainerItemProxy */;
+		};
+		F3733CE6E7FC4F609D789498 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2736E4FFF445B96FC72ED /* ZERO_CHECK */;
+			targetProxy = 0CF648C88F3240BD8EB0FEBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D31CD973F7146B9B5059610 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1224BDD8C0E74CB9A4ED82B3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1951F709BB9E4B9BA64F7B7B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",FMT_LOCALE);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++     -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fmt;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2255F648432C4742990DF396 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",FMT_LOCALE);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++     -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fmt;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		2581834539F74118AF205EDD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/build";
+			};
+			name = RelWithDebInfo;
+		};
+		401665065A41458498EA019F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		4D39C5BA145F4F6191E1EC40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		514762C90BA14D71AD4F8BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		59CD51025FD747648353FD4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		666C798BE1B4419E88D18253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/build";
+			};
+			name = Debug;
+		};
+		66986C68D7D14E8F90A26F3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6F1A08CCAE544232B4F05420 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		758A3680C2D94126814DC721 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/build";
+			};
+			name = Release;
+		};
+		7D6CA389A2E642618888AF73 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9D892E83038245959E162D4F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A7D2C404C499452C8D77B271 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",FMT_LOCALE);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++        -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fmt;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		ABF05F909A6E49F3BF6D06E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B40E25E0CC5046FEB2C85C0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",FMT_LOCALE);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/fmt-6.1.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-x objective-c++    '-std=gnu++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fmtd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C5F7BE4DF7B74F868882D51E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D5000ADAA3AA43AF92385DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		EC0B23E7F91643F79F75B830 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		ED1E6DC626D24E15A236DDC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		F4E9C94A71B04387BF35B255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		FCEA6BFA83B64778AE52A8DF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/build";
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03E9534F5A384D2A912A9A96 /* Build configuration list for PBXProject "FMT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666C798BE1B4419E88D18253 /* Debug */,
+				758A3680C2D94126814DC721 /* Release */,
+				FCEA6BFA83B64778AE52A8DF /* MinSizeRel */,
+				2581834539F74118AF205EDD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		32001C2246E44086978BCB78 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D39C5BA145F4F6191E1EC40 /* Debug */,
+				D5000ADAA3AA43AF92385DAB /* Release */,
+				C5F7BE4DF7B74F868882D51E /* MinSizeRel */,
+				7D6CA389A2E642618888AF73 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5EAD12452C624FF4B8F5D991 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59CD51025FD747648353FD4F /* Debug */,
+				514762C90BA14D71AD4F8BFF /* Release */,
+				9D892E83038245959E162D4F /* MinSizeRel */,
+				1224BDD8C0E74CB9A4ED82B3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6A11F6A9AE544D4B9B5A0622 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF05F909A6E49F3BF6D06E7 /* Debug */,
+				66986C68D7D14E8F90A26F3B /* Release */,
+				401665065A41458498EA019F /* MinSizeRel */,
+				6F1A08CCAE544232B4F05420 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8B0B5C5E181242ECA7C13F59 /* Build configuration list for PBXNativeTarget "fmt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40E25E0CC5046FEB2C85C0E /* Debug */,
+				2255F648432C4742990DF396 /* Release */,
+				1951F709BB9E4B9BA64F7B7B /* MinSizeRel */,
+				A7D2C404C499452C8D77B271 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B9A548F6D40D4554B58237FA /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4E9C94A71B04387BF35B255 /* Debug */,
+				ED1E6DC626D24E15A236DDC6 /* Release */,
+				0D31CD973F7146B9B5059610 /* MinSizeRel */,
+				EC0B23E7F91643F79F75B830 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4F5E95E844043FE831E548F /* Project object */;
+}

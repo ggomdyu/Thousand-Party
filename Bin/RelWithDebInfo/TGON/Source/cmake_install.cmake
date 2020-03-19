@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/ggomdyu/Desktop/프로그래밍/Git/TGON/Source
+# Install script for directory: /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/ThousandParty")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,13 +34,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/cmake_install.cmake")
-  include("C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/cmake_install.cmake")
-  include("C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/cmake_install.cmake")
-  include("C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/cmake_install.cmake")
-  include("C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/glew-2.1.0/cmake_install.cmake")
-  include("C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/icu4c-64_2/icu/cmake_install.cmake")
-  include("C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/cmake_install.cmake")
+  include("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/openal-soft-1.20.1/cmake_install.cmake")
+  include("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/cmake_install.cmake")
+  include("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/fmt-6.1.2/cmake_install.cmake")
+  include("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/freetype-2.10.1/cmake_install.cmake")
+  include("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/glew-2.1.0/cmake_install.cmake")
+  include("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/icu4c-64_2/icu/cmake_install.cmake")
+  include("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/zlib-1.2.11/cmake_install.cmake")
 
 endif()
 

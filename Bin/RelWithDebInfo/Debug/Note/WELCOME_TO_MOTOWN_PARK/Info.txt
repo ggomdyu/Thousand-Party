@@ -1,0 +1,4 @@
+music=WELCOME TO MOTOWN PARK
+artist=OSTER project
+bpm=165
+sync=2.15

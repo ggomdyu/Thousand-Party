@@ -1,0 +1,32 @@
+dependencies: \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/ucnv_ext.cpp \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/utypes.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/umachine.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/ptypes.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/platform.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/uconfig.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/uvernum.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/urename.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/uversion.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/uset.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/uchar.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/stringoptions.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/ucpmap.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/localpointer.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/ustring.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/putil.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/uiter.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/ucnv_bld.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/ucnv.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/ucnv_err.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/uenum.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/utf16.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/utf.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/ucnv_cnv.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/uset_imp.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/ucnvmbcs.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/ucnv_ext.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/udataswp.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/cmemory.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/unicode/uobject.h \
+  /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/icu4c-64_2/icu/source/common/uassert.h

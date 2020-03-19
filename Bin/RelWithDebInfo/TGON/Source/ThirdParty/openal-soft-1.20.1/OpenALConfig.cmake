@@ -46,36 +46,36 @@ add_library(OpenAL::OpenAL STATIC IMPORTED)
 
 set_target_properties(OpenAL::OpenAL PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "AL_LIBTYPE_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/ggomdyu/Desktop/프로그래밍/Git/TGON/Source/ThirdParty/openal-soft-1.20.1/include"
-  INTERFACE_LINK_LIBRARIES "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.18362.0/um/x64/WinMM.Lib"
+  INTERFACE_INCLUDE_DIRECTORIES "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/openal-soft-1.20.1/include"
+  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:-pthread>;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AudioToolbox.framework;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreAudio.framework;/System/Library/Frameworks/AudioUnit.framework;/System/Library/Frameworks/ApplicationServices.framework;\$<LINK_ONLY:pthread>;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>"
 )
 
 # Import target "OpenAL::OpenAL" for configuration "Debug"
 set_property(TARGET OpenAL::OpenAL APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(OpenAL::OpenAL PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug/OpenAL32.lib"
+  IMPORTED_LOCATION_DEBUG "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug/libopenal.a"
   )
 
 # Import target "OpenAL::OpenAL" for configuration "Release"
 set_property(TARGET OpenAL::OpenAL APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(OpenAL::OpenAL PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release/OpenAL32.lib"
+  IMPORTED_LOCATION_RELEASE "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release/libopenal.a"
   )
 
 # Import target "OpenAL::OpenAL" for configuration "MinSizeRel"
 set_property(TARGET OpenAL::OpenAL APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(OpenAL::OpenAL PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel/OpenAL32.lib"
+  IMPORTED_LOCATION_MINSIZEREL "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel/libopenal.a"
   )
 
 # Import target "OpenAL::OpenAL" for configuration "RelWithDebInfo"
 set_property(TARGET OpenAL::OpenAL APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(OpenAL::OpenAL PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo/OpenAL32.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo/libopenal.a"
   )
 
 # This file does not depend on other imported targets which have

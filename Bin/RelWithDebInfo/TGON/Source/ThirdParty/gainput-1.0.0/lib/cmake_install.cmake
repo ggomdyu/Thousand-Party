@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/ggomdyu/Desktop/프로그래밍/Git/TGON/Source/ThirdParty/gainput-1.0.0/lib
+# Install script for directory: /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/ThousandParty")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,50 +33,66 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Users/ggomdyu/Desktop/프로그래밍/Git/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0/lib/include/gainput" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Program Files (x86)/ThousandParty/lib/gainputstatic-d.lib")
+     "/usr/local/lib/libgainputstatic-d.a")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/ThousandParty/lib" TYPE STATIC_LIBRARY FILES "C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug/gainputstatic-d.lib")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Debug/libgainputstatic-d.a")
+    if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libgainputstatic-d.a" AND
+       NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libgainputstatic-d.a")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" "$ENV{DESTDIR}/usr/local/lib/libgainputstatic-d.a")
+    endif()
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Program Files (x86)/ThousandParty/lib/gainputstatic.lib")
+     "/usr/local/lib/libgainputstatic.a")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/ThousandParty/lib" TYPE STATIC_LIBRARY FILES "C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release/gainputstatic.lib")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/Release/libgainputstatic.a")
+    if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libgainputstatic.a" AND
+       NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libgainputstatic.a")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" "$ENV{DESTDIR}/usr/local/lib/libgainputstatic.a")
+    endif()
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Program Files (x86)/ThousandParty/lib/gainputstatic.lib")
+     "/usr/local/lib/libgainputstatic.a")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/ThousandParty/lib" TYPE STATIC_LIBRARY FILES "C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel/gainputstatic.lib")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/MinSizeRel/libgainputstatic.a")
+    if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libgainputstatic.a" AND
+       NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libgainputstatic.a")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" "$ENV{DESTDIR}/usr/local/lib/libgainputstatic.a")
+    endif()
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Program Files (x86)/ThousandParty/lib/gainputstatic.lib")
+     "/usr/local/lib/libgainputstatic.a")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/ThousandParty/lib" TYPE STATIC_LIBRARY FILES "C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo/gainputstatic.lib")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/RelWithDebInfo/RelWithDebInfo/libgainputstatic.a")
+    if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libgainputstatic.a" AND
+       NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libgainputstatic.a")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" "$ENV{DESTDIR}/usr/local/lib/libgainputstatic.a")
+    endif()
   endif()
 endif()
 

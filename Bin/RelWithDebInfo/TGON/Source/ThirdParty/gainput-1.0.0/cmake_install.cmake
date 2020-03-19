@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/ggomdyu/Desktop/프로그래밍/Git/TGON/Source/ThirdParty/gainput-1.0.0
+# Install script for directory: /Users/chajunho/Desktop/Programming/Git/GitHub/TGON/Source/ThirdParty/gainput-1.0.0
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/ThousandParty")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/ggomdyu/Desktop/프로그래밍/Git/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/cmake_install.cmake")
+  include("/Users/chajunho/Desktop/Programming/Git/GitHub/Thousand-Party/Bin/RelWithDebInfo/TGON/Source/ThirdParty/gainput-1.0.0/lib/cmake_install.cmake")
 
 endif()
 
